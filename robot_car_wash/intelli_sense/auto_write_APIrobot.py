@@ -28,7 +28,8 @@ class AutoWriteRobot1(object):
             api_params_name_list = data[5]
             api_params_type_list = data[6]
             api_params_nn_list = data[7]
-            api_codes_list = data[8]
+            api_codes_list = list(data[8])
+            print(api_codes_list)
             if api_url.find(':') != -1 and str(api_codes_list).find('404') == -1:
                 api_codes_list.append('404')
                 txt.write(service_name+'_'+model_name+':'+api_name+'：缺少 404,加入后:'+str(api_codes_list)+'\r')
@@ -133,9 +134,13 @@ class AutoWriteRobot1(object):
         else:
             change_data = ''
         api_params = ''
+        index = 0
         for i in api_params_name_list:
-            api_params = api_params + '"' + i + '", '
-
+            index += 1
+            if index != len(api_params_name_list) or index == 1:
+                api_params = api_params + '"' + i + '", '
+            if index == len(api_params_name_list) and i != '':
+                api_params = api_params + '"' + i + '"'
         if api_params == '"", ':
             kwargs_name = ''
         else:
@@ -285,7 +290,7 @@ class AutoWriteRobot1(object):
             if flag is True and api_params_name_list != []:
                 robot.write('   ${essential_params}  create list  \r')
                 robot.write('   ${unessential_params}  create list  \r')
-                robot.write('   run every case by params  '+kw_name+'  ${essential_params}  ${unessential_params}  '+
+                robot.write('   run every case by params  '+kw_name+'  ${essential_params}  ${unessential_params}  ' +
                             api_url.split(':')[1]+'=\r\r')
             if flag is True and api_params_name_list == []:
                 robot.write('   '+kw_name+'  '+api_url.split(':')[1]+'=\r\r')

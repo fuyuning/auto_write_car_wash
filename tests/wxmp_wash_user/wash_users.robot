@@ -8,151 +8,89 @@ Force Tags  model:wxmp_wash_user  车主微信端
 
 
 *** Test Cases ***
-Post wash_user Success 
+Post User User Forms Success 
    [Documentation]  接口名:上传forms${\n}
    ...              请求方式:Post${\n}
    ...              预期结果:输入正确参数,http响应码返回 201,返回的Json数据符合验证。
    [Tags]           Respcode:201
    ${essential_params}  create list  formid=${formid}  
    ${unessential_params}  create list  
-   run every case by params  Post user user forms Success 201  ${essential_params}  ${unessential_params}
+   run every case by params  Post User User Forms Success 201  ${essential_params}  ${unessential_params}
 
-
-
-Post wash_user Fail Without Login
-   [Documentation]  接口名:上传forms${\n}
-   ...              请求方式:Post${\n}
-   ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
-   [Tags]           Respcode:403
-   ${essential_params}  create list  formid=${formid}  
-   ${unessential_params}  create list  
-   run every case by params  Post user user forms Fail 403  ${essential_params}  ${unessential_params}
-
-
-
-Post wash_user Fail With Wrong Params
+Post User User Forms Fail With Wrong Params
    [Documentation]  接口名:上传forms${\n}
    ...              请求方式:Post${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  formid=${formid}  
    ${unessential_params}  create list  
-   run every case by params  Post user user forms Fail 422  ${essential_params}  ${unessential_params}
+   run every case by params  Post User User Forms Fail 422  ${essential_params}  ${unessential_params}
 
-
-
-Get wash_user Success 
+Get User User Info Success 
    [Documentation]  接口名:获取用户信息${\n}
    ...              请求方式:Get${\n}
    ...              预期结果:输入正确参数,http响应码返回 200,返回的Json数据为 WashUser 列表。
    [Tags]           Respcode:200
    ${essential_params}  create list  unionid=${unionid}  
    ${unessential_params}  create list  
-   run every case by params  Get user user info Success 200  ${essential_params}  ${unessential_params}
+   run every case by params  Get User User Info Success 200  ${essential_params}  ${unessential_params}
 
-
-
-Get wash_user Fail Without Login
-   [Documentation]  接口名:获取用户信息${\n}
-   ...              请求方式:Get${\n}
-   ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
-   [Tags]           Respcode:403
-   ${essential_params}  create list  unionid=${unionid}  
-   ${unessential_params}  create list  
-   run every case by params  Get user user info Fail 403  ${essential_params}  ${unessential_params}
-
-
-
-Get wash_user Fail With Wrong Params
+Get User User Info Fail With Wrong Params
    [Documentation]  接口名:获取用户信息${\n}
    ...              请求方式:Get${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  unionid=${unionid}  
    ${unessential_params}  create list  
-   run every case by params  Get user user info Fail 422  ${essential_params}  ${unessential_params}
+   run every case by params  Get User User Info Fail 422  ${essential_params}  ${unessential_params}
 
-
-
-Put wash_user Success 
+Put User User Info Success 
    [Documentation]  接口名:上传用户信息${\n}
    ...              请求方式:Put${\n}
    ...              预期结果:输入正确参数,http响应码返回 204,无Json数据返回。
    [Tags]           Respcode:204
    ${essential_params}  create list  wx_nickname=${wx_nickname}  wx_avatarurl=${wx_avatarurl}  unionid=${unionid}  mobile=${mobile}  
    ${unessential_params}  create list  
-   run every case by params  Put user user info Success 204  ${essential_params}  ${unessential_params}
+   run every case by params  Put User User Info Success 204  ${essential_params}  ${unessential_params}
 
-
-
-Put wash_user Fail Without Login
-   [Documentation]  接口名:上传用户信息${\n}
-   ...              请求方式:Put${\n}
-   ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
-   [Tags]           Respcode:403
-   ${essential_params}  create list  wx_nickname=${wx_nickname}  wx_avatarurl=${wx_avatarurl}  unionid=${unionid}  mobile=${mobile}  
-   ${unessential_params}  create list  
-   run every case by params  Put user user info Fail 403  ${essential_params}  ${unessential_params}
-
-
-
-Put wash_user Fail With Wrong Params
+Put User User Info Fail With Wrong Params
    [Documentation]  接口名:上传用户信息${\n}
    ...              请求方式:Put${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  wx_nickname=${wx_nickname}  wx_avatarurl=${wx_avatarurl}  unionid=${unionid}  mobile=${mobile}  
    ${unessential_params}  create list  
-   run every case by params  Put user user info Fail 422  ${essential_params}  ${unessential_params}
-
-
-
-*** Variables ***
+   run every case by params  Put User User Info Fail 422  ${essential_params}  ${unessential_params}
 
 
 *** Keywords ***
-Post User user forms Success 201
+Post User User Forms Success 201
    [Arguments]  &{kwargs}
-   ${resp}=  post user user forms   &{kwargs}
-   expect status is 201  ${resp}  wxmp_wash_user/Post_User_user_forms_201.json
+   ${resp}=  Post User User Forms   &{kwargs}
+   expect status is 201  ${resp}  wxmp_wash_user/Post_User_User_Forms_201.json
 
-Post User user forms Fail 403
+Post User User Forms Fail 422
    [Arguments]  &{kwargs}
-   ${resp}=  post user user forms   &{kwargs}
-   expect status is 403  ${resp}  
-
-Post User user forms Fail 422
-   [Arguments]  &{kwargs}
-   ${resp}=  post user user forms   &{kwargs}
+   ${resp}=  Post User User Forms   &{kwargs}
    expect status is 422  ${resp}  
 
-Get User user info Success 200
+Get User User Info Success 200
    [Arguments]  &{kwargs}
-   ${resp}=  get user user info   &{kwargs}
-   expect status is 200  ${resp}  wxmp_wash_user/Get_User_user_info_200.json
+   ${resp}=  Get User User Info   &{kwargs}
+   expect status is 200  ${resp}  wxmp_wash_user/Get_User_User_Info_200.json
 
-Get User user info Fail 403
+Get User User Info Fail 422
    [Arguments]  &{kwargs}
-   ${resp}=  get user user info   &{kwargs}
-   expect status is 403  ${resp}  
-
-Get User user info Fail 422
-   [Arguments]  &{kwargs}
-   ${resp}=  get user user info   &{kwargs}
+   ${resp}=  Get User User Info   &{kwargs}
    expect status is 422  ${resp}  
 
-Put User user info Success 204
+Put User User Info Success 204
    [Arguments]  &{kwargs}
-   ${resp}=  put user user info   &{kwargs}
+   ${resp}=  Put User User Info   &{kwargs}
    expect status is 204  ${resp}  
 
-Put User user info Fail 403
+Put User User Info Fail 422
    [Arguments]  &{kwargs}
-   ${resp}=  put user user info   &{kwargs}
-   expect status is 403  ${resp}  
-
-Put User user info Fail 422
-   [Arguments]  &{kwargs}
-   ${resp}=  put user user info   &{kwargs}
+   ${resp}=  Put User User Info   &{kwargs}
    expect status is 422  ${resp}  
 

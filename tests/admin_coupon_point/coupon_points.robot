@@ -8,284 +8,163 @@ Force Tags  model:admin_coupon_point  虾洗后台
 
 
 *** Test Cases ***
-Post coupon_point Fail Without Login
-   [Documentation]  接口名:添加自动定向券${\n}
-   ...              请求方式:Post${\n}
-   ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
-   [Tags]           Respcode:403
-   ${essential_params}  create list  coupon_pool_id=${coupon_pool_id}  record_num_last_30_day=${record_num_last_30_day}  average_last_30_day=${average_last_30_day}  how_long_no_record=${how_long_no_record}  user_type=${user_type}  
-   ${unessential_params}  create list  is_record_num_last_30_day=False  is_average_last_30_day=False  is_how_long_no_record=False  enable=False  
-   run every case by params  Post admin coupon point automatic records Fail 403  ${essential_params}  ${unessential_params}
-
-
-
-Post coupon_point Success 
+Post Admin Coupon Point Autos Success 
    [Documentation]  接口名:添加自动定向券${\n}
    ...              请求方式:Post${\n}
    ...              预期结果:输入正确参数,http响应码返回 200,返回的Json数据为  列表。
    [Tags]           Respcode:200
-   ${essential_params}  create list  coupon_pool_id=${coupon_pool_id}  record_num_last_30_day=${record_num_last_30_day}  average_last_30_day=${average_last_30_day}  how_long_no_record=${how_long_no_record}  user_type=${user_type}  
-   ${unessential_params}  create list  is_record_num_last_30_day=False  is_average_last_30_day=False  is_how_long_no_record=False  enable=False  
-   run every case by params  Post admin coupon point automatic records Success 200  ${essential_params}  ${unessential_params}
+   ${essential_params}  create list  coupon_pool_id=${coupon_pool_id}  record_num_last_30_day=${record_num_last_30_day}  average_price_last_30_day=${average_price_last_30_day}  wash_interval=${wash_interval}  user_type=${user_type}  
+   ${unessential_params}  create list  is_record_num_last_30_day=False  is_average_price_last_30_day=False  is_wash_interval=False  enable=False  
+   run every case by params  Post Admin Coupon Point Autos Success 200  ${essential_params}  ${unessential_params}
 
-
-
-Post coupon_point Fail With Wrong Params
+Post Admin Coupon Point Autos Fail With Wrong Params
    [Documentation]  接口名:添加自动定向券${\n}
    ...              请求方式:Post${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  coupon_pool_id=${coupon_pool_id}  record_num_last_30_day=${record_num_last_30_day}  average_last_30_day=${average_last_30_day}  how_long_no_record=${how_long_no_record}  user_type=${user_type}  
-   ${unessential_params}  create list  is_record_num_last_30_day=False  is_average_last_30_day=False  is_how_long_no_record=False  enable=False  
-   run every case by params  Post admin coupon point automatic records Fail 422  ${essential_params}  ${unessential_params}
+   ${essential_params}  create list  coupon_pool_id=${coupon_pool_id}  record_num_last_30_day=${record_num_last_30_day}  average_price_last_30_day=${average_price_last_30_day}  wash_interval=${wash_interval}  user_type=${user_type}  
+   ${unessential_params}  create list  is_record_num_last_30_day=False  is_average_price_last_30_day=False  is_wash_interval=False  enable=False  
+   run every case by params  Post Admin Coupon Point Autos Fail 422  ${essential_params}  ${unessential_params}
 
-
-
-Post coupon_point Fail Without Login
-   [Documentation]  接口名:批量添加定向券${\n}
-   ...              请求方式:Post${\n}
-   ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
-   [Tags]           Respcode:403
-   ${essential_params}  create list  user_ids=${user_ids}  coupon_pool_id=${coupon_pool_id}  
-   ${unessential_params}  create list  
-   run every case by params  Post admin coupon point records Fail 403  ${essential_params}  ${unessential_params}
-
-
-
-Post coupon_point Fail With Wrong Params
+Post Admin Coupon Point Records Fail With Wrong Params
    [Documentation]  接口名:批量添加定向券${\n}
    ...              请求方式:Post${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  user_ids=${user_ids}  coupon_pool_id=${coupon_pool_id}  
    ${unessential_params}  create list  
-   run every case by params  Post admin coupon point records Fail 422  ${essential_params}  ${unessential_params}
+   run every case by params  Post Admin Coupon Point Records Fail 422  ${essential_params}  ${unessential_params}
 
-
-
-Post coupon_point Success 
+Post Admin Coupon Point Records Success 
    [Documentation]  接口名:批量添加定向券${\n}
    ...              请求方式:Post${\n}
    ...              预期结果:输入正确参数,http响应码返回 200,返回的Json数据为  列表。
    [Tags]           Respcode:200
    ${essential_params}  create list  user_ids=${user_ids}  coupon_pool_id=${coupon_pool_id}  
    ${unessential_params}  create list  
-   run every case by params  Post admin coupon point records Success 200  ${essential_params}  ${unessential_params}
+   run every case by params  Post Admin Coupon Point Records Success 200  ${essential_params}  ${unessential_params}
 
-
-
-Post coupon_point Fail Without Login
-   [Documentation]  接口名:文件上传(已停用)${\n}
-   ...              请求方式:Post${\n}
-   ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
-   [Tags]           Respcode:403
-   ${essential_params}  create list  coupon_pool_id=${coupon_pool_id}  
-   ${unessential_params}  create list  
-   run every case by params  Post coupon point records upload Fail 403  ${essential_params}  ${unessential_params}
-
-
-
-Post coupon_point Fail With Wrong Url
+Post coupon Point Records upload Fail With Wrong Url
    [Documentation]  接口名:文件上传(已停用)${\n}
    ...              请求方式:Post${\n}
    ...              预期结果:输入正确参数及错误的url,http响应码返回 404,无Json数据返回。
    [Tags]           Respcode:404
    ${essential_params}  create list  coupon_pool_id=${coupon_pool_id}  
    ${unessential_params}  create list  
-   run every case by params  Post coupon point records upload Fail 404  ${essential_params}  ${unessential_params}
+   run every case by params  Post coupon Point Records upload Fail 404  ${essential_params}  ${unessential_params}
 
-
-
-Post coupon_point Success 
+Post coupon Point Records upload Success 
    [Documentation]  接口名:文件上传(已停用)${\n}
    ...              请求方式:Post${\n}
    ...              预期结果:输入正确参数,http响应码返回 200,返回的Json数据为 CouponPointRecord 列表。
    [Tags]           Respcode:200
    ${essential_params}  create list  coupon_pool_id=${coupon_pool_id}  
    ${unessential_params}  create list  
-   run every case by params  Post coupon point records upload Success 200  ${essential_params}  ${unessential_params}
+   run every case by params  Post coupon Point Records upload Success 200  ${essential_params}  ${unessential_params}
 
-
-
-Post coupon_point Fail With Wrong Params
+Post coupon Point Records upload Fail With Wrong Params
    [Documentation]  接口名:文件上传(已停用)${\n}
    ...              请求方式:Post${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  coupon_pool_id=${coupon_pool_id}  
    ${unessential_params}  create list  
-   run every case by params  Post coupon point records upload Fail 422  ${essential_params}  ${unessential_params}
+   run every case by params  Post coupon Point Records upload Fail 422  ${essential_params}  ${unessential_params}
 
-
-
-Get coupon_point Fail Without Login
+Get Admin Coupon Point Autos Success 
    [Documentation]  接口名:自动定向发券列表${\n}
    ...              请求方式:Get${\n}
-   ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
-   [Tags]           Respcode:403
-   ${essential_params}  create list  
-   ${unessential_params}  create list  coupon_name=${coupon_name}  created_section=${created_section}  page_num=${page_num}  page_size=${page_size}  
-   run every case by params  Get admin coupon point automatic records Fail 403  ${essential_params}  ${unessential_params}
-
-
-
-Get coupon_point Success 
-   [Documentation]  接口名:自动定向发券列表${\n}
-   ...              请求方式:Get${\n}
-   ...              预期结果:输入正确参数,http响应码返回 200,返回的Json数据为 CouponPointAutomaticRecord 列表。
+   ...              预期结果:输入正确参数,http响应码返回 200,返回的Json数据为 CouponPointAuto 列表。
    [Tags]           Respcode:200
    ${essential_params}  create list  
    ${unessential_params}  create list  coupon_name=${coupon_name}  created_section=${created_section}  page_num=${page_num}  page_size=${page_size}  
-   run every case by params  Get admin coupon point automatic records Success 200  ${essential_params}  ${unessential_params}
+   run every case by params  Get Admin Coupon Point Autos Success 200  ${essential_params}  ${unessential_params}
 
-
-
-Get coupon_point Fail With Wrong Params
+Get Admin Coupon Point Autos Fail With Wrong Params
    [Documentation]  接口名:自动定向发券列表${\n}
    ...              请求方式:Get${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  
    ${unessential_params}  create list  coupon_name=${coupon_name}  created_section=${created_section}  page_num=${page_num}  page_size=${page_size}  
-   run every case by params  Get admin coupon point automatic records Fail 422  ${essential_params}  ${unessential_params}
+   run every case by params  Get Admin Coupon Point Autos Fail 422  ${essential_params}  ${unessential_params}
 
-
-
-Get coupon_point Fail Without Login
-   [Documentation]  接口名:定向发券列表${\n}
-   ...              请求方式:Get${\n}
-   ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
-   [Tags]           Respcode:403
-   ${essential_params}  create list  
-   ${unessential_params}  create list  user_id=${user_id}  mobile=${mobile}  status=${status}  is_used=${is_used}  page_num=${page_num}  page_size=${page_size}  
-   run every case by params  Get admin coupon point records Fail 403  ${essential_params}  ${unessential_params}
-
-
-
-Get coupon_point Success 
+Get Admin Coupon Point Records Success 
    [Documentation]  接口名:定向发券列表${\n}
    ...              请求方式:Get${\n}
    ...              预期结果:输入正确参数,http响应码返回 200,返回的Json数据为 CouponPointRecord 列表。
    [Tags]           Respcode:200
    ${essential_params}  create list  
    ${unessential_params}  create list  user_id=${user_id}  mobile=${mobile}  status=${status}  is_used=${is_used}  page_num=${page_num}  page_size=${page_size}  
-   run every case by params  Get admin coupon point records Success 200  ${essential_params}  ${unessential_params}
+   run every case by params  Get Admin Coupon Point Records Success 200  ${essential_params}  ${unessential_params}
 
-
-
-Get coupon_point Fail With Wrong Params
+Get Admin Coupon Point Records Fail With Wrong Params
    [Documentation]  接口名:定向发券列表${\n}
    ...              请求方式:Get${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  
    ${unessential_params}  create list  user_id=${user_id}  mobile=${mobile}  status=${status}  is_used=${is_used}  page_num=${page_num}  page_size=${page_size}  
-   run every case by params  Get admin coupon point records Fail 422  ${essential_params}  ${unessential_params}
+   run every case by params  Get Admin Coupon Point Records Fail 422  ${essential_params}  ${unessential_params}
 
-
-
-Get coupon_point Fail Without Login
-   [Documentation]  接口名:发放记录列表${\n}
-   ...              请求方式:Get${\n}
-   ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
-   [Tags]           Respcode:403
-   ${essential_params}  create list  coupon_point_record_id=${coupon_point_record_id}  
-   ${unessential_params}  create list  coupon_name=${coupon_name}  point_remark=${point_remark}  created_section=${created_section}  page_num=${page_num}  page_size=${page_size}  
-   run every case by params  Get admin coupon points Fail 403  ${essential_params}  ${unessential_params}
-
-
-
-Get coupon_point Success 
+Get Admin Coupon Points Success 
    [Documentation]  接口名:发放记录列表${\n}
    ...              请求方式:Get${\n}
    ...              预期结果:输入正确参数,http响应码返回 200,返回的Json数据为 CouponPoint 列表。
    [Tags]           Respcode:200
    ${essential_params}  create list  coupon_point_record_id=${coupon_point_record_id}  
    ${unessential_params}  create list  coupon_name=${coupon_name}  point_remark=${point_remark}  created_section=${created_section}  page_num=${page_num}  page_size=${page_size}  
-   run every case by params  Get admin coupon points Success 200  ${essential_params}  ${unessential_params}
+   run every case by params  Get Admin Coupon Points Success 200  ${essential_params}  ${unessential_params}
 
-
-
-Get coupon_point Fail With Wrong Params
+Get Admin Coupon Points Fail With Wrong Params
    [Documentation]  接口名:发放记录列表${\n}
    ...              请求方式:Get${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  coupon_point_record_id=${coupon_point_record_id}  
    ${unessential_params}  create list  coupon_name=${coupon_name}  point_remark=${point_remark}  created_section=${created_section}  page_num=${page_num}  page_size=${page_size}  
-   run every case by params  Get admin coupon points Fail 422  ${essential_params}  ${unessential_params}
+   run every case by params  Get Admin Coupon Points Fail 422  ${essential_params}  ${unessential_params}
 
-
-
-Patch coupon_point By Id Success 
+Patch Admin Coupon Point Records By Coupon Point Record Id Success 
    [Documentation]  接口名:定向发券备注${\n}
    ...              请求方式:Patch${\n}
    ...              预期结果:输入正确参数,http响应码返回 204,无Json数据返回。
    [Tags]           Respcode:204
    ${essential_params}  create list  
    ${unessential_params}  create list  point_remark=${point_remark}  
-   run every case by params  Patch admin coupon point records By Id Success 204  ${essential_params}  ${unessential_params}  coupon_point_record_id=${coupon_point_record_id}
+   run every case by params  Patch Admin Coupon Point Records By Coupon Point Record Id Success 204  ${essential_params}  ${unessential_params}  coupon_point_record_id=${coupon_point_record_id}
 
-
-
-Patch coupon_point By Id Fail Without Login
-   [Documentation]  接口名:定向发券备注${\n}
-   ...              请求方式:Patch${\n}
-   ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
-   [Tags]           Respcode:403
-   ${essential_params}  create list  
-   ${unessential_params}  create list  point_remark=${point_remark}  
-   run every case by params  Patch admin coupon point records By Id Fail 403  ${essential_params}  ${unessential_params}  coupon_point_record_id=${coupon_point_record_id}
-
-
-
-Patch coupon_point By Id Fail With Wrong Url
+Patch Admin Coupon Point Records By Coupon Point Record Id Fail With Wrong Url
    [Documentation]  接口名:定向发券备注${\n}
    ...              请求方式:Patch${\n}
    ...              预期结果:输入正确参数及错误的url,http响应码返回 404,无Json数据返回。
    [Tags]           Respcode:404
    ${essential_params}  create list  
    ${unessential_params}  create list  point_remark=${point_remark}  
-   run every case by params  Patch admin coupon point records By Id Fail 404  ${essential_params}  ${unessential_params}  coupon_point_record_id=${wrong_url_id}
+   run every case by params  Patch Admin Coupon Point Records By Coupon Point Record Id Fail 404  ${essential_params}  ${unessential_params}  coupon_point_record_id=${wrong_url_id}
 
-
-
-Patch coupon_point By Id Fail With Wrong Params
+Patch Admin Coupon Point Records By Coupon Point Record Id Fail With Wrong Params
    [Documentation]  接口名:定向发券备注${\n}
    ...              请求方式:Patch${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  
    ${unessential_params}  create list  point_remark=${point_remark}  
-   run every case by params  Patch admin coupon point records By Id Fail 422  ${essential_params}  ${unessential_params}  coupon_point_record_id=${coupon_point_record_id}
+   run every case by params  Patch Admin Coupon Point Records By Coupon Point Record Id Fail 422  ${essential_params}  ${unessential_params}  coupon_point_record_id=${coupon_point_record_id}
 
-
-
-Delete coupon_point By Id Success 
+Delete Admin Coupon Point Records By Coupon Point Record Id Success 
    [Documentation]  接口名:删除定向发券${\n}
    ...              请求方式:Delete${\n}
    ...              预期结果:输入正确参数,http响应码返回 204,无Json数据返回。
    [Tags]           Respcode:204
-   Delete admin coupon point records By Id Success 204  coupon_point_record_id=${coupon_point_record_id}
+   Delete Admin Coupon Point Records By Coupon Point Record Id Success 204  coupon_point_record_id=${coupon_point_record_id}
 
-
-
-Delete coupon_point By Id Fail With Wrong Url
+Delete Admin Coupon Point Records By Coupon Point Record Id Fail With Wrong Url
    [Documentation]  接口名:删除定向发券${\n}
    ...              请求方式:Delete${\n}
    ...              预期结果:输入正确参数及错误的url,http响应码返回 404,无Json数据返回。
    [Tags]           Respcode:404
-   Delete admin coupon point records By Id Fail 404  coupon_point_record_id=${wrong_url_id}
-
-
-
-Delete coupon_point By Id Fail Without Login
-   [Documentation]  接口名:删除定向发券${\n}
-   ...              请求方式:Delete${\n}
-   ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
-   [Tags]           Respcode:403
-   Delete admin coupon point records By Id Fail 403  coupon_point_record_id=${coupon_point_record_id}
-
+   Delete Admin Coupon Point Records By Coupon Point Record Id Fail 404  coupon_point_record_id=${wrong_url_id}
 
 
 *** Variables ***
@@ -293,145 +172,105 @@ ${coupon_point_record_id}
 
 
 *** Keywords ***
-Post Admin coupon point automatic records Fail 403
+Post Admin Coupon Point Autos Success 200
    [Arguments]  &{kwargs}
-   ${resp}=  post admin coupon point automatic records   &{kwargs}
-   expect status is 403  ${resp}  
-
-Post Admin coupon point automatic records Success 200
-   [Arguments]  &{kwargs}
-   ${resp}=  post admin coupon point automatic records   &{kwargs}
-   expect status is 200  ${resp}  admin_coupon_point/Post_Admin_coupon_point_automatic_records_200.json
+   ${resp}=  Post Admin Coupon Point Autos   &{kwargs}
+   expect status is 200  ${resp}  admin_coupon_point/Post_Admin_Coupon_Point_Autos_200.json
    ${coupon_point_record_id}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][coupon_point_record_id]}
    set global variable   ${coupon_point_record_id}
 
-Post Admin coupon point automatic records Fail 422
+Post Admin Coupon Point Autos Fail 422
    [Arguments]  &{kwargs}
-   ${resp}=  post admin coupon point automatic records   &{kwargs}
+   ${resp}=  Post Admin Coupon Point Autos   &{kwargs}
    expect status is 422  ${resp}  
 
-Post Admin coupon point records Fail 403
+Post Admin Coupon Point Records Fail 422
    [Arguments]  &{kwargs}
-   ${resp}=  post admin coupon point records   &{kwargs}
-   expect status is 403  ${resp}  
-
-Post Admin coupon point records Fail 422
-   [Arguments]  &{kwargs}
-   ${resp}=  post admin coupon point records   &{kwargs}
+   ${resp}=  Post Admin Coupon Point Records   &{kwargs}
    expect status is 422  ${resp}  
 
-Post Admin coupon point records Success 200
+Post Admin Coupon Point Records Success 200
    [Arguments]  &{kwargs}
-   ${resp}=  post admin coupon point records   &{kwargs}
-   expect status is 200  ${resp}  admin_coupon_point/Post_Admin_coupon_point_records_200.json
+   ${resp}=  Post Admin Coupon Point Records   &{kwargs}
+   expect status is 200  ${resp}  admin_coupon_point/Post_Admin_Coupon_Point_Records_200.json
    ${coupon_point_record_id}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][coupon_point_record_id]}
    set global variable   ${coupon_point_record_id}
 
-Post Coupon point records upload Fail 403
+Post coupon Point Records upload Fail 404
    [Arguments]  &{kwargs}
-   ${resp}=  post coupon point records upload   &{kwargs}
-   expect status is 403  ${resp}  
-
-Post Coupon point records upload Fail 404
-   [Arguments]  &{kwargs}
-   ${resp}=  post coupon point records upload   &{kwargs}
+   ${resp}=  Post coupon Point Records upload   &{kwargs}
    expect status is 404  ${resp}  
 
-Post Coupon point records upload Success 200
+Post coupon Point Records upload Success 200
    [Arguments]  &{kwargs}
-   ${resp}=  post coupon point records upload   &{kwargs}
-   expect status is 200  ${resp}  admin_coupon_point/Post_Coupon_point_records_upload_200.json
+   ${resp}=  Post coupon Point Records upload   &{kwargs}
+   expect status is 200  ${resp}  admin_coupon_point/Post_coupon_Point_Records_upload_200.json
    ${coupon_point_record_id}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][coupon_point_record_id]}
    set global variable   ${coupon_point_record_id}
 
-Post Coupon point records upload Fail 422
+Post coupon Point Records upload Fail 422
    [Arguments]  &{kwargs}
-   ${resp}=  post coupon point records upload   &{kwargs}
+   ${resp}=  Post coupon Point Records upload   &{kwargs}
    expect status is 422  ${resp}  
 
-Get Admin coupon point automatic records Fail 403
+Get Admin Coupon Point Autos Success 200
    [Arguments]  &{kwargs}
-   ${resp}=  get admin coupon point automatic records   &{kwargs}
-   expect status is 403  ${resp}  
-
-Get Admin coupon point automatic records Success 200
-   [Arguments]  &{kwargs}
-   ${resp}=  get admin coupon point automatic records   &{kwargs}
-   expect status is 200  ${resp}  admin_coupon_point/Get_Admin_coupon_point_automatic_records_200.json
+   ${resp}=  Get Admin Coupon Point Autos   &{kwargs}
+   expect status is 200  ${resp}  admin_coupon_point/Get_Admin_Coupon_Point_Autos_200.json
    ${coupon_point_record_id}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][coupon_point_record_id]}
    set global variable   ${coupon_point_record_id}
 
-Get Admin coupon point automatic records Fail 422
+Get Admin Coupon Point Autos Fail 422
    [Arguments]  &{kwargs}
-   ${resp}=  get admin coupon point automatic records   &{kwargs}
+   ${resp}=  Get Admin Coupon Point Autos   &{kwargs}
    expect status is 422  ${resp}  
 
-Get Admin coupon point records Fail 403
+Get Admin Coupon Point Records Success 200
    [Arguments]  &{kwargs}
-   ${resp}=  get admin coupon point records   &{kwargs}
-   expect status is 403  ${resp}  
-
-Get Admin coupon point records Success 200
-   [Arguments]  &{kwargs}
-   ${resp}=  get admin coupon point records   &{kwargs}
-   expect status is 200  ${resp}  admin_coupon_point/Get_Admin_coupon_point_records_200.json
+   ${resp}=  Get Admin Coupon Point Records   &{kwargs}
+   expect status is 200  ${resp}  admin_coupon_point/Get_Admin_Coupon_Point_Records_200.json
    ${coupon_point_record_id}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][coupon_point_record_id]}
    set global variable   ${coupon_point_record_id}
 
-Get Admin coupon point records Fail 422
+Get Admin Coupon Point Records Fail 422
    [Arguments]  &{kwargs}
-   ${resp}=  get admin coupon point records   &{kwargs}
+   ${resp}=  Get Admin Coupon Point Records   &{kwargs}
    expect status is 422  ${resp}  
 
-Get Admin coupon points Fail 403
+Get Admin Coupon Points Success 200
    [Arguments]  &{kwargs}
-   ${resp}=  get admin coupon points   &{kwargs}
-   expect status is 403  ${resp}  
-
-Get Admin coupon points Success 200
-   [Arguments]  &{kwargs}
-   ${resp}=  get admin coupon points   &{kwargs}
-   expect status is 200  ${resp}  admin_coupon_point/Get_Admin_coupon_points_200.json
+   ${resp}=  Get Admin Coupon Points   &{kwargs}
+   expect status is 200  ${resp}  admin_coupon_point/Get_Admin_Coupon_Points_200.json
    ${coupon_point_record_id}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][coupon_point_record_id]}
    set global variable   ${coupon_point_record_id}
 
-Get Admin coupon points Fail 422
+Get Admin Coupon Points Fail 422
    [Arguments]  &{kwargs}
-   ${resp}=  get admin coupon points   &{kwargs}
+   ${resp}=  Get Admin Coupon Points   &{kwargs}
    expect status is 422  ${resp}  
 
-Patch Admin coupon point records By Id Success 204
+Patch Admin Coupon Point Records By Coupon Point Record Id Success 204
    [Arguments]  &{kwargs}
-   ${resp}=  patch admin coupon point records by coupon point record id  &{kwargs}
+   ${resp}=  Patch Admin Coupon Point Records By Coupon Point Record Id   &{kwargs}
    expect status is 204  ${resp}  
 
-Patch Admin coupon point records By Id Fail 403
+Patch Admin Coupon Point Records By Coupon Point Record Id Fail 404
    [Arguments]  &{kwargs}
-   ${resp}=  patch admin coupon point records by coupon point record id  &{kwargs}
-   expect status is 403  ${resp}  
-
-Patch Admin coupon point records By Id Fail 404
-   [Arguments]  &{kwargs}
-   ${resp}=  patch admin coupon point records by coupon point record id  &{kwargs}
+   ${resp}=  Patch Admin Coupon Point Records By Coupon Point Record Id   &{kwargs}
    expect status is 404  ${resp}  
 
-Patch Admin coupon point records By Id Fail 422
+Patch Admin Coupon Point Records By Coupon Point Record Id Fail 422
    [Arguments]  &{kwargs}
-   ${resp}=  patch admin coupon point records by coupon point record id  &{kwargs}
+   ${resp}=  Patch Admin Coupon Point Records By Coupon Point Record Id   &{kwargs}
    expect status is 422  ${resp}  
 
-Delete Admin coupon point records By Id Success 204
+Delete Admin Coupon Point Records By Coupon Point Record Id Success 204
    [Arguments]  &{kwargs}
-   ${resp}=  delete admin coupon point records by coupon point record id  &{kwargs}
+   ${resp}=  Delete Admin Coupon Point Records By Coupon Point Record Id   &{kwargs}
    expect status is 204  ${resp}  
 
-Delete Admin coupon point records By Id Fail 404
+Delete Admin Coupon Point Records By Coupon Point Record Id Fail 404
    [Arguments]  &{kwargs}
-   ${resp}=  delete admin coupon point records by coupon point record id  &{kwargs}
+   ${resp}=  Delete Admin Coupon Point Records By Coupon Point Record Id   &{kwargs}
    expect status is 404  ${resp}  
-
-Delete Admin coupon point records By Id Fail 403
-   [Arguments]  &{kwargs}
-   ${resp}=  delete admin coupon point records by coupon point record id  &{kwargs}
-   expect status is 403  ${resp}  
 

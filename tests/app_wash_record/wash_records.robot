@@ -8,601 +8,359 @@ Force Tags  model:app_wash_record  虾客APP
 
 
 *** Test Cases ***
-Post wash_record By Id Fail Without Login
-   [Documentation]  接口名:智能更新订单${\n}
-   ...              请求方式:Post${\n}
-   ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
-   [Tags]           Respcode:403
-   ${essential_params}  create list  status=${status}  
-   ${unessential_params}  create list  before_wash_images=${before_wash_images}  after_wash_images=${after_wash_images}  wash_tags=${wash_tags}  description=${description}  start_time=${start_time}  end_time=${end_time}  dirty_percent=${dirty_percent}  washer_remark=${washer_remark}  mark=${mark}  
-   run every case by params  Post car wash wash records By Id Fail 403  ${essential_params}  ${unessential_params}  wash_record_id/update=${wash_record_id/update}
-
-
-
-Post wash_record By Id Fail With Wrong Url
+Post Update By Wash Record Id Fail With Wrong Url
    [Documentation]  接口名:智能更新订单${\n}
    ...              请求方式:Post${\n}
    ...              预期结果:输入正确参数及错误的url,http响应码返回 404,无Json数据返回。
    [Tags]           Respcode:404
    ${essential_params}  create list  status=${status}  
    ${unessential_params}  create list  before_wash_images=${before_wash_images}  after_wash_images=${after_wash_images}  wash_tags=${wash_tags}  description=${description}  start_time=${start_time}  end_time=${end_time}  dirty_percent=${dirty_percent}  washer_remark=${washer_remark}  mark=${mark}  
-   run every case by params  Post car wash wash records By Id Fail 404  ${essential_params}  ${unessential_params}  wash_record_id/update=${wrong_url_id}
+   run every case by params  Post Update By Wash Record Id Fail 404  ${essential_params}  ${unessential_params}  wash_record_id/update=${wrong_url_id}
 
-
-
-Post wash_record By Id Success 
+Post Update By Wash Record Id Success 
    [Documentation]  接口名:智能更新订单${\n}
    ...              请求方式:Post${\n}
    ...              预期结果:输入正确参数,http响应码返回 201,返回的Json数据符合验证。
    [Tags]           Respcode:201
    ${essential_params}  create list  status=${status}  
    ${unessential_params}  create list  before_wash_images=${before_wash_images}  after_wash_images=${after_wash_images}  wash_tags=${wash_tags}  description=${description}  start_time=${start_time}  end_time=${end_time}  dirty_percent=${dirty_percent}  washer_remark=${washer_remark}  mark=${mark}  
-   run every case by params  Post car wash wash records By Id Success 201  ${essential_params}  ${unessential_params}  wash_record_id/update=${wash_record_id/update}
+   run every case by params  Post Update By Wash Record Id Success 201  ${essential_params}  ${unessential_params}  wash_record_id/update=${wash_record_id/update}
 
-
-
-Post wash_record By Id Fail With Wrong Params
+Post Update By Wash Record Id Fail With Wrong Params
    [Documentation]  接口名:智能更新订单${\n}
    ...              请求方式:Post${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  status=${status}  
    ${unessential_params}  create list  before_wash_images=${before_wash_images}  after_wash_images=${after_wash_images}  wash_tags=${wash_tags}  description=${description}  start_time=${start_time}  end_time=${end_time}  dirty_percent=${dirty_percent}  washer_remark=${washer_remark}  mark=${mark}  
-   run every case by params  Post car wash wash records By Id Fail 422  ${essential_params}  ${unessential_params}  wash_record_id/update=${wash_record_id/update}
+   run every case by params  Post Update By Wash Record Id Fail 422  ${essential_params}  ${unessential_params}  wash_record_id/update=${wash_record_id/update}
 
-
-
-Post wash_record By Id Fail Without Login
-   [Documentation]  接口名:上传洗车备注及标记${\n}
-   ...              请求方式:Post${\n}
-   ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
-   [Tags]           Respcode:403
-   ${essential_params}  create list  
-   ${unessential_params}  create list  washer_remark=${washer_remark}  mark=${mark}  
-   run every case by params  Post car wash wash records By Id Fail 403  ${essential_params}  ${unessential_params}  wash_record_id/upload_mark=${wash_record_id/upload_mark}
-
-
-
-Post wash_record By Id Fail With Wrong Url
+Post upload Mark by wash record id Fail With Wrong Url
    [Documentation]  接口名:上传洗车备注及标记${\n}
    ...              请求方式:Post${\n}
    ...              预期结果:输入正确参数及错误的url,http响应码返回 404,无Json数据返回。
    [Tags]           Respcode:404
    ${essential_params}  create list  
    ${unessential_params}  create list  washer_remark=${washer_remark}  mark=${mark}  
-   run every case by params  Post car wash wash records By Id Fail 404  ${essential_params}  ${unessential_params}  wash_record_id/upload_mark=${wrong_url_id}
+   run every case by params  Post upload Mark by wash record id Fail 404  ${essential_params}  ${unessential_params}  wash_record_id/upload_mark=${wrong_url_id}
 
-
-
-Post wash_record By Id Success 
+Post upload Mark by wash record id Success 
    [Documentation]  接口名:上传洗车备注及标记${\n}
    ...              请求方式:Post${\n}
    ...              预期结果:输入正确参数,http响应码返回 201,返回的Json数据符合验证。
    [Tags]           Respcode:201
    ${essential_params}  create list  
    ${unessential_params}  create list  washer_remark=${washer_remark}  mark=${mark}  
-   run every case by params  Post car wash wash records By Id Success 201  ${essential_params}  ${unessential_params}  wash_record_id/upload_mark=${wash_record_id/upload_mark}
+   run every case by params  Post upload Mark by wash record id Success 201  ${essential_params}  ${unessential_params}  wash_record_id/upload_mark=${wash_record_id/upload_mark}
 
-
-
-Post wash_record By Id Fail With Wrong Params
+Post upload Mark by wash record id Fail With Wrong Params
    [Documentation]  接口名:上传洗车备注及标记${\n}
    ...              请求方式:Post${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  
    ${unessential_params}  create list  washer_remark=${washer_remark}  mark=${mark}  
-   run every case by params  Post car wash wash records By Id Fail 422  ${essential_params}  ${unessential_params}  wash_record_id/upload_mark=${wash_record_id/upload_mark}
+   run every case by params  Post upload Mark by wash record id Fail 422  ${essential_params}  ${unessential_params}  wash_record_id/upload_mark=${wash_record_id/upload_mark}
 
-
-
-Post wash_record By Id Fail Without Login
-   [Documentation]  接口名:上传洗车记录${\n}
-   ...              请求方式:Post${\n}
-   ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
-   [Tags]           Respcode:403
-   ${essential_params}  create list  before_wash_images=${before_wash_images}  status=${status}  after_wash_images=${after_wash_images}  start_time=${start_time}  end_time=${end_time}  dirty_percent=${dirty_percent}  
-   ${unessential_params}  create list  tags=${Please_input}  description=${description}  
-   run every case by params  Post car wash wash records By Id Fail 403  ${essential_params}  ${unessential_params}  wash_record_id/upload=${wash_record_id/upload}
-
-
-
-Post wash_record By Id Fail With Wrong Url
+Post Upload By Wash Record Id Fail With Wrong Url
    [Documentation]  接口名:上传洗车记录${\n}
    ...              请求方式:Post${\n}
    ...              预期结果:输入正确参数及错误的url,http响应码返回 404,无Json数据返回。
    [Tags]           Respcode:404
    ${essential_params}  create list  before_wash_images=${before_wash_images}  status=${status}  after_wash_images=${after_wash_images}  start_time=${start_time}  end_time=${end_time}  dirty_percent=${dirty_percent}  
    ${unessential_params}  create list  tags=${Please_input}  description=${description}  
-   run every case by params  Post car wash wash records By Id Fail 404  ${essential_params}  ${unessential_params}  wash_record_id/upload=${wrong_url_id}
+   run every case by params  Post Upload By Wash Record Id Fail 404  ${essential_params}  ${unessential_params}  wash_record_id/upload=${wrong_url_id}
 
-
-
-Post wash_record By Id Success 
+Post Upload By Wash Record Id Success 
    [Documentation]  接口名:上传洗车记录${\n}
    ...              请求方式:Post${\n}
    ...              预期结果:输入正确参数,http响应码返回 201,返回的Json数据符合验证。
    [Tags]           Respcode:201
    ${essential_params}  create list  before_wash_images=${before_wash_images}  status=${status}  after_wash_images=${after_wash_images}  start_time=${start_time}  end_time=${end_time}  dirty_percent=${dirty_percent}  
    ${unessential_params}  create list  tags=${Please_input}  description=${description}  
-   run every case by params  Post car wash wash records By Id Success 201  ${essential_params}  ${unessential_params}  wash_record_id/upload=${wash_record_id/upload}
+   run every case by params  Post Upload By Wash Record Id Success 201  ${essential_params}  ${unessential_params}  wash_record_id/upload=${wash_record_id/upload}
 
-
-
-Post wash_record By Id Fail With Wrong Params
+Post Upload By Wash Record Id Fail With Wrong Params
    [Documentation]  接口名:上传洗车记录${\n}
    ...              请求方式:Post${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  before_wash_images=${before_wash_images}  status=${status}  after_wash_images=${after_wash_images}  start_time=${start_time}  end_time=${end_time}  dirty_percent=${dirty_percent}  
    ${unessential_params}  create list  tags=${Please_input}  description=${description}  
-   run every case by params  Post car wash wash records By Id Fail 422  ${essential_params}  ${unessential_params}  wash_record_id/upload=${wash_record_id/upload}
+   run every case by params  Post Upload By Wash Record Id Fail 422  ${essential_params}  ${unessential_params}  wash_record_id/upload=${wash_record_id/upload}
 
-
-
-Post wash_record By Id Fail Without Login
-   [Documentation]  接口名:洗车${\n}
-   ...              请求方式:Post${\n}
-   ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
-   [Tags]           Respcode:403
-   ${essential_params}  create list  before_wash_images=${before_wash_images}  
-   ${unessential_params}  create list  tags=${Please_input}  description=${description}  
-   run every case by params  Post car wash wash records By Id Fail 403  ${essential_params}  ${unessential_params}  wash_record_id/wash=${wash_record_id/wash}
-
-
-
-Post wash_record By Id Fail With Wrong Url
+Post Wash By Wash Record Id Fail With Wrong Url
    [Documentation]  接口名:洗车${\n}
    ...              请求方式:Post${\n}
    ...              预期结果:输入正确参数及错误的url,http响应码返回 404,无Json数据返回。
    [Tags]           Respcode:404
    ${essential_params}  create list  before_wash_images=${before_wash_images}  
    ${unessential_params}  create list  tags=${Please_input}  description=${description}  
-   run every case by params  Post car wash wash records By Id Fail 404  ${essential_params}  ${unessential_params}  wash_record_id/wash=${wrong_url_id}
+   run every case by params  Post Wash By Wash Record Id Fail 404  ${essential_params}  ${unessential_params}  wash_record_id/wash=${wrong_url_id}
 
-
-
-Post wash_record By Id Success 
+Post Wash By Wash Record Id Success 
    [Documentation]  接口名:洗车${\n}
    ...              请求方式:Post${\n}
    ...              预期结果:输入正确参数,http响应码返回 201,返回的Json数据符合验证。
    [Tags]           Respcode:201
    ${essential_params}  create list  before_wash_images=${before_wash_images}  
    ${unessential_params}  create list  tags=${Please_input}  description=${description}  
-   run every case by params  Post car wash wash records By Id Success 201  ${essential_params}  ${unessential_params}  wash_record_id/wash=${wash_record_id/wash}
+   run every case by params  Post Wash By Wash Record Id Success 201  ${essential_params}  ${unessential_params}  wash_record_id/wash=${wash_record_id/wash}
 
-
-
-Post wash_record By Id Fail With Wrong Params
+Post Wash By Wash Record Id Fail With Wrong Params
    [Documentation]  接口名:洗车${\n}
    ...              请求方式:Post${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  before_wash_images=${before_wash_images}  
    ${unessential_params}  create list  tags=${Please_input}  description=${description}  
-   run every case by params  Post car wash wash records By Id Fail 422  ${essential_params}  ${unessential_params}  wash_record_id/wash=${wash_record_id/wash}
+   run every case by params  Post Wash By Wash Record Id Fail 422  ${essential_params}  ${unessential_params}  wash_record_id/wash=${wash_record_id/wash}
 
-
-
-Post wash_record By Id Fail Without Login
-   [Documentation]  接口名:完成洗车${\n}
-   ...              请求方式:Post${\n}
-   ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
-   [Tags]           Respcode:403
-   ${essential_params}  create list  after_wash_images=${after_wash_images}  
-   ${unessential_params}  create list  
-   run every case by params  Post car wash wash records By Id Fail 403  ${essential_params}  ${unessential_params}  wash_record_id/finish=${wash_record_id/finish}
-
-
-
-Post wash_record By Id Fail With Wrong Url
+Post Finish By Wash Record Id Fail With Wrong Url
    [Documentation]  接口名:完成洗车${\n}
    ...              请求方式:Post${\n}
    ...              预期结果:输入正确参数及错误的url,http响应码返回 404,无Json数据返回。
    [Tags]           Respcode:404
    ${essential_params}  create list  after_wash_images=${after_wash_images}  
    ${unessential_params}  create list  
-   run every case by params  Post car wash wash records By Id Fail 404  ${essential_params}  ${unessential_params}  wash_record_id/finish=${wrong_url_id}
+   run every case by params  Post Finish By Wash Record Id Fail 404  ${essential_params}  ${unessential_params}  wash_record_id/finish=${wrong_url_id}
 
-
-
-Post wash_record By Id Success 
+Post Finish By Wash Record Id Success 
    [Documentation]  接口名:完成洗车${\n}
    ...              请求方式:Post${\n}
    ...              预期结果:输入正确参数,http响应码返回 204,无Json数据返回。
    [Tags]           Respcode:204
    ${essential_params}  create list  after_wash_images=${after_wash_images}  
    ${unessential_params}  create list  
-   run every case by params  Post car wash wash records By Id Success 204  ${essential_params}  ${unessential_params}  wash_record_id/finish=${wash_record_id/finish}
+   run every case by params  Post Finish By Wash Record Id Success 204  ${essential_params}  ${unessential_params}  wash_record_id/finish=${wash_record_id/finish}
 
-
-
-Post wash_record By Id Fail With Wrong Params
+Post Finish By Wash Record Id Fail With Wrong Params
    [Documentation]  接口名:完成洗车${\n}
    ...              请求方式:Post${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  after_wash_images=${after_wash_images}  
    ${unessential_params}  create list  
-   run every case by params  Post car wash wash records By Id Fail 422  ${essential_params}  ${unessential_params}  wash_record_id/finish=${wash_record_id/finish}
+   run every case by params  Post Finish By Wash Record Id Fail 422  ${essential_params}  ${unessential_params}  wash_record_id/finish=${wash_record_id/finish}
 
-
-
-Get wash_record Fail Without Login
-   [Documentation]  接口名:获取虾克历史订单列表${\n}
-   ...              请求方式:Get${\n}
-   ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
-   [Tags]           Respcode:403
-   ${essential_params}  create list  
-   ${unessential_params}  create list  section=${section}  page_limit=${page_limit}  
-   run every case by params  Get user wash records Fail 403  ${essential_params}  ${unessential_params}
-
-
-
-Get wash_record Success 
+Get User Wash Records Success 
    [Documentation]  接口名:获取虾克历史订单列表${\n}
    ...              请求方式:Get${\n}
    ...              预期结果:输入正确参数,http响应码返回 200,返回的Json数据为 WashRecord 列表。
    [Tags]           Respcode:200
    ${essential_params}  create list  
    ${unessential_params}  create list  section=${section}  page_limit=${page_limit}  
-   run every case by params  Get user wash records Success 200  ${essential_params}  ${unessential_params}
+   run every case by params  Get User Wash Records Success 200  ${essential_params}  ${unessential_params}
 
-
-
-Get wash_record Fail With Wrong Params
+Get User Wash Records Fail With Wrong Params
    [Documentation]  接口名:获取虾克历史订单列表${\n}
    ...              请求方式:Get${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  
    ${unessential_params}  create list  section=${section}  page_limit=${page_limit}  
-   run every case by params  Get user wash records Fail 422  ${essential_params}  ${unessential_params}
+   run every case by params  Get User Wash Records Fail 422  ${essential_params}  ${unessential_params}
 
-
-
-Get wash_record Fail Without Login
-   [Documentation]  接口名:车牌号批量获取在场状态${\n}
-   ...              请求方式:Get${\n}
-   ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
-   [Tags]           Respcode:403
-   ${essential_params}  create list  car_ids=${car_ids}  
-   ${unessential_params}  create list  parking_id=${parking_id}  
-   run every case by params  Get cars in parking Fail 403  ${essential_params}  ${unessential_params}
-
-
-
-Get wash_record Success 
+Get Cars In Parking Success 
    [Documentation]  接口名:车牌号批量获取在场状态${\n}
    ...              请求方式:Get${\n}
    ...              预期结果:输入正确参数,http响应码返回 200,返回的Json数据为  列表。
    [Tags]           Respcode:200
    ${essential_params}  create list  car_ids=${car_ids}  
    ${unessential_params}  create list  parking_id=${parking_id}  
-   run every case by params  Get cars in parking Success 200  ${essential_params}  ${unessential_params}
+   run every case by params  Get Cars In Parking Success 200  ${essential_params}  ${unessential_params}
 
-
-
-Get wash_record Fail With Wrong Params
+Get Cars In Parking Fail With Wrong Params
    [Documentation]  接口名:车牌号批量获取在场状态${\n}
    ...              请求方式:Get${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  car_ids=${car_ids}  
    ${unessential_params}  create list  parking_id=${parking_id}  
-   run every case by params  Get cars in parking Fail 422  ${essential_params}  ${unessential_params}
+   run every case by params  Get Cars In Parking Fail 422  ${essential_params}  ${unessential_params}
 
-
-
-Get wash_record Fail Without Login
-   [Documentation]  接口名:洗车记录按停车场区进行分组${\n}
-   ...              请求方式:Get${\n}
-   ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
-   [Tags]           Respcode:403
-   ${essential_params}  create list  status=${status}  wash_area_id=${wash_area_id}  
-   ${unessential_params}  create list  parking_id=${parking_id}  
-   run every case by params  Get wash records group by zone Fail 403  ${essential_params}  ${unessential_params}
-
-
-
-Get wash_record Success 
+Get wash Records group by zone Success 
    [Documentation]  接口名:洗车记录按停车场区进行分组${\n}
    ...              请求方式:Get${\n}
    ...              预期结果:输入正确参数,http响应码返回 200,返回的Json数据为  列表。
    [Tags]           Respcode:200
    ${essential_params}  create list  status=${status}  wash_area_id=${wash_area_id}  
    ${unessential_params}  create list  parking_id=${parking_id}  
-   run every case by params  Get wash records group by zone Success 200  ${essential_params}  ${unessential_params}
+   run every case by params  Get wash Records group by zone Success 200  ${essential_params}  ${unessential_params}
 
-
-
-Get wash_record Fail With Wrong Params
+Get wash Records group by zone Fail With Wrong Params
    [Documentation]  接口名:洗车记录按停车场区进行分组${\n}
    ...              请求方式:Get${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  status=${status}  wash_area_id=${wash_area_id}  
    ${unessential_params}  create list  parking_id=${parking_id}  
-   run every case by params  Get wash records group by zone Fail 422  ${essential_params}  ${unessential_params}
+   run every case by params  Get wash Records group by zone Fail 422  ${essential_params}  ${unessential_params}
 
-
-
-Get wash_record Fail Without Login
-   [Documentation]  接口名:洗车记录根据距离排序${\n}
-   ...              请求方式:Get${\n}
-   ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
-   [Tags]           Respcode:403
-   ${essential_params}  create list  radius=${radius}  center=${center}  status=${status}  limit=${limit}  wash_area_id=${wash_area_id}  
-   ${unessential_params}  create list  
-   run every case by params  Get wash records nearby Fail 403  ${essential_params}  ${unessential_params}
-
-
-
-Get wash_record Success 
+Get wash Records nearby Success 
    [Documentation]  接口名:洗车记录根据距离排序${\n}
    ...              请求方式:Get${\n}
    ...              预期结果:输入正确参数,http响应码返回 200,返回的Json数据为 WashRecord 列表。
    [Tags]           Respcode:200
    ${essential_params}  create list  radius=${radius}  center=${center}  status=${status}  limit=${limit}  wash_area_id=${wash_area_id}  
    ${unessential_params}  create list  
-   run every case by params  Get wash records nearby Success 200  ${essential_params}  ${unessential_params}
+   run every case by params  Get wash Records nearby Success 200  ${essential_params}  ${unessential_params}
 
-
-
-Get wash_record Fail With Wrong Params
+Get wash Records nearby Fail With Wrong Params
    [Documentation]  接口名:洗车记录根据距离排序${\n}
    ...              请求方式:Get${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  radius=${radius}  center=${center}  status=${status}  limit=${limit}  wash_area_id=${wash_area_id}  
    ${unessential_params}  create list  
-   run every case by params  Get wash records nearby Fail 422  ${essential_params}  ${unessential_params}
+   run every case by params  Get wash Records nearby Fail 422  ${essential_params}  ${unessential_params}
 
-
-
-Get wash_record Fail Without Login
-   [Documentation]  接口名:获取洗车记录列表${\n}
-   ...              请求方式:Get${\n}
-   ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
-   [Tags]           Respcode:403
-   ${essential_params}  create list  
-   ${unessential_params}  create list  status=${status}  car_id=${car_id}  wash_group_id=${wash_group_id}  section=${section}  page_limit=${page_limit}  wash_area_id=${wash_area_id}  order_by=${order_by}  floor=${floor}  zone=${zone}  
-   run every case by params  Get car wash wash records Fail 403  ${essential_params}  ${unessential_params}
-
-
-
-Get wash_record Success 
+Get car Wash wash records Success 
    [Documentation]  接口名:获取洗车记录列表${\n}
    ...              请求方式:Get${\n}
    ...              预期结果:输入正确参数,http响应码返回 200,返回的Json数据为 WashRecord 列表。
    [Tags]           Respcode:200
    ${essential_params}  create list  
    ${unessential_params}  create list  status=${status}  car_id=${car_id}  wash_group_id=${wash_group_id}  section=${section}  page_limit=${page_limit}  wash_area_id=${wash_area_id}  order_by=${order_by}  floor=${floor}  zone=${zone}  
-   run every case by params  Get car wash wash records Success 200  ${essential_params}  ${unessential_params}
+   run every case by params  Get car Wash wash records Success 200  ${essential_params}  ${unessential_params}
 
-
-
-Get wash_record Fail With Wrong Params
+Get car Wash wash records Fail With Wrong Params
    [Documentation]  接口名:获取洗车记录列表${\n}
    ...              请求方式:Get${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  
    ${unessential_params}  create list  status=${status}  car_id=${car_id}  wash_group_id=${wash_group_id}  section=${section}  page_limit=${page_limit}  wash_area_id=${wash_area_id}  order_by=${order_by}  floor=${floor}  zone=${zone}  
-   run every case by params  Get car wash wash records Fail 422  ${essential_params}  ${unessential_params}
+   run every case by params  Get car Wash wash records Fail 422  ${essential_params}  ${unessential_params}
 
-
-
-Get wash_record By Id Fail Without Login
-   [Documentation]  接口名:获取单个洗车记录${\n}
-   ...              请求方式:Get${\n}
-   ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
-   [Tags]           Respcode:403
-   Get car wash wash records By Id Fail 403  wash_record_id=${wash_record_id}
-
-
-
-Get wash_record By Id Fail With Wrong Url
+Get car Wash wash records by wash record id Fail With Wrong Url
    [Documentation]  接口名:获取单个洗车记录${\n}
    ...              请求方式:Get${\n}
    ...              预期结果:输入正确参数及错误的url,http响应码返回 404,无Json数据返回。
    [Tags]           Respcode:404
-   Get car wash wash records By Id Fail 404  wash_record_id=${wrong_url_id}
+   Get car Wash wash records by wash record id Fail 404  wash_record_id=${wrong_url_id}
 
-
-
-Get wash_record By Id Success 
+Get car Wash wash records by wash record id Success 
    [Documentation]  接口名:获取单个洗车记录${\n}
    ...              请求方式:Get${\n}
    ...              预期结果:输入正确参数,http响应码返回 200,返回的Json数据为 WashRecord 对象。
    [Tags]           Respcode:200
-   Get car wash wash records By Id Success 200  wash_record_id=${wash_record_id}
+   Get car Wash wash records by wash record id Success 200  wash_record_id=${wash_record_id}
 
-
-
-Get wash_record By Id Fail With Wrong Params
+Get car Wash wash records by wash record id Fail With Wrong Params
    [Documentation]  接口名:获取单个洗车记录${\n}
    ...              请求方式:Get${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   Get car wash wash records By Id Fail 422  wash_record_id=${wash_record_id}
+   Get car Wash wash records by wash record id Fail 422  wash_record_id=${wash_record_id}
 
-
-
-Get wash_record Fail Without Login
-   [Documentation]  接口名:查询车辆是否在场内${\n}
-   ...              请求方式:Get${\n}
-   ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
-   [Tags]           Respcode:403
-   ${essential_params}  create list  car_id=${car_id}  
-   ${unessential_params}  create list  parking_id=${parking_id}  
-   run every case by params  Get car in parking Fail 403  ${essential_params}  ${unessential_params}
-
-
-
-Get wash_record Fail With Wrong Url
+Get Car In Parking Fail With Wrong Url
    [Documentation]  接口名:查询车辆是否在场内${\n}
    ...              请求方式:Get${\n}
    ...              预期结果:输入正确参数及错误的url,http响应码返回 404,无Json数据返回。
    [Tags]           Respcode:404
    ${essential_params}  create list  car_id=${car_id}  
    ${unessential_params}  create list  parking_id=${parking_id}  
-   run every case by params  Get car in parking Fail 404  ${essential_params}  ${unessential_params}
+   run every case by params  Get Car In Parking Fail 404  ${essential_params}  ${unessential_params}
 
-
-
-Get wash_record Success 
+Get Car In Parking Success 
    [Documentation]  接口名:查询车辆是否在场内${\n}
    ...              请求方式:Get${\n}
    ...              预期结果:输入正确参数,http响应码返回 200,返回的Json数据为  列表。
    [Tags]           Respcode:200
    ${essential_params}  create list  car_id=${car_id}  
    ${unessential_params}  create list  parking_id=${parking_id}  
-   run every case by params  Get car in parking Success 200  ${essential_params}  ${unessential_params}
+   run every case by params  Get Car In Parking Success 200  ${essential_params}  ${unessential_params}
 
-
-
-Get wash_record Fail With Wrong Params
+Get Car In Parking Fail With Wrong Params
    [Documentation]  接口名:查询车辆是否在场内${\n}
    ...              请求方式:Get${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  car_id=${car_id}  
    ${unessential_params}  create list  parking_id=${parking_id}  
-   run every case by params  Get car in parking Fail 422  ${essential_params}  ${unessential_params}
+   run every case by params  Get Car In Parking Fail 422  ${essential_params}  ${unessential_params}
 
-
-
-Patch wash_record By Id Success 
+Patch washer Remark by wash record id Success 
    [Documentation]  接口名:备注${\n}
    ...              请求方式:Patch${\n}
    ...              预期结果:输入正确参数,http响应码返回 204,无Json数据返回。
    [Tags]           Respcode:204
    ${essential_params}  create list  
    ${unessential_params}  create list  washer_remark=${washer_remark}  
-   run every case by params  Patch car wash wash records By Id Success 204  ${essential_params}  ${unessential_params}  wash_record_id/washer_remark=${wash_record_id/washer_remark}
+   run every case by params  Patch washer Remark by wash record id Success 204  ${essential_params}  ${unessential_params}  wash_record_id/washer_remark=${wash_record_id/washer_remark}
 
-
-
-Patch wash_record By Id Fail Without Login
-   [Documentation]  接口名:备注${\n}
-   ...              请求方式:Patch${\n}
-   ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
-   [Tags]           Respcode:403
-   ${essential_params}  create list  
-   ${unessential_params}  create list  washer_remark=${washer_remark}  
-   run every case by params  Patch car wash wash records By Id Fail 403  ${essential_params}  ${unessential_params}  wash_record_id/washer_remark=${wash_record_id/washer_remark}
-
-
-
-Patch wash_record By Id Fail With Wrong Url
+Patch washer Remark by wash record id Fail With Wrong Url
    [Documentation]  接口名:备注${\n}
    ...              请求方式:Patch${\n}
    ...              预期结果:输入正确参数及错误的url,http响应码返回 404,无Json数据返回。
    [Tags]           Respcode:404
    ${essential_params}  create list  
    ${unessential_params}  create list  washer_remark=${washer_remark}  
-   run every case by params  Patch car wash wash records By Id Fail 404  ${essential_params}  ${unessential_params}  wash_record_id/washer_remark=${wrong_url_id}
+   run every case by params  Patch washer Remark by wash record id Fail 404  ${essential_params}  ${unessential_params}  wash_record_id/washer_remark=${wrong_url_id}
 
-
-
-Patch wash_record By Id Fail With Wrong Params
+Patch washer Remark by wash record id Fail With Wrong Params
    [Documentation]  接口名:备注${\n}
    ...              请求方式:Patch${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  
    ${unessential_params}  create list  washer_remark=${washer_remark}  
-   run every case by params  Patch car wash wash records By Id Fail 422  ${essential_params}  ${unessential_params}  wash_record_id/washer_remark=${wash_record_id/washer_remark}
+   run every case by params  Patch washer Remark by wash record id Fail 422  ${essential_params}  ${unessential_params}  wash_record_id/washer_remark=${wash_record_id/washer_remark}
 
-
-
-Patch wash_record By Id Success 
+Patch Mark By Wash Record Id Success 
    [Documentation]  接口名:标记${\n}
    ...              请求方式:Patch${\n}
    ...              预期结果:输入正确参数,http响应码返回 204,无Json数据返回。
    [Tags]           Respcode:204
    ${essential_params}  create list  
    ${unessential_params}  create list  mark=${mark}  
-   run every case by params  Patch car wash wash records By Id Success 204  ${essential_params}  ${unessential_params}  wash_record_id/mark=${wash_record_id/mark}
+   run every case by params  Patch Mark By Wash Record Id Success 204  ${essential_params}  ${unessential_params}  wash_record_id/mark=${wash_record_id/mark}
 
-
-
-Patch wash_record By Id Fail Without Login
-   [Documentation]  接口名:标记${\n}
-   ...              请求方式:Patch${\n}
-   ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
-   [Tags]           Respcode:403
-   ${essential_params}  create list  
-   ${unessential_params}  create list  mark=${mark}  
-   run every case by params  Patch car wash wash records By Id Fail 403  ${essential_params}  ${unessential_params}  wash_record_id/mark=${wash_record_id/mark}
-
-
-
-Patch wash_record By Id Fail With Wrong Url
+Patch Mark By Wash Record Id Fail With Wrong Url
    [Documentation]  接口名:标记${\n}
    ...              请求方式:Patch${\n}
    ...              预期结果:输入正确参数及错误的url,http响应码返回 404,无Json数据返回。
    [Tags]           Respcode:404
    ${essential_params}  create list  
    ${unessential_params}  create list  mark=${mark}  
-   run every case by params  Patch car wash wash records By Id Fail 404  ${essential_params}  ${unessential_params}  wash_record_id/mark=${wrong_url_id}
+   run every case by params  Patch Mark By Wash Record Id Fail 404  ${essential_params}  ${unessential_params}  wash_record_id/mark=${wrong_url_id}
 
-
-
-Patch wash_record By Id Fail With Wrong Params
+Patch Mark By Wash Record Id Fail With Wrong Params
    [Documentation]  接口名:标记${\n}
    ...              请求方式:Patch${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  
    ${unessential_params}  create list  mark=${mark}  
-   run every case by params  Patch car wash wash records By Id Fail 422  ${essential_params}  ${unessential_params}  wash_record_id/mark=${wash_record_id/mark}
+   run every case by params  Patch Mark By Wash Record Id Fail 422  ${essential_params}  ${unessential_params}  wash_record_id/mark=${wash_record_id/mark}
 
-
-
-Patch wash_record By Id Fail Without Login
-   [Documentation]  接口名:修改单个洗车记录状态${\n}
-   ...              请求方式:Patch${\n}
-   ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
-   [Tags]           Respcode:403
-   ${essential_params}  create list  status=${status}  
-   ${unessential_params}  create list  
-   run every case by params  Patch car wash wash records By Id Fail 403  ${essential_params}  ${unessential_params}  wash_record_id/status=${wash_record_id/status}
-
-
-
-Patch wash_record By Id Fail With Wrong Url
+Patch Status By Wash Record Id Fail With Wrong Url
    [Documentation]  接口名:修改单个洗车记录状态${\n}
    ...              请求方式:Patch${\n}
    ...              预期结果:输入正确参数及错误的url,http响应码返回 404,无Json数据返回。
    [Tags]           Respcode:404
    ${essential_params}  create list  status=${status}  
    ${unessential_params}  create list  
-   run every case by params  Patch car wash wash records By Id Fail 404  ${essential_params}  ${unessential_params}  wash_record_id/status=${wrong_url_id}
+   run every case by params  Patch Status By Wash Record Id Fail 404  ${essential_params}  ${unessential_params}  wash_record_id/status=${wrong_url_id}
 
-
-
-Patch wash_record By Id Success 
+Patch Status By Wash Record Id Success 
    [Documentation]  接口名:修改单个洗车记录状态${\n}
    ...              请求方式:Patch${\n}
    ...              预期结果:输入正确参数,http响应码返回 200,返回的Json数据为 WashRecord 对象。
    [Tags]           Respcode:200
    ${essential_params}  create list  status=${status}  
    ${unessential_params}  create list  
-   run every case by params  Patch car wash wash records By Id Success 200  ${essential_params}  ${unessential_params}  wash_record_id/status=${wash_record_id/status}
+   run every case by params  Patch Status By Wash Record Id Success 200  ${essential_params}  ${unessential_params}  wash_record_id/status=${wash_record_id/status}
 
-
-
-Patch wash_record By Id Fail With Wrong Params
+Patch Status By Wash Record Id Fail With Wrong Params
    [Documentation]  接口名:修改单个洗车记录状态${\n}
    ...              请求方式:Patch${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  status=${status}  
    ${unessential_params}  create list  
-   run every case by params  Patch car wash wash records By Id Fail 422  ${essential_params}  ${unessential_params}  wash_record_id/status=${wash_record_id/status}
-
+   run every case by params  Patch Status By Wash Record Id Fail 422  ${essential_params}  ${unessential_params}  wash_record_id/status=${wash_record_id/status}
 
 
 *** Variables ***
@@ -618,20 +376,15 @@ ${wash_record_id/status}
 
 
 *** Keywords ***
-Post Car wash wash records By Id Fail 403
+Post Update By Wash Record Id Fail 404
    [Arguments]  &{kwargs}
-   ${resp}=  post update by wash record id  &{kwargs}
-   expect status is 403  ${resp}  
-
-Post Car wash wash records By Id Fail 404
-   [Arguments]  &{kwargs}
-   ${resp}=  post update by wash record id  &{kwargs}
+   ${resp}=  Post Update By Wash Record Id   &{kwargs}
    expect status is 404  ${resp}  
 
-Post Car wash wash records By Id Success 201
+Post Update By Wash Record Id Success 201
    [Arguments]  &{kwargs}
-   ${resp}=  post update by wash record id  &{kwargs}
-   expect status is 201  ${resp}  app_wash_record/Post_Car_wash_wash_records_By_Id_201.json
+   ${resp}=  Post Update By Wash Record Id   &{kwargs}
+   expect status is 201  ${resp}  app_wash_record/Post_Update_By_Wash_Record_Id_201.json
    ${wash_record_id/update}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][wash_record_id/update]}
    set global variable   ${wash_record_id/update}
    ${wash_record_id/upload_mark}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][wash_record_id/upload_mark]}
@@ -651,25 +404,20 @@ Post Car wash wash records By Id Success 201
    ${wash_record_id/status}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][wash_record_id/status]}
    set global variable   ${wash_record_id/status}
 
-Post Car wash wash records By Id Fail 422
+Post Update By Wash Record Id Fail 422
    [Arguments]  &{kwargs}
-   ${resp}=  post update by wash record id  &{kwargs}
+   ${resp}=  Post Update By Wash Record Id   &{kwargs}
    expect status is 422  ${resp}  
 
-Post Car wash wash records By Id Fail 403
+Post upload Mark by wash record id Fail 404
    [Arguments]  &{kwargs}
-   ${resp}=  post upload mark by wash record id  &{kwargs}
-   expect status is 403  ${resp}  
-
-Post Car wash wash records By Id Fail 404
-   [Arguments]  &{kwargs}
-   ${resp}=  post upload mark by wash record id  &{kwargs}
+   ${resp}=  Post upload Mark by wash record id   &{kwargs}
    expect status is 404  ${resp}  
 
-Post Car wash wash records By Id Success 201
+Post upload Mark by wash record id Success 201
    [Arguments]  &{kwargs}
-   ${resp}=  post upload mark by wash record id  &{kwargs}
-   expect status is 201  ${resp}  app_wash_record/Post_Car_wash_wash_records_By_Id_201.json
+   ${resp}=  Post upload Mark by wash record id   &{kwargs}
+   expect status is 201  ${resp}  app_wash_record/Post_upload_Mark_by_wash_record_id_201.json
    ${wash_record_id/update}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][wash_record_id/update]}
    set global variable   ${wash_record_id/update}
    ${wash_record_id/upload_mark}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][wash_record_id/upload_mark]}
@@ -689,25 +437,20 @@ Post Car wash wash records By Id Success 201
    ${wash_record_id/status}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][wash_record_id/status]}
    set global variable   ${wash_record_id/status}
 
-Post Car wash wash records By Id Fail 422
+Post upload Mark by wash record id Fail 422
    [Arguments]  &{kwargs}
-   ${resp}=  post upload mark by wash record id  &{kwargs}
+   ${resp}=  Post upload Mark by wash record id   &{kwargs}
    expect status is 422  ${resp}  
 
-Post Car wash wash records By Id Fail 403
+Post Upload By Wash Record Id Fail 404
    [Arguments]  &{kwargs}
-   ${resp}=  post upload by wash record id  &{kwargs}
-   expect status is 403  ${resp}  
-
-Post Car wash wash records By Id Fail 404
-   [Arguments]  &{kwargs}
-   ${resp}=  post upload by wash record id  &{kwargs}
+   ${resp}=  Post Upload By Wash Record Id   &{kwargs}
    expect status is 404  ${resp}  
 
-Post Car wash wash records By Id Success 201
+Post Upload By Wash Record Id Success 201
    [Arguments]  &{kwargs}
-   ${resp}=  post upload by wash record id  &{kwargs}
-   expect status is 201  ${resp}  app_wash_record/Post_Car_wash_wash_records_By_Id_201.json
+   ${resp}=  Post Upload By Wash Record Id   &{kwargs}
+   expect status is 201  ${resp}  app_wash_record/Post_Upload_By_Wash_Record_Id_201.json
    ${wash_record_id/update}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][wash_record_id/update]}
    set global variable   ${wash_record_id/update}
    ${wash_record_id/upload_mark}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][wash_record_id/upload_mark]}
@@ -727,25 +470,20 @@ Post Car wash wash records By Id Success 201
    ${wash_record_id/status}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][wash_record_id/status]}
    set global variable   ${wash_record_id/status}
 
-Post Car wash wash records By Id Fail 422
+Post Upload By Wash Record Id Fail 422
    [Arguments]  &{kwargs}
-   ${resp}=  post upload by wash record id  &{kwargs}
+   ${resp}=  Post Upload By Wash Record Id   &{kwargs}
    expect status is 422  ${resp}  
 
-Post Car wash wash records By Id Fail 403
+Post Wash By Wash Record Id Fail 404
    [Arguments]  &{kwargs}
-   ${resp}=  post wash by wash record id  &{kwargs}
-   expect status is 403  ${resp}  
-
-Post Car wash wash records By Id Fail 404
-   [Arguments]  &{kwargs}
-   ${resp}=  post wash by wash record id  &{kwargs}
+   ${resp}=  Post Wash By Wash Record Id   &{kwargs}
    expect status is 404  ${resp}  
 
-Post Car wash wash records By Id Success 201
+Post Wash By Wash Record Id Success 201
    [Arguments]  &{kwargs}
-   ${resp}=  post wash by wash record id  &{kwargs}
-   expect status is 201  ${resp}  app_wash_record/Post_Car_wash_wash_records_By_Id_201.json
+   ${resp}=  Post Wash By Wash Record Id   &{kwargs}
+   expect status is 201  ${resp}  app_wash_record/Post_Wash_By_Wash_Record_Id_201.json
    ${wash_record_id/update}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][wash_record_id/update]}
    set global variable   ${wash_record_id/update}
    ${wash_record_id/upload_mark}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][wash_record_id/upload_mark]}
@@ -765,40 +503,30 @@ Post Car wash wash records By Id Success 201
    ${wash_record_id/status}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][wash_record_id/status]}
    set global variable   ${wash_record_id/status}
 
-Post Car wash wash records By Id Fail 422
+Post Wash By Wash Record Id Fail 422
    [Arguments]  &{kwargs}
-   ${resp}=  post wash by wash record id  &{kwargs}
+   ${resp}=  Post Wash By Wash Record Id   &{kwargs}
    expect status is 422  ${resp}  
 
-Post Car wash wash records By Id Fail 403
+Post Finish By Wash Record Id Fail 404
    [Arguments]  &{kwargs}
-   ${resp}=  post finish by wash record id  &{kwargs}
-   expect status is 403  ${resp}  
-
-Post Car wash wash records By Id Fail 404
-   [Arguments]  &{kwargs}
-   ${resp}=  post finish by wash record id  &{kwargs}
+   ${resp}=  Post Finish By Wash Record Id   &{kwargs}
    expect status is 404  ${resp}  
 
-Post Car wash wash records By Id Success 204
+Post Finish By Wash Record Id Success 204
    [Arguments]  &{kwargs}
-   ${resp}=  post finish by wash record id  &{kwargs}
+   ${resp}=  Post Finish By Wash Record Id   &{kwargs}
    expect status is 204  ${resp}  
 
-Post Car wash wash records By Id Fail 422
+Post Finish By Wash Record Id Fail 422
    [Arguments]  &{kwargs}
-   ${resp}=  post finish by wash record id  &{kwargs}
+   ${resp}=  Post Finish By Wash Record Id   &{kwargs}
    expect status is 422  ${resp}  
 
-Get User wash records Fail 403
+Get User Wash Records Success 200
    [Arguments]  &{kwargs}
-   ${resp}=  get user wash records   &{kwargs}
-   expect status is 403  ${resp}  
-
-Get User wash records Success 200
-   [Arguments]  &{kwargs}
-   ${resp}=  get user wash records   &{kwargs}
-   expect status is 200  ${resp}  app_wash_record/Get_User_wash_records_200.json
+   ${resp}=  Get User Wash Records   &{kwargs}
+   expect status is 200  ${resp}  app_wash_record/Get_User_Wash_Records_200.json
    ${wash_record_id/update}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][wash_record_id/update]}
    set global variable   ${wash_record_id/update}
    ${wash_record_id/upload_mark}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][wash_record_id/upload_mark]}
@@ -818,20 +546,15 @@ Get User wash records Success 200
    ${wash_record_id/status}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][wash_record_id/status]}
    set global variable   ${wash_record_id/status}
 
-Get User wash records Fail 422
+Get User Wash Records Fail 422
    [Arguments]  &{kwargs}
-   ${resp}=  get user wash records   &{kwargs}
+   ${resp}=  Get User Wash Records   &{kwargs}
    expect status is 422  ${resp}  
 
-Get Cars in parking Fail 403
+Get Cars In Parking Success 200
    [Arguments]  &{kwargs}
-   ${resp}=  get cars in parking   &{kwargs}
-   expect status is 403  ${resp}  
-
-Get Cars in parking Success 200
-   [Arguments]  &{kwargs}
-   ${resp}=  get cars in parking   &{kwargs}
-   expect status is 200  ${resp}  app_wash_record/Get_Cars_in_parking_200.json
+   ${resp}=  Get Cars In Parking   &{kwargs}
+   expect status is 200  ${resp}  app_wash_record/Get_Cars_In_Parking_200.json
    ${wash_record_id/update}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][wash_record_id/update]}
    set global variable   ${wash_record_id/update}
    ${wash_record_id/upload_mark}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][wash_record_id/upload_mark]}
@@ -851,20 +574,15 @@ Get Cars in parking Success 200
    ${wash_record_id/status}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][wash_record_id/status]}
    set global variable   ${wash_record_id/status}
 
-Get Cars in parking Fail 422
+Get Cars In Parking Fail 422
    [Arguments]  &{kwargs}
-   ${resp}=  get cars in parking   &{kwargs}
+   ${resp}=  Get Cars In Parking   &{kwargs}
    expect status is 422  ${resp}  
 
-Get Wash records group by zone Fail 403
+Get wash Records group by zone Success 200
    [Arguments]  &{kwargs}
-   ${resp}=  get wash records group by zone   &{kwargs}
-   expect status is 403  ${resp}  
-
-Get Wash records group by zone Success 200
-   [Arguments]  &{kwargs}
-   ${resp}=  get wash records group by zone   &{kwargs}
-   expect status is 200  ${resp}  app_wash_record/Get_Wash_records_group_by_zone_200.json
+   ${resp}=  Get wash Records group by zone   &{kwargs}
+   expect status is 200  ${resp}  app_wash_record/Get_wash_Records_group_by_zone_200.json
    ${wash_record_id/update}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][wash_record_id/update]}
    set global variable   ${wash_record_id/update}
    ${wash_record_id/upload_mark}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][wash_record_id/upload_mark]}
@@ -884,20 +602,15 @@ Get Wash records group by zone Success 200
    ${wash_record_id/status}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][wash_record_id/status]}
    set global variable   ${wash_record_id/status}
 
-Get Wash records group by zone Fail 422
+Get wash Records group by zone Fail 422
    [Arguments]  &{kwargs}
-   ${resp}=  get wash records group by zone   &{kwargs}
+   ${resp}=  Get wash Records group by zone   &{kwargs}
    expect status is 422  ${resp}  
 
-Get Wash records nearby Fail 403
+Get wash Records nearby Success 200
    [Arguments]  &{kwargs}
-   ${resp}=  get wash records nearby   &{kwargs}
-   expect status is 403  ${resp}  
-
-Get Wash records nearby Success 200
-   [Arguments]  &{kwargs}
-   ${resp}=  get wash records nearby   &{kwargs}
-   expect status is 200  ${resp}  app_wash_record/Get_Wash_records_nearby_200.json
+   ${resp}=  Get wash Records nearby   &{kwargs}
+   expect status is 200  ${resp}  app_wash_record/Get_wash_Records_nearby_200.json
    ${wash_record_id/update}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][wash_record_id/update]}
    set global variable   ${wash_record_id/update}
    ${wash_record_id/upload_mark}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][wash_record_id/upload_mark]}
@@ -917,20 +630,15 @@ Get Wash records nearby Success 200
    ${wash_record_id/status}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][wash_record_id/status]}
    set global variable   ${wash_record_id/status}
 
-Get Wash records nearby Fail 422
+Get wash Records nearby Fail 422
    [Arguments]  &{kwargs}
-   ${resp}=  get wash records nearby   &{kwargs}
+   ${resp}=  Get wash Records nearby   &{kwargs}
    expect status is 422  ${resp}  
 
-Get Car wash wash records Fail 403
+Get car Wash wash records Success 200
    [Arguments]  &{kwargs}
-   ${resp}=  get car wash wash records   &{kwargs}
-   expect status is 403  ${resp}  
-
-Get Car wash wash records Success 200
-   [Arguments]  &{kwargs}
-   ${resp}=  get car wash wash records   &{kwargs}
-   expect status is 200  ${resp}  app_wash_record/Get_Car_wash_wash_records_200.json
+   ${resp}=  Get car Wash wash records   &{kwargs}
+   expect status is 200  ${resp}  app_wash_record/Get_car_Wash_wash_records_200.json
    ${wash_record_id/update}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][wash_record_id/update]}
    set global variable   ${wash_record_id/update}
    ${wash_record_id/upload_mark}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][wash_record_id/upload_mark]}
@@ -950,25 +658,20 @@ Get Car wash wash records Success 200
    ${wash_record_id/status}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][wash_record_id/status]}
    set global variable   ${wash_record_id/status}
 
-Get Car wash wash records Fail 422
+Get car Wash wash records Fail 422
    [Arguments]  &{kwargs}
-   ${resp}=  get car wash wash records   &{kwargs}
+   ${resp}=  Get car Wash wash records   &{kwargs}
    expect status is 422  ${resp}  
 
-Get Car wash wash records By Id Fail 403
+Get car Wash wash records by wash record id Fail 404
    [Arguments]  &{kwargs}
-   ${resp}=  get car wash wash records by wash record id  &{kwargs}
-   expect status is 403  ${resp}  
-
-Get Car wash wash records By Id Fail 404
-   [Arguments]  &{kwargs}
-   ${resp}=  get car wash wash records by wash record id  &{kwargs}
+   ${resp}=  Get car Wash wash records by wash record id   &{kwargs}
    expect status is 404  ${resp}  
 
-Get Car wash wash records By Id Success 200
+Get car Wash wash records by wash record id Success 200
    [Arguments]  &{kwargs}
-   ${resp}=  get car wash wash records by wash record id  &{kwargs}
-   expect status is 200  ${resp}  app_wash_record/Get_Car_wash_wash_records_By_Id_200.json
+   ${resp}=  Get car Wash wash records by wash record id   &{kwargs}
+   expect status is 200  ${resp}  app_wash_record/Get_car_Wash_wash_records_by_wash_record_id_200.json
    ${wash_record_id/update}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][wash_record_id/update]}
    set global variable   ${wash_record_id/update}
    ${wash_record_id/upload_mark}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][wash_record_id/upload_mark]}
@@ -988,25 +691,20 @@ Get Car wash wash records By Id Success 200
    ${wash_record_id/status}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][wash_record_id/status]}
    set global variable   ${wash_record_id/status}
 
-Get Car wash wash records By Id Fail 422
+Get car Wash wash records by wash record id Fail 422
    [Arguments]  &{kwargs}
-   ${resp}=  get car wash wash records by wash record id  &{kwargs}
+   ${resp}=  Get car Wash wash records by wash record id   &{kwargs}
    expect status is 422  ${resp}  
 
-Get Car in parking Fail 403
+Get Car In Parking Fail 404
    [Arguments]  &{kwargs}
-   ${resp}=  get car in parking   &{kwargs}
-   expect status is 403  ${resp}  
-
-Get Car in parking Fail 404
-   [Arguments]  &{kwargs}
-   ${resp}=  get car in parking   &{kwargs}
+   ${resp}=  Get Car In Parking   &{kwargs}
    expect status is 404  ${resp}  
 
-Get Car in parking Success 200
+Get Car In Parking Success 200
    [Arguments]  &{kwargs}
-   ${resp}=  get car in parking   &{kwargs}
-   expect status is 200  ${resp}  app_wash_record/Get_Car_in_parking_200.json
+   ${resp}=  Get Car In Parking   &{kwargs}
+   expect status is 200  ${resp}  app_wash_record/Get_Car_In_Parking_200.json
    ${wash_record_id/update}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][wash_record_id/update]}
    set global variable   ${wash_record_id/update}
    ${wash_record_id/upload_mark}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][wash_record_id/upload_mark]}
@@ -1026,68 +724,53 @@ Get Car in parking Success 200
    ${wash_record_id/status}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][wash_record_id/status]}
    set global variable   ${wash_record_id/status}
 
-Get Car in parking Fail 422
+Get Car In Parking Fail 422
    [Arguments]  &{kwargs}
-   ${resp}=  get car in parking   &{kwargs}
+   ${resp}=  Get Car In Parking   &{kwargs}
    expect status is 422  ${resp}  
 
-Patch Car wash wash records By Id Success 204
+Patch washer Remark by wash record id Success 204
    [Arguments]  &{kwargs}
-   ${resp}=  patch washer remark by wash record id  &{kwargs}
+   ${resp}=  Patch washer Remark by wash record id   &{kwargs}
    expect status is 204  ${resp}  
 
-Patch Car wash wash records By Id Fail 403
+Patch washer Remark by wash record id Fail 404
    [Arguments]  &{kwargs}
-   ${resp}=  patch washer remark by wash record id  &{kwargs}
-   expect status is 403  ${resp}  
-
-Patch Car wash wash records By Id Fail 404
-   [Arguments]  &{kwargs}
-   ${resp}=  patch washer remark by wash record id  &{kwargs}
+   ${resp}=  Patch washer Remark by wash record id   &{kwargs}
    expect status is 404  ${resp}  
 
-Patch Car wash wash records By Id Fail 422
+Patch washer Remark by wash record id Fail 422
    [Arguments]  &{kwargs}
-   ${resp}=  patch washer remark by wash record id  &{kwargs}
+   ${resp}=  Patch washer Remark by wash record id   &{kwargs}
    expect status is 422  ${resp}  
 
-Patch Car wash wash records By Id Success 204
+Patch Mark By Wash Record Id Success 204
    [Arguments]  &{kwargs}
-   ${resp}=  patch mark by wash record id  &{kwargs}
+   ${resp}=  Patch Mark By Wash Record Id   &{kwargs}
    expect status is 204  ${resp}  
 
-Patch Car wash wash records By Id Fail 403
+Patch Mark By Wash Record Id Fail 404
    [Arguments]  &{kwargs}
-   ${resp}=  patch mark by wash record id  &{kwargs}
-   expect status is 403  ${resp}  
-
-Patch Car wash wash records By Id Fail 404
-   [Arguments]  &{kwargs}
-   ${resp}=  patch mark by wash record id  &{kwargs}
+   ${resp}=  Patch Mark By Wash Record Id   &{kwargs}
    expect status is 404  ${resp}  
 
-Patch Car wash wash records By Id Fail 422
+Patch Mark By Wash Record Id Fail 422
    [Arguments]  &{kwargs}
-   ${resp}=  patch mark by wash record id  &{kwargs}
+   ${resp}=  Patch Mark By Wash Record Id   &{kwargs}
    expect status is 422  ${resp}  
 
-Patch Car wash wash records By Id Fail 403
+Patch Status By Wash Record Id Fail 404
    [Arguments]  &{kwargs}
-   ${resp}=  patch status by wash record id  &{kwargs}
-   expect status is 403  ${resp}  
-
-Patch Car wash wash records By Id Fail 404
-   [Arguments]  &{kwargs}
-   ${resp}=  patch status by wash record id  &{kwargs}
+   ${resp}=  Patch Status By Wash Record Id   &{kwargs}
    expect status is 404  ${resp}  
 
-Patch Car wash wash records By Id Success 200
+Patch Status By Wash Record Id Success 200
    [Arguments]  &{kwargs}
-   ${resp}=  patch status by wash record id  &{kwargs}
-   expect status is 200  ${resp}  app_wash_record/Patch_Car_wash_wash_records_By_Id_200.json
+   ${resp}=  Patch Status By Wash Record Id   &{kwargs}
+   expect status is 200  ${resp}  app_wash_record/Patch_Status_By_Wash_Record_Id_200.json
 
-Patch Car wash wash records By Id Fail 422
+Patch Status By Wash Record Id Fail 422
    [Arguments]  &{kwargs}
-   ${resp}=  patch status by wash record id  &{kwargs}
+   ${resp}=  Patch Status By Wash Record Id   &{kwargs}
    expect status is 422  ${resp}  
 

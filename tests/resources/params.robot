@@ -116,8 +116,8 @@ ${wash_area_ids}
 ${parking_ids}
 ${coupon_id}
 ${record_num_last_30_day}
-${average_last_30_day}
-${how_long_no_record}
+${average_price_last_30_day}
+${wash_interval}
 ${user_type}
 ${user_ids}
 ${coupon_name}
@@ -126,7 +126,6 @@ ${coupon_point_record_id}
 ${point_remark}
 ${service_name}
 ${commission_price}
-${service_time}
 ${service_group_name}
 ${service_original_price}
 ${pricing_strategy}
@@ -182,7 +181,7 @@ ${position}
 ${notice_mail}
 ${banners}
 ${order_id}
-${mouth}
+${type}
 ${parking_coupon_no}
 ${before_wash_images}
 ${after_wash_images}

@@ -1,3 +1,4 @@
+http://10.1.50.100/car-wash/app/call_user/call_user.html
 http://10.1.50.100/car-wash/app/car_washer_order_statistic/car_washer_order_statistic.html
 http://10.1.50.100/car-wash/app/car_washer/car_washer.html
 http://10.1.50.100/car-wash/app/parking_coupon/parking_coupon.html

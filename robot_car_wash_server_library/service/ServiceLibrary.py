@@ -7,7 +7,7 @@ class ServiceLibrary(CommonLibrary):
             SERVER_DOMAIN=self.SERVER_DOMAIN)
         data = {}
         for k, v in kwargs.items():
-            if k in ("service_name", "cost_price", "price", "wash_normal_price", "wash_group_price", "member_price", "commission_price", "description", "order_by", "service_time"):
+            if k in ("service_name", "cost_price", "price", "wash_normal_price", "wash_group_price", "member_price", "commission_price", "description", "order_by", "standard_time"):
                 data[k] = v
         return self.client.post(url, json=data)
 
@@ -25,7 +25,7 @@ class ServiceLibrary(CommonLibrary):
             SERVER_DOMAIN=self.SERVER_DOMAIN, service_id=service_id)
         data = {}
         for k, v in kwargs.items():
-            if k in ("service_name", "cost_price", "price", "wash_normal_price", "wash_group_price", "member_price", "commission_price", "description", "order_by", "service_time"):
+            if k in ("service_name", "cost_price", "price", "wash_normal_price", "wash_group_price", "member_price", "commission_price", "description", "order_by", "standard_time"):
                 data[k] = v
         return self.client.put(url, json=data)
 

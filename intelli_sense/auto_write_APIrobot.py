@@ -53,7 +53,7 @@ class AutoWriteRobot(object):
                 if index2 != 0:
                     all_model_list.append(model_list)
                 model_list = []
-                lib_name = self._write_robot_file_settings(service_name, model_name)
+                lib_name = self._write_robot_file_settings(service_name, model_name, api_codes_list)
                 self._write_library_head(lib_name, model_name)
             api_list.append(service_name)
             api_list.append(model_name)
@@ -129,9 +129,10 @@ class AutoWriteRobot(object):
         if not lib:
             os.makedirs(lib_name)
         class_name = self._upper_name(model_name)
+        lib_import = lib_name.split('/')[1]
         open(lib_name + '/' + '__init__.py', 'w+')
         lib_file = open(lib_name + '/' + class_name + 'Library.py', 'w+')
-        lib_file.write('from robot_car_wash_server_library.common import CommonLibrary\n\n\n')
+        lib_file.write('from '+lib_import+'.common import CommonLibrary\n\n\n')
         lib_file.write('class ' + class_name + 'Library(CommonLibrary):\n')
         lib_file.close()
 
@@ -206,15 +207,11 @@ class AutoWriteRobot(object):
         lib_file.close()
 
     # 根据爬取的数据生成robot文件头
-    def _write_robot_file_settings(self, service_name, model_name):
+    def _write_robot_file_settings(self, service_name, model_name, api_codes_list):
         full_name = service_name+'_'+model_name
         folder = os.path.exists('../tests/'+full_name)
         if not folder:
             os.makedirs('../tests/'+full_name)
-        robot = open('../tests/'+full_name+'/'+model_name+'s.robot', 'w+')
-        robot.write('*** Settings ***\n')
-        robot.write('Documentation  '+full_name+'\n')
-        robot.write('Resource  ../resources.robot'+'\n')
         lib_name = ''
         setup = ''
         teardown = ''
@@ -236,102 +233,56 @@ class AutoWriteRobot(object):
             name_tag = '车主微信端'
         lib_name = lib_name[:-1]+'.'+model_name
         class_name = self._upper_name(model_name)
+        robot = open('../tests/'+full_name+'/'+model_name+'s.robot', 'w+')
+        robot.write('*** Settings ***\n')
+        robot.write('Documentation  '+full_name+'\n')
+        robot.write('Resource  ../resources.robot'+'\n')
         robot.write('Library  '+lib_name+'.'+class_name+'Library'+'\n')
         robot.write(setup+'\n')
         robot.write(teardown+'\n')
         robot.write('Force Tags  model:'+full_name+'  '+name_tag+'\n\n\n')
+        if '403' in api_codes_list:
+            name_part = 'unauthorized.'
+        else:
+            name_part = 'please_delete.'
+        robot = open('../tests/' + full_name + '/' + model_name + 's.'+name_part+'robot', 'w+')
+        robot.write('*** Settings ***\n')
+        robot.write('Documentation  ' + full_name + '\n')
+        robot.write('Resource  ../resources.robot' + '\n')
+        robot.write('Library  ' + lib_name + '.' + class_name + 'Library' + '\n')
+        robot.write('Force Tags  model:' + full_name + '  ' + name_tag + '\n\n\n')
         return lib_name
-
-    # 根据爬取的数据生成robot文件keywords
-    def _write_robot_file_keywords(self, service_name, model_name, api_method, api_url, api_codes_list,
-                                   id_in_url, keyword_switch):
-        full_name = service_name+'_'+model_name
-        api_method = self._upper_name(api_method)
-        robot = open('../tests/'+full_name+'/'+model_name+'s.robot', 'a+')
-        for api_code in api_codes_list:
-            url_parts = api_url.split("/:")
-            url_part_one = url_parts[0]
-            method_name = str(url_part_one).split('/')
-            if len(method_name) > 1 and method_name[-2] != '':
-                method_name = method_name[-2] + '_' + method_name[-1]
-            else:
-                method_name = method_name[-1]
-            method_name = method_name.split('/')
-            method_name = method_name[-1].replace('_', ' ')
-            method_name = self._upper_name(method_name)
-            if len(url_parts) > 1:
-                id_name = url_parts[1].split('/')[0].replace('_', ' ')
-                js_name = api_method+' '+method_name+' By Id '
-                if len(url_parts[1].split("/")) > 1:
-                    url_end = '/' + url_parts[1].split("/")[1].replace('_', ' ')
-                else:
-                    url_end = ''
-            else:
-                id_name = ''
-                js_name = api_method+' '+method_name+' '
-                url_end = ''
-            if api_code == '200':
-                kw_name = js_name + 'Success ' + api_code
-                json_name = full_name+'/'+js_name+api_code+'.json\n'
-            elif api_code == '201':
-                kw_name = js_name + 'Success ' + api_code
-                json_name = full_name+'/'+js_name+api_code+'.json\n'
-            elif api_code == '204':
-                kw_name = js_name + 'Success ' + api_code
-                json_name = '\n'
-            elif api_code == '404':
-                kw_name = js_name + 'Fail ' + api_code
-                json_name = '\n'
-            elif api_code == '403':
-                kw_name = js_name + 'Fail ' + api_code
-                json_name = '\n'
-            elif api_code == '422':
-                kw_name = js_name + 'Fail ' + api_code
-                json_name = '\n'
-            else:
-                kw_name = ''
-                json_name = '\n'
-            json_name = json_name.replace(' ', '_')
-            if id_name != '':
-                str1 = ' by '
-            else:
-                str1 = ' '
-            if url_end != '':
-                method_name = url_end.replace('/', '')
-            method_name = (api_method + ' ' + method_name + str1 + id_name).lower()
-            if keyword_switch is True:
-                robot.write('*** Variables ***\n')
-                for var in id_in_url:
-                    robot.write('${'+var+'}\n')
-                robot.write('\n\n')
-                robot.write('*** Keywords ***\n')
-                keyword_switch = False
-            robot.write(kw_name+'\n')
-            robot.write('   [Arguments]  &{kwargs}\n')
-            robot.write('   ${resp}=  '+method_name+'  &{kwargs}\n')
-            robot.write('   expect status is '+api_code+'  ${resp}  '+json_name)
-            if id_in_url != [] and api_code in ('200', '201') and api_method in ('Get', 'Post'):
-                for k in range(0, len(id_in_url)):
-                    robot.write('   ${'+id_in_url[k]+'}  set variable if  ${resp.json()}!=[]'
-                                '  ${resp.json()[0]['+id_in_url[k]+']}\n')
-                    robot.write('   set global variable   ${'+id_in_url[k]+'}\n')
-            robot.write('\n')
 
     # 根据爬取的数据生成robot文件test_case
     def _write_robot_file_case(self, ptxt, service_name, model_name, api_name, api_method, api_url, api_params_name_list,
                                api_codes_list, return_entities, api_params_nn_list, api_params_type_list, case_switch):
         full_name = service_name+'_'+model_name
         api_method = self._upper_name(api_method)
-        robot = open('../tests/'+full_name+'/'+model_name+'s.robot', 'a+')
         url_parts = api_url.split("/:")
         url_part_one = url_parts[0]
         method_name = str(url_part_one).split('/')
         if len(method_name) > 1 and method_name[-2] != '':
-            method_name = method_name[-2] + '_' + method_name[-1]
+            method_name = method_name[-2]+' '+method_name[-1].replace('_', ' ')
         else:
-            method_name = method_name[-1]
-        method_name = method_name.split('/')
-        method_name = method_name[-1].replace('_', ' ')
+            method_name = method_name[-1].replace('_', ' ')
+        print(method_name)
+        if len(url_parts) > 1:
+            id_name = url_parts[1].split("/")[0].replace('_', ' ')
+            if len(url_parts[1].split("/")) > 1:
+                url_end = '/' + url_parts[1].split("/")[1]
+            else:
+                url_end = ''
+        else:
+            id_name = ''
+            url_end = ''
+        if id_name != '':
+            str1 = ' by '
+        else:
+            str1 = ''
+        if url_end != '':
+            method_name = url_end.replace('/', '')
+        method_name = (api_method + ' ' + method_name + str1 + id_name).lower()
+        method_name = self._upper_name(method_name, place=True)
         for api_code in api_codes_list:
             wrong_id_name = ''
             if len(api_url.split(':')) > 1:
@@ -339,44 +290,40 @@ class AutoWriteRobot(object):
             else:
                 id_name = 'Please_input'
             if api_url.find(':') == -1:
-                st_name = api_method+' '+method_name+' '
-                js_name = api_method+' '+model_name+' '
                 flag = False
                 lt_part = ' 列表'
             else:
-                st_name = api_method+' '+method_name+' By Id '
-                js_name = api_method+' '+model_name+' By Id '
                 flag = True
                 lt_part = ' 对象'
             if api_code == '200':
-                kw_name = st_name + 'Success ' + api_code
-                tc_name = js_name + 'Success '
+                kw_name = method_name + 'Success ' + api_code
+                tc_name = method_name + 'Success '
                 st_part = '输入正确参数,'
                 ed_part = ',返回的Json数据为 '+return_entities+lt_part
             elif api_code == '201':
-                kw_name = st_name + 'Success ' + api_code
-                tc_name = js_name + 'Success '
+                kw_name = method_name + 'Success ' + api_code
+                tc_name = method_name + 'Success '
                 st_part = '输入正确参数,'
                 ed_part = ',返回的Json数据符合验证'
             elif api_code == '204':
-                kw_name = st_name + 'Success ' + api_code
-                tc_name = js_name + 'Success '
+                kw_name = method_name + 'Success ' + api_code
+                tc_name = method_name + 'Success '
                 st_part = '输入正确参数,'
                 ed_part = ',无Json数据返回'
             elif api_code == '404':
-                kw_name = st_name + 'Fail ' + api_code
-                tc_name = js_name + 'Fail With Wrong Url'
+                kw_name = method_name + 'Fail ' + api_code
+                tc_name = method_name + 'Fail With Wrong Url'
                 st_part = '输入正确参数及错误的url,'
                 ed_part = ',无Json数据返回'
                 wrong_id_name = 'wrong_url_id'
             elif api_code == '403':
-                kw_name = st_name + 'Fail ' + api_code
-                tc_name = js_name + 'Fail Without Login'
+                kw_name = method_name + 'Fail ' + api_code
+                tc_name = method_name + 'Fail Without Login'
                 st_part = '未登录,'
                 ed_part = ',无Json数据返回'
             elif api_code == '422':
-                kw_name = st_name + 'Fail ' + api_code
-                tc_name = js_name + 'Fail With Wrong Params'
+                kw_name = method_name + 'Fail ' + api_code
+                tc_name = method_name + 'Fail With Wrong Params'
                 st_part = '输入错误参数,'
                 ed_part = ',返回的Json数据为错误信息'
             else:
@@ -407,9 +354,15 @@ class AutoWriteRobot(object):
                 id_name_value = wrong_id_name
             else:
                 id_name_value = id_name
+            if api_code != '403':
+                name_part = ''
+            else:
+                name_part = 'unauthorized.'
+            robot = open('../tests/' + full_name + '/' + model_name + 's.'+name_part+'robot', 'a+')
             if case_switch is True:
                 robot.write('*** Test Cases ***\n')
-                case_switch = False
+                if api_code != '403':
+                    case_switch = False
             robot.write(tc_name+'\n')
             robot.write('   [Documentation]  接口名:' + api_name + '${\\n}\n   ...              请求方式:' + api_method +
                         '${\\n}\n   ...              预期结果:'+ex_result+'\n')
@@ -417,24 +370,110 @@ class AutoWriteRobot(object):
             if flag is False and api_params_name_list != ['']:
                 robot.write('   ${essential_params}  create list  '+essential_params_part+'\n')
                 robot.write('   ${unessential_params}  create list  '+unessential_params_part+'\n')
-                robot.write('   run every case by params  '+kw_name+'  ${essential_params}  ${unessential_params}\n\n')
+                robot.write('   run every case by params  '+kw_name+'  ${essential_params}  ${unessential_params}\n')
             if flag is False and api_params_name_list == ['']:
                 robot.write('    '+kw_name+'\n')
             if flag is True and api_params_name_list != ['']:
                 robot.write('   ${essential_params}  create list  '+essential_params_part+'\n')
                 robot.write('   ${unessential_params}  create list  '+unessential_params_part+'\n')
                 robot.write('   run every case by params  '+kw_name+'  ${essential_params}  ${unessential_params}  ' +
-                            id_name+'=${'+id_name_value+'}\n\n')
+                            id_name+'=${'+id_name_value+'}\n')
             if flag is True and api_params_name_list == ['']:
-                robot.write('   '+kw_name+'  '+id_name+'=${'+id_name_value+'}\n\n')
-            robot.write('\n\n')
+                robot.write('   '+kw_name+'  '+id_name+'=${'+id_name_value+'}\n')
+            robot.write('\n')
+
+    # 根据爬取的数据生成robot文件keywords
+    def _write_robot_file_keywords(self, service_name, model_name, api_method, api_url, api_codes_list,
+                                   id_in_url, keyword_switch):
+        full_name = service_name+'_'+model_name
+        api_method = self._upper_name(api_method)
+        for api_code in api_codes_list:
+            url_parts = api_url.split("/:")
+            url_part_one = url_parts[0]
+            method_name = str(url_part_one).split('/')
+            if len(method_name) > 1 and method_name[-2] != '':
+                method_name = method_name[-2] + ' ' + method_name[-1].replace('_', ' ')
+            else:
+                method_name = method_name[-1].replace('_', ' ')
+            print(method_name)
+            if len(url_parts) > 1:
+                id_name = url_parts[1].split("/")[0].replace('_', ' ')
+                if len(url_parts[1].split("/")) > 1:
+                    url_end = '/' + url_parts[1].split("/")[1]
+                else:
+                    url_end = ''
+            else:
+                id_name = ''
+                url_end = ''
+            if id_name != '':
+                str1 = ' by '
+            else:
+                str1 = ''
+            if url_end != '':
+                method_name = url_end.replace('/', '')
+            method_name = (api_method + ' ' + method_name + str1 + id_name).lower()
+            method_name = self._upper_name(method_name, place=True)
+            if api_code == '200':
+                kw_name = method_name + 'Success ' + api_code
+                json_name = full_name+'/'+method_name+api_code+'.json\n'
+            elif api_code == '201':
+                kw_name = method_name + 'Success ' + api_code
+                json_name = full_name+'/'+method_name+api_code+'.json\n'
+            elif api_code == '204':
+                kw_name = method_name + 'Success ' + api_code
+                json_name = '\n'
+            elif api_code == '404':
+                kw_name = method_name + 'Fail ' + api_code
+                json_name = '\n'
+            elif api_code == '403':
+                kw_name = method_name + 'Fail ' + api_code
+                json_name = '\n'
+            elif api_code == '422':
+                kw_name = method_name + 'Fail ' + api_code
+                json_name = '\n'
+            else:
+                kw_name = ''
+                json_name = '\n'
+            json_name = json_name.replace(' ', '_')
+            if api_code != '403':
+                name_part = ''
+            else:
+                name_part = 'unauthorized.'
+            robot = open('../tests/' + full_name + '/' + model_name + 's.'+name_part+'robot', 'a+')
+            if keyword_switch is True:
+                robot.write('\n')
+                if id_in_url:
+                    robot.write('*** Variables ***\n')
+                    for var in id_in_url:
+                        robot.write('${'+var+'}\n')
+                    robot.write('\n\n')
+                robot.write('*** Keywords ***\n')
+                if api_code != '403':
+                    keyword_switch = False
+            robot.write(kw_name+'\n')
+            robot.write('   [Arguments]  &{kwargs}\n')
+            robot.write('   ${resp}=  '+method_name+'  &{kwargs}\n')
+            robot.write('   expect status is '+api_code+'  ${resp}  '+json_name)
+            if id_in_url != [] and api_code in ('200', '201') and api_method in ('Get', 'Post'):
+                for k in range(0, len(id_in_url)):
+                    robot.write('   ${'+id_in_url[k]+'}  set variable if  ${resp.json()}!=[]'
+                                '  ${resp.json()[0]['+id_in_url[k]+']}\n')
+                    robot.write('   set global variable   ${'+id_in_url[k]+'}\n')
+            robot.write('\n')
 
     @staticmethod
-    def _upper_name(name):
-        str_list = name.split('_')
+    def _upper_name(name, place=False):
+        if '_' in name:
+            str_list = name.split('_')
+        else:
+            str_list = name.split(' ')
         for index in range(0, len(str_list)):
+            if place is False:
+                end = ''
+            else:
+                end = ' '
             if str_list[index] != '':
-                str_list[index] = str_list[index][0].upper() + str_list[index][1:].lower()
+                str_list[index] = str_list[index][0].upper()+str_list[index][1:].lower()+end
             else:
                 continue
         return ''.join(str_list)

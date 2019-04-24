@@ -2,12 +2,12 @@ from robot_car_wash_server_library.common import CommonLibrary
 
 
 class CouponPointLibrary(CommonLibrary):
-    def post_admin_coupon_point_automatic_records(self, **kwargs):
-        url = "{SERVER_DOMAIN}/admin/coupon_point_automatic_records".format(
+    def post_admin_coupon_point_autos(self, **kwargs):
+        url = "{SERVER_DOMAIN}/admin/coupon_point_autos".format(
             SERVER_DOMAIN=self.SERVER_DOMAIN)
         data = {}
         for k, v in kwargs.items():
-            if k in ("coupon_pool_id", "record_num_last_30_day", "is_record_num_last_30_day", "average_last_30_day", "is_average_last_30_day", "how_long_no_record", "is_how_long_no_record", "enable", "user_type"):
+            if k in ("coupon_pool_id", "record_num_last_30_day", "is_record_num_last_30_day", "average_price_last_30_day", "is_average_price_last_30_day", "wash_interval", "is_wash_interval", "enable", "user_type"):
                 data[k] = v
         return self.client.post(url, json=data)
 
@@ -29,8 +29,8 @@ class CouponPointLibrary(CommonLibrary):
                 data[k] = v
         return self.client.post(url)
 
-    def get_admin_coupon_point_automatic_records(self, **kwargs):
-        url = "{SERVER_DOMAIN}/admin/coupon_point_automatic_records".format(
+    def get_admin_coupon_point_autos(self, **kwargs):
+        url = "{SERVER_DOMAIN}/admin/coupon_point_autos".format(
             SERVER_DOMAIN=self.SERVER_DOMAIN)
         data = {}
         for k, v in kwargs.items():

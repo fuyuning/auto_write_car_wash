@@ -1,4 +1,4 @@
-from robot_car_wash_server_library.common import CommonLibrary
+from robot_car_wash_app_library.common import CommonLibrary
 
 
 class WashTagLibrary(CommonLibrary):

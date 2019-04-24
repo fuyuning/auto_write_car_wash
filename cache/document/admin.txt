@@ -1,4 +1,4 @@
-http://10.1.50.100/car-wash/admin/custom_menu/custom_menu.html
+http://10.1.50.100/car-wash/admin/wechat_menu/wechat_menu.html
 http://10.1.50.100/car-wash/admin/wechat_keyword/wechat_keyword.html
 http://10.1.50.100/car-wash/admin/wechat_reply/wechat_reply.html
 http://10.1.50.100/car-wash/admin/wash_normal/wash_normal.html

@@ -34,3 +34,12 @@ class WashNormalLibrary(CommonLibrary):
                 data[k] = v
         return self.client.put(url, json=data)
 
+    def patch_admin_wash_normal_by_wash_normal_id(self, wash_normal_id, **kwargs):
+        url = "{SERVER_DOMAIN}/admin/wash_normal/{wash_normal_id}".format(
+            SERVER_DOMAIN=self.SERVER_DOMAIN, wash_normal_id=wash_normal_id)
+        data = {}
+        for k, v in kwargs.items():
+            if k in ("spec_people_day_num", ):
+                data[k] = v
+        return self.client.patch(url)
+

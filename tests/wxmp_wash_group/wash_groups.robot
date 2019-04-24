@@ -8,130 +8,73 @@ Force Tags  model:wxmp_wash_group  车主微信端
 
 
 *** Test Cases ***
-Post wash_group Fail Without Login
-   [Documentation]  接口名:用户创建拼团${\n}
-   ...              请求方式:Post${\n}
-   ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
-   [Tags]           Respcode:403
-   ${essential_params}  create list  wash_able_group_id=${wash_able_group_id}  parking_id=${parking_id}  
-   ${unessential_params}  create list  
-   run every case by params  Post user wash groups Fail 403  ${essential_params}  ${unessential_params}
-
-
-
-Post wash_group Success 
+Post User Wash Groups Success 
    [Documentation]  接口名:用户创建拼团${\n}
    ...              请求方式:Post${\n}
    ...              预期结果:输入正确参数,http响应码返回 201,返回的Json数据符合验证。
    [Tags]           Respcode:201
    ${essential_params}  create list  wash_able_group_id=${wash_able_group_id}  parking_id=${parking_id}  
    ${unessential_params}  create list  
-   run every case by params  Post user wash groups Success 201  ${essential_params}  ${unessential_params}
+   run every case by params  Post User Wash Groups Success 201  ${essential_params}  ${unessential_params}
 
-
-
-Post wash_group Fail With Wrong Params
+Post User Wash Groups Fail With Wrong Params
    [Documentation]  接口名:用户创建拼团${\n}
    ...              请求方式:Post${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  wash_able_group_id=${wash_able_group_id}  parking_id=${parking_id}  
    ${unessential_params}  create list  
-   run every case by params  Post user wash groups Fail 422  ${essential_params}  ${unessential_params}
+   run every case by params  Post User Wash Groups Fail 422  ${essential_params}  ${unessential_params}
 
-
-
-Get wash_group Success 
+Get User Wash Able Groups Success 
    [Documentation]  接口名:查询某区域用户能否创建拼团${\n}
    ...              请求方式:Get${\n}
    ...              预期结果:输入正确参数,http响应码返回 200,返回的Json数据为 AutoWashGroup 列表。
    [Tags]           Respcode:200
    ${essential_params}  create list  
    ${unessential_params}  create list  wash_area_id=${wash_area_id}  
-   run every case by params  Get user wash able groups Success 200  ${essential_params}  ${unessential_params}
+   run every case by params  Get User Wash Able Groups Success 200  ${essential_params}  ${unessential_params}
 
-
-
-Get wash_group Fail Without Login
-   [Documentation]  接口名:查询某区域用户能否创建拼团${\n}
-   ...              请求方式:Get${\n}
-   ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
-   [Tags]           Respcode:403
-   ${essential_params}  create list  
-   ${unessential_params}  create list  wash_area_id=${wash_area_id}  
-   run every case by params  Get user wash able groups Fail 403  ${essential_params}  ${unessential_params}
-
-
-
-Get wash_group Fail With Wrong Params
+Get User Wash Able Groups Fail With Wrong Params
    [Documentation]  接口名:查询某区域用户能否创建拼团${\n}
    ...              请求方式:Get${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  
    ${unessential_params}  create list  wash_area_id=${wash_area_id}  
-   run every case by params  Get user wash able groups Fail 422  ${essential_params}  ${unessential_params}
+   run every case by params  Get User Wash Able Groups Fail 422  ${essential_params}  ${unessential_params}
 
-
-
-Get wash_group Fail Without Login
-   [Documentation]  接口名:获取拼团列表${\n}
-   ...              请求方式:Get${\n}
-   ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
-   [Tags]           Respcode:403
-   ${essential_params}  create list  status=${status}  wash_area_id=${wash_area_id}  parking_id=${parking_id}  
-   ${unessential_params}  create list  
-   run every case by params  Get wash groups Fail 403  ${essential_params}  ${unessential_params}
-
-
-
-Get wash_group Success 
+Get Wash Groups Success 
    [Documentation]  接口名:获取拼团列表${\n}
    ...              请求方式:Get${\n}
    ...              预期结果:输入正确参数,http响应码返回 200,返回的Json数据为 WashGroup 列表。
    [Tags]           Respcode:200
    ${essential_params}  create list  status=${status}  wash_area_id=${wash_area_id}  parking_id=${parking_id}  
    ${unessential_params}  create list  
-   run every case by params  Get wash groups Success 200  ${essential_params}  ${unessential_params}
+   run every case by params  Get Wash Groups Success 200  ${essential_params}  ${unessential_params}
 
-
-
-Get wash_group Fail With Wrong Params
+Get Wash Groups Fail With Wrong Params
    [Documentation]  接口名:获取拼团列表${\n}
    ...              请求方式:Get${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  status=${status}  wash_area_id=${wash_area_id}  parking_id=${parking_id}  
    ${unessential_params}  create list  
-   run every case by params  Get wash groups Fail 422  ${essential_params}  ${unessential_params}
+   run every case by params  Get Wash Groups Fail 422  ${essential_params}  ${unessential_params}
 
-
-
-Get wash_group By Id Fail With Wrong Url
+Get Wash Groups By Wash Group Id Fail With Wrong Url
    [Documentation]  接口名:获取单个拼团${\n}
    ...              请求方式:Get${\n}
    ...              预期结果:输入正确参数及错误的url,http响应码返回 404,无Json数据返回。
    [Tags]           Respcode:404
-   Get wash groups By Id Fail 404  wash_group_id=${wrong_url_id}
+   Get Wash Groups By Wash Group Id Fail 404  wash_group_id=${wrong_url_id}
 
-
-
-Get wash_group By Id Fail Without Login
-   [Documentation]  接口名:获取单个拼团${\n}
-   ...              请求方式:Get${\n}
-   ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
-   [Tags]           Respcode:403
-   Get wash groups By Id Fail 403  wash_group_id=${wash_group_id}
-
-
-
-Get wash_group By Id Success 
+Get Wash Groups By Wash Group Id Success 
    [Documentation]  接口名:获取单个拼团${\n}
    ...              请求方式:Get${\n}
    ...              预期结果:输入正确参数,http响应码返回 200,返回的Json数据为 WashGroup 对象。
    [Tags]           Respcode:200
-   Get wash groups By Id Success 200  wash_group_id=${wash_group_id}
-
+   Get Wash Groups By Wash Group Id Success 200  wash_group_id=${wash_group_id}
 
 
 *** Variables ***
@@ -139,71 +82,51 @@ ${wash_group_id}
 
 
 *** Keywords ***
-Post User wash groups Fail 403
+Post User Wash Groups Success 201
    [Arguments]  &{kwargs}
-   ${resp}=  post user wash groups   &{kwargs}
-   expect status is 403  ${resp}  
-
-Post User wash groups Success 201
-   [Arguments]  &{kwargs}
-   ${resp}=  post user wash groups   &{kwargs}
-   expect status is 201  ${resp}  wxmp_wash_group/Post_User_wash_groups_201.json
+   ${resp}=  Post User Wash Groups   &{kwargs}
+   expect status is 201  ${resp}  wxmp_wash_group/Post_User_Wash_Groups_201.json
    ${wash_group_id}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][wash_group_id]}
    set global variable   ${wash_group_id}
 
-Post User wash groups Fail 422
+Post User Wash Groups Fail 422
    [Arguments]  &{kwargs}
-   ${resp}=  post user wash groups   &{kwargs}
+   ${resp}=  Post User Wash Groups   &{kwargs}
    expect status is 422  ${resp}  
 
-Get User wash able groups Success 200
+Get User Wash Able Groups Success 200
    [Arguments]  &{kwargs}
-   ${resp}=  get user wash able groups   &{kwargs}
-   expect status is 200  ${resp}  wxmp_wash_group/Get_User_wash_able_groups_200.json
+   ${resp}=  Get User Wash Able Groups   &{kwargs}
+   expect status is 200  ${resp}  wxmp_wash_group/Get_User_Wash_Able_Groups_200.json
    ${wash_group_id}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][wash_group_id]}
    set global variable   ${wash_group_id}
 
-Get User wash able groups Fail 403
+Get User Wash Able Groups Fail 422
    [Arguments]  &{kwargs}
-   ${resp}=  get user wash able groups   &{kwargs}
-   expect status is 403  ${resp}  
-
-Get User wash able groups Fail 422
-   [Arguments]  &{kwargs}
-   ${resp}=  get user wash able groups   &{kwargs}
+   ${resp}=  Get User Wash Able Groups   &{kwargs}
    expect status is 422  ${resp}  
 
-Get Wash groups Fail 403
+Get Wash Groups Success 200
    [Arguments]  &{kwargs}
-   ${resp}=  get wash groups   &{kwargs}
-   expect status is 403  ${resp}  
-
-Get Wash groups Success 200
-   [Arguments]  &{kwargs}
-   ${resp}=  get wash groups   &{kwargs}
-   expect status is 200  ${resp}  wxmp_wash_group/Get_Wash_groups_200.json
+   ${resp}=  Get Wash Groups   &{kwargs}
+   expect status is 200  ${resp}  wxmp_wash_group/Get_Wash_Groups_200.json
    ${wash_group_id}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][wash_group_id]}
    set global variable   ${wash_group_id}
 
-Get Wash groups Fail 422
+Get Wash Groups Fail 422
    [Arguments]  &{kwargs}
-   ${resp}=  get wash groups   &{kwargs}
+   ${resp}=  Get Wash Groups   &{kwargs}
    expect status is 422  ${resp}  
 
-Get Wash groups By Id Fail 404
+Get Wash Groups By Wash Group Id Fail 404
    [Arguments]  &{kwargs}
-   ${resp}=  get wash groups by wash group id  &{kwargs}
+   ${resp}=  Get Wash Groups By Wash Group Id   &{kwargs}
    expect status is 404  ${resp}  
 
-Get Wash groups By Id Fail 403
+Get Wash Groups By Wash Group Id Success 200
    [Arguments]  &{kwargs}
-   ${resp}=  get wash groups by wash group id  &{kwargs}
-   expect status is 403  ${resp}  
-
-Get Wash groups By Id Success 200
-   [Arguments]  &{kwargs}
-   ${resp}=  get wash groups by wash group id  &{kwargs}
-   expect status is 200  ${resp}  wxmp_wash_group/Get_Wash_groups_By_Id_200.json
+   ${resp}=  Get Wash Groups By Wash Group Id   &{kwargs}
+   expect status is 200  ${resp}  wxmp_wash_group/Get_Wash_Groups_By_Wash_Group_Id_200.json
    ${wash_group_id}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][wash_group_id]}
    set global variable   ${wash_group_id}
 

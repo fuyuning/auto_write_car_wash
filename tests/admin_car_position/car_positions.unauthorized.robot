@@ -56,8 +56,8 @@ Delete Admin Car Positions By Car Position Id Fail Without Login
 
 
 *** Variables ***
-${/car_postion_id}
-${car_position_id}
+${/car_postion_id}  12345678909876543
+${car_position_id}  12345678909876543
 
 
 *** Keywords ***

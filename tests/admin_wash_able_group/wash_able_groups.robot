@@ -40,15 +40,6 @@ Get Admin Wash Able Groups By Wash Auto Group Id Success
    [Tags]           Respcode:200
    Get Admin Wash Able Groups By Wash Auto Group Id Success 200  wash_auto_group_id=${wash_auto_group_id}
 
-Put Admin Wash Able Groups By Wash Able Group Id Success 
-   [Documentation]  接口名:更新用户建团${\n}
-   ...              请求方式:Put${\n}
-   ...              预期结果:输入正确参数,http响应码返回 204,无Json数据返回。
-   [Tags]           Respcode:204
-   ${essential_params}  create list  name=${name}  group_time_range=${group_time_range}  expect_time=${expect_time}  expect_day=${expect_day}  is_diff_car_type=False  people_num=${people_num}  people_day_num=${people_day_num}  service_groups=${service_groups}  status=${status}  start_time=${start_time}  end_time=${end_time}  day_in_week=${day_in_week}  car_washers=${car_washers}  time_loop_set=${time_loop_set}  
-   ${unessential_params}  create list  spec_people_day_num=${spec_people_day_num}  auto_group=False  
-   run every case by params  Put Admin Wash Able Groups By Wash Able Group Id Success 204  ${essential_params}  ${unessential_params}  wash_able_group_id=${wash_able_group_id}
-
 Put Admin Wash Able Groups By Wash Able Group Id Fail With Wrong Params
    [Documentation]  接口名:更新用户建团${\n}
    ...              请求方式:Put${\n}
@@ -57,6 +48,15 @@ Put Admin Wash Able Groups By Wash Able Group Id Fail With Wrong Params
    ${essential_params}  create list  name=${name}  group_time_range=${group_time_range}  expect_time=${expect_time}  expect_day=${expect_day}  is_diff_car_type=False  people_num=${people_num}  people_day_num=${people_day_num}  service_groups=${service_groups}  status=${status}  start_time=${start_time}  end_time=${end_time}  day_in_week=${day_in_week}  car_washers=${car_washers}  time_loop_set=${time_loop_set}  
    ${unessential_params}  create list  spec_people_day_num=${spec_people_day_num}  auto_group=False  
    run every case by params  Put Admin Wash Able Groups By Wash Able Group Id Fail 422  ${essential_params}  ${unessential_params}  wash_able_group_id=${wash_able_group_id}
+
+Put Admin Wash Able Groups By Wash Able Group Id Success 
+   [Documentation]  接口名:更新用户建团${\n}
+   ...              请求方式:Put${\n}
+   ...              预期结果:输入正确参数,http响应码返回 204,无Json数据返回。
+   [Tags]           Respcode:204
+   ${essential_params}  create list  name=${name}  group_time_range=${group_time_range}  expect_time=${expect_time}  expect_day=${expect_day}  is_diff_car_type=False  people_num=${people_num}  people_day_num=${people_day_num}  service_groups=${service_groups}  status=${status}  start_time=${start_time}  end_time=${end_time}  day_in_week=${day_in_week}  car_washers=${car_washers}  time_loop_set=${time_loop_set}  
+   ${unessential_params}  create list  spec_people_day_num=${spec_people_day_num}  auto_group=False  
+   run every case by params  Put Admin Wash Able Groups By Wash Able Group Id Success 204  ${essential_params}  ${unessential_params}  wash_able_group_id=${wash_able_group_id}
 
 Put Admin Wash Able Groups By Wash Able Group Id Fail With Wrong Url
    [Documentation]  接口名:更新用户建团${\n}
@@ -96,8 +96,8 @@ Patch Admin Wash Able Group By Wash Able Group Id Fail With Wrong Params
 
 
 *** Variables ***
-${wash_auto_group_id}
-${wash_able_group_id}
+${wash_auto_group_id}  
+${wash_able_group_id}  
 
 
 *** Keywords ***
@@ -129,15 +129,15 @@ Get Admin Wash Able Groups By Wash Auto Group Id Success 200
    ${wash_able_group_id}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][wash_able_group_id]}
    set global variable   ${wash_able_group_id}
 
-Put Admin Wash Able Groups By Wash Able Group Id Success 204
-   [Arguments]  &{kwargs}
-   ${resp}=  Put Admin Wash Able Groups By Wash Able Group Id   &{kwargs}
-   expect status is 204  ${resp}  
-
 Put Admin Wash Able Groups By Wash Able Group Id Fail 422
    [Arguments]  &{kwargs}
    ${resp}=  Put Admin Wash Able Groups By Wash Able Group Id   &{kwargs}
    expect status is 422  ${resp}  
+
+Put Admin Wash Able Groups By Wash Able Group Id Success 204
+   [Arguments]  &{kwargs}
+   ${resp}=  Put Admin Wash Able Groups By Wash Able Group Id   &{kwargs}
+   expect status is 204  ${resp}  
 
 Put Admin Wash Able Groups By Wash Able Group Id Fail 404
    [Arguments]  &{kwargs}

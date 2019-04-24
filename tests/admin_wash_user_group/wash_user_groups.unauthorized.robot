@@ -5,6 +5,7 @@ Library  robot_car_wash_server_library.wash_user_group.WashUserGroupLibrary
 Force Tags  model:admin_wash_user_group  虾洗后台
 
 
+*** Test Cases ***
 Post Admin Wash User Groups Fail Without Login
    [Documentation]  接口名:新增分组${\n}
    ...              请求方式:Post${\n}
@@ -44,6 +45,12 @@ Delete Admin Wash User Groups By Wash User Group Id Fail Without Login
    [Tags]           Respcode:403
    Delete Admin Wash User Groups By Wash User Group Id Fail 403  wash_user_group_id=${wash_user_group_id}
 
+
+*** Variables ***
+${wash_user_group_id}  12345678909876543
+
+
+*** Keywords ***
 Post Admin Wash User Groups Fail 403
    [Arguments]  &{kwargs}
    ${resp}=  Post Admin Wash User Groups   &{kwargs}

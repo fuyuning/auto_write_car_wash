@@ -40,7 +40,7 @@ Put Admin Car Infos By Car Info Id Fail Without Login
 
 
 *** Variables ***
-${car_info_id}
+${car_info_id}  12345678909876543
 
 
 *** Keywords ***

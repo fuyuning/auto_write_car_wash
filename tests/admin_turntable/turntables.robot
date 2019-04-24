@@ -153,8 +153,8 @@ Delete Admin Turntables By Turntable Id Fail With Wrong Params
 
 
 *** Variables ***
-${turntable_id}
-${turntable_id/enabled}
+${turntable_id}  
+${turntable_id/enabled}  
 
 
 *** Keywords ***

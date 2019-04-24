@@ -5,6 +5,7 @@ Library  robot_car_wash_server_library.wash_normal.WashNormalLibrary
 Force Tags  model:admin_wash_normal  虾洗后台
 
 
+*** Test Cases ***
 Get Admin Wash Normals By Wash Normal Id Fail Without Login
    [Documentation]  接口名:查询单个单买${\n}
    ...              请求方式:Get${\n}
@@ -48,6 +49,12 @@ Patch Admin Wash Normal By Wash Normal Id Fail Without Login
    ${unessential_params}  create list  
    run every case by params  Patch Admin Wash Normal By Wash Normal Id Fail 403  ${essential_params}  ${unessential_params}  wash_normal_id=${wash_normal_id}
 
+
+*** Variables ***
+${wash_normal_id}  12345678909876543
+
+
+*** Keywords ***
 Get Admin Wash Normals By Wash Normal Id Fail 403
    [Arguments]  &{kwargs}
    ${resp}=  Get Admin Wash Normals By Wash Normal Id   &{kwargs}

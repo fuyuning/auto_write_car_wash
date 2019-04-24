@@ -168,9 +168,9 @@ Get User Coupon Pools Fail With Wrong Params
 
 
 *** Variables ***
-${coupon_pool_id/achieve_by_mobile}
-${coupon_pool_id/achieve}
-${coupon_pool_id}
+${coupon_pool_id/achieve_by_mobile}  
+${coupon_pool_id/achieve}  
+${coupon_pool_id}  
 
 
 *** Keywords ***

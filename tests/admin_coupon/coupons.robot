@@ -94,15 +94,6 @@ Get Admin Coupon Pools By Coupon Pool Id Success
    [Tags]           Respcode:200
    Get Admin Coupon Pools By Coupon Pool Id Success 200  coupon_pool_id=${coupon_pool_id}
 
-Put Admin Coupon Pools By Coupon Pool Id Success 
-   [Documentation]  接口名:编辑优惠券${\n}
-   ...              请求方式:Put${\n}
-   ...              预期结果:输入正确参数,http响应码返回 204,无Json数据返回。
-   [Tags]           Respcode:204
-   ${essential_params}  create list  coupon_template_name=${coupon_template_name}  discount_money=${discount_money}  coupon_number=${coupon_number}  allow_gain_number=${allow_gain_number}  condition_money=${condition_money}  is_fixed_time=False  allow_use_days=${allow_use_days}  allow_use_start_time=${Please_input}  allow_use_end_time=${Please_input}  service_types=${service_types}  order_types=${order_types}  service_group_ids=${service_group_ids}  coupon_type=${coupon_type}  parking_ids=${parking_ids}  
-   ${unessential_params}  create list  is_coupon_number_limit=False  is_allow_gain_number_limit=False  discount=${discount}  is_point=${is_point}  wash_area_ids=${wash_area_ids}  
-   run every case by params  Put Admin Coupon Pools By Coupon Pool Id Success 204  ${essential_params}  ${unessential_params}  coupon_pool_id=${coupon_pool_id}
-
 Put Admin Coupon Pools By Coupon Pool Id Fail With Wrong Params
    [Documentation]  接口名:编辑优惠券${\n}
    ...              请求方式:Put${\n}
@@ -111,6 +102,15 @@ Put Admin Coupon Pools By Coupon Pool Id Fail With Wrong Params
    ${essential_params}  create list  coupon_template_name=${coupon_template_name}  discount_money=${discount_money}  coupon_number=${coupon_number}  allow_gain_number=${allow_gain_number}  condition_money=${condition_money}  is_fixed_time=False  allow_use_days=${allow_use_days}  allow_use_start_time=${Please_input}  allow_use_end_time=${Please_input}  service_types=${service_types}  order_types=${order_types}  service_group_ids=${service_group_ids}  coupon_type=${coupon_type}  parking_ids=${parking_ids}  
    ${unessential_params}  create list  is_coupon_number_limit=False  is_allow_gain_number_limit=False  discount=${discount}  is_point=${is_point}  wash_area_ids=${wash_area_ids}  
    run every case by params  Put Admin Coupon Pools By Coupon Pool Id Fail 422  ${essential_params}  ${unessential_params}  coupon_pool_id=${coupon_pool_id}
+
+Put Admin Coupon Pools By Coupon Pool Id Success 
+   [Documentation]  接口名:编辑优惠券${\n}
+   ...              请求方式:Put${\n}
+   ...              预期结果:输入正确参数,http响应码返回 204,无Json数据返回。
+   [Tags]           Respcode:204
+   ${essential_params}  create list  coupon_template_name=${coupon_template_name}  discount_money=${discount_money}  coupon_number=${coupon_number}  allow_gain_number=${allow_gain_number}  condition_money=${condition_money}  is_fixed_time=False  allow_use_days=${allow_use_days}  allow_use_start_time=${Please_input}  allow_use_end_time=${Please_input}  service_types=${service_types}  order_types=${order_types}  service_group_ids=${service_group_ids}  coupon_type=${coupon_type}  parking_ids=${parking_ids}  
+   ${unessential_params}  create list  is_coupon_number_limit=False  is_allow_gain_number_limit=False  discount=${discount}  is_point=${is_point}  wash_area_ids=${wash_area_ids}  
+   run every case by params  Put Admin Coupon Pools By Coupon Pool Id Success 204  ${essential_params}  ${unessential_params}  coupon_pool_id=${coupon_pool_id}
 
 Put Admin Coupon Pools By Coupon Pool Id Fail With Wrong Url
    [Documentation]  接口名:编辑优惠券${\n}
@@ -121,13 +121,6 @@ Put Admin Coupon Pools By Coupon Pool Id Fail With Wrong Url
    ${unessential_params}  create list  is_coupon_number_limit=False  is_allow_gain_number_limit=False  discount=${discount}  is_point=${is_point}  wash_area_ids=${wash_area_ids}  
    run every case by params  Put Admin Coupon Pools By Coupon Pool Id Fail 404  ${essential_params}  ${unessential_params}  coupon_pool_id=${wrong_url_id}
 
-Delete Admin Coupon Pools By Coupon Pool Id Success 
-   [Documentation]  接口名:删除优惠券${\n}
-   ...              请求方式:Delete${\n}
-   ...              预期结果:输入正确参数,http响应码返回 204,无Json数据返回。
-   [Tags]           Respcode:204
-   Delete Admin Coupon Pools By Coupon Pool Id Success 204  coupon_pool_id=${coupon_pool_id}
-
 Delete Admin Coupon Pools By Coupon Pool Id Fail With Wrong Url
    [Documentation]  接口名:删除优惠券${\n}
    ...              请求方式:Delete${\n}
@@ -135,9 +128,16 @@ Delete Admin Coupon Pools By Coupon Pool Id Fail With Wrong Url
    [Tags]           Respcode:404
    Delete Admin Coupon Pools By Coupon Pool Id Fail 404  coupon_pool_id=${wrong_url_id}
 
+Delete Admin Coupon Pools By Coupon Pool Id Success 
+   [Documentation]  接口名:删除优惠券${\n}
+   ...              请求方式:Delete${\n}
+   ...              预期结果:输入正确参数,http响应码返回 204,无Json数据返回。
+   [Tags]           Respcode:204
+   Delete Admin Coupon Pools By Coupon Pool Id Success 204  coupon_pool_id=${coupon_pool_id}
+
 
 *** Variables ***
-${coupon_pool_id}
+${coupon_pool_id}  
 
 
 *** Keywords ***
@@ -201,28 +201,28 @@ Get Admin Coupon Pools By Coupon Pool Id Success 200
    ${coupon_pool_id}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][coupon_pool_id]}
    set global variable   ${coupon_pool_id}
 
-Put Admin Coupon Pools By Coupon Pool Id Success 204
-   [Arguments]  &{kwargs}
-   ${resp}=  Put Admin Coupon Pools By Coupon Pool Id   &{kwargs}
-   expect status is 204  ${resp}  
-
 Put Admin Coupon Pools By Coupon Pool Id Fail 422
    [Arguments]  &{kwargs}
    ${resp}=  Put Admin Coupon Pools By Coupon Pool Id   &{kwargs}
    expect status is 422  ${resp}  
+
+Put Admin Coupon Pools By Coupon Pool Id Success 204
+   [Arguments]  &{kwargs}
+   ${resp}=  Put Admin Coupon Pools By Coupon Pool Id   &{kwargs}
+   expect status is 204  ${resp}  
 
 Put Admin Coupon Pools By Coupon Pool Id Fail 404
    [Arguments]  &{kwargs}
    ${resp}=  Put Admin Coupon Pools By Coupon Pool Id   &{kwargs}
    expect status is 404  ${resp}  
 
-Delete Admin Coupon Pools By Coupon Pool Id Success 204
-   [Arguments]  &{kwargs}
-   ${resp}=  Delete Admin Coupon Pools By Coupon Pool Id   &{kwargs}
-   expect status is 204  ${resp}  
-
 Delete Admin Coupon Pools By Coupon Pool Id Fail 404
    [Arguments]  &{kwargs}
    ${resp}=  Delete Admin Coupon Pools By Coupon Pool Id   &{kwargs}
    expect status is 404  ${resp}  
+
+Delete Admin Coupon Pools By Coupon Pool Id Success 204
+   [Arguments]  &{kwargs}
+   ${resp}=  Delete Admin Coupon Pools By Coupon Pool Id   &{kwargs}
+   expect status is 204  ${resp}  
 

@@ -26,7 +26,7 @@ Post Pay By Card Order Id Fail Without Login
 
 
 *** Variables ***
-${card_order_id/pay}
+${card_order_id/pay}  12345678909876543
 
 
 *** Keywords ***

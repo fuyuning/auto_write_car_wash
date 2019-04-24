@@ -40,15 +40,6 @@ Get Admin Wash Auto Groups By Wash Auto Group Id Success
    [Tags]           Respcode:200
    Get Admin Wash Auto Groups By Wash Auto Group Id Success 200  wash_auto_group_id=${wash_auto_group_id}
 
-Put Admin Wash Auto Groups By Wash Auto Group Id Success 
-   [Documentation]  接口名:更新自动建团${\n}
-   ...              请求方式:Put${\n}
-   ...              预期结果:输入正确参数,http响应码返回 201,返回的Json数据符合验证。
-   [Tags]           Respcode:201
-   ${essential_params}  create list  name=${name}  group_time_range=${group_time_range}  expect_time=${expect_time}  expect_day=${expect_day}  is_diff_car_type=False  people_num=${people_num}  people_day_num=${people_day_num}  service_groups=${service_groups}  status=${status}  start_time=${start_time}  end_time=${end_time}  day_in_week=${day_in_week}  car_washers=${car_washers}  
-   ${unessential_params}  create list  is_auto_robot=False  auto_group=False  subscribe=False  subscribe_name=${subscribe_name}  subscribe_day_num=${subscribe_day_num}  subscribe_expect_time=${subscribe_expect_time}  subscribe_expect_day=${subscribe_expect_day}  
-   run every case by params  Put Admin Wash Auto Groups By Wash Auto Group Id Success 201  ${essential_params}  ${unessential_params}  wash_auto_group_id=${wash_auto_group_id}
-
 Put Admin Wash Auto Groups By Wash Auto Group Id Fail With Wrong Params
    [Documentation]  接口名:更新自动建团${\n}
    ...              请求方式:Put${\n}
@@ -57,6 +48,15 @@ Put Admin Wash Auto Groups By Wash Auto Group Id Fail With Wrong Params
    ${essential_params}  create list  name=${name}  group_time_range=${group_time_range}  expect_time=${expect_time}  expect_day=${expect_day}  is_diff_car_type=False  people_num=${people_num}  people_day_num=${people_day_num}  service_groups=${service_groups}  status=${status}  start_time=${start_time}  end_time=${end_time}  day_in_week=${day_in_week}  car_washers=${car_washers}  
    ${unessential_params}  create list  is_auto_robot=False  auto_group=False  subscribe=False  subscribe_name=${subscribe_name}  subscribe_day_num=${subscribe_day_num}  subscribe_expect_time=${subscribe_expect_time}  subscribe_expect_day=${subscribe_expect_day}  
    run every case by params  Put Admin Wash Auto Groups By Wash Auto Group Id Fail 422  ${essential_params}  ${unessential_params}  wash_auto_group_id=${wash_auto_group_id}
+
+Put Admin Wash Auto Groups By Wash Auto Group Id Success 
+   [Documentation]  接口名:更新自动建团${\n}
+   ...              请求方式:Put${\n}
+   ...              预期结果:输入正确参数,http响应码返回 201,返回的Json数据符合验证。
+   [Tags]           Respcode:201
+   ${essential_params}  create list  name=${name}  group_time_range=${group_time_range}  expect_time=${expect_time}  expect_day=${expect_day}  is_diff_car_type=False  people_num=${people_num}  people_day_num=${people_day_num}  service_groups=${service_groups}  status=${status}  start_time=${start_time}  end_time=${end_time}  day_in_week=${day_in_week}  car_washers=${car_washers}  
+   ${unessential_params}  create list  is_auto_robot=False  auto_group=False  subscribe=False  subscribe_name=${subscribe_name}  subscribe_day_num=${subscribe_day_num}  subscribe_expect_time=${subscribe_expect_time}  subscribe_expect_day=${subscribe_expect_day}  
+   run every case by params  Put Admin Wash Auto Groups By Wash Auto Group Id Success 201  ${essential_params}  ${unessential_params}  wash_auto_group_id=${wash_auto_group_id}
 
 Put Admin Wash Auto Groups By Wash Auto Group Id Fail With Wrong Url
    [Documentation]  接口名:更新自动建团${\n}
@@ -96,7 +96,7 @@ Patch Admin Wash Auto Group By Wash Auto Group Id Fail With Wrong Params
 
 
 *** Variables ***
-${wash_auto_group_id}
+${wash_auto_group_id}  
 
 
 *** Keywords ***
@@ -124,15 +124,15 @@ Get Admin Wash Auto Groups By Wash Auto Group Id Success 200
    ${wash_auto_group_id}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][wash_auto_group_id]}
    set global variable   ${wash_auto_group_id}
 
-Put Admin Wash Auto Groups By Wash Auto Group Id Success 201
-   [Arguments]  &{kwargs}
-   ${resp}=  Put Admin Wash Auto Groups By Wash Auto Group Id   &{kwargs}
-   expect status is 201  ${resp}  admin_wash_auto_group/Put_Admin_Wash_Auto_Groups_By_Wash_Auto_Group_Id_201.json
-
 Put Admin Wash Auto Groups By Wash Auto Group Id Fail 422
    [Arguments]  &{kwargs}
    ${resp}=  Put Admin Wash Auto Groups By Wash Auto Group Id   &{kwargs}
    expect status is 422  ${resp}  
+
+Put Admin Wash Auto Groups By Wash Auto Group Id Success 201
+   [Arguments]  &{kwargs}
+   ${resp}=  Put Admin Wash Auto Groups By Wash Auto Group Id   &{kwargs}
+   expect status is 201  ${resp}  admin_wash_auto_group/Put_Admin_Wash_Auto_Groups_By_Wash_Auto_Group_Id_201.json
 
 Put Admin Wash Auto Groups By Wash Auto Group Id Fail 404
    [Arguments]  &{kwargs}

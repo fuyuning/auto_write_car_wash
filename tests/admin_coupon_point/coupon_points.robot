@@ -95,7 +95,7 @@ Get Admin Coupon Point Records Success
    ...              预期结果:输入正确参数,http响应码返回 200,返回的Json数据为 CouponPointRecord 列表。
    [Tags]           Respcode:200
    ${essential_params}  create list  
-   ${unessential_params}  create list  user_id=${user_id}  mobile=${mobile}  status=${status}  is_used=${is_used}  page_num=${page_num}  page_size=${page_size}  
+   ${unessential_params}  create list  coupon_name=${coupon_name}  point_remark=${point_remark}  created_section=${created_section}  page_num=${page_num}  page_size=${page_size}  
    run every case by params  Get Admin Coupon Point Records Success 200  ${essential_params}  ${unessential_params}
 
 Get Admin Coupon Point Records Fail With Wrong Params
@@ -104,7 +104,7 @@ Get Admin Coupon Point Records Fail With Wrong Params
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  
-   ${unessential_params}  create list  user_id=${user_id}  mobile=${mobile}  status=${status}  is_used=${is_used}  page_num=${page_num}  page_size=${page_size}  
+   ${unessential_params}  create list  coupon_name=${coupon_name}  point_remark=${point_remark}  created_section=${created_section}  page_num=${page_num}  page_size=${page_size}  
    run every case by params  Get Admin Coupon Point Records Fail 422  ${essential_params}  ${unessential_params}
 
 Get Admin Coupon Points Success 
@@ -113,7 +113,7 @@ Get Admin Coupon Points Success
    ...              预期结果:输入正确参数,http响应码返回 200,返回的Json数据为 CouponPoint 列表。
    [Tags]           Respcode:200
    ${essential_params}  create list  coupon_point_record_id=${coupon_point_record_id}  
-   ${unessential_params}  create list  coupon_name=${coupon_name}  point_remark=${point_remark}  created_section=${created_section}  page_num=${page_num}  page_size=${page_size}  
+   ${unessential_params}  create list  user_id=${user_id}  mobile=${mobile}  status=${status}  is_used=${is_used}  page_num=${page_num}  page_size=${page_size}  
    run every case by params  Get Admin Coupon Points Success 200  ${essential_params}  ${unessential_params}
 
 Get Admin Coupon Points Fail With Wrong Params
@@ -122,7 +122,7 @@ Get Admin Coupon Points Fail With Wrong Params
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  coupon_point_record_id=${coupon_point_record_id}  
-   ${unessential_params}  create list  coupon_name=${coupon_name}  point_remark=${point_remark}  created_section=${created_section}  page_num=${page_num}  page_size=${page_size}  
+   ${unessential_params}  create list  user_id=${user_id}  mobile=${mobile}  status=${status}  is_used=${is_used}  page_num=${page_num}  page_size=${page_size}  
    run every case by params  Get Admin Coupon Points Fail 422  ${essential_params}  ${unessential_params}
 
 Patch Admin Coupon Point Records By Coupon Point Record Id Success 
@@ -152,13 +152,6 @@ Patch Admin Coupon Point Records By Coupon Point Record Id Fail With Wrong Param
    ${unessential_params}  create list  point_remark=${point_remark}  
    run every case by params  Patch Admin Coupon Point Records By Coupon Point Record Id Fail 422  ${essential_params}  ${unessential_params}  coupon_point_record_id=${coupon_point_record_id}
 
-Delete Admin Coupon Point Records By Coupon Point Record Id Success 
-   [Documentation]  接口名:删除定向发券${\n}
-   ...              请求方式:Delete${\n}
-   ...              预期结果:输入正确参数,http响应码返回 204,无Json数据返回。
-   [Tags]           Respcode:204
-   Delete Admin Coupon Point Records By Coupon Point Record Id Success 204  coupon_point_record_id=${coupon_point_record_id}
-
 Delete Admin Coupon Point Records By Coupon Point Record Id Fail With Wrong Url
    [Documentation]  接口名:删除定向发券${\n}
    ...              请求方式:Delete${\n}
@@ -166,9 +159,16 @@ Delete Admin Coupon Point Records By Coupon Point Record Id Fail With Wrong Url
    [Tags]           Respcode:404
    Delete Admin Coupon Point Records By Coupon Point Record Id Fail 404  coupon_point_record_id=${wrong_url_id}
 
+Delete Admin Coupon Point Records By Coupon Point Record Id Success 
+   [Documentation]  接口名:删除定向发券${\n}
+   ...              请求方式:Delete${\n}
+   ...              预期结果:输入正确参数,http响应码返回 204,无Json数据返回。
+   [Tags]           Respcode:204
+   Delete Admin Coupon Point Records By Coupon Point Record Id Success 204  coupon_point_record_id=${coupon_point_record_id}
+
 
 *** Variables ***
-${coupon_point_record_id}
+${coupon_point_record_id}  
 
 
 *** Keywords ***
@@ -264,13 +264,13 @@ Patch Admin Coupon Point Records By Coupon Point Record Id Fail 422
    ${resp}=  Patch Admin Coupon Point Records By Coupon Point Record Id   &{kwargs}
    expect status is 422  ${resp}  
 
-Delete Admin Coupon Point Records By Coupon Point Record Id Success 204
-   [Arguments]  &{kwargs}
-   ${resp}=  Delete Admin Coupon Point Records By Coupon Point Record Id   &{kwargs}
-   expect status is 204  ${resp}  
-
 Delete Admin Coupon Point Records By Coupon Point Record Id Fail 404
    [Arguments]  &{kwargs}
    ${resp}=  Delete Admin Coupon Point Records By Coupon Point Record Id   &{kwargs}
    expect status is 404  ${resp}  
+
+Delete Admin Coupon Point Records By Coupon Point Record Id Success 204
+   [Arguments]  &{kwargs}
+   ${resp}=  Delete Admin Coupon Point Records By Coupon Point Record Id   &{kwargs}
+   expect status is 204  ${resp}  
 

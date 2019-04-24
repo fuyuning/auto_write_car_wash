@@ -5,6 +5,7 @@ Library  robot_car_wash_server_library.wechat_keyword.WechatKeywordLibrary
 Force Tags  model:admin_wechat_keyword  虾洗后台
 
 
+*** Test Cases ***
 Post Admin Wechat Keywords Fail Without Login
    [Documentation]  接口名:添加--公众号关键字回复${\n}
    ...              请求方式:Post${\n}
@@ -37,6 +38,12 @@ Delete Admin Wechat Keywords By Wechat Keyword Id Fail Without Login
    [Tags]           Respcode:403
    Delete Admin Wechat Keywords By Wechat Keyword Id Fail 403  wechat_keyword_id=${wechat_keyword_id}
 
+
+*** Variables ***
+${wechat_keyword_id}  12345678909876543
+
+
+*** Keywords ***
 Post Admin Wechat Keywords Fail 403
    [Arguments]  &{kwargs}
    ${resp}=  Post Admin Wechat Keywords   &{kwargs}

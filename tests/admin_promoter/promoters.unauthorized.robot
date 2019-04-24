@@ -69,8 +69,8 @@ Delete Admin Promoters By Promoter Id Fail Without Login
 
 
 *** Variables ***
-${promoter_id}
-${promoter_id/enabled}
+${promoter_id}  12345678909876543
+${promoter_id/enabled}  12345678909876543
 
 
 *** Keywords ***

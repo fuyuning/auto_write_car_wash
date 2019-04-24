@@ -5,6 +5,7 @@ Library  robot_car_wash_server_library.wash_group.WashGroupLibrary
 Force Tags  model:admin_wash_group  虾洗后台
 
 
+*** Test Cases ***
 Post Admin Wash Groups Fail Without Login
    [Documentation]  接口名:新增拼团${\n}
    ...              请求方式:Post${\n}
@@ -48,6 +49,13 @@ Put Admin Wash Groups By Wash Group Id Fail Without Login
    ${unessential_params}  create list  name=${name}  people_num=${people_num}  auto_group=False  
    run every case by params  Put Admin Wash Groups By Wash Group Id Fail 403  ${essential_params}  ${unessential_params}  wash_group_id=${wash_group_id}
 
+
+*** Variables ***
+${wash_group_id/join}  12345678909876543
+${wash_group_id}  12345678909876543
+
+
+*** Keywords ***
 Post Admin Wash Groups Fail 403
    [Arguments]  &{kwargs}
    ${resp}=  Post Admin Wash Groups   &{kwargs}

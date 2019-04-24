@@ -42,7 +42,7 @@ Delete Admin Service Groups By Service Group Id Fail Without Login
 
 
 *** Variables ***
-${service_group_id}
+${service_group_id}  12345678909876543
 
 
 *** Keywords ***

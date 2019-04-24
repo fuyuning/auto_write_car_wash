@@ -55,7 +55,7 @@ Patch Visible By Wash User Statistic Id Fail With Wrong Params
 
 
 *** Variables ***
-${wash_user_statistic_id/visible}
+${wash_user_statistic_id/visible}  
 
 
 *** Keywords ***

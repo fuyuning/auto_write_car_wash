@@ -5,6 +5,7 @@ Library  robot_car_wash_server_library.wash_area.WashAreaLibrary
 Force Tags  model:admin_wash_area  虾洗后台
 
 
+*** Test Cases ***
 Post Admin Wash Areas Fail Without Login
    [Documentation]  接口名:服务区域_添加${\n}
    ...              请求方式:Post${\n}
@@ -55,6 +56,13 @@ Delete Admin Wash Areas By Wash Area Id Fail Without Login
    [Tags]           Respcode:403
    Delete Admin Wash Areas By Wash Area Id Fail 403  wash_area_id=${wash_area_id}
 
+
+*** Variables ***
+${wash_area_id}  12345678909876543
+${wash_area_id/(wash_normal|wash_group|user_group|enabled)}  12345678909876543
+
+
+*** Keywords ***
 Post Admin Wash Areas Fail 403
    [Arguments]  &{kwargs}
    ${resp}=  Post Admin Wash Areas   &{kwargs}

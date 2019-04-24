@@ -55,7 +55,7 @@ Patch Visible By Car Statistic Id Fail With Wrong Params
 
 
 *** Variables ***
-${car_statistic_id/visible}
+${car_statistic_id/visible}  
 
 
 *** Keywords ***

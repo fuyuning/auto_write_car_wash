@@ -5,6 +5,7 @@ Library  robot_car_wash_server_library.parking.ParkingLibrary
 Force Tags  model:admin_parking  虾洗后台
 
 
+*** Test Cases ***
 Post Admin Parkings Fail Without Login
    [Documentation]  接口名:添加停车场信息${\n}
    ...              请求方式:Post${\n}
@@ -55,6 +56,13 @@ Delete Admin Parkings By Parking Id Fail Without Login
    [Tags]           Respcode:403
    Delete Admin Parkings By Parking Id Fail 403  parking_id=${parking_id}
 
+
+*** Variables ***
+${parking_id}  12345678909876543
+${parking_id/enabled}  12345678909876543
+
+
+*** Keywords ***
 Post Admin Parkings Fail 403
    [Arguments]  &{kwargs}
    ${resp}=  Post Admin Parkings   &{kwargs}

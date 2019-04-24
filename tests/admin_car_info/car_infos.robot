@@ -47,15 +47,6 @@ Get Admin Car Infos By Car Info Id Success
    [Tags]           Respcode:200
    Get Admin Car Infos By Car Info Id Success 200  car_info_id=${car_info_id}
 
-Put Admin Car Infos By Car Info Id Fail With Wrong Url
-   [Documentation]  接口名:修改车辆信息${\n}
-   ...              请求方式:Put${\n}
-   ...              预期结果:输入正确参数及错误的url,http响应码返回 404,无Json数据返回。
-   [Tags]           Respcode:404
-   ${essential_params}  create list  car_id=${car_id}  
-   ${unessential_params}  create list  car_type=${car_type}  car_brand=${car_brand}  car_series=${car_series}  car_color=${car_color}  car_frame_no=${car_frame_no}  licensed_time=${licensed_time}  car_year=${car_year}  car_images=${car_images}  car_tire_pressure=${car_tire_pressure}  description=${description}  
-   run every case by params  Put Admin Car Infos By Car Info Id Fail 404  ${essential_params}  ${unessential_params}  car_info_id=${wrong_url_id}
-
 Put Admin Car Infos By Car Info Id Success 
    [Documentation]  接口名:修改车辆信息${\n}
    ...              请求方式:Put${\n}
@@ -74,9 +65,18 @@ Put Admin Car Infos By Car Info Id Fail With Wrong Params
    ${unessential_params}  create list  car_type=${car_type}  car_brand=${car_brand}  car_series=${car_series}  car_color=${car_color}  car_frame_no=${car_frame_no}  licensed_time=${licensed_time}  car_year=${car_year}  car_images=${car_images}  car_tire_pressure=${car_tire_pressure}  description=${description}  
    run every case by params  Put Admin Car Infos By Car Info Id Fail 422  ${essential_params}  ${unessential_params}  car_info_id=${car_info_id}
 
+Put Admin Car Infos By Car Info Id Fail With Wrong Url
+   [Documentation]  接口名:修改车辆信息${\n}
+   ...              请求方式:Put${\n}
+   ...              预期结果:输入正确参数及错误的url,http响应码返回 404,无Json数据返回。
+   [Tags]           Respcode:404
+   ${essential_params}  create list  car_id=${car_id}  
+   ${unessential_params}  create list  car_type=${car_type}  car_brand=${car_brand}  car_series=${car_series}  car_color=${car_color}  car_frame_no=${car_frame_no}  licensed_time=${licensed_time}  car_year=${car_year}  car_images=${car_images}  car_tire_pressure=${car_tire_pressure}  description=${description}  
+   run every case by params  Put Admin Car Infos By Car Info Id Fail 404  ${essential_params}  ${unessential_params}  car_info_id=${wrong_url_id}
+
 
 *** Variables ***
-${car_info_id}
+${car_info_id}  
 
 
 *** Keywords ***
@@ -111,11 +111,6 @@ Get Admin Car Infos By Car Info Id Success 200
    ${car_info_id}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][car_info_id]}
    set global variable   ${car_info_id}
 
-Put Admin Car Infos By Car Info Id Fail 404
-   [Arguments]  &{kwargs}
-   ${resp}=  Put Admin Car Infos By Car Info Id   &{kwargs}
-   expect status is 404  ${resp}  
-
 Put Admin Car Infos By Car Info Id Success 204
    [Arguments]  &{kwargs}
    ${resp}=  Put Admin Car Infos By Car Info Id   &{kwargs}
@@ -125,4 +120,9 @@ Put Admin Car Infos By Car Info Id Fail 422
    [Arguments]  &{kwargs}
    ${resp}=  Put Admin Car Infos By Car Info Id   &{kwargs}
    expect status is 422  ${resp}  
+
+Put Admin Car Infos By Car Info Id Fail 404
+   [Arguments]  &{kwargs}
+   ${resp}=  Put Admin Car Infos By Car Info Id   &{kwargs}
+   expect status is 404  ${resp}  
 

@@ -37,7 +37,7 @@ Get Price By Service Group Id Fail With Wrong Params
 
 
 *** Variables ***
-${service_group_id/price}
+${service_group_id/price}  
 
 
 *** Keywords ***

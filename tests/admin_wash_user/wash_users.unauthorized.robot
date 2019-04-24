@@ -5,6 +5,7 @@ Library  robot_car_wash_server_library.wash_user.WashUserLibrary
 Force Tags  model:admin_wash_user  虾洗后台
 
 
+*** Test Cases ***
 Post Clear By Userid Fail Without Login
    [Documentation]  接口名:用户数据清除${\n}
    ...              请求方式:Post${\n}
@@ -48,6 +49,13 @@ Patch wash User Group by userid Fail Without Login
    ${unessential_params}  create list  
    run every case by params  Patch wash User Group by userid Fail 403  ${essential_params}  ${unessential_params}  userid/wash_user_group=${userid/wash_user_group}
 
+
+*** Variables ***
+${userid/clear}  12345678909876543
+${userid/wash_user_group}  12345678909876543
+
+
+*** Keywords ***
 Post Clear By Userid Fail 403
    [Arguments]  &{kwargs}
    ${resp}=  Post Clear By Userid   &{kwargs}

@@ -1,5 +1,5 @@
 admin  ||  wechat_menu  ||  获取自定义菜单  ||  GET  ||    /admin/wechat_menus  ||    ||    ||    ||  ['200', '403', '404']  ||    ||  
-admin  ||  wechat_menu  ||  编辑自定义菜单  ||  PUT  ||    /admin/wechat_menus  ||  ['menu']  ||  ['json']  ||  ['T']  ||  ['204', '403', '422']  ||    ||  
+admin  ||  wechat_menu  ||  编辑自定义菜单  ||  POST  ||    /admin/wechat_menus  ||  ['menu']  ||  ['json']  ||  ['T']  ||  ['201', '403', '422']  ||    ||  
 admin  ||  wechat_keyword  ||  添加--公众号关键字回复  ||  POST  ||   /admin/wechat_keywords  ||  ['name', 'keyword', 'reply_type', 'content']  ||  ['string', 'array', 'string', 'json']  ||  ['T', 'T', 'T', 'T']  ||  ['201', '403', '422']  ||    ||  
 admin  ||  wechat_keyword  ||  修改--公众号关键字回复  ||  PUT  ||   /admin/wechat_keywords/:wechat_keyword_id  ||  ['name', 'keyword', 'reply_type', 'content']  ||  ['string', 'array', 'string', 'json']  ||  ['T', 'T', 'T', 'T']  ||  ['204', '403', '422']  ||    ||  
 admin  ||  wechat_keyword  ||  查询--公众号关键字回复  ||  GET  ||   /admin/wechat_keywords  ||    ||    ||    ||  ['200', '403', '404']  ||  WechatKeyword  ||  
@@ -97,8 +97,8 @@ admin  ||  coupon_point  ||  自动定向发券列表  ||  GET  ||   /admin/coup
 admin  ||  coupon_point  ||  添加自动定向券  ||  POST  ||   /admin/coupon_point_autos  ||  ['coupon_pool_id', 'record_num_last_30_day', 'is_record_num_last_30_day', 'average_price_last_30_day', 'is_average_price_last_30_day', 'wash_interval', 'is_wash_interval', 'enable', 'user_type']  ||  ['string', 'int', 'boolean', 'int', 'boolean', 'int', 'boolean', 'boolean', 'int']  ||  ['T', 'T', 'F', 'T', 'F', 'T', 'F', 'F', 'T']  ||  ['403', '200', '422']  ||    ||  
 admin  ||  coupon_point  ||  批量添加定向券  ||  POST  ||   /admin/coupon_point_records  ||  ['user_ids', 'coupon_pool_id']  ||  ['string', 'string']  ||  ['T', 'T']  ||  ['403', '422', '200']  ||    ||  
 admin  ||  coupon_point  ||  定向发券备注  ||  PATCH  ||   /admin/coupon_point_records/:coupon_point_record_id  ||  ['point_remark']  ||  ['string']  ||  ['F']  ||  ['204', '403', '404', '422']  ||    ||  
-admin  ||  coupon_point  ||  定向发券列表  ||  GET  ||   /admin/coupon_point_records  ||  ['user_id', 'mobile', 'status', 'is_used', 'page_num', 'page_size']  ||  ['string', 'string', 'int', 'int', 'int', 'int']  ||  ['F', 'F', 'F', 'F', 'F', 'F']  ||  ['403', '200']  ||  CouponPointRecord  ||  
-admin  ||  coupon_point  ||  发放记录列表  ||  GET  ||   /admin/coupon_points  ||  ['coupon_point_record_id', 'coupon_name', 'point_remark', 'created_section', 'page_num', 'page_size']  ||  ['string', 'string', 'string', 'string', 'int', 'int']  ||  ['T', 'F', 'F', 'F', 'F', 'F']  ||  ['403', '200']  ||  CouponPoint  ||  
+admin  ||  coupon_point  ||  定向发券列表  ||  GET  ||   /admin/coupon_point_records  ||  ['coupon_name', 'point_remark', 'created_section', 'page_num', 'page_size']  ||  ['string', 'string', 'string', 'int', 'int']  ||  ['F', 'F', 'F', 'F', 'F']  ||  ['403', '200']  ||  CouponPointRecord  ||  
+admin  ||  coupon_point  ||  发放记录列表  ||  GET  ||   /admin/coupon_points  ||  ['coupon_point_record_id', 'user_id', 'mobile', 'status', 'is_used', 'page_num', 'page_size']  ||  ['string', 'string', 'string', 'int', 'int', 'int', 'int']  ||  ['T', 'F', 'F', 'F', 'F', 'F', 'F']  ||  ['403', '200']  ||  CouponPoint  ||  
 admin  ||  coupon_point  ||  文件上传(已停用)  ||  POST  ||   /admin/coupon_point_records/upload  ||  ['coupon_pool_id']  ||  ['string']  ||  ['T']  ||  ['403', '404', '200']  ||  CouponPointRecord  ||  
 admin  ||  coupon_point  ||  删除定向发券  ||  DELETE  ||   /admin/coupon_point_records/:coupon_point_record_id  ||    ||    ||    ||  ['204', '404', '403']  ||    ||  
 admin  ||  service  ||  新增服务  ||  POST  ||   /admin/services  ||  ['service_name', 'cost_price', 'price', 'wash_normal_price', 'wash_group_price', 'member_price', 'commission_price', 'description', 'order_by', 'standard_time']  ||  ['String', 'int', 'int', 'Int', 'Int', 'int', 'int', 'String', 'Int', 'int']  ||  ['T', 'T', 'T', 'T', 'T', 'T', 'T', 'F', 'F', 'T']  ||  ['201', '422', '403']  ||    ||  
@@ -184,8 +184,8 @@ admin  ||  home_page_banner  ||  添加首页信息  ||  POST  ||   /admin/parki
 admin  ||  refund  ||  获取退款  ||  GET  ||   /admin/refunds  ||  ['order_id']  ||  ['string']  ||  ['T']  ||  ['200']  ||  Refund  ||  
 admin  ||  parking_statistic  ||  停车场统计  ||  GET  ||   /admin/parking_statistics_by_day  ||  ['order_by', 'section', 'page_num', 'page_size']  ||  ['string', 'Float', 'int', 'int']  ||  ['F', 'F', 'F', 'F']  ||  ['403', '200', '422']  ||  ParkingStatistic  ||  
 admin  ||  parking_statistic  ||  停车场数据隐藏  ||  PATCH  ||   /admin/parking_statistics_by_day/:parking_statistic_id/visible  ||  ['visible']  ||  ['boolean']  ||  ['T']  ||  ['404', '403', '204', '422']  ||    ||  
-app  ||  call_user  ||  电话联系车主  ||  GET  ||   car_wash/get_virtual_mobile  ||    ||    ||    ||  ['422']  ||    ||  
-app  ||  call_user  ||  短信联系车主  ||  POST  ||   car_wash/send_mobile_short_message  ||  ['type']  ||  ['int']  ||  ['T']  ||  ['422']  ||    ||  
+app  ||  call_user  ||  电话联系车主  ||  GET  ||   car_wash/get_virtual_mobile  ||    ||    ||    ||  ['403', '404', '201', '422']  ||    ||  
+app  ||  call_user  ||  短信联系车主  ||  POST  ||   car_wash/send_mobile_short_message  ||  ['type']  ||  ['int']  ||  ['T']  ||  ['403', '404', '200', '422']  ||    ||  
 app  ||  car_washer_order_statistic  ||  车辆信息详情  ||  GET  ||   /car_wash/car_washers/order_statistic  ||    ||    ||    ||  ['404', '403', '200']  ||    ||  
 app  ||  car_washer  ||  获取虾客二维码  ||  GET  ||   /car_wash/promoter_qrcode  ||    ||    ||    ||  ['404', '403', '200']  ||    ||  
 app  ||  parking_coupon  ||  添加停车优惠劵  ||  POST  ||   /car_wash/parking_coupons  ||  ['parking_id', 'car_id', 'parking_coupon_no']  ||  ['string', 'string', 'string']  ||  ['T', 'T', 'T']  ||  ['201', '403', '422']  ||    ||  
@@ -255,7 +255,7 @@ wxmp  ||  invitation  ||  获取我的邀请码  ||  GET  ||   /user/invite_code
 wxmp  ||  invitation  ||  接受邀请  ||  POST  ||   /user/invitation/accept  ||  ['invite_code', 'mobile']  ||  ['string', 'string']  ||  ['F', 'F']  ||  ['403', '204', '422']  ||    ||  
 wxmp  ||  turntable  ||  获取我的抽奖资格  ||  GET  ||   /user/turntable  ||  ['key']  ||  ['string']  ||  ['T']  ||  ['403', '404', '200', '422']  ||  Turntable  ||  
 wxmp  ||  turntable  ||  抽奖  ||  POST  ||   /user/turntable/award  ||  ['key', 'mobile']  ||  ['string', 'string']  ||  ['T', 'F']  ||  ['403', '404', '200', '422']  ||    ||  
-wxmp  ||  customer_service  ||  添加售后服务  ||  POST  ||   /user/customer_services  ||  ['wash_record_id', 'reason', 'description', 'is_refund']  ||  ['string', 'int', 'string', 'bool']  ||  ['T', 'T', 'T', 'T']  ||  ['201', '422', '403']  ||    ||  
+wxmp  ||  customer_service  ||  添加售后服务  ||  POST  ||   /user/customer_services  ||  ['wash_record_id', 'reason', 'description', 'is_refund']  ||  ['string', 'int', 'string', 'int']  ||  ['T', 'T', 'T', 'T']  ||  ['201', '422', '403']  ||    ||  
 wxmp  ||  customer_service  ||  获取售后服务列表  ||  GET  ||   /user/customer_services  ||  ['status', 'page_num', 'page_size']  ||  ['int', 'int', 'int']  ||  ['F', 'F', 'F']  ||  ['404', '403', '200']  ||  CustomerService  ||  
 wxmp  ||  customer_service  ||  获取单个售后服务  ||  GET  ||   /user/customer_services/:customer_service_id  ||    ||    ||    ||  ['404', '403', '200']  ||  CustomerService  ||  
 wxmp  ||  car_move_qrcode  ||  申请二维码  ||  POST  ||   /user/car_move_qrcodes  ||  ['mobile']  ||  ['string']  ||  ['F']  ||  ['403', '204', '422']  ||    ||  

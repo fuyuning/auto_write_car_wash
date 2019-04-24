@@ -5,6 +5,7 @@ Library  robot_car_wash_wxmp_library.user_contact.UserContactLibrary
 Force Tags  model:wxmp_user_contact  车主微信端
 
 
+*** Test Cases ***
 Post User User Contacts Fail Without Login
    [Documentation]  接口名:添加联系方式${\n}
    ...              请求方式:Post${\n}
@@ -51,6 +52,13 @@ Delete User User Contacts By User Contact Id Fail Without Login
    [Tags]           Respcode:403
    Delete User User Contacts By User Contact Id Fail 403  user_contact_id=${user_contact_id}
 
+
+*** Variables ***
+${user_contact_id}  12345678909876543
+${user_contact_id/is_default}  12345678909876543
+
+
+*** Keywords ***
 Post User User Contacts Fail 403
    [Arguments]  &{kwargs}
    ${resp}=  Post User User Contacts   &{kwargs}

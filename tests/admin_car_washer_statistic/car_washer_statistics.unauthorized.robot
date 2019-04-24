@@ -5,6 +5,7 @@ Library  robot_car_wash_server_library.car_washer_statistic.CarWasherStatisticLi
 Force Tags  model:admin_car_washer_statistic  虾洗后台
 
 
+*** Test Cases ***
 Get Admin Car Washer Statistics Fail Without Login
    [Documentation]  接口名:统计列表${\n}
    ...              请求方式:Get${\n}
@@ -23,6 +24,12 @@ Patch Visible By Username Fail Without Login
    ${unessential_params}  create list  
    run every case by params  Patch Visible By Username Fail 403  ${essential_params}  ${unessential_params}  username/visible=${username/visible}
 
+
+*** Variables ***
+${username/visible}  12345678909876543
+
+
+*** Keywords ***
 Get Admin Car Washer Statistics Fail 403
    [Arguments]  &{kwargs}
    ${resp}=  Get Admin Car Washer Statistics   &{kwargs}

@@ -5,6 +5,7 @@ Library  robot_car_wash_server_library.card_sale.CardSaleLibrary
 Force Tags  model:admin_card_sale  虾洗后台
 
 
+*** Test Cases ***
 Post Admin Card Sales Fail Without Login
    [Documentation]  接口名:创建可购买会员卡${\n}
    ...              请求方式:Post${\n}
@@ -37,6 +38,12 @@ Delete Admin Card Sales By Card Sale Id Fail Without Login
    [Tags]           Respcode:403
    Delete Admin Card Sales By Card Sale Id Fail 403  card_sale_id=${card_sale_id}
 
+
+*** Variables ***
+${card_sale_id}  12345678909876543
+
+
+*** Keywords ***
 Post Admin Card Sales Fail 403
    [Arguments]  &{kwargs}
    ${resp}=  Post Admin Card Sales   &{kwargs}

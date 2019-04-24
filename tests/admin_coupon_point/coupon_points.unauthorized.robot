@@ -48,7 +48,7 @@ Get Admin Coupon Point Records Fail Without Login
    ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
    [Tags]           Respcode:403
    ${essential_params}  create list  
-   ${unessential_params}  create list  user_id=${user_id}  mobile=${mobile}  status=${status}  is_used=${is_used}  page_num=${page_num}  page_size=${page_size}  
+   ${unessential_params}  create list  coupon_name=${coupon_name}  point_remark=${point_remark}  created_section=${created_section}  page_num=${page_num}  page_size=${page_size}  
    run every case by params  Get Admin Coupon Point Records Fail 403  ${essential_params}  ${unessential_params}
 
 Get Admin Coupon Points Fail Without Login
@@ -57,7 +57,7 @@ Get Admin Coupon Points Fail Without Login
    ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
    [Tags]           Respcode:403
    ${essential_params}  create list  coupon_point_record_id=${coupon_point_record_id}  
-   ${unessential_params}  create list  coupon_name=${coupon_name}  point_remark=${point_remark}  created_section=${created_section}  page_num=${page_num}  page_size=${page_size}  
+   ${unessential_params}  create list  user_id=${user_id}  mobile=${mobile}  status=${status}  is_used=${is_used}  page_num=${page_num}  page_size=${page_size}  
    run every case by params  Get Admin Coupon Points Fail 403  ${essential_params}  ${unessential_params}
 
 Patch Admin Coupon Point Records By Coupon Point Record Id Fail Without Login
@@ -78,7 +78,7 @@ Delete Admin Coupon Point Records By Coupon Point Record Id Fail Without Login
 
 
 *** Variables ***
-${coupon_point_record_id}
+${coupon_point_record_id}  12345678909876543
 
 
 *** Keywords ***

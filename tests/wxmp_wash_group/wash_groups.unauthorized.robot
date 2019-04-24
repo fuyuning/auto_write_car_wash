@@ -42,7 +42,7 @@ Get Wash Groups By Wash Group Id Fail Without Login
 
 
 *** Variables ***
-${wash_group_id}
+${wash_group_id}  12345678909876543
 
 
 *** Keywords ***

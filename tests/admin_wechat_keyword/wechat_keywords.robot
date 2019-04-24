@@ -67,13 +67,6 @@ Put Admin Wechat Keywords By Wechat Keyword Id Fail With Wrong Url
    ${unessential_params}  create list  
    run every case by params  Put Admin Wechat Keywords By Wechat Keyword Id Fail 404  ${essential_params}  ${unessential_params}  wechat_keyword_id=${wrong_url_id}
 
-Delete Admin Wechat Keywords By Wechat Keyword Id Success 
-   [Documentation]  接口名:添删除--公众号关键字回复${\n}
-   ...              请求方式:Delete${\n}
-   ...              预期结果:输入正确参数,http响应码返回 204,无Json数据返回。
-   [Tags]           Respcode:204
-   Delete Admin Wechat Keywords By Wechat Keyword Id Success 204  wechat_keyword_id=${wechat_keyword_id}
-
 Delete Admin Wechat Keywords By Wechat Keyword Id Fail With Wrong Url
    [Documentation]  接口名:添删除--公众号关键字回复${\n}
    ...              请求方式:Delete${\n}
@@ -81,9 +74,16 @@ Delete Admin Wechat Keywords By Wechat Keyword Id Fail With Wrong Url
    [Tags]           Respcode:404
    Delete Admin Wechat Keywords By Wechat Keyword Id Fail 404  wechat_keyword_id=${wrong_url_id}
 
+Delete Admin Wechat Keywords By Wechat Keyword Id Success 
+   [Documentation]  接口名:添删除--公众号关键字回复${\n}
+   ...              请求方式:Delete${\n}
+   ...              预期结果:输入正确参数,http响应码返回 204,无Json数据返回。
+   [Tags]           Respcode:204
+   Delete Admin Wechat Keywords By Wechat Keyword Id Success 204  wechat_keyword_id=${wechat_keyword_id}
+
 
 *** Variables ***
-${wechat_keyword_id}
+${wechat_keyword_id}  
 
 
 *** Keywords ***
@@ -126,13 +126,13 @@ Put Admin Wechat Keywords By Wechat Keyword Id Fail 404
    ${resp}=  Put Admin Wechat Keywords By Wechat Keyword Id   &{kwargs}
    expect status is 404  ${resp}  
 
-Delete Admin Wechat Keywords By Wechat Keyword Id Success 204
-   [Arguments]  &{kwargs}
-   ${resp}=  Delete Admin Wechat Keywords By Wechat Keyword Id   &{kwargs}
-   expect status is 204  ${resp}  
-
 Delete Admin Wechat Keywords By Wechat Keyword Id Fail 404
    [Arguments]  &{kwargs}
    ${resp}=  Delete Admin Wechat Keywords By Wechat Keyword Id   &{kwargs}
    expect status is 404  ${resp}  
+
+Delete Admin Wechat Keywords By Wechat Keyword Id Success 204
+   [Arguments]  &{kwargs}
+   ${resp}=  Delete Admin Wechat Keywords By Wechat Keyword Id   &{kwargs}
+   expect status is 204  ${resp}  
 

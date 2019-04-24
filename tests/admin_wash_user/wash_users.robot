@@ -85,15 +85,6 @@ Get Admin Wechat Info Fail With Wrong Params
    ${unessential_params}  create list  userid=${userid}  
    run every case by params  Get Admin Wechat Info Fail 422  ${essential_params}  ${unessential_params}
 
-Patch wash User Group by userid Success 
-   [Documentation]  接口名:修改用户分组${\n}
-   ...              请求方式:Patch${\n}
-   ...              预期结果:输入正确参数,http响应码返回 204,无Json数据返回。
-   [Tags]           Respcode:204
-   ${essential_params}  create list  wash_user_group_id=${wash_user_group_id}  
-   ${unessential_params}  create list  
-   run every case by params  Patch wash User Group by userid Success 204  ${essential_params}  ${unessential_params}  userid/wash_user_group=${userid/wash_user_group}
-
 Patch wash User Group by userid Fail With Wrong Url
    [Documentation]  接口名:修改用户分组${\n}
    ...              请求方式:Patch${\n}
@@ -112,10 +103,19 @@ Patch wash User Group by userid Fail With Wrong Params
    ${unessential_params}  create list  
    run every case by params  Patch wash User Group by userid Fail 422  ${essential_params}  ${unessential_params}  userid/wash_user_group=${userid/wash_user_group}
 
+Patch wash User Group by userid Success 
+   [Documentation]  接口名:修改用户分组${\n}
+   ...              请求方式:Patch${\n}
+   ...              预期结果:输入正确参数,http响应码返回 204,无Json数据返回。
+   [Tags]           Respcode:204
+   ${essential_params}  create list  wash_user_group_id=${wash_user_group_id}  
+   ${unessential_params}  create list  
+   run every case by params  Patch wash User Group by userid Success 204  ${essential_params}  ${unessential_params}  userid/wash_user_group=${userid/wash_user_group}
+
 
 *** Variables ***
-${userid/clear}
-${userid/wash_user_group}
+${userid/clear}  
+${userid/wash_user_group}  
 
 
 *** Keywords ***
@@ -176,11 +176,6 @@ Get Admin Wechat Info Fail 422
    ${resp}=  Get Admin Wechat Info   &{kwargs}
    expect status is 422  ${resp}  
 
-Patch wash User Group by userid Success 204
-   [Arguments]  &{kwargs}
-   ${resp}=  Patch wash User Group by userid   &{kwargs}
-   expect status is 204  ${resp}  
-
 Patch wash User Group by userid Fail 404
    [Arguments]  &{kwargs}
    ${resp}=  Patch wash User Group by userid   &{kwargs}
@@ -190,4 +185,9 @@ Patch wash User Group by userid Fail 422
    [Arguments]  &{kwargs}
    ${resp}=  Patch wash User Group by userid   &{kwargs}
    expect status is 422  ${resp}  
+
+Patch wash User Group by userid Success 204
+   [Arguments]  &{kwargs}
+   ${resp}=  Patch wash User Group by userid   &{kwargs}
+   expect status is 204  ${resp}  
 

@@ -5,6 +5,7 @@ Library  robot_car_wash_server_library.home_page_banner.HomePageBannerLibrary
 Force Tags  model:admin_home_page_banner  虾洗后台
 
 
+*** Test Cases ***
 Post Admin Parkings Fail Without Login
    [Documentation]  接口名:添加首页信息${\n}
    ...              请求方式:Post${\n}
@@ -30,6 +31,12 @@ Put Admin Home Page Banners By Home Page Banner Id Fail Without Login
    ${unessential_params}  create list  banners=${banners}  service_introduce=${service_introduce}  
    run every case by params  Put Admin Home Page Banners By Home Page Banner Id Fail 403  ${essential_params}  ${unessential_params}  home_page_banner_id=${home_page_banner_id}
 
+
+*** Variables ***
+${home_page_banner_id}  12345678909876543
+
+
+*** Keywords ***
 Post Admin Parkings Fail 403
    [Arguments]  &{kwargs}
    ${resp}=  Post Admin Parkings   &{kwargs}

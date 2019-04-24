@@ -33,7 +33,7 @@ Delete Cancel By Robot Id Fail Without Login
 
 
 *** Variables ***
-${robot_id/cancel}
+${robot_id/cancel}  12345678909876543
 
 
 *** Keywords ***

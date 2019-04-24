@@ -121,8 +121,8 @@ Delete Admin Wash Areas By Wash Area Id Fail With Wrong Url
 
 
 *** Variables ***
-${wash_area_id}
-${wash_area_id/(wash_normal|wash_group|user_group|enabled)}
+${wash_area_id}  
+${wash_area_id/(wash_normal|wash_group|user_group|enabled)}  
 
 
 *** Keywords ***

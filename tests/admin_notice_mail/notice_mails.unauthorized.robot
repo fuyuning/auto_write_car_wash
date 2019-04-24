@@ -5,6 +5,7 @@ Library  robot_car_wash_server_library.notice_mail.NoticeMailLibrary
 Force Tags  model:admin_notice_mail  虾洗后台
 
 
+*** Test Cases ***
 Post Admin Notice Mails Fail Without Login
    [Documentation]  接口名:新增通知邮件地址${\n}
    ...              请求方式:Post${\n}
@@ -39,6 +40,13 @@ Delete Admin Notice Mails By Notice Mail Id Fail Without Login
    [Tags]           Respcode:403
    Delete Admin Notice Mails By Notice Mail Id Fail 403  notice_mail_id=${notice_mail_id}
 
+
+*** Variables ***
+${notice_mail_id/(comment_status|money_status|car_move_qrcode_status|wxmp_remark_status|washer_remark_status)}  12345678909876543
+${notice_mail_id}  12345678909876543
+
+
+*** Keywords ***
 Post Admin Notice Mails Fail 403
    [Arguments]  &{kwargs}
    ${resp}=  Post Admin Notice Mails   &{kwargs}

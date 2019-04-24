@@ -82,7 +82,7 @@ Patch Admin Car Series By Car Series Id Fail With Wrong Params
 
 
 *** Variables ***
-${car_series_id}
+${car_series_id}  
 
 
 *** Keywords ***

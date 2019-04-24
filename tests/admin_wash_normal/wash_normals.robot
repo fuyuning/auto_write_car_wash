@@ -40,15 +40,6 @@ Get Admin Wash Normals Fail With Wrong Params
    ${unessential_params}  create list  page_num=${page_num}  page_size=${page_size}  
    run every case by params  Get Admin Wash Normals Fail 422  ${essential_params}  ${unessential_params}
 
-Put Admin Wash Normals By Wash Normal Id Success 
-   [Documentation]  接口名:编辑单买${\n}
-   ...              请求方式:Put${\n}
-   ...              预期结果:输入正确参数,http响应码返回 204,无Json数据返回。
-   [Tags]           Respcode:204
-   ${essential_params}  create list  start_time=${start_time}  end_time=${end_time}  is_diff_car_type=False  people_day_num=${people_day_num}  expect_type=${expect_type}  car_washer_ids=${Please_input}  service_groups=${service_groups}  day_in_week=${day_in_week}  time_loop_set=${time_loop_set}  
-   ${unessential_params}  create list  expect_time=${expect_time}  expect_day=${expect_day}  expect_hour=${expect_hour}  spec_people_day_num=${spec_people_day_num}  
-   run every case by params  Put Admin Wash Normals By Wash Normal Id Success 204  ${essential_params}  ${unessential_params}  wash_normal_id=${wash_normal_id}
-
 Put Admin Wash Normals By Wash Normal Id Fail With Wrong Url
    [Documentation]  接口名:编辑单买${\n}
    ...              请求方式:Put${\n}
@@ -72,8 +63,8 @@ Put Admin Wash Normals By Wash Normal Id Success
    ...              请求方式:Put${\n}
    ...              预期结果:输入正确参数,http响应码返回 204,无Json数据返回。
    [Tags]           Respcode:204
-   ${essential_params}  create list  start_time=${start_time}  end_time=${end_time}  is_diff_car_type=False  people_day_num=${people_day_num}  expect_type=${expect_type}  car_washer_ids=${Please_input}  service_groups=${service_groups}  
-   ${unessential_params}  create list  expect_time=${expect_time}  expect_day=${expect_day}  expect_hour=${expect_hour}  
+   ${essential_params}  create list  start_time=${start_time}  end_time=${end_time}  is_diff_car_type=False  people_day_num=${people_day_num}  expect_type=${expect_type}  car_washer_ids=${Please_input}  service_groups=${service_groups}  day_in_week=${day_in_week}  time_loop_set=${time_loop_set}  
+   ${unessential_params}  create list  expect_time=${expect_time}  expect_day=${expect_day}  expect_hour=${expect_hour}  spec_people_day_num=${spec_people_day_num}  
    run every case by params  Put Admin Wash Normals By Wash Normal Id Success 204  ${essential_params}  ${unessential_params}  wash_normal_id=${wash_normal_id}
 
 Put Admin Wash Normals By Wash Normal Id Fail With Wrong Url
@@ -93,6 +84,15 @@ Put Admin Wash Normals By Wash Normal Id Fail With Wrong Params
    ${essential_params}  create list  start_time=${start_time}  end_time=${end_time}  is_diff_car_type=False  people_day_num=${people_day_num}  expect_type=${expect_type}  car_washer_ids=${Please_input}  service_groups=${service_groups}  
    ${unessential_params}  create list  expect_time=${expect_time}  expect_day=${expect_day}  expect_hour=${expect_hour}  
    run every case by params  Put Admin Wash Normals By Wash Normal Id Fail 422  ${essential_params}  ${unessential_params}  wash_normal_id=${wash_normal_id}
+
+Put Admin Wash Normals By Wash Normal Id Success 
+   [Documentation]  接口名:编辑单买${\n}
+   ...              请求方式:Put${\n}
+   ...              预期结果:输入正确参数,http响应码返回 204,无Json数据返回。
+   [Tags]           Respcode:204
+   ${essential_params}  create list  start_time=${start_time}  end_time=${end_time}  is_diff_car_type=False  people_day_num=${people_day_num}  expect_type=${expect_type}  car_washer_ids=${Please_input}  service_groups=${service_groups}  
+   ${unessential_params}  create list  expect_time=${expect_time}  expect_day=${expect_day}  expect_hour=${expect_hour}  
+   run every case by params  Put Admin Wash Normals By Wash Normal Id Success 204  ${essential_params}  ${unessential_params}  wash_normal_id=${wash_normal_id}
 
 Patch Admin Wash Normal By Wash Normal Id Success 
    [Documentation]  接口名:改人数${\n}
@@ -123,7 +123,7 @@ Patch Admin Wash Normal By Wash Normal Id Fail With Wrong Params
 
 
 *** Variables ***
-${wash_normal_id}
+${wash_normal_id}  
 
 
 *** Keywords ***
@@ -151,11 +151,6 @@ Get Admin Wash Normals Fail 422
    ${resp}=  Get Admin Wash Normals   &{kwargs}
    expect status is 422  ${resp}  
 
-Put Admin Wash Normals By Wash Normal Id Success 204
-   [Arguments]  &{kwargs}
-   ${resp}=  Put Admin Wash Normals By Wash Normal Id   &{kwargs}
-   expect status is 204  ${resp}  
-
 Put Admin Wash Normals By Wash Normal Id Fail 404
    [Arguments]  &{kwargs}
    ${resp}=  Put Admin Wash Normals By Wash Normal Id   &{kwargs}
@@ -180,6 +175,11 @@ Put Admin Wash Normals By Wash Normal Id Fail 422
    [Arguments]  &{kwargs}
    ${resp}=  Put Admin Wash Normals By Wash Normal Id   &{kwargs}
    expect status is 422  ${resp}  
+
+Put Admin Wash Normals By Wash Normal Id Success 204
+   [Arguments]  &{kwargs}
+   ${resp}=  Put Admin Wash Normals By Wash Normal Id   &{kwargs}
+   expect status is 204  ${resp}  
 
 Patch Admin Wash Normal By Wash Normal Id Success 204
    [Arguments]  &{kwargs}

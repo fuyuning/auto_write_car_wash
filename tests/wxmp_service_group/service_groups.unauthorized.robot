@@ -5,6 +5,7 @@ Library  robot_car_wash_wxmp_library.service_group.ServiceGroupLibrary
 Force Tags  model:wxmp_service_group  车主微信端
 
 
+*** Test Cases ***
 Get Price By Service Group Id Fail Without Login
    [Documentation]  接口名:根据套餐、车型获取智能定价${\n}
    ...              请求方式:Get${\n}
@@ -14,6 +15,12 @@ Get Price By Service Group Id Fail Without Login
    ${unessential_params}  create list  
    run every case by params  Get Price By Service Group Id Fail 403  ${essential_params}  ${unessential_params}  service_group_id/price=${service_group_id/price}
 
+
+*** Variables ***
+${service_group_id/price}  12345678909876543
+
+
+*** Keywords ***
 Get Price By Service Group Id Fail 403
    [Arguments]  &{kwargs}
    ${resp}=  Get Price By Service Group Id   &{kwargs}

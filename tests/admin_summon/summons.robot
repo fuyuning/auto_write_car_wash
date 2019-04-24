@@ -26,13 +26,6 @@ Get Admin Summons Fail With Wrong Params
    ${unessential_params}  create list  name=${name}  created_section=${created_section}  page_num=${page_num}  page_size=${page_size}  
    run every case by params  Get Admin Summons Fail 422  ${essential_params}  ${unessential_params}
 
-Delete Admin Summons By Summon Id Success 
-   [Documentation]  接口名:删除召唤虾洗记录${\n}
-   ...              请求方式:Delete${\n}
-   ...              预期结果:输入正确参数,http响应码返回 204,无Json数据返回。
-   [Tags]           Respcode:204
-   Delete Admin Summons By Summon Id Success 204  summon_id=${summon_id}
-
 Delete Admin Summons By Summon Id Fail With Wrong Url
    [Documentation]  接口名:删除召唤虾洗记录${\n}
    ...              请求方式:Delete${\n}
@@ -40,9 +33,16 @@ Delete Admin Summons By Summon Id Fail With Wrong Url
    [Tags]           Respcode:404
    Delete Admin Summons By Summon Id Fail 404  summon_id=${wrong_url_id}
 
+Delete Admin Summons By Summon Id Success 
+   [Documentation]  接口名:删除召唤虾洗记录${\n}
+   ...              请求方式:Delete${\n}
+   ...              预期结果:输入正确参数,http响应码返回 204,无Json数据返回。
+   [Tags]           Respcode:204
+   Delete Admin Summons By Summon Id Success 204  summon_id=${summon_id}
+
 
 *** Variables ***
-${summon_id}
+${summon_id}  
 
 
 *** Keywords ***
@@ -58,13 +58,13 @@ Get Admin Summons Fail 422
    ${resp}=  Get Admin Summons   &{kwargs}
    expect status is 422  ${resp}  
 
-Delete Admin Summons By Summon Id Success 204
-   [Arguments]  &{kwargs}
-   ${resp}=  Delete Admin Summons By Summon Id   &{kwargs}
-   expect status is 204  ${resp}  
-
 Delete Admin Summons By Summon Id Fail 404
    [Arguments]  &{kwargs}
    ${resp}=  Delete Admin Summons By Summon Id   &{kwargs}
    expect status is 404  ${resp}  
+
+Delete Admin Summons By Summon Id Success 204
+   [Arguments]  &{kwargs}
+   ${resp}=  Delete Admin Summons By Summon Id   &{kwargs}
+   expect status is 204  ${resp}  
 

@@ -80,15 +80,6 @@ Get Admin Promotion Count Fail With Wrong Params
    ${unessential_params}  create list  promoter_id=${promoter_id}  created_section=${created_section}  
    run every case by params  Get Admin Promotion Count Fail 422  ${essential_params}  ${unessential_params}
 
-Put Admin Promoters By Promoter Id Success 
-   [Documentation]  接口名:编辑二维码${\n}
-   ...              请求方式:Put${\n}
-   ...              预期结果:输入正确参数,http响应码返回 204,无Json数据返回。
-   [Tags]           Respcode:204
-   ${essential_params}  create list  
-   ${unessential_params}  create list  name=${name}  mobile=${mobile}  promoter_remark=${promoter_remark}  enabled=False  
-   run every case by params  Put Admin Promoters By Promoter Id Success 204  ${essential_params}  ${unessential_params}  promoter_id=${promoter_id}
-
 Put Admin Promoters By Promoter Id Fail With Wrong Params
    [Documentation]  接口名:编辑二维码${\n}
    ...              请求方式:Put${\n}
@@ -97,6 +88,15 @@ Put Admin Promoters By Promoter Id Fail With Wrong Params
    ${essential_params}  create list  
    ${unessential_params}  create list  name=${name}  mobile=${mobile}  promoter_remark=${promoter_remark}  enabled=False  
    run every case by params  Put Admin Promoters By Promoter Id Fail 422  ${essential_params}  ${unessential_params}  promoter_id=${promoter_id}
+
+Put Admin Promoters By Promoter Id Success 
+   [Documentation]  接口名:编辑二维码${\n}
+   ...              请求方式:Put${\n}
+   ...              预期结果:输入正确参数,http响应码返回 204,无Json数据返回。
+   [Tags]           Respcode:204
+   ${essential_params}  create list  
+   ${unessential_params}  create list  name=${name}  mobile=${mobile}  promoter_remark=${promoter_remark}  enabled=False  
+   run every case by params  Put Admin Promoters By Promoter Id Success 204  ${essential_params}  ${unessential_params}  promoter_id=${promoter_id}
 
 Put Admin Promoters By Promoter Id Fail With Wrong Url
    [Documentation]  接口名:编辑二维码${\n}
@@ -107,15 +107,6 @@ Put Admin Promoters By Promoter Id Fail With Wrong Url
    ${unessential_params}  create list  name=${name}  mobile=${mobile}  promoter_remark=${promoter_remark}  enabled=False  
    run every case by params  Put Admin Promoters By Promoter Id Fail 404  ${essential_params}  ${unessential_params}  promoter_id=${wrong_url_id}
 
-Patch Enabled By Promoter Id Success 
-   [Documentation]  接口名:二维码推广启用${\n}
-   ...              请求方式:Patch${\n}
-   ...              预期结果:输入正确参数,http响应码返回 204,无Json数据返回。
-   [Tags]           Respcode:204
-   ${essential_params}  create list  
-   ${unessential_params}  create list  enabled=False  
-   run every case by params  Patch Enabled By Promoter Id Success 204  ${essential_params}  ${unessential_params}  promoter_id/enabled=${promoter_id/enabled}
-
 Patch Enabled By Promoter Id Fail With Wrong Url
    [Documentation]  接口名:二维码推广启用${\n}
    ...              请求方式:Patch${\n}
@@ -124,6 +115,15 @@ Patch Enabled By Promoter Id Fail With Wrong Url
    ${essential_params}  create list  
    ${unessential_params}  create list  enabled=False  
    run every case by params  Patch Enabled By Promoter Id Fail 404  ${essential_params}  ${unessential_params}  promoter_id/enabled=${wrong_url_id}
+
+Patch Enabled By Promoter Id Success 
+   [Documentation]  接口名:二维码推广启用${\n}
+   ...              请求方式:Patch${\n}
+   ...              预期结果:输入正确参数,http响应码返回 204,无Json数据返回。
+   [Tags]           Respcode:204
+   ${essential_params}  create list  
+   ${unessential_params}  create list  enabled=False  
+   run every case by params  Patch Enabled By Promoter Id Success 204  ${essential_params}  ${unessential_params}  promoter_id/enabled=${promoter_id/enabled}
 
 Patch Enabled By Promoter Id Fail With Wrong Params
    [Documentation]  接口名:二维码推广启用${\n}
@@ -134,13 +134,6 @@ Patch Enabled By Promoter Id Fail With Wrong Params
    ${unessential_params}  create list  enabled=False  
    run every case by params  Patch Enabled By Promoter Id Fail 422  ${essential_params}  ${unessential_params}  promoter_id/enabled=${promoter_id/enabled}
 
-Delete Admin Promoters By Promoter Id Success 
-   [Documentation]  接口名:删除二维码${\n}
-   ...              请求方式:Delete${\n}
-   ...              预期结果:输入正确参数,http响应码返回 204,无Json数据返回。
-   [Tags]           Respcode:204
-   Delete Admin Promoters By Promoter Id Success 204  promoter_id=${promoter_id}
-
 Delete Admin Promoters By Promoter Id Fail With Wrong Url
    [Documentation]  接口名:删除二维码${\n}
    ...              请求方式:Delete${\n}
@@ -148,10 +141,17 @@ Delete Admin Promoters By Promoter Id Fail With Wrong Url
    [Tags]           Respcode:404
    Delete Admin Promoters By Promoter Id Fail 404  promoter_id=${wrong_url_id}
 
+Delete Admin Promoters By Promoter Id Success 
+   [Documentation]  接口名:删除二维码${\n}
+   ...              请求方式:Delete${\n}
+   ...              预期结果:输入正确参数,http响应码返回 204,无Json数据返回。
+   [Tags]           Respcode:204
+   Delete Admin Promoters By Promoter Id Success 204  promoter_id=${promoter_id}
+
 
 *** Variables ***
-${promoter_id}
-${promoter_id/enabled}
+${promoter_id}  
+${promoter_id/enabled}  
 
 
 *** Keywords ***
@@ -211,19 +211,24 @@ Get Admin Promotion Count Fail 422
    ${resp}=  Get Admin Promotion Count   &{kwargs}
    expect status is 422  ${resp}  
 
-Put Admin Promoters By Promoter Id Success 204
-   [Arguments]  &{kwargs}
-   ${resp}=  Put Admin Promoters By Promoter Id   &{kwargs}
-   expect status is 204  ${resp}  
-
 Put Admin Promoters By Promoter Id Fail 422
    [Arguments]  &{kwargs}
    ${resp}=  Put Admin Promoters By Promoter Id   &{kwargs}
    expect status is 422  ${resp}  
 
+Put Admin Promoters By Promoter Id Success 204
+   [Arguments]  &{kwargs}
+   ${resp}=  Put Admin Promoters By Promoter Id   &{kwargs}
+   expect status is 204  ${resp}  
+
 Put Admin Promoters By Promoter Id Fail 404
    [Arguments]  &{kwargs}
    ${resp}=  Put Admin Promoters By Promoter Id   &{kwargs}
+   expect status is 404  ${resp}  
+
+Patch Enabled By Promoter Id Fail 404
+   [Arguments]  &{kwargs}
+   ${resp}=  Patch Enabled By Promoter Id   &{kwargs}
    expect status is 404  ${resp}  
 
 Patch Enabled By Promoter Id Success 204
@@ -231,23 +236,18 @@ Patch Enabled By Promoter Id Success 204
    ${resp}=  Patch Enabled By Promoter Id   &{kwargs}
    expect status is 204  ${resp}  
 
-Patch Enabled By Promoter Id Fail 404
-   [Arguments]  &{kwargs}
-   ${resp}=  Patch Enabled By Promoter Id   &{kwargs}
-   expect status is 404  ${resp}  
-
 Patch Enabled By Promoter Id Fail 422
    [Arguments]  &{kwargs}
    ${resp}=  Patch Enabled By Promoter Id   &{kwargs}
    expect status is 422  ${resp}  
 
-Delete Admin Promoters By Promoter Id Success 204
-   [Arguments]  &{kwargs}
-   ${resp}=  Delete Admin Promoters By Promoter Id   &{kwargs}
-   expect status is 204  ${resp}  
-
 Delete Admin Promoters By Promoter Id Fail 404
    [Arguments]  &{kwargs}
    ${resp}=  Delete Admin Promoters By Promoter Id   &{kwargs}
    expect status is 404  ${resp}  
+
+Delete Admin Promoters By Promoter Id Success 204
+   [Arguments]  &{kwargs}
+   ${resp}=  Delete Admin Promoters By Promoter Id   &{kwargs}
+   expect status is 204  ${resp}  
 

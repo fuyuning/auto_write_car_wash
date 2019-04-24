@@ -83,8 +83,8 @@ Delete Admin Customer Services By Customer Service Id Fail With Wrong Url
 
 
 *** Variables ***
-${customer_service_id/finish}
-${customer_service_id}
+${customer_service_id/finish}  
+${customer_service_id}  
 
 
 *** Keywords ***

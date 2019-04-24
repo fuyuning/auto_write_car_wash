@@ -76,15 +76,6 @@ Get coupon Codes export by coupon code record id Success
    [Tags]           Respcode:200
    Get coupon Codes export by coupon code record id Success 200  coupon_code_record_id=${coupon_code_record_id}
 
-Patch Remark By Coupon Code Record Id Success 
-   [Documentation]  接口名:备注${\n}
-   ...              请求方式:Patch${\n}
-   ...              预期结果:输入正确参数,http响应码返回 204,无Json数据返回。
-   [Tags]           Respcode:204
-   ${essential_params}  create list  coupon_code_remark=${coupon_code_remark}  
-   ${unessential_params}  create list  
-   run every case by params  Patch Remark By Coupon Code Record Id Success 204  ${essential_params}  ${unessential_params}  coupon_code_record_id/remark=${coupon_code_record_id/remark}
-
 Patch Remark By Coupon Code Record Id Fail With Wrong Url
    [Documentation]  接口名:备注${\n}
    ...              请求方式:Patch${\n}
@@ -93,6 +84,15 @@ Patch Remark By Coupon Code Record Id Fail With Wrong Url
    ${essential_params}  create list  coupon_code_remark=${coupon_code_remark}  
    ${unessential_params}  create list  
    run every case by params  Patch Remark By Coupon Code Record Id Fail 404  ${essential_params}  ${unessential_params}  coupon_code_record_id/remark=${wrong_url_id}
+
+Patch Remark By Coupon Code Record Id Success 
+   [Documentation]  接口名:备注${\n}
+   ...              请求方式:Patch${\n}
+   ...              预期结果:输入正确参数,http响应码返回 204,无Json数据返回。
+   [Tags]           Respcode:204
+   ${essential_params}  create list  coupon_code_remark=${coupon_code_remark}  
+   ${unessential_params}  create list  
+   run every case by params  Patch Remark By Coupon Code Record Id Success 204  ${essential_params}  ${unessential_params}  coupon_code_record_id/remark=${coupon_code_record_id/remark}
 
 Patch Remark By Coupon Code Record Id Fail With Wrong Params
    [Documentation]  接口名:备注${\n}
@@ -103,13 +103,6 @@ Patch Remark By Coupon Code Record Id Fail With Wrong Params
    ${unessential_params}  create list  
    run every case by params  Patch Remark By Coupon Code Record Id Fail 422  ${essential_params}  ${unessential_params}  coupon_code_record_id/remark=${coupon_code_record_id/remark}
 
-Delete Admin Coupon Code Records By Coupon Code Record Id Success 
-   [Documentation]  接口名:删除优惠码${\n}
-   ...              请求方式:Delete${\n}
-   ...              预期结果:输入正确参数,http响应码返回 204,无Json数据返回。
-   [Tags]           Respcode:204
-   Delete Admin Coupon Code Records By Coupon Code Record Id Success 204  coupon_code_record_id=${coupon_code_record_id}
-
 Delete Admin Coupon Code Records By Coupon Code Record Id Fail With Wrong Url
    [Documentation]  接口名:删除优惠码${\n}
    ...              请求方式:Delete${\n}
@@ -117,10 +110,17 @@ Delete Admin Coupon Code Records By Coupon Code Record Id Fail With Wrong Url
    [Tags]           Respcode:404
    Delete Admin Coupon Code Records By Coupon Code Record Id Fail 404  coupon_code_record_id=${wrong_url_id}
 
+Delete Admin Coupon Code Records By Coupon Code Record Id Success 
+   [Documentation]  接口名:删除优惠码${\n}
+   ...              请求方式:Delete${\n}
+   ...              预期结果:输入正确参数,http响应码返回 204,无Json数据返回。
+   [Tags]           Respcode:204
+   Delete Admin Coupon Code Records By Coupon Code Record Id Success 204  coupon_code_record_id=${coupon_code_record_id}
+
 
 *** Variables ***
-${coupon_code_record_id}
-${coupon_code_record_id/remark}
+${coupon_code_record_id}  
+${coupon_code_record_id/remark}  
 
 
 *** Keywords ***
@@ -180,28 +180,28 @@ Get coupon Codes export by coupon code record id Success 200
    ${coupon_code_record_id/remark}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][coupon_code_record_id/remark]}
    set global variable   ${coupon_code_record_id/remark}
 
-Patch Remark By Coupon Code Record Id Success 204
-   [Arguments]  &{kwargs}
-   ${resp}=  Patch Remark By Coupon Code Record Id   &{kwargs}
-   expect status is 204  ${resp}  
-
 Patch Remark By Coupon Code Record Id Fail 404
    [Arguments]  &{kwargs}
    ${resp}=  Patch Remark By Coupon Code Record Id   &{kwargs}
    expect status is 404  ${resp}  
+
+Patch Remark By Coupon Code Record Id Success 204
+   [Arguments]  &{kwargs}
+   ${resp}=  Patch Remark By Coupon Code Record Id   &{kwargs}
+   expect status is 204  ${resp}  
 
 Patch Remark By Coupon Code Record Id Fail 422
    [Arguments]  &{kwargs}
    ${resp}=  Patch Remark By Coupon Code Record Id   &{kwargs}
    expect status is 422  ${resp}  
 
-Delete Admin Coupon Code Records By Coupon Code Record Id Success 204
-   [Arguments]  &{kwargs}
-   ${resp}=  Delete Admin Coupon Code Records By Coupon Code Record Id   &{kwargs}
-   expect status is 204  ${resp}  
-
 Delete Admin Coupon Code Records By Coupon Code Record Id Fail 404
    [Arguments]  &{kwargs}
    ${resp}=  Delete Admin Coupon Code Records By Coupon Code Record Id   &{kwargs}
    expect status is 404  ${resp}  
+
+Delete Admin Coupon Code Records By Coupon Code Record Id Success 204
+   [Arguments]  &{kwargs}
+   ${resp}=  Delete Admin Coupon Code Records By Coupon Code Record Id   &{kwargs}
+   expect status is 204  ${resp}  
 

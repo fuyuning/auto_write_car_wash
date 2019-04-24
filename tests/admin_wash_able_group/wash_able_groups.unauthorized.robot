@@ -42,8 +42,8 @@ Patch Admin Wash Able Group By Wash Able Group Id Fail Without Login
 
 
 *** Variables ***
-${wash_auto_group_id}
-${wash_able_group_id}
+${wash_auto_group_id}  12345678909876543
+${wash_able_group_id}  12345678909876543
 
 
 *** Keywords ***

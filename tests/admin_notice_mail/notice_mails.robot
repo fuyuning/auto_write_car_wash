@@ -8,15 +8,6 @@ Force Tags  model:admin_notice_mail  虾洗后台
 
 
 *** Test Cases ***
-Post Admin Notice Mails Success 
-   [Documentation]  接口名:新增通知邮件地址${\n}
-   ...              请求方式:Post${\n}
-   ...              预期结果:输入正确参数,http响应码返回 201,返回的Json数据符合验证。
-   [Tags]           Respcode:201
-   ${essential_params}  create list  notice_mail=${notice_mail}  
-   ${unessential_params}  create list  comment_status=False  money_status=False  car_move_qrcode_status=False  wxmp_remark_status=False  washer_remark_status=False  
-   run every case by params  Post Admin Notice Mails Success 201  ${essential_params}  ${unessential_params}
-
 Post Admin Notice Mails Fail With Wrong Params
    [Documentation]  接口名:新增通知邮件地址${\n}
    ...              请求方式:Post${\n}
@@ -25,6 +16,15 @@ Post Admin Notice Mails Fail With Wrong Params
    ${essential_params}  create list  notice_mail=${notice_mail}  
    ${unessential_params}  create list  comment_status=False  money_status=False  car_move_qrcode_status=False  wxmp_remark_status=False  washer_remark_status=False  
    run every case by params  Post Admin Notice Mails Fail 422  ${essential_params}  ${unessential_params}
+
+Post Admin Notice Mails Success 
+   [Documentation]  接口名:新增通知邮件地址${\n}
+   ...              请求方式:Post${\n}
+   ...              预期结果:输入正确参数,http响应码返回 201,返回的Json数据符合验证。
+   [Tags]           Respcode:201
+   ${essential_params}  create list  notice_mail=${notice_mail}  
+   ${unessential_params}  create list  comment_status=False  money_status=False  car_move_qrcode_status=False  wxmp_remark_status=False  washer_remark_status=False  
+   run every case by params  Post Admin Notice Mails Success 201  ${essential_params}  ${unessential_params}
 
 Get Admin Notice Mails Success 
    [Documentation]  接口名:邮件通知列表${\n}
@@ -87,11 +87,16 @@ Delete Admin Notice Mails By Notice Mail Id Fail With Wrong Url
 
 
 *** Variables ***
-${notice_mail_id/(comment_status|money_status|car_move_qrcode_status|wxmp_remark_status|washer_remark_status)}
-${notice_mail_id}
+${notice_mail_id/(comment_status|money_status|car_move_qrcode_status|wxmp_remark_status|washer_remark_status)}  
+${notice_mail_id}  
 
 
 *** Keywords ***
+Post Admin Notice Mails Fail 422
+   [Arguments]  &{kwargs}
+   ${resp}=  Post Admin Notice Mails   &{kwargs}
+   expect status is 422  ${resp}  
+
 Post Admin Notice Mails Success 201
    [Arguments]  &{kwargs}
    ${resp}=  Post Admin Notice Mails   &{kwargs}
@@ -100,11 +105,6 @@ Post Admin Notice Mails Success 201
    set global variable   ${notice_mail_id/(comment_status|money_status|car_move_qrcode_status|wxmp_remark_status|washer_remark_status)}
    ${notice_mail_id}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][notice_mail_id]}
    set global variable   ${notice_mail_id}
-
-Post Admin Notice Mails Fail 422
-   [Arguments]  &{kwargs}
-   ${resp}=  Post Admin Notice Mails   &{kwargs}
-   expect status is 422  ${resp}  
 
 Get Admin Notice Mails Success 200
    [Arguments]  &{kwargs}

@@ -44,15 +44,6 @@ Get Admin Service Groups Fail With Wrong Params
    ${unessential_params}  create list  pricing_strategy=${pricing_strategy}  service_group_name=${service_group_name}  page_num=${page_num}  page_size=${page_size}  
    run every case by params  Get Admin Service Groups Fail 422  ${essential_params}  ${unessential_params}
 
-Put Admin Service Groups By Service Group Id Success 
-   [Documentation]  接口名:编辑套餐${\n}
-   ...              请求方式:Put${\n}
-   ...              预期结果:输入正确参数,http响应码返回 204,无Json数据返回。
-   [Tags]           Respcode:204
-   ${essential_params}  create list  service_group_name=${service_group_name}  service_original_price=${service_original_price}  cost_price=${cost_price}  service_original_price=${service_original_price}  wash_normal_price=${wash_normal_price}  wash_group_price=${wash_group_price}  membership_price=${membership_price}  order_by=${order_by}  description=${description}  
-   ${unessential_params}  create list  commission_price=${commission_price}  wash_normal_percent=${wash_normal_percent}  wash_group_percent=${wash_group_percent}  membership_percent=${membership_percent}  service_ids=${service_ids}  intelligent_service_ids=${intelligent_service_ids}  
-   run every case by params  Put Admin Service Groups By Service Group Id Success 204  ${essential_params}  ${unessential_params}  service_group_id=${service_group_id}
-
 Put Admin Service Groups By Service Group Id Fail With Wrong Params
    [Documentation]  接口名:编辑套餐${\n}
    ...              请求方式:Put${\n}
@@ -61,6 +52,15 @@ Put Admin Service Groups By Service Group Id Fail With Wrong Params
    ${essential_params}  create list  service_group_name=${service_group_name}  service_original_price=${service_original_price}  cost_price=${cost_price}  service_original_price=${service_original_price}  wash_normal_price=${wash_normal_price}  wash_group_price=${wash_group_price}  membership_price=${membership_price}  order_by=${order_by}  description=${description}  
    ${unessential_params}  create list  commission_price=${commission_price}  wash_normal_percent=${wash_normal_percent}  wash_group_percent=${wash_group_percent}  membership_percent=${membership_percent}  service_ids=${service_ids}  intelligent_service_ids=${intelligent_service_ids}  
    run every case by params  Put Admin Service Groups By Service Group Id Fail 422  ${essential_params}  ${unessential_params}  service_group_id=${service_group_id}
+
+Put Admin Service Groups By Service Group Id Success 
+   [Documentation]  接口名:编辑套餐${\n}
+   ...              请求方式:Put${\n}
+   ...              预期结果:输入正确参数,http响应码返回 204,无Json数据返回。
+   [Tags]           Respcode:204
+   ${essential_params}  create list  service_group_name=${service_group_name}  service_original_price=${service_original_price}  cost_price=${cost_price}  service_original_price=${service_original_price}  wash_normal_price=${wash_normal_price}  wash_group_price=${wash_group_price}  membership_price=${membership_price}  order_by=${order_by}  description=${description}  
+   ${unessential_params}  create list  commission_price=${commission_price}  wash_normal_percent=${wash_normal_percent}  wash_group_percent=${wash_group_percent}  membership_percent=${membership_percent}  service_ids=${service_ids}  intelligent_service_ids=${intelligent_service_ids}  
+   run every case by params  Put Admin Service Groups By Service Group Id Success 204  ${essential_params}  ${unessential_params}  service_group_id=${service_group_id}
 
 Put Admin Service Groups By Service Group Id Fail With Wrong Url
    [Documentation]  接口名:编辑套餐${\n}
@@ -71,13 +71,6 @@ Put Admin Service Groups By Service Group Id Fail With Wrong Url
    ${unessential_params}  create list  commission_price=${commission_price}  wash_normal_percent=${wash_normal_percent}  wash_group_percent=${wash_group_percent}  membership_percent=${membership_percent}  service_ids=${service_ids}  intelligent_service_ids=${intelligent_service_ids}  
    run every case by params  Put Admin Service Groups By Service Group Id Fail 404  ${essential_params}  ${unessential_params}  service_group_id=${wrong_url_id}
 
-Delete Admin Service Groups By Service Group Id Success 
-   [Documentation]  接口名:删除服务${\n}
-   ...              请求方式:Delete${\n}
-   ...              预期结果:输入正确参数,http响应码返回 204,无Json数据返回。
-   [Tags]           Respcode:204
-   Delete Admin Service Groups By Service Group Id Success 204  service_group_id=${service_group_id}
-
 Delete Admin Service Groups By Service Group Id Fail With Wrong Url
    [Documentation]  接口名:删除服务${\n}
    ...              请求方式:Delete${\n}
@@ -85,9 +78,16 @@ Delete Admin Service Groups By Service Group Id Fail With Wrong Url
    [Tags]           Respcode:404
    Delete Admin Service Groups By Service Group Id Fail 404  service_group_id=${wrong_url_id}
 
+Delete Admin Service Groups By Service Group Id Success 
+   [Documentation]  接口名:删除服务${\n}
+   ...              请求方式:Delete${\n}
+   ...              预期结果:输入正确参数,http响应码返回 204,无Json数据返回。
+   [Tags]           Respcode:204
+   Delete Admin Service Groups By Service Group Id Success 204  service_group_id=${service_group_id}
+
 
 *** Variables ***
-${service_group_id}
+${service_group_id}  
 
 
 *** Keywords ***
@@ -115,28 +115,28 @@ Get Admin Service Groups Fail 422
    ${resp}=  Get Admin Service Groups   &{kwargs}
    expect status is 422  ${resp}  
 
-Put Admin Service Groups By Service Group Id Success 204
-   [Arguments]  &{kwargs}
-   ${resp}=  Put Admin Service Groups By Service Group Id   &{kwargs}
-   expect status is 204  ${resp}  
-
 Put Admin Service Groups By Service Group Id Fail 422
    [Arguments]  &{kwargs}
    ${resp}=  Put Admin Service Groups By Service Group Id   &{kwargs}
    expect status is 422  ${resp}  
+
+Put Admin Service Groups By Service Group Id Success 204
+   [Arguments]  &{kwargs}
+   ${resp}=  Put Admin Service Groups By Service Group Id   &{kwargs}
+   expect status is 204  ${resp}  
 
 Put Admin Service Groups By Service Group Id Fail 404
    [Arguments]  &{kwargs}
    ${resp}=  Put Admin Service Groups By Service Group Id   &{kwargs}
    expect status is 404  ${resp}  
 
-Delete Admin Service Groups By Service Group Id Success 204
-   [Arguments]  &{kwargs}
-   ${resp}=  Delete Admin Service Groups By Service Group Id   &{kwargs}
-   expect status is 204  ${resp}  
-
 Delete Admin Service Groups By Service Group Id Fail 404
    [Arguments]  &{kwargs}
    ${resp}=  Delete Admin Service Groups By Service Group Id   &{kwargs}
    expect status is 404  ${resp}  
+
+Delete Admin Service Groups By Service Group Id Success 204
+   [Arguments]  &{kwargs}
+   ${resp}=  Delete Admin Service Groups By Service Group Id   &{kwargs}
+   expect status is 204  ${resp}  
 

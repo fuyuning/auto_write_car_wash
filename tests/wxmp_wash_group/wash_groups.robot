@@ -78,7 +78,7 @@ Get Wash Groups By Wash Group Id Success
 
 
 *** Variables ***
-${wash_group_id}
+${wash_group_id}  
 
 
 *** Keywords ***

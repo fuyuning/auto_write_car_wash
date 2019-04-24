@@ -5,6 +5,7 @@ Library  robot_car_wash_app_library.car_position.CarPositionLibrary
 Force Tags  model:app_car_position  虾客APP
 
 
+*** Test Cases ***
 Post car Wash car positions Fail Without Login
    [Documentation]  接口名:采集车辆信息${\n}
    ...              请求方式:Post${\n}
@@ -32,6 +33,8 @@ Get car Wash new car positions Fail Without Login
    ${unessential_params}  create list  wash_area_id=${wash_area_id}  section=${section}  
    run every case by params  Get car Wash new car positions Fail 403  ${essential_params}  ${unessential_params}
 
+
+*** Keywords ***
 Post car Wash car positions Fail 403
    [Arguments]  &{kwargs}
    ${resp}=  Post car Wash car positions   &{kwargs}

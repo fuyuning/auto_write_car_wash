@@ -26,7 +26,7 @@ Patch Visible By Promoter Statistic Id Fail Without Login
 
 
 *** Variables ***
-${promoter_statistic_id/visible}
+${promoter_statistic_id/visible}  12345678909876543
 
 
 *** Keywords ***

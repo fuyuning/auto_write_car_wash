@@ -43,7 +43,7 @@ class CouponPointLibrary(CommonLibrary):
             SERVER_DOMAIN=self.SERVER_DOMAIN)
         data = {}
         for k, v in kwargs.items():
-            if k in ("user_id", "mobile", "status", "is_used", "page_num", "page_size"):
+            if k in ("coupon_name", "point_remark", "created_section", "page_num", "page_size"):
                 data[k] = v
         return self.client.get(url, params=data)
 
@@ -52,7 +52,7 @@ class CouponPointLibrary(CommonLibrary):
             SERVER_DOMAIN=self.SERVER_DOMAIN)
         data = {}
         for k, v in kwargs.items():
-            if k in ("coupon_point_record_id", "coupon_name", "point_remark", "created_section", "page_num", "page_size"):
+            if k in ("coupon_point_record_id", "user_id", "mobile", "status", "is_used", "page_num", "page_size"):
                 data[k] = v
         return self.client.get(url, params=data)
 

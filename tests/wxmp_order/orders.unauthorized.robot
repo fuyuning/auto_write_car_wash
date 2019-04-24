@@ -51,8 +51,8 @@ Get Orders By Order Id Fail Without Login
 
 
 *** Variables ***
-${order_id/pay}
-${order_id}
+${order_id/pay}  12345678909876543
+${order_id}  12345678909876543
 
 
 *** Keywords ***

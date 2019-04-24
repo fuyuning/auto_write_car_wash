@@ -5,6 +5,7 @@ Library  robot_car_wash_server_library.user_car.UserCarLibrary
 Force Tags  model:admin_user_car  虾洗后台
 
 
+*** Test Cases ***
 Get Admin User Cars Fail Without Login
    [Documentation]  接口名:用户车辆信息查询${\n}
    ...              请求方式:Get${\n}
@@ -14,6 +15,8 @@ Get Admin User Cars Fail Without Login
    ${unessential_params}  create list  user_id=${user_id}  
    run every case by params  Get Admin User Cars Fail 403  ${essential_params}  ${unessential_params}
 
+
+*** Keywords ***
 Get Admin User Cars Fail 403
    [Arguments]  &{kwargs}
    ${resp}=  Get Admin User Cars   &{kwargs}

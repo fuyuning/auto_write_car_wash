@@ -58,7 +58,7 @@ Delete Admin Coupon Distribute Settings By Setting Id Fail Without Login
 
 
 *** Variables ***
-${setting_id}
+${setting_id}  12345678909876543
 
 
 *** Keywords ***

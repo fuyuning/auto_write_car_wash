@@ -60,7 +60,7 @@ Get Admin Car Model Count Fail With Wrong Params
 
 
 *** Variables ***
-${car_model_id}
+${car_model_id}  
 
 
 *** Keywords ***

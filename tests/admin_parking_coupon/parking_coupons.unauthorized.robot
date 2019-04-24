@@ -24,7 +24,7 @@ Delete Admin Parking Coupons By Parking Coupon Id Fail Without Login
 
 
 *** Variables ***
-${parking_coupon_id}
+${parking_coupon_id}  12345678909876543
 
 
 *** Keywords ***

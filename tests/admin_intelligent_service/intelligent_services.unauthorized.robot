@@ -49,7 +49,7 @@ Delete Admin Intelligent Services By Intelligent Service Id Fail Without Login
 
 
 *** Variables ***
-${intelligent_service_id}
+${intelligent_service_id}  12345678909876543
 
 
 *** Keywords ***

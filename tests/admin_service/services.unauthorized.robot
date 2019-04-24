@@ -5,6 +5,7 @@ Library  robot_car_wash_server_library.service.ServiceLibrary
 Force Tags  model:admin_service  虾洗后台
 
 
+*** Test Cases ***
 Post Admin Services Fail Without Login
    [Documentation]  接口名:新增服务${\n}
    ...              请求方式:Post${\n}
@@ -39,6 +40,12 @@ Delete Admin Services By Service Id Fail Without Login
    [Tags]           Respcode:403
    Delete Admin Services By Service Id Fail 403  service_id=${service_id}
 
+
+*** Variables ***
+${service_id}  12345678909876543
+
+
+*** Keywords ***
 Post Admin Services Fail 403
    [Arguments]  &{kwargs}
    ${resp}=  Post Admin Services   &{kwargs}

@@ -85,13 +85,6 @@ Put Admin Intelligent Services By Intelligent Service Id Fail With Wrong Params
    ${unessential_params}  create list  order_by=${order_by}  description=${description}  
    run every case by params  Put Admin Intelligent Services By Intelligent Service Id Fail 422  ${essential_params}  ${unessential_params}  intelligent_service_id=${intelligent_service_id}
 
-Delete Admin Intelligent Services By Intelligent Service Id Success 
-   [Documentation]  接口名:删除智能定价服务${\n}
-   ...              请求方式:Delete${\n}
-   ...              预期结果:输入正确参数,http响应码返回 204,无Json数据返回。
-   [Tags]           Respcode:204
-   Delete Admin Intelligent Services By Intelligent Service Id Success 204  intelligent_service_id=${intelligent_service_id}
-
 Delete Admin Intelligent Services By Intelligent Service Id Fail With Wrong Url
    [Documentation]  接口名:删除智能定价服务${\n}
    ...              请求方式:Delete${\n}
@@ -99,9 +92,16 @@ Delete Admin Intelligent Services By Intelligent Service Id Fail With Wrong Url
    [Tags]           Respcode:404
    Delete Admin Intelligent Services By Intelligent Service Id Fail 404  intelligent_service_id=${wrong_url_id}
 
+Delete Admin Intelligent Services By Intelligent Service Id Success 
+   [Documentation]  接口名:删除智能定价服务${\n}
+   ...              请求方式:Delete${\n}
+   ...              预期结果:输入正确参数,http响应码返回 204,无Json数据返回。
+   [Tags]           Respcode:204
+   Delete Admin Intelligent Services By Intelligent Service Id Success 204  intelligent_service_id=${intelligent_service_id}
+
 
 *** Variables ***
-${intelligent_service_id}
+${intelligent_service_id}  
 
 
 *** Keywords ***
@@ -156,13 +156,13 @@ Put Admin Intelligent Services By Intelligent Service Id Fail 422
    ${resp}=  Put Admin Intelligent Services By Intelligent Service Id   &{kwargs}
    expect status is 422  ${resp}  
 
-Delete Admin Intelligent Services By Intelligent Service Id Success 204
-   [Arguments]  &{kwargs}
-   ${resp}=  Delete Admin Intelligent Services By Intelligent Service Id   &{kwargs}
-   expect status is 204  ${resp}  
-
 Delete Admin Intelligent Services By Intelligent Service Id Fail 404
    [Arguments]  &{kwargs}
    ${resp}=  Delete Admin Intelligent Services By Intelligent Service Id   &{kwargs}
    expect status is 404  ${resp}  
+
+Delete Admin Intelligent Services By Intelligent Service Id Success 204
+   [Arguments]  &{kwargs}
+   ${resp}=  Delete Admin Intelligent Services By Intelligent Service Id   &{kwargs}
+   expect status is 204  ${resp}  
 

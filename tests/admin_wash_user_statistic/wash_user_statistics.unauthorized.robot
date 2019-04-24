@@ -26,7 +26,7 @@ Patch Visible By Wash User Statistic Id Fail Without Login
 
 
 *** Variables ***
-${wash_user_statistic_id/visible}
+${wash_user_statistic_id/visible}  12345678909876543
 
 
 *** Keywords ***

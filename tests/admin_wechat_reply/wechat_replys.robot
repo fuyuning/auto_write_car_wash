@@ -67,13 +67,6 @@ Put Admin Wachat Replys By Wechat Reply Id Fail With Wrong Url
    ${unessential_params}  create list  
    run every case by params  Put Admin Wachat Replys By Wechat Reply Id Fail 404  ${essential_params}  ${unessential_params}  wechat_reply_id=${wrong_url_id}
 
-Delete Admin Wachat Replys By Wechat Reply Id Success 
-   [Documentation]  接口名:添删除--公众号关注/自定义回复${\n}
-   ...              请求方式:Delete${\n}
-   ...              预期结果:输入正确参数,http响应码返回 204,无Json数据返回。
-   [Tags]           Respcode:204
-   Delete Admin Wachat Replys By Wechat Reply Id Success 204  wechat_reply_id=${wechat_reply_id}
-
 Delete Admin Wachat Replys By Wechat Reply Id Fail With Wrong Url
    [Documentation]  接口名:添删除--公众号关注/自定义回复${\n}
    ...              请求方式:Delete${\n}
@@ -81,9 +74,16 @@ Delete Admin Wachat Replys By Wechat Reply Id Fail With Wrong Url
    [Tags]           Respcode:404
    Delete Admin Wachat Replys By Wechat Reply Id Fail 404  wechat_reply_id=${wrong_url_id}
 
+Delete Admin Wachat Replys By Wechat Reply Id Success 
+   [Documentation]  接口名:添删除--公众号关注/自定义回复${\n}
+   ...              请求方式:Delete${\n}
+   ...              预期结果:输入正确参数,http响应码返回 204,无Json数据返回。
+   [Tags]           Respcode:204
+   Delete Admin Wachat Replys By Wechat Reply Id Success 204  wechat_reply_id=${wechat_reply_id}
+
 
 *** Variables ***
-${wechat_reply_id}
+${wechat_reply_id}  
 
 
 *** Keywords ***
@@ -126,13 +126,13 @@ Put Admin Wachat Replys By Wechat Reply Id Fail 404
    ${resp}=  Put Admin Wachat Replys By Wechat Reply Id   &{kwargs}
    expect status is 404  ${resp}  
 
-Delete Admin Wachat Replys By Wechat Reply Id Success 204
-   [Arguments]  &{kwargs}
-   ${resp}=  Delete Admin Wachat Replys By Wechat Reply Id   &{kwargs}
-   expect status is 204  ${resp}  
-
 Delete Admin Wachat Replys By Wechat Reply Id Fail 404
    [Arguments]  &{kwargs}
    ${resp}=  Delete Admin Wachat Replys By Wechat Reply Id   &{kwargs}
    expect status is 404  ${resp}  
+
+Delete Admin Wachat Replys By Wechat Reply Id Success 204
+   [Arguments]  &{kwargs}
+   ${resp}=  Delete Admin Wachat Replys By Wechat Reply Id   &{kwargs}
+   expect status is 204  ${resp}  
 

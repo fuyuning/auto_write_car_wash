@@ -55,7 +55,7 @@ Patch Visible By Parking Statistic Id Fail With Wrong Params
 
 
 *** Variables ***
-${parking_statistic_id/visible}
+${parking_statistic_id/visible}  
 
 
 *** Keywords ***

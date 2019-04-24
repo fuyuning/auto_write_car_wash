@@ -5,6 +5,7 @@ Library  robot_car_wash_server_library.car_move_qrcode.CarMoveQrcodeLibrary
 Force Tags  model:admin_car_move_qrcode  虾洗后台
 
 
+*** Test Cases ***
 Post Finish By Car Move Qrcode Id Fail Without Login
    [Documentation]  接口名:申请通过${\n}
    ...              请求方式:Post${\n}
@@ -30,6 +31,13 @@ Delete Admin Car Move Qrcodes By Car Move Qrcode Id Fail Without Login
    [Tags]           Respcode:403
    Delete Admin Car Move Qrcodes By Car Move Qrcode Id Fail 403  car_move_qrcode_id=${car_move_qrcode_id}
 
+
+*** Variables ***
+${car_move_qrcode_id/finish}  12345678909876543
+${car_move_qrcode_id}  12345678909876543
+
+
+*** Keywords ***
 Post Finish By Car Move Qrcode Id Fail 403
    [Arguments]  &{kwargs}
    ${resp}=  Post Finish By Car Move Qrcode Id   &{kwargs}

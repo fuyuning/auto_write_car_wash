@@ -44,7 +44,7 @@ Get User Wash Records By Wash Record Id Fail Without Login
 
 
 *** Variables ***
-${wash_record_id}
+${wash_record_id}  12345678909876543
 
 
 *** Keywords ***

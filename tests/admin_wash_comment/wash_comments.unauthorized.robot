@@ -24,7 +24,7 @@ Delete Admin Wash Comments By Comment Id Fail Without Login
 
 
 *** Variables ***
-${comment_id}
+${comment_id}  12345678909876543
 
 
 *** Keywords ***

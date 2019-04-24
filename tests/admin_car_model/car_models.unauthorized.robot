@@ -33,7 +33,7 @@ Get Admin Car Model Count Fail Without Login
 
 
 *** Variables ***
-${car_model_id}
+${car_model_id}  12345678909876543
 
 
 *** Keywords ***

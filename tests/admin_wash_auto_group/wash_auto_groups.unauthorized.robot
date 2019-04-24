@@ -42,7 +42,7 @@ Patch Admin Wash Auto Group By Wash Auto Group Id Fail Without Login
 
 
 *** Variables ***
-${wash_auto_group_id}
+${wash_auto_group_id}  12345678909876543
 
 
 *** Keywords ***

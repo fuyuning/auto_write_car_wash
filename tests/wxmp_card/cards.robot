@@ -24,7 +24,7 @@ Get Price By Card Id Fail With Wrong Url
 
 
 *** Variables ***
-${card_id/price}
+${card_id/price}  
 
 
 *** Keywords ***

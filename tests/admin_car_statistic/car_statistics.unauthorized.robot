@@ -26,7 +26,7 @@ Patch Visible By Car Statistic Id Fail Without Login
 
 
 *** Variables ***
-${car_statistic_id/visible}
+${car_statistic_id/visible}  12345678909876543
 
 
 *** Keywords ***

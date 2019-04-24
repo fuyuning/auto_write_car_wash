@@ -5,6 +5,7 @@ Library  robot_car_wash_server_library.car_washer.CarWasherLibrary
 Force Tags  model:admin_car_washer  虾洗后台
 
 
+*** Test Cases ***
 Post Admin Car Washers Fail Without Login
    [Documentation]  接口名:新增虾客${\n}
    ...              请求方式:Post${\n}
@@ -57,6 +58,14 @@ Patch is Active by username Fail Without Login
    ${unessential_params}  create list  is_active=False  
    run every case by params  Patch is Active by username Fail 403  ${essential_params}  ${unessential_params}  username/is_active=${username/is_active}
 
+
+*** Variables ***
+${username}  12345678909876543
+${username/wash_records}  12345678909876543
+${username/is_active}  12345678909876543
+
+
+*** Keywords ***
 Post Admin Car Washers Fail 403
    [Arguments]  &{kwargs}
    ${resp}=  Post Admin Car Washers   &{kwargs}

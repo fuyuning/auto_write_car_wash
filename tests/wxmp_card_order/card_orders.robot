@@ -55,7 +55,7 @@ Post Pay By Card Order Id Fail With Wrong Params
 
 
 *** Variables ***
-${card_order_id/pay}
+${card_order_id/pay}  
 
 
 *** Keywords ***

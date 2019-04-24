@@ -5,6 +5,7 @@ Library  robot_car_wash_server_library.user_contact.UserContactLibrary
 Force Tags  model:admin_user_contact  虾洗后台
 
 
+*** Test Cases ***
 Get Admin User Contacts Fail Without Login
    [Documentation]  接口名:查询联系方式${\n}
    ...              请求方式:Get${\n}
@@ -14,6 +15,8 @@ Get Admin User Contacts Fail Without Login
    ${unessential_params}  create list  user_id=${user_id}  
    run every case by params  Get Admin User Contacts Fail 403  ${essential_params}  ${unessential_params}
 
+
+*** Keywords ***
 Get Admin User Contacts Fail 403
    [Arguments]  &{kwargs}
    ${resp}=  Get Admin User Contacts   &{kwargs}

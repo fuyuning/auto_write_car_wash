@@ -55,7 +55,7 @@ Patch Visible By Promoter Statistic Id Fail With Wrong Params
 
 
 *** Variables ***
-${promoter_statistic_id/visible}
+${promoter_statistic_id/visible}  
 
 
 *** Keywords ***

@@ -69,9 +69,9 @@ Get User Coupon Pools Fail Without Login
 
 
 *** Variables ***
-${coupon_pool_id/achieve_by_mobile}
-${coupon_pool_id/achieve}
-${coupon_pool_id}
+${coupon_pool_id/achieve_by_mobile}  12345678909876543
+${coupon_pool_id/achieve}  12345678909876543
+${coupon_pool_id}  12345678909876543
 
 
 *** Keywords ***

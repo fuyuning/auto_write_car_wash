@@ -8,23 +8,23 @@ Force Tags  model:wxmp_customer_service  车主微信端
 
 
 *** Test Cases ***
-Post User Customer Services Success 
-   [Documentation]  接口名:添加售后服务${\n}
-   ...              请求方式:Post${\n}
-   ...              预期结果:输入正确参数,http响应码返回 201,返回的Json数据符合验证。
-   [Tags]           Respcode:201
-   ${essential_params}  create list  wash_record_id=${wash_record_id}  reason=${reason}  description=${description}  is_refund=False  
-   ${unessential_params}  create list  
-   run every case by params  Post User Customer Services Success 201  ${essential_params}  ${unessential_params}
-
 Post User Customer Services Fail With Wrong Params
    [Documentation]  接口名:添加售后服务${\n}
    ...              请求方式:Post${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  wash_record_id=${wash_record_id}  reason=${reason}  description=${description}  is_refund=False  
+   ${essential_params}  create list  wash_record_id=${wash_record_id}  reason=${reason}  description=${description}  is_refund=${is_refund}  
    ${unessential_params}  create list  
    run every case by params  Post User Customer Services Fail 422  ${essential_params}  ${unessential_params}
+
+Post User Customer Services Success 
+   [Documentation]  接口名:添加售后服务${\n}
+   ...              请求方式:Post${\n}
+   ...              预期结果:输入正确参数,http响应码返回 201,返回的Json数据符合验证。
+   [Tags]           Respcode:201
+   ${essential_params}  create list  wash_record_id=${wash_record_id}  reason=${reason}  description=${description}  is_refund=${is_refund}  
+   ${unessential_params}  create list  
+   run every case by params  Post User Customer Services Success 201  ${essential_params}  ${unessential_params}
 
 Get User Customer Services Fail With Wrong Url
    [Documentation]  接口名:获取售后服务列表${\n}
@@ -69,21 +69,21 @@ Get User Customer Services By Customer Service Id Success
 
 
 *** Variables ***
-${customer_service_id}
+${customer_service_id}  
 
 
 *** Keywords ***
+Post User Customer Services Fail 422
+   [Arguments]  &{kwargs}
+   ${resp}=  Post User Customer Services   &{kwargs}
+   expect status is 422  ${resp}  
+
 Post User Customer Services Success 201
    [Arguments]  &{kwargs}
    ${resp}=  Post User Customer Services   &{kwargs}
    expect status is 201  ${resp}  wxmp_customer_service/Post_User_Customer_Services_201.json
    ${customer_service_id}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][customer_service_id]}
    set global variable   ${customer_service_id}
-
-Post User Customer Services Fail 422
-   [Arguments]  &{kwargs}
-   ${resp}=  Post User Customer Services   &{kwargs}
-   expect status is 422  ${resp}  
 
 Get User Customer Services Fail 404
    [Arguments]  &{kwargs}

@@ -53,13 +53,6 @@ Get Admin Car Move Qrcodes Fail With Wrong Params
    ${unessential_params}  create list  car_move_qrcode_id=${car_move_qrcode_id}  user_id=${user_id}  mobile=${mobile}  status=${status}  created_section=${created_section}  
    run every case by params  Get Admin Car Move Qrcodes Fail 422  ${essential_params}  ${unessential_params}
 
-Delete Admin Car Move Qrcodes By Car Move Qrcode Id Success 
-   [Documentation]  接口名:二维码删除${\n}
-   ...              请求方式:Delete${\n}
-   ...              预期结果:输入正确参数,http响应码返回 204,无Json数据返回。
-   [Tags]           Respcode:204
-   Delete Admin Car Move Qrcodes By Car Move Qrcode Id Success 204  car_move_qrcode_id=${car_move_qrcode_id}
-
 Delete Admin Car Move Qrcodes By Car Move Qrcode Id Fail With Wrong Url
    [Documentation]  接口名:二维码删除${\n}
    ...              请求方式:Delete${\n}
@@ -67,10 +60,17 @@ Delete Admin Car Move Qrcodes By Car Move Qrcode Id Fail With Wrong Url
    [Tags]           Respcode:404
    Delete Admin Car Move Qrcodes By Car Move Qrcode Id Fail 404  car_move_qrcode_id=${wrong_url_id}
 
+Delete Admin Car Move Qrcodes By Car Move Qrcode Id Success 
+   [Documentation]  接口名:二维码删除${\n}
+   ...              请求方式:Delete${\n}
+   ...              预期结果:输入正确参数,http响应码返回 204,无Json数据返回。
+   [Tags]           Respcode:204
+   Delete Admin Car Move Qrcodes By Car Move Qrcode Id Success 204  car_move_qrcode_id=${car_move_qrcode_id}
+
 
 *** Variables ***
-${car_move_qrcode_id/finish}
-${car_move_qrcode_id}
+${car_move_qrcode_id/finish}  
+${car_move_qrcode_id}  
 
 
 *** Keywords ***
@@ -103,13 +103,13 @@ Get Admin Car Move Qrcodes Fail 422
    ${resp}=  Get Admin Car Move Qrcodes   &{kwargs}
    expect status is 422  ${resp}  
 
-Delete Admin Car Move Qrcodes By Car Move Qrcode Id Success 204
-   [Arguments]  &{kwargs}
-   ${resp}=  Delete Admin Car Move Qrcodes By Car Move Qrcode Id   &{kwargs}
-   expect status is 204  ${resp}  
-
 Delete Admin Car Move Qrcodes By Car Move Qrcode Id Fail 404
    [Arguments]  &{kwargs}
    ${resp}=  Delete Admin Car Move Qrcodes By Car Move Qrcode Id   &{kwargs}
    expect status is 404  ${resp}  
+
+Delete Admin Car Move Qrcodes By Car Move Qrcode Id Success 204
+   [Arguments]  &{kwargs}
+   ${resp}=  Delete Admin Car Move Qrcodes By Car Move Qrcode Id   &{kwargs}
+   expect status is 204  ${resp}  
 

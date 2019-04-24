@@ -24,7 +24,7 @@ Delete Admin Summons By Summon Id Fail Without Login
 
 
 *** Variables ***
-${summon_id}
+${summon_id}  12345678909876543
 
 
 *** Keywords ***

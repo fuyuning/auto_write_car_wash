@@ -64,7 +64,7 @@ Patch Visible By Username Fail With Wrong Params
 
 
 *** Variables ***
-${username/visible}
+${username/visible}  
 
 
 *** Keywords ***

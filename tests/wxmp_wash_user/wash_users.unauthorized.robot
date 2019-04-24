@@ -5,6 +5,7 @@ Library  robot_car_wash_wxmp_library.wash_user.WashUserLibrary
 Force Tags  model:wxmp_wash_user  车主微信端
 
 
+*** Test Cases ***
 Post User User Forms Fail Without Login
    [Documentation]  接口名:上传forms${\n}
    ...              请求方式:Post${\n}
@@ -32,6 +33,8 @@ Put User User Info Fail Without Login
    ${unessential_params}  create list  
    run every case by params  Put User User Info Fail 403  ${essential_params}  ${unessential_params}
 
+
+*** Keywords ***
 Post User User Forms Fail 403
    [Arguments]  &{kwargs}
    ${resp}=  Post User User Forms   &{kwargs}

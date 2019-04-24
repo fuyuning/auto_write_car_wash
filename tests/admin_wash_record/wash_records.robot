@@ -148,15 +148,6 @@ Patch Admin Wash Record By Wash Record Id Fail With Wrong Params
    ${unessential_params}  create list  
    run every case by params  Patch Admin Wash Record By Wash Record Id Fail 422  ${essential_params}  ${unessential_params}  wash_record_id=${wash_record_id}
 
-Patch (car Id|mobile|name) by wash record id Success 
-   [Documentation]  接口名:订单详情修改（车牌,手机号,名字）${\n}
-   ...              请求方式:Patch${\n}
-   ...              预期结果:输入正确参数,http响应码返回 204,无Json数据返回。
-   [Tags]           Respcode:204
-   ${essential_params}  create list  
-   ${unessential_params}  create list  car_id=${car_id}  mobile=${mobile}  name=${name}  
-   run every case by params  Patch (car Id|mobile|name) by wash record id Success 204  ${essential_params}  ${unessential_params}  wash_record_id/(car_id|mobile|name)=${wash_record_id/(car_id|mobile|name)}
-
 Patch (car Id|mobile|name) by wash record id Fail With Wrong Params
    [Documentation]  接口名:订单详情修改（车牌,手机号,名字）${\n}
    ...              请求方式:Patch${\n}
@@ -165,6 +156,15 @@ Patch (car Id|mobile|name) by wash record id Fail With Wrong Params
    ${essential_params}  create list  
    ${unessential_params}  create list  car_id=${car_id}  mobile=${mobile}  name=${name}  
    run every case by params  Patch (car Id|mobile|name) by wash record id Fail 422  ${essential_params}  ${unessential_params}  wash_record_id/(car_id|mobile|name)=${wash_record_id/(car_id|mobile|name)}
+
+Patch (car Id|mobile|name) by wash record id Success 
+   [Documentation]  接口名:订单详情修改（车牌,手机号,名字）${\n}
+   ...              请求方式:Patch${\n}
+   ...              预期结果:输入正确参数,http响应码返回 204,无Json数据返回。
+   [Tags]           Respcode:204
+   ${essential_params}  create list  
+   ${unessential_params}  create list  car_id=${car_id}  mobile=${mobile}  name=${name}  
+   run every case by params  Patch (car Id|mobile|name) by wash record id Success 204  ${essential_params}  ${unessential_params}  wash_record_id/(car_id|mobile|name)=${wash_record_id/(car_id|mobile|name)}
 
 Patch (car Id|mobile|name) by wash record id Fail With Wrong Url
    [Documentation]  接口名:订单详情修改（车牌,手机号,名字）${\n}
@@ -175,13 +175,6 @@ Patch (car Id|mobile|name) by wash record id Fail With Wrong Url
    ${unessential_params}  create list  car_id=${car_id}  mobile=${mobile}  name=${name}  
    run every case by params  Patch (car Id|mobile|name) by wash record id Fail 404  ${essential_params}  ${unessential_params}  wash_record_id/(car_id|mobile|name)=${wrong_url_id}
 
-Delete Admin Wash Records By Wash Record Id Success 
-   [Documentation]  接口名:删除洗车订单${\n}
-   ...              请求方式:Delete${\n}
-   ...              预期结果:输入正确参数,http响应码返回 204,无Json数据返回。
-   [Tags]           Respcode:204
-   Delete Admin Wash Records By Wash Record Id Success 204  wash_record_id=${wash_record_id}
-
 Delete Admin Wash Records By Wash Record Id Fail With Wrong Url
    [Documentation]  接口名:删除洗车订单${\n}
    ...              请求方式:Delete${\n}
@@ -189,13 +182,20 @@ Delete Admin Wash Records By Wash Record Id Fail With Wrong Url
    [Tags]           Respcode:404
    Delete Admin Wash Records By Wash Record Id Fail 404  wash_record_id=${wrong_url_id}
 
+Delete Admin Wash Records By Wash Record Id Success 
+   [Documentation]  接口名:删除洗车订单${\n}
+   ...              请求方式:Delete${\n}
+   ...              预期结果:输入正确参数,http响应码返回 204,无Json数据返回。
+   [Tags]           Respcode:204
+   Delete Admin Wash Records By Wash Record Id Success 204  wash_record_id=${wash_record_id}
+
 
 *** Variables ***
-${wash_record_id/refund}
-${wash_record_id/close}
-${wash_record_id}
-${wash_record_id/is_deleted}
-${wash_record_id/(car_id|mobile|name)}
+${wash_record_id/refund}  
+${wash_record_id/close}  
+${wash_record_id}  
+${wash_record_id/is_deleted}  
+${wash_record_id/(car_id|mobile|name)}  
 
 
 *** Keywords ***
@@ -299,28 +299,28 @@ Patch Admin Wash Record By Wash Record Id Fail 422
    ${resp}=  Patch Admin Wash Record By Wash Record Id   &{kwargs}
    expect status is 422  ${resp}  
 
-Patch (car Id|mobile|name) by wash record id Success 204
-   [Arguments]  &{kwargs}
-   ${resp}=  Patch (car Id|mobile|name) by wash record id   &{kwargs}
-   expect status is 204  ${resp}  
-
 Patch (car Id|mobile|name) by wash record id Fail 422
    [Arguments]  &{kwargs}
    ${resp}=  Patch (car Id|mobile|name) by wash record id   &{kwargs}
    expect status is 422  ${resp}  
+
+Patch (car Id|mobile|name) by wash record id Success 204
+   [Arguments]  &{kwargs}
+   ${resp}=  Patch (car Id|mobile|name) by wash record id   &{kwargs}
+   expect status is 204  ${resp}  
 
 Patch (car Id|mobile|name) by wash record id Fail 404
    [Arguments]  &{kwargs}
    ${resp}=  Patch (car Id|mobile|name) by wash record id   &{kwargs}
    expect status is 404  ${resp}  
 
-Delete Admin Wash Records By Wash Record Id Success 204
-   [Arguments]  &{kwargs}
-   ${resp}=  Delete Admin Wash Records By Wash Record Id   &{kwargs}
-   expect status is 204  ${resp}  
-
 Delete Admin Wash Records By Wash Record Id Fail 404
    [Arguments]  &{kwargs}
    ${resp}=  Delete Admin Wash Records By Wash Record Id   &{kwargs}
    expect status is 404  ${resp}  
+
+Delete Admin Wash Records By Wash Record Id Success 204
+   [Arguments]  &{kwargs}
+   ${resp}=  Delete Admin Wash Records By Wash Record Id   &{kwargs}
+   expect status is 204  ${resp}  
 

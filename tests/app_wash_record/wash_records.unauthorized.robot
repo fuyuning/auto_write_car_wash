@@ -141,15 +141,15 @@ Patch Status By Wash Record Id Fail Without Login
 
 
 *** Variables ***
-${wash_record_id/update}
-${wash_record_id/upload_mark}
-${wash_record_id/upload}
-${wash_record_id/wash}
-${wash_record_id/finish}
-${wash_record_id}
-${wash_record_id/washer_remark}
-${wash_record_id/mark}
-${wash_record_id/status}
+${wash_record_id/update}  12345678909876543
+${wash_record_id/upload_mark}  12345678909876543
+${wash_record_id/upload}  12345678909876543
+${wash_record_id/wash}  12345678909876543
+${wash_record_id/finish}  12345678909876543
+${wash_record_id}  12345678909876543
+${wash_record_id/washer_remark}  12345678909876543
+${wash_record_id/mark}  12345678909876543
+${wash_record_id/status}  12345678909876543
 
 
 *** Keywords ***

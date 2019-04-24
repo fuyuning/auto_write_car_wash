@@ -67,8 +67,8 @@ Delete Admin Turntables By Turntable Id Fail Without Login
 
 
 *** Variables ***
-${turntable_id}
-${turntable_id/enabled}
+${turntable_id}  12345678909876543
+${turntable_id/enabled}  12345678909876543
 
 
 *** Keywords ***

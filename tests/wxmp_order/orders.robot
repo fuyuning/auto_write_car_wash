@@ -105,8 +105,8 @@ Get Orders By Order Id Success
 
 
 *** Variables ***
-${order_id/pay}
-${order_id}
+${order_id/pay}  
+${order_id}  
 
 
 *** Keywords ***

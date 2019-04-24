@@ -35,7 +35,7 @@ Patch Admin Car Series By Car Series Id Fail Without Login
 
 
 *** Variables ***
-${car_series_id}
+${car_series_id}  12345678909876543
 
 
 *** Keywords ***

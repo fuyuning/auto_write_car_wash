@@ -118,7 +118,7 @@ Get User Wash Records By Wash Record Id Fail With Wrong Params
 
 
 *** Variables ***
-${wash_record_id}
+${wash_record_id}  
 
 
 *** Keywords ***

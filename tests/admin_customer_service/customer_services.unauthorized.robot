@@ -5,6 +5,7 @@ Library  robot_car_wash_server_library.customer_service.CustomerServiceLibrary
 Force Tags  model:admin_customer_service  虾洗后台
 
 
+*** Test Cases ***
 Post Finish By Customer Service Id Fail Without Login
    [Documentation]  接口名:售后修改${\n}
    ...              请求方式:Post${\n}
@@ -37,6 +38,13 @@ Delete Admin Customer Services By Customer Service Id Fail Without Login
    [Tags]           Respcode:403
    Delete Admin Customer Services By Customer Service Id Fail 403  customer_service_id=${customer_service_id}
 
+
+*** Variables ***
+${customer_service_id/finish}  12345678909876543
+${customer_service_id}  12345678909876543
+
+
+*** Keywords ***
 Post Finish By Customer Service Id Fail 403
    [Arguments]  &{kwargs}
    ${resp}=  Post Finish By Customer Service Id   &{kwargs}

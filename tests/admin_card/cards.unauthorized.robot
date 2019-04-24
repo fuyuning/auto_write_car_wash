@@ -5,6 +5,7 @@ Library  robot_car_wash_server_library.card.CardLibrary
 Force Tags  model:admin_card  虾洗后台
 
 
+*** Test Cases ***
 Post Admin Cards Fail Without Login
    [Documentation]  接口名:创建会员卡${\n}
    ...              请求方式:Post${\n}
@@ -39,6 +40,12 @@ Delete Admin Cards By Card Id Fail Without Login
    [Tags]           Respcode:403
    Delete Admin Cards By Card Id Fail 403  card_id=${card_id}
 
+
+*** Variables ***
+${card_id}  12345678909876543
+
+
+*** Keywords ***
 Post Admin Cards Fail 403
    [Arguments]  &{kwargs}
    ${resp}=  Post Admin Cards   &{kwargs}

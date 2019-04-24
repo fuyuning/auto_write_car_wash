@@ -110,15 +110,22 @@ class AutoWriteRobot(object):
                 return_entities = api[8]
                 api_params_nn_list = api[9]
                 api_params_type_list = api[10]
+                api_codes_list_sort = api_codes_list
+                if '403' in api_codes_list:
+                    code_index = 0
+                    for api_code in api_codes_list:
+                        if api_code == '403':
+                            api_codes_list_sort[0], api_codes_list_sort[code_index] = api_codes_list[code_index], api_codes_list[0]
+                        code_index += 1
                 if i == 0:
                     self._write_lib_file(lib_name, model_name, api_method, api_url, api_params_name_list)
                 if i == 1:
                     self._write_robot_file_case(ptxt, service_name, model_name, api_name, api_method, api_url,
-                                                api_params_name_list, api_codes_list, return_entities,
+                                                api_params_name_list, api_codes_list_sort, return_entities,
                                                 api_params_nn_list, api_params_type_list, case_switch)
                     case_switch = False
                 if i == 2:
-                    self._write_robot_file_keywords(service_name, model_name, api_method, api_url, api_codes_list,
+                    self._write_robot_file_keywords(service_name, model_name, api_method, api_url, api_codes_list_sort,
                                                     id_in_url, keyword_switch)
                     keyword_switch = False
 
@@ -241,11 +248,8 @@ class AutoWriteRobot(object):
         robot.write(setup+'\n')
         robot.write(teardown+'\n')
         robot.write('Force Tags  model:'+full_name+'  '+name_tag+'\n\n\n')
-        if '403' in api_codes_list:
-            name_part = 'unauthorized.'
-        else:
-            name_part = 'please_delete.'
-        robot = open('../tests/' + full_name + '/' + model_name + 's.'+name_part+'robot', 'w+')
+        print(api_codes_list)
+        robot = open('../tests/' + full_name + '/' + model_name + 's.unauthorized.robot', 'w+')
         robot.write('*** Settings ***\n')
         robot.write('Documentation  ' + full_name + '\n')
         robot.write('Resource  ../resources.robot' + '\n')
@@ -265,7 +269,6 @@ class AutoWriteRobot(object):
             method_name = method_name[-2]+' '+method_name[-1].replace('_', ' ')
         else:
             method_name = method_name[-1].replace('_', ' ')
-        print(method_name)
         if len(url_parts) > 1:
             id_name = url_parts[1].split("/")[0].replace('_', ' ')
             if len(url_parts[1].split("/")) > 1:
@@ -395,7 +398,6 @@ class AutoWriteRobot(object):
                 method_name = method_name[-2] + ' ' + method_name[-1].replace('_', ' ')
             else:
                 method_name = method_name[-1].replace('_', ' ')
-            print(method_name)
             if len(url_parts) > 1:
                 id_name = url_parts[1].split("/")[0].replace('_', ' ')
                 if len(url_parts[1].split("/")) > 1:
@@ -444,8 +446,12 @@ class AutoWriteRobot(object):
                 robot.write('\n')
                 if id_in_url:
                     robot.write('*** Variables ***\n')
+                    if api_code == '403':
+                        id_value = '12345678909876543'
+                    else:
+                        id_value = ''
                     for var in id_in_url:
-                        robot.write('${'+var+'}\n')
+                        robot.write('${'+var+'}  '+id_value+'\n')
                     robot.write('\n\n')
                 robot.write('*** Keywords ***\n')
                 if api_code != '403':

@@ -26,7 +26,7 @@ Patch Visible By Parking Statistic Id Fail Without Login
 
 
 *** Variables ***
-${parking_statistic_id/visible}
+${parking_statistic_id/visible}  12345678909876543
 
 
 *** Keywords ***

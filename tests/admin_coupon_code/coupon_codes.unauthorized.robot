@@ -58,8 +58,8 @@ Delete Admin Coupon Code Records By Coupon Code Record Id Fail Without Login
 
 
 *** Variables ***
-${coupon_code_record_id}
-${coupon_code_record_id/remark}
+${coupon_code_record_id}  12345678909876543
+${coupon_code_record_id/remark}  12345678909876543
 
 
 *** Keywords ***

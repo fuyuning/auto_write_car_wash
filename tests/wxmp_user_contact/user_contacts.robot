@@ -95,13 +95,6 @@ Put is Default by user contact id Fail With Wrong Params
    [Tags]           Respcode:422
    Put is Default by user contact id Fail 422  user_contact_id/is_default=${user_contact_id/is_default}
 
-Delete User User Contacts By User Contact Id Success 
-   [Documentation]  接口名:删除联系方式${\n}
-   ...              请求方式:Delete${\n}
-   ...              预期结果:输入正确参数,http响应码返回 204,无Json数据返回。
-   [Tags]           Respcode:204
-   Delete User User Contacts By User Contact Id Success 204  user_contact_id=${user_contact_id}
-
 Delete User User Contacts By User Contact Id Fail With Wrong Url
    [Documentation]  接口名:删除联系方式${\n}
    ...              请求方式:Delete${\n}
@@ -109,10 +102,17 @@ Delete User User Contacts By User Contact Id Fail With Wrong Url
    [Tags]           Respcode:404
    Delete User User Contacts By User Contact Id Fail 404  user_contact_id=${wrong_url_id}
 
+Delete User User Contacts By User Contact Id Success 
+   [Documentation]  接口名:删除联系方式${\n}
+   ...              请求方式:Delete${\n}
+   ...              预期结果:输入正确参数,http响应码返回 204,无Json数据返回。
+   [Tags]           Respcode:204
+   Delete User User Contacts By User Contact Id Success 204  user_contact_id=${user_contact_id}
+
 
 *** Variables ***
-${user_contact_id}
-${user_contact_id/is_default}
+${user_contact_id}  
+${user_contact_id/is_default}  
 
 
 *** Keywords ***
@@ -183,13 +183,13 @@ Put is Default by user contact id Fail 422
    ${resp}=  Put is Default by user contact id   &{kwargs}
    expect status is 422  ${resp}  
 
-Delete User User Contacts By User Contact Id Success 204
-   [Arguments]  &{kwargs}
-   ${resp}=  Delete User User Contacts By User Contact Id   &{kwargs}
-   expect status is 204  ${resp}  
-
 Delete User User Contacts By User Contact Id Fail 404
    [Arguments]  &{kwargs}
    ${resp}=  Delete User User Contacts By User Contact Id   &{kwargs}
    expect status is 404  ${resp}  
+
+Delete User User Contacts By User Contact Id Success 204
+   [Arguments]  &{kwargs}
+   ${resp}=  Delete User User Contacts By User Contact Id   &{kwargs}
+   expect status is 204  ${resp}  
 

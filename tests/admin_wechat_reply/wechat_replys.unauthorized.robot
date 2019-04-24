@@ -5,6 +5,7 @@ Library  robot_car_wash_server_library.wechat_reply.WechatReplyLibrary
 Force Tags  model:admin_wechat_reply  虾洗后台
 
 
+*** Test Cases ***
 Post Admin Wachat Replys Fail Without Login
    [Documentation]  接口名:添加--公众号关注/自定义回复${\n}
    ...              请求方式:Post${\n}
@@ -37,6 +38,12 @@ Delete Admin Wachat Replys By Wechat Reply Id Fail Without Login
    [Tags]           Respcode:403
    Delete Admin Wachat Replys By Wechat Reply Id Fail 403  wechat_reply_id=${wechat_reply_id}
 
+
+*** Variables ***
+${wechat_reply_id}  12345678909876543
+
+
+*** Keywords ***
 Post Admin Wachat Replys Fail 403
    [Arguments]  &{kwargs}
    ${resp}=  Post Admin Wachat Replys   &{kwargs}

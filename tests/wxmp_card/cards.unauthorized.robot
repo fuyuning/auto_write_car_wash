@@ -15,7 +15,7 @@ Get Price By Card Id Fail Without Login
 
 
 *** Variables ***
-${card_id/price}
+${card_id/price}  12345678909876543
 
 
 *** Keywords ***

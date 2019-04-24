@@ -364,15 +364,15 @@ Patch Status By Wash Record Id Fail With Wrong Params
 
 
 *** Variables ***
-${wash_record_id/update}
-${wash_record_id/upload_mark}
-${wash_record_id/upload}
-${wash_record_id/wash}
-${wash_record_id/finish}
-${wash_record_id}
-${wash_record_id/washer_remark}
-${wash_record_id/mark}
-${wash_record_id/status}
+${wash_record_id/update}  
+${wash_record_id/upload_mark}  
+${wash_record_id/upload}  
+${wash_record_id/wash}  
+${wash_record_id/finish}  
+${wash_record_id}  
+${wash_record_id/washer_remark}  
+${wash_record_id/mark}  
+${wash_record_id/status}  
 
 
 *** Keywords ***

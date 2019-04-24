@@ -5,6 +5,7 @@ Library  robot_car_wash_app_library.parking_coupon.ParkingCouponLibrary
 Force Tags  model:app_parking_coupon  虾客APP
 
 
+*** Test Cases ***
 Post car Wash parking coupons Fail Without Login
    [Documentation]  接口名:添加停车优惠劵${\n}
    ...              请求方式:Post${\n}
@@ -14,6 +15,8 @@ Post car Wash parking coupons Fail Without Login
    ${unessential_params}  create list  
    run every case by params  Post car Wash parking coupons Fail 403  ${essential_params}  ${unessential_params}
 
+
+*** Keywords ***
 Post car Wash parking coupons Fail 403
    [Arguments]  &{kwargs}
    ${resp}=  Post car Wash parking coupons   &{kwargs}

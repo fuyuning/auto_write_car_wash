@@ -67,7 +67,7 @@ Delete Admin Coupon Pools By Coupon Pool Id Fail Without Login
 
 
 *** Variables ***
-${coupon_pool_id}
+${coupon_pool_id}  12345678909876543
 
 
 *** Keywords ***

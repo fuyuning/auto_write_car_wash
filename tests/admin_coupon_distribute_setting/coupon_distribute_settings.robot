@@ -51,15 +51,6 @@ Get coupon Distribute Settings (invite register|invite first) Success
    [Tags]           Respcode:200
     Get coupon Distribute Settings (invite register|invite first) Success 200
 
-Put Admin Coupon Distribute Settings By Setting Id Success 
-   [Documentation]  接口名:修改新人优惠券发放设置${\n}
-   ...              请求方式:Put${\n}
-   ...              预期结果:输入正确参数,http响应码返回 204,无Json数据返回。
-   [Tags]           Respcode:204
-   ${essential_params}  create list  enabled=False  coupon_pool_id=${coupon_pool_id}  
-   ${unessential_params}  create list  
-   run every case by params  Put Admin Coupon Distribute Settings By Setting Id Success 204  ${essential_params}  ${unessential_params}  setting_id=${setting_id}
-
 Put Admin Coupon Distribute Settings By Setting Id Fail With Wrong Params
    [Documentation]  接口名:修改新人优惠券发放设置${\n}
    ...              请求方式:Put${\n}
@@ -68,6 +59,15 @@ Put Admin Coupon Distribute Settings By Setting Id Fail With Wrong Params
    ${essential_params}  create list  enabled=False  coupon_pool_id=${coupon_pool_id}  
    ${unessential_params}  create list  
    run every case by params  Put Admin Coupon Distribute Settings By Setting Id Fail 422  ${essential_params}  ${unessential_params}  setting_id=${setting_id}
+
+Put Admin Coupon Distribute Settings By Setting Id Success 
+   [Documentation]  接口名:修改新人优惠券发放设置${\n}
+   ...              请求方式:Put${\n}
+   ...              预期结果:输入正确参数,http响应码返回 204,无Json数据返回。
+   [Tags]           Respcode:204
+   ${essential_params}  create list  enabled=False  coupon_pool_id=${coupon_pool_id}  
+   ${unessential_params}  create list  
+   run every case by params  Put Admin Coupon Distribute Settings By Setting Id Success 204  ${essential_params}  ${unessential_params}  setting_id=${setting_id}
 
 Put Admin Coupon Distribute Settings By Setting Id Fail With Wrong Url
    [Documentation]  接口名:修改新人优惠券发放设置${\n}
@@ -96,13 +96,6 @@ Put coupon Distribute Settings (invite register|invite first|new user) Fail With
    ${unessential_params}  create list  
    run every case by params  Put coupon Distribute Settings (invite register|invite first|new user) Fail 422  ${essential_params}  ${unessential_params}
 
-Delete Admin Coupon Distribute Settings By Setting Id Success 
-   [Documentation]  接口名:删除新人优惠券发放设置${\n}
-   ...              请求方式:Delete${\n}
-   ...              预期结果:输入正确参数,http响应码返回 204,无Json数据返回。
-   [Tags]           Respcode:204
-   Delete Admin Coupon Distribute Settings By Setting Id Success 204  setting_id=${setting_id}
-
 Delete Admin Coupon Distribute Settings By Setting Id Fail With Wrong Url
    [Documentation]  接口名:删除新人优惠券发放设置${\n}
    ...              请求方式:Delete${\n}
@@ -110,9 +103,16 @@ Delete Admin Coupon Distribute Settings By Setting Id Fail With Wrong Url
    [Tags]           Respcode:404
    Delete Admin Coupon Distribute Settings By Setting Id Fail 404  setting_id=${wrong_url_id}
 
+Delete Admin Coupon Distribute Settings By Setting Id Success 
+   [Documentation]  接口名:删除新人优惠券发放设置${\n}
+   ...              请求方式:Delete${\n}
+   ...              预期结果:输入正确参数,http响应码返回 204,无Json数据返回。
+   [Tags]           Respcode:204
+   Delete Admin Coupon Distribute Settings By Setting Id Success 204  setting_id=${setting_id}
+
 
 *** Variables ***
-${setting_id}
+${setting_id}  
 
 
 *** Keywords ***
@@ -147,15 +147,15 @@ Get coupon Distribute Settings (invite register|invite first) Success 200
    ${setting_id}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][setting_id]}
    set global variable   ${setting_id}
 
-Put Admin Coupon Distribute Settings By Setting Id Success 204
-   [Arguments]  &{kwargs}
-   ${resp}=  Put Admin Coupon Distribute Settings By Setting Id   &{kwargs}
-   expect status is 204  ${resp}  
-
 Put Admin Coupon Distribute Settings By Setting Id Fail 422
    [Arguments]  &{kwargs}
    ${resp}=  Put Admin Coupon Distribute Settings By Setting Id   &{kwargs}
    expect status is 422  ${resp}  
+
+Put Admin Coupon Distribute Settings By Setting Id Success 204
+   [Arguments]  &{kwargs}
+   ${resp}=  Put Admin Coupon Distribute Settings By Setting Id   &{kwargs}
+   expect status is 204  ${resp}  
 
 Put Admin Coupon Distribute Settings By Setting Id Fail 404
    [Arguments]  &{kwargs}
@@ -172,13 +172,13 @@ Put coupon Distribute Settings (invite register|invite first|new user) Fail 422
    ${resp}=  Put coupon Distribute Settings (invite register|invite first|new user)   &{kwargs}
    expect status is 422  ${resp}  
 
-Delete Admin Coupon Distribute Settings By Setting Id Success 204
-   [Arguments]  &{kwargs}
-   ${resp}=  Delete Admin Coupon Distribute Settings By Setting Id   &{kwargs}
-   expect status is 204  ${resp}  
-
 Delete Admin Coupon Distribute Settings By Setting Id Fail 404
    [Arguments]  &{kwargs}
    ${resp}=  Delete Admin Coupon Distribute Settings By Setting Id   &{kwargs}
    expect status is 404  ${resp}  
+
+Delete Admin Coupon Distribute Settings By Setting Id Success 204
+   [Arguments]  &{kwargs}
+   ${resp}=  Delete Admin Coupon Distribute Settings By Setting Id   &{kwargs}
+   expect status is 204  ${resp}  
 

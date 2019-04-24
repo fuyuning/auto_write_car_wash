@@ -5,6 +5,7 @@ Library  robot_car_wash_server_library.card_record.CardRecordLibrary
 Force Tags  model:admin_card_record  虾洗后台
 
 
+*** Test Cases ***
 Get Admin Card Records Fail Without Login
    [Documentation]  接口名:会员购卡记录${\n}
    ...              请求方式:Get${\n}
@@ -21,6 +22,12 @@ Delete Admin Card Records By Card Record Id Fail Without Login
    [Tags]           Respcode:403
    Delete Admin Card Records By Card Record Id Fail 403  card_record_id=${card_record_id}
 
+
+*** Variables ***
+${card_record_id}  12345678909876543
+
+
+*** Keywords ***
 Get Admin Card Records Fail 403
    [Arguments]  &{kwargs}
    ${resp}=  Get Admin Card Records   &{kwargs}

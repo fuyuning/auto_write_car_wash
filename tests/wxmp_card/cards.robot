@@ -3,7 +3,6 @@ Documentation  wxmp_card
 Resource  ../resources.robot
 Library  robot_car_wash_wxmp_library.card.CardLibrary
 Suite Setup  Login By Openid  ${openid}
-
 Force Tags  model:wxmp_card  车主微信端
 
 

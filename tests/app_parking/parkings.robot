@@ -3,7 +3,6 @@ Documentation  app_parking
 Resource  ../resources.robot
 Library  robot_car_wash_app_library.parking.ParkingLibrary
 Suite Setup  Login  ${app_username}  ${app_password}
-
 Force Tags  model:app_parking  虾客APP
 
 

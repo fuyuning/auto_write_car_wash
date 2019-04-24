@@ -3,7 +3,6 @@ Documentation  app_car_washer_order_statistic
 Resource  ../resources.robot
 Library  robot_car_wash_app_library.car_washer_order_statistic.CarWasherOrderStatisticLibrary
 Suite Setup  Login  ${app_username}  ${app_password}
-
 Force Tags  model:app_car_washer_order_statistic  虾客APP
 
 

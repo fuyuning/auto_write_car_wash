@@ -10,6 +10,8 @@ ${admin_password}  admin123
 ${app_username}  987654321
 ${app_password}  fuyuning123
 ${wrong_url_id}  000000000000000000ZZZZZZZZZZZZZZZZ0000000000000000000000
+
+
 *** Keywords ***
 Status Should be
     [Documentation]     检测响应状态是否符合预期值。

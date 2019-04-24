@@ -3,7 +3,6 @@ Documentation  wxmp_user_contact
 Resource  ../resources.robot
 Library  robot_car_wash_wxmp_library.user_contact.UserContactLibrary
 Suite Setup  Login By Openid  ${openid}
-
 Force Tags  model:wxmp_user_contact  车主微信端
 
 

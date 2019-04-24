@@ -3,7 +3,6 @@ Documentation  app_car_info
 Resource  ../resources.robot
 Library  robot_car_wash_app_library.car_info.CarInfoLibrary
 Suite Setup  Login  ${app_username}  ${app_password}
-
 Force Tags  model:app_car_info  虾客APP
 
 

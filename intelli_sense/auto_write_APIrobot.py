@@ -246,9 +246,9 @@ class AutoWriteRobot(object):
         robot.write('Resource  ../resources.robot'+'\n')
         robot.write('Library  '+lib_name+'.'+class_name+'Library'+'\n')
         robot.write(setup+'\n')
-        robot.write(teardown+'\n')
+        if teardown != '':
+            robot.write(teardown+'\n')
         robot.write('Force Tags  model:'+full_name+'  '+name_tag+'\n\n\n')
-        print(api_codes_list)
         robot = open('../tests/' + full_name + '/' + model_name + 's.unauthorized.robot', 'w+')
         robot.write('*** Settings ***\n')
         robot.write('Documentation  ' + full_name + '\n')

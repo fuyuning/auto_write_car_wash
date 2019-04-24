@@ -3,7 +3,6 @@ Documentation  app_car_position
 Resource  ../resources.robot
 Library  robot_car_wash_app_library.car_position.CarPositionLibrary
 Suite Setup  Login  ${app_username}  ${app_password}
-
 Force Tags  model:app_car_position  虾客APP
 
 

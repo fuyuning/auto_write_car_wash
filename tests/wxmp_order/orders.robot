@@ -3,7 +3,6 @@ Documentation  wxmp_order
 Resource  ../resources.robot
 Library  robot_car_wash_wxmp_library.order.OrderLibrary
 Suite Setup  Login By Openid  ${openid}
-
 Force Tags  model:wxmp_order  车主微信端
 
 

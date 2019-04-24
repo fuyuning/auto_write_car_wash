@@ -3,7 +3,6 @@ Documentation  app_user
 Resource  ../resources.robot
 Library  robot_car_wash_app_library.user.UserLibrary
 Suite Setup  Login  ${app_username}  ${app_password}
-
 Force Tags  model:app_user  虾客APP
 
 

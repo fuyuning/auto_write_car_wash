@@ -3,7 +3,6 @@ Documentation  app_wash_area
 Resource  ../resources.robot
 Library  robot_car_wash_app_library.wash_area.WashAreaLibrary
 Suite Setup  Login  ${app_username}  ${app_password}
-
 Force Tags  model:app_wash_area  虾客APP
 
 

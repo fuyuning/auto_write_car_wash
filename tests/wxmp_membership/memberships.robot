@@ -3,7 +3,6 @@ Documentation  wxmp_membership
 Resource  ../resources.robot
 Library  robot_car_wash_wxmp_library.membership.MembershipLibrary
 Suite Setup  Login By Openid  ${openid}
-
 Force Tags  model:wxmp_membership  车主微信端
 
 

@@ -3,7 +3,6 @@ Documentation  wxmp_coupon
 Resource  ../resources.robot
 Library  robot_car_wash_wxmp_library.coupon.CouponLibrary
 Suite Setup  Login By Openid  ${openid}
-
 Force Tags  model:wxmp_coupon  车主微信端
 
 

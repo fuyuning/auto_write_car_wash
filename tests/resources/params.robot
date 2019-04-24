@@ -121,9 +121,9 @@ ${wash_interval}
 ${user_type}
 ${user_ids}
 ${coupon_name}
-${is_used}
-${coupon_point_record_id}
 ${point_remark}
+${coupon_point_record_id}
+${is_used}
 ${service_name}
 ${commission_price}
 ${service_group_name}

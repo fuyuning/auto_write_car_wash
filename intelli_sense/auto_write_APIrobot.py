@@ -75,10 +75,9 @@ class AutoWriteRobot(object):
                     writer.writerow({'问题类型': '建议修改', '服务端': service_name, '模块名': model_name, '接口名': api_name,
                                      '请求方式': api_method, '问题': '应该返回 200, 但'+return_code+',请判断是否为文档及代码错误',
                                      '预期': str(api_codes_list)})
-                elif '201' not in api_codes_list and api_method == 'POST':
-                    writer.writerow({'问题类型': '建议修改', '服务端': service_name, '模块名': model_name, '接口名': api_name,
-                                     '请求方式': api_method, '问题': '应该返回 201, 但'+return_code+',请判断是否为文档及代码错误',
-                                     '预期': str(api_codes_list)})
+                    if '201' not in api_codes_list and api_method == 'POST':
+                        writer.writerow({'问题类型': '有待验证', '服务端': service_name, '模块名': model_name, '接口名': api_name,
+                                         '请求方式': api_method, '问题': return_code + ',是否为特殊接口'})
                 elif '204' not in api_codes_list and api_method in ('PUT', 'DELETE', 'PATCH'):
                     writer.writerow({'问题类型': '建议修改', '服务端': service_name, '模块名': model_name, '接口名': api_name,
                                      '请求方式': api_method, '问题': '应该返回 204, 但'+return_code+',请判断是否为文档及代码错误',

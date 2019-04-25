@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation   expert_login
 Resource        ../resources.robot
-Library         robot_washing_expert_library.accredit.LoginLibrary
+Library         robot_car_wash_app_library.accredit.LoginLibrary
 Force Tags      login  虾客APP
 
 *** Variables ***

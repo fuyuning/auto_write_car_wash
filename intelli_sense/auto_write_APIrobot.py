@@ -1,4 +1,5 @@
 # *-coding:utf-8-*-
+import csv
 import re
 import os
 
@@ -16,78 +17,96 @@ class AutoWriteRobot(object):
         lib_name = ''
         model_list = []
         all_model_list = []
-        txt = open('../cache/log/document_wrong.txt', "w+")
-        for line in file:
-            line = line.replace(' ', '')
-            data = line.split('||')
-            data[5] = data[5][1:-1].replace('\'', '').split(',')
-            data[6] = data[6][1:-1].replace('\'', '').split(',')
-            data[7] = data[7][1:-1].replace('\'', '').split(',')
-            data[8] = data[8][1:-1].replace('\'', '').split(',')
-            service_name = data[0]
-            model_name = data[1]
-            api_name = data[2]
-            api_method = data[3]
-            api_url = data[4]
-            api_params_name_list = data[5]
-            api_params_type_list = data[6]
-            api_params_nn_list = data[7]
-            api_codes_list = list(data[8])
-            return_entities = data[9]
-            if api_url.find(':') != -1 and str(api_codes_list).find('404') == -1:
-                api_codes_list.append('404')
-                txt.write(service_name+'_'+model_name+':'+api_name+api_method+'方法：缺少 404,加入后:'+str(api_codes_list)+'\n')
-            if api_params_name_list[0] != '' and str(api_codes_list).find('422') == -1:
-                api_codes_list.append('422')
-                txt.write(service_name+'_'+model_name+':'+api_name+api_method+'方法：缺少 422,加入后:'+str(api_codes_list)+'\n')
-            return_code = re.findall('20[0-9]', str(api_codes_list))
-            if return_code:
-                return_code = '返回 '+str(return_code[0])
-            else:
-                return_code = ' 未识别到2xx的返回 '
-            if '200' not in api_codes_list and api_method == 'GET':
-                txt.write(service_name+'_'+model_name + ':' + api_name + api_method+'方法：应该返回 200, 但'+return_code+',请判断是否为代码或文档错误\n')
-            elif '201' not in api_codes_list and api_method == 'POST':
-                txt.write(service_name+'_'+model_name + ':' + api_name + api_method+'方法：应该返回 201, 但'+return_code+',请判断是否为代码或文档错误\n')
-            elif '204' not in api_codes_list and api_method in ('PUT', 'DELETE', 'PATCH'):
-                txt.write(service_name+'_'+model_name + ':' + api_name + api_method+'方法：应该返回 204, 但'+return_code+',请判断是否为代码或文档错误\n')
-            if len(re.findall('404', str(api_codes_list))) > 1:
-                index = []
-                for i in api_codes_list:
-                    if i not in index:
-                        index.append(i)
-                api_codes_list = index
-                txt.write(service_name+'_'+model_name + ':' + api_name +api_method+'方法：文档含有过多 404,移除后应为:' + str(api_codes_list)+'\n')
-            api_list = []
-            if '404' in api_codes_list and api_url.find(':') == -1:
-                api_codes_list.remove('404')
-                txt.write(service_name+'_'+model_name + ':' + api_name +api_method+'方法：不该含有 404,移除后:' + str(api_codes_list)+'\n')
-            if '422' in api_codes_list and api_params_name_list == []:
-                api_codes_list.remove('422')
-                txt.write(service_name+'_'+model_name + ':' + api_name+api_method+'方法：不该含有 422,移除后:' + str(api_codes_list)+'\n')
-            if flag != service_name+'_'+model_name:
-                flag = service_name + '_' + model_name
-                if index2 != 0:
-                    all_model_list.append(model_list)
-                model_list = []
-                lib_name = self._write_robot_file_settings(service_name, model_name)
-                self._write_library_head(lib_name, model_name)
-            api_list.append(service_name)
-            api_list.append(model_name)
-            api_list.append(api_name)
-            api_list.append(api_method)
-            api_list.append(api_url)
-            api_list.append(api_params_name_list)
-            api_list.append(api_codes_list)
-            api_list.append(lib_name)
-            api_list.append(return_entities)
-            api_list.append(api_params_nn_list)
-            api_list.append(api_params_type_list)
-            model_list.append(api_list)
-            if index2 == 10000:
-                break
-            index2 += 1
-        print(len(all_model_list))
+        folder = os.path.exists('../cache/log')
+        if not folder:
+            os.makedirs('../cache/log')
+        with open('../cache/log/文档状态码问题.csv', 'w+', newline='') as csv_file:
+            # 表头
+            fieldnames = ['问题类型', '服务端', '模块名', '接口名', '请求方式', '问题', '预期']
+            writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
+            writer.writeheader()
+            for line in file:
+                line = line.replace(' ', '')
+                data = line.split('||')
+                data[5] = data[5][1:-1].replace('\'', '').split(',')
+                data[6] = data[6][1:-1].replace('\'', '').split(',')
+                data[7] = data[7][1:-1].replace('\'', '').split(',')
+                data[8] = data[8][1:-1].replace('\'', '').split(',')
+                service_name = data[0]
+                model_name = data[1]
+                api_name = data[2]
+                api_method = data[3]
+                api_url = data[4]
+                api_params_name_list = data[5]
+                api_params_type_list = data[6]
+                api_params_nn_list = data[7]
+                api_codes_list = list(data[8])
+                return_entities = data[9]
+                if len(re.findall('404', str(api_codes_list))) > 1:
+                    index = []
+                    for i in api_codes_list:
+                        if i not in index:
+                            index.append(i)
+                    api_codes_list = index
+                    writer.writerow({'问题类型': '建议修改', '服务端': service_name, '模块名': model_name, '接口名': api_name,
+                                     '请求方式': api_method, '问题': '文档含有过多 404,应移除', '预期': str(api_codes_list)})
+                if api_url.find(':') != -1 and str(api_codes_list).find('404') == -1:
+                    api_codes_list.append('404')
+                    writer.writerow({'问题类型': '已知缺陷', '服务端': service_name, '模块名': model_name, '接口名': api_name,
+                                     '请求方式': api_method, '问题': '缺少 404', '预期': str(api_codes_list)})
+                if api_params_name_list[0] != '' and str(api_codes_list).find('422') == -1:
+                    api_codes_list.append('422')
+                    writer.writerow({'问题类型': '已知缺陷', '服务端': service_name, '模块名': model_name, '接口名': api_name,
+                                     '请求方式': api_method, '问题': '缺少 422', '预期': str(api_codes_list)})
+                if '404' in api_codes_list and api_url.find(':') == -1:
+                    api_codes_list.remove('404')
+                    writer.writerow({'问题类型': '已知缺陷', '服务端': service_name, '模块名': model_name, '接口名': api_name,
+                                     '请求方式': api_method, '问题': '文档不该含有 404,应移除', '预期': str(api_codes_list)})
+                if '422' in api_codes_list and api_params_name_list[0] == '':
+                    api_codes_list.remove('422')
+                    writer.writerow({'问题类型': '已知缺陷', '服务端': service_name, '模块名': model_name, '接口名': api_name,
+                                     '请求方式': api_method, '问题': '文档不该含有 422,应移除', '预期': str(api_codes_list)})
+                return_code = re.findall('20[0-9]', str(api_codes_list))
+                if return_code:
+                    return_code = '返回 '+str(return_code[0])
+                else:
+                    return_code = ' 未识别到2xx的返回 '
+                if '200' not in api_codes_list and api_method == 'GET':
+                    writer.writerow({'问题类型': '建议修改', '服务端': service_name, '模块名': model_name, '接口名': api_name,
+                                     '请求方式': api_method, '问题': '应该返回 200, 但'+return_code+',请判断是否为文档及代码错误',
+                                     '预期': str(api_codes_list)})
+                elif '201' not in api_codes_list and api_method == 'POST':
+                    writer.writerow({'问题类型': '建议修改', '服务端': service_name, '模块名': model_name, '接口名': api_name,
+                                     '请求方式': api_method, '问题': '应该返回 201, 但'+return_code+',请判断是否为文档及代码错误',
+                                     '预期': str(api_codes_list)})
+                elif '204' not in api_codes_list and api_method in ('PUT', 'DELETE', 'PATCH'):
+                    writer.writerow({'问题类型': '建议修改', '服务端': service_name, '模块名': model_name, '接口名': api_name,
+                                     '请求方式': api_method, '问题': '应该返回 204, 但'+return_code+',请判断是否为文档及代码错误',
+                                     '预期': str(api_codes_list)})
+                api_list = []
+                if flag != service_name+'_'+model_name:
+                    flag = service_name + '_' + model_name
+                    if index2 != 0:
+                        all_model_list.append(model_list)
+                    model_list = []
+                    lib_name = self._write_robot_file_settings(service_name, model_name)
+                    self._write_library_head(lib_name, model_name)
+                api_list.append(service_name)
+                api_list.append(model_name)
+                api_list.append(api_name)
+                api_list.append(api_method)
+                api_list.append(api_url)
+                api_list.append(api_params_name_list)
+                api_list.append(api_codes_list)
+                api_list.append(lib_name)
+                api_list.append(return_entities)
+                api_list.append(api_params_nn_list)
+                api_list.append(api_params_type_list)
+                model_list.append(api_list)
+                if index2 == 10000:
+                    break
+                index2 += 1
+            print(len(all_model_list))
         for i in range(0, len(all_model_list)):
             self.parse_model_file(all_model_list[i])
 

@@ -33,13 +33,6 @@ Get Admin Card Sales Success
    [Tags]           Respcode:200
     Get Admin Card Sales Success 200
 
-Get Admin Card Sales Fail With Wrong Params
-   [Documentation]  接口名:查询可购买会员卡${\n}
-   ...              请求方式:Get${\n}
-   ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
-   [Tags]           Respcode:422
-    Get Admin Card Sales Fail 422
-
 Put Admin Card Sales By Card Sale Id Success 
    [Documentation]  接口名:修改可购买会员卡${\n}
    ...              请求方式:Put${\n}
@@ -105,11 +98,6 @@ Get Admin Card Sales Success 200
    expect status is 200  ${resp}  admin_card_sale/Get_Admin_Card_Sales_200.json
    ${card_sale_id}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][card_sale_id]}
    set global variable   ${card_sale_id}
-
-Get Admin Card Sales Fail 422
-   [Arguments]  &{kwargs}
-   ${resp}=  Get Admin Card Sales   &{kwargs}
-   expect status is 422  ${resp}  
 
 Put Admin Card Sales By Card Sale Id Success 204
    [Arguments]  &{kwargs}

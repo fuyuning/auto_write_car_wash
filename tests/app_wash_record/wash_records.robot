@@ -246,13 +246,6 @@ Get car Wash wash records by wash record id Success
    [Tags]           Respcode:200
    Get car Wash wash records by wash record id Success 200  wash_record_id=${wash_record_id}
 
-Get car Wash wash records by wash record id Fail With Wrong Params
-   [Documentation]  接口名:获取单个洗车记录${\n}
-   ...              请求方式:Get${\n}
-   ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
-   [Tags]           Respcode:422
-   Get car Wash wash records by wash record id Fail 422  wash_record_id=${wash_record_id}
-
 Get Car In Parking Success 
    [Documentation]  接口名:查询车辆是否在场内${\n}
    ...              请求方式:Get${\n}
@@ -680,11 +673,6 @@ Get car Wash wash records by wash record id Success 200
    set global variable   ${wash_record_id/mark}
    ${wash_record_id/status}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][wash_record_id/status]}
    set global variable   ${wash_record_id/status}
-
-Get car Wash wash records by wash record id Fail 422
-   [Arguments]  &{kwargs}
-   ${resp}=  Get car Wash wash records by wash record id   &{kwargs}
-   expect status is 422  ${resp}  
 
 Get Car In Parking Success 200
    [Arguments]  &{kwargs}

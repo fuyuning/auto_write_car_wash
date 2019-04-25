@@ -144,13 +144,6 @@ Delete Admin Turntables By Turntable Id Success
    [Tags]           Respcode:204
    Delete Admin Turntables By Turntable Id Success 204  turntable_id=${turntable_id}
 
-Delete Admin Turntables By Turntable Id Fail With Wrong Params
-   [Documentation]  接口名:转盘删除${\n}
-   ...              请求方式:Delete${\n}
-   ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
-   [Tags]           Respcode:422
-   Delete Admin Turntables By Turntable Id Fail 422  turntable_id=${turntable_id}
-
 
 *** Variables ***
 ${turntable_id}  
@@ -253,9 +246,4 @@ Delete Admin Turntables By Turntable Id Success 204
    [Arguments]  &{kwargs}
    ${resp}=  Delete Admin Turntables By Turntable Id   &{kwargs}
    expect status is 204  ${resp}  
-
-Delete Admin Turntables By Turntable Id Fail 422
-   [Arguments]  &{kwargs}
-   ${resp}=  Delete Admin Turntables By Turntable Id   &{kwargs}
-   expect status is 422  ${resp}  
 

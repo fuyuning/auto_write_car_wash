@@ -32,13 +32,6 @@ Get car Wash get virtual mobile Success
    [Tags]           Respcode:201
     Get car Wash get virtual mobile Success 201
 
-Get car Wash get virtual mobile Fail With Wrong Params
-   [Documentation]  接口名:电话联系车主${\n}
-   ...              请求方式:Get${\n}
-   ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
-   [Tags]           Respcode:422
-    Get car Wash get virtual mobile Fail 422
-
 
 *** Keywords ***
 Post car Wash send mobile short message Success 200
@@ -55,9 +48,4 @@ Get car Wash get virtual mobile Success 201
    [Arguments]  &{kwargs}
    ${resp}=  Get car Wash get virtual mobile   &{kwargs}
    expect status is 201  ${resp}  app_call_user/Get_car_Wash_get_virtual_mobile_201.json
-
-Get car Wash get virtual mobile Fail 422
-   [Arguments]  &{kwargs}
-   ${resp}=  Get car Wash get virtual mobile   &{kwargs}
-   expect status is 422  ${resp}  
 

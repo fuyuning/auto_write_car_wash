@@ -87,13 +87,6 @@ Put is Default by user contact id Fail With Wrong Url
    [Tags]           Respcode:404
    Put is Default by user contact id Fail 404  user_contact_id/is_default=${wrong_url_id}
 
-Put is Default by user contact id Fail With Wrong Params
-   [Documentation]  接口名:设置默认联系方式${\n}
-   ...              请求方式:Put${\n}
-   ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
-   [Tags]           Respcode:422
-   Put is Default by user contact id Fail 422  user_contact_id/is_default=${user_contact_id/is_default}
-
 Delete User User Contacts By User Contact Id Fail With Wrong Url
    [Documentation]  接口名:删除联系方式${\n}
    ...              请求方式:Delete${\n}
@@ -176,11 +169,6 @@ Put is Default by user contact id Fail 404
    [Arguments]  &{kwargs}
    ${resp}=  Put is Default by user contact id   &{kwargs}
    expect status is 404  ${resp}  
-
-Put is Default by user contact id Fail 422
-   [Arguments]  &{kwargs}
-   ${resp}=  Put is Default by user contact id   &{kwargs}
-   expect status is 422  ${resp}  
 
 Delete User User Contacts By User Contact Id Fail 404
    [Arguments]  &{kwargs}

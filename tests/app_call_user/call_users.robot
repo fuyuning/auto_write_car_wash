@@ -7,15 +7,6 @@ Force Tags  model:app_call_user  虾客APP
 
 
 *** Test Cases ***
-Post car Wash send mobile short message Fail With Wrong Url
-   [Documentation]  接口名:短信联系车主${\n}
-   ...              请求方式:Post${\n}
-   ...              预期结果:输入正确参数及错误的url,http响应码返回 404,无Json数据返回。
-   [Tags]           Respcode:404
-   ${essential_params}  create list  type=${type}  
-   ${unessential_params}  create list  
-   run every case by params  Post car Wash send mobile short message Fail 404  ${essential_params}  ${unessential_params}
-
 Post car Wash send mobile short message Success 
    [Documentation]  接口名:短信联系车主${\n}
    ...              请求方式:Post${\n}
@@ -34,13 +25,6 @@ Post car Wash send mobile short message Fail With Wrong Params
    ${unessential_params}  create list  
    run every case by params  Post car Wash send mobile short message Fail 422  ${essential_params}  ${unessential_params}
 
-Get car Wash get virtual mobile Fail With Wrong Url
-   [Documentation]  接口名:电话联系车主${\n}
-   ...              请求方式:Get${\n}
-   ...              预期结果:输入正确参数及错误的url,http响应码返回 404,无Json数据返回。
-   [Tags]           Respcode:404
-    Get car Wash get virtual mobile Fail 404
-
 Get car Wash get virtual mobile Success 
    [Documentation]  接口名:电话联系车主${\n}
    ...              请求方式:Get${\n}
@@ -57,11 +41,6 @@ Get car Wash get virtual mobile Fail With Wrong Params
 
 
 *** Keywords ***
-Post car Wash send mobile short message Fail 404
-   [Arguments]  &{kwargs}
-   ${resp}=  Post car Wash send mobile short message   &{kwargs}
-   expect status is 404  ${resp}  
-
 Post car Wash send mobile short message Success 200
    [Arguments]  &{kwargs}
    ${resp}=  Post car Wash send mobile short message   &{kwargs}
@@ -71,11 +50,6 @@ Post car Wash send mobile short message Fail 422
    [Arguments]  &{kwargs}
    ${resp}=  Post car Wash send mobile short message   &{kwargs}
    expect status is 422  ${resp}  
-
-Get car Wash get virtual mobile Fail 404
-   [Arguments]  &{kwargs}
-   ${resp}=  Get car Wash get virtual mobile   &{kwargs}
-   expect status is 404  ${resp}  
 
 Get car Wash get virtual mobile Success 201
    [Arguments]  &{kwargs}

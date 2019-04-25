@@ -7,15 +7,6 @@ Force Tags  model:wxmp_wash_record  车主微信端
 
 
 *** Test Cases ***
-Get User Wash Record By Order Fail With Wrong Url
-   [Documentation]  接口名:用订单id获取一洗车记录${\n}
-   ...              请求方式:Get${\n}
-   ...              预期结果:输入正确参数及错误的url,http响应码返回 404,无Json数据返回。
-   [Tags]           Respcode:404
-   ${essential_params}  create list  order_id=${order_id}  
-   ${unessential_params}  create list  refresh=False  
-   run every case by params  Get User Wash Record By Order Fail 404  ${essential_params}  ${unessential_params}
-
 Get User Wash Record By Order Success 
    [Documentation]  接口名:用订单id获取一洗车记录${\n}
    ...              请求方式:Get${\n}
@@ -34,15 +25,6 @@ Get User Wash Record By Order Fail With Wrong Params
    ${unessential_params}  create list  refresh=False  
    run every case by params  Get User Wash Record By Order Fail 422  ${essential_params}  ${unessential_params}
 
-Get User Wash Records Fail With Wrong Url
-   [Documentation]  接口名:获取洗车记录列表${\n}
-   ...              请求方式:Get${\n}
-   ...              预期结果:输入正确参数及错误的url,http响应码返回 404,无Json数据返回。
-   [Tags]           Respcode:404
-   ${essential_params}  create list  
-   ${unessential_params}  create list  status=${status}  order_status=${order_status}  section=${section}  page_limit=${page_limit}  comment_status=${comment_status}  
-   run every case by params  Get User Wash Records Fail 404  ${essential_params}  ${unessential_params}
-
 Get User Wash Records Success 
    [Documentation]  接口名:获取洗车记录列表${\n}
    ...              请求方式:Get${\n}
@@ -60,15 +42,6 @@ Get User Wash Records Fail With Wrong Params
    ${essential_params}  create list  
    ${unessential_params}  create list  status=${status}  order_status=${order_status}  section=${section}  page_limit=${page_limit}  comment_status=${comment_status}  
    run every case by params  Get User Wash Records Fail 422  ${essential_params}  ${unessential_params}
-
-Get Wash Records Fail With Wrong Url
-   [Documentation]  接口名:获取记录列表${\n}
-   ...              请求方式:Get${\n}
-   ...              预期结果:输入正确参数及错误的url,http响应码返回 404,无Json数据返回。
-   [Tags]           Respcode:404
-   ${essential_params}  create list  wash_group_id=${wash_group_id}  
-   ${unessential_params}  create list  section=${section}  page_limit=${page_limit}  
-   run every case by params  Get Wash Records Fail 404  ${essential_params}  ${unessential_params}
 
 Get Wash Records Success 
    [Documentation]  接口名:获取记录列表${\n}
@@ -121,11 +94,6 @@ ${wash_record_id}
 
 
 *** Keywords ***
-Get User Wash Record By Order Fail 404
-   [Arguments]  &{kwargs}
-   ${resp}=  Get User Wash Record By Order   &{kwargs}
-   expect status is 404  ${resp}  
-
 Get User Wash Record By Order Success 200
    [Arguments]  &{kwargs}
    ${resp}=  Get User Wash Record By Order   &{kwargs}
@@ -138,11 +106,6 @@ Get User Wash Record By Order Fail 422
    ${resp}=  Get User Wash Record By Order   &{kwargs}
    expect status is 422  ${resp}  
 
-Get User Wash Records Fail 404
-   [Arguments]  &{kwargs}
-   ${resp}=  Get User Wash Records   &{kwargs}
-   expect status is 404  ${resp}  
-
 Get User Wash Records Success 200
    [Arguments]  &{kwargs}
    ${resp}=  Get User Wash Records   &{kwargs}
@@ -154,11 +117,6 @@ Get User Wash Records Fail 422
    [Arguments]  &{kwargs}
    ${resp}=  Get User Wash Records   &{kwargs}
    expect status is 422  ${resp}  
-
-Get Wash Records Fail 404
-   [Arguments]  &{kwargs}
-   ${resp}=  Get Wash Records   &{kwargs}
-   expect status is 404  ${resp}  
 
 Get Wash Records Success 200
    [Arguments]  &{kwargs}

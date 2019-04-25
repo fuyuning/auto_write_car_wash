@@ -33,13 +33,6 @@ Get Admin Wachat Replys Success
    [Tags]           Respcode:200
     Get Admin Wachat Replys Success 200
 
-Get Admin Wachat Replys Fail With Wrong Url
-   [Documentation]  接口名:查询--公众号关注/自定义回复${\n}
-   ...              请求方式:Get${\n}
-   ...              预期结果:输入正确参数及错误的url,http响应码返回 404,无Json数据返回。
-   [Tags]           Respcode:404
-    Get Admin Wachat Replys Fail 404
-
 Put Admin Wachat Replys By Wechat Reply Id Success 
    [Documentation]  接口名:修改--公众号关注/自定义回复${\n}
    ...              请求方式:Put${\n}
@@ -105,11 +98,6 @@ Get Admin Wachat Replys Success 200
    expect status is 200  ${resp}  admin_wechat_reply/Get_Admin_Wachat_Replys_200.json
    ${wechat_reply_id}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][wechat_reply_id]}
    set global variable   ${wechat_reply_id}
-
-Get Admin Wachat Replys Fail 404
-   [Arguments]  &{kwargs}
-   ${resp}=  Get Admin Wachat Replys   &{kwargs}
-   expect status is 404  ${resp}  
 
 Put Admin Wachat Replys By Wechat Reply Id Success 204
    [Arguments]  &{kwargs}

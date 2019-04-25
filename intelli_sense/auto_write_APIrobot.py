@@ -36,24 +36,41 @@ class AutoWriteRobot(object):
             return_entities = data[9]
             if api_url.find(':') != -1 and str(api_codes_list).find('404') == -1:
                 api_codes_list.append('404')
-                txt.write(service_name+'_'+model_name+':'+api_name+'：缺少 404,加入后:'+str(api_codes_list)+'\n')
+                txt.write(service_name+'_'+model_name+':'+api_name+api_method+'方法：缺少 404,加入后:'+str(api_codes_list)+'\n')
             if api_params_name_list[0] != '' and str(api_codes_list).find('422') == -1:
                 api_codes_list.append('422')
-                txt.write(service_name+'_'+model_name+':'+api_name+'：缺少 422,加入后:'+str(api_codes_list)+'\n')
+                txt.write(service_name+'_'+model_name+':'+api_name+api_method+'方法：缺少 422,加入后:'+str(api_codes_list)+'\n')
+            return_code = re.findall('20[0-9]', str(api_codes_list))
+            if return_code:
+                return_code = '返回 '+str(return_code[0])
+            else:
+                return_code = ' 未识别到2xx的返回 '
+            if '200' not in api_codes_list and api_method == 'GET':
+                txt.write(service_name+'_'+model_name + ':' + api_name + api_method+'方法：应该返回 200, 但'+return_code+',请判断是否为代码或文档错误\n')
+            elif '201' not in api_codes_list and api_method == 'POST':
+                txt.write(service_name+'_'+model_name + ':' + api_name + api_method+'方法：应该返回 201, 但'+return_code+',请判断是否为代码或文档错误\n')
+            elif '204' not in api_codes_list and api_method in ('PUT', 'DELETE', 'PATCH'):
+                txt.write(service_name+'_'+model_name + ':' + api_name + api_method+'方法：应该返回 204, 但'+return_code+',请判断是否为代码或文档错误\n')
             if len(re.findall('404', str(api_codes_list))) > 1:
                 index = []
                 for i in api_codes_list:
                     if i not in index:
                         index.append(i)
                 api_codes_list = index
-                txt.write(service_name+'_'+model_name + ':' + api_name + '：含有过多 404,移除后:' + str(api_codes_list)+'\n')
+                txt.write(service_name+'_'+model_name + ':' + api_name +api_method+'方法：文档含有过多 404,移除后应为:' + str(api_codes_list)+'\n')
             api_list = []
+            if '404' in api_codes_list and api_url.find(':') == -1:
+                api_codes_list.remove('404')
+                txt.write(service_name+'_'+model_name + ':' + api_name +api_method+'方法：不该含有 404,移除后:' + str(api_codes_list)+'\n')
+            if '422' in api_codes_list and api_params_name_list == []:
+                api_codes_list.remove('422')
+                txt.write(service_name+'_'+model_name + ':' + api_name+api_method+'方法：不该含有 422,移除后:' + str(api_codes_list)+'\n')
             if flag != service_name+'_'+model_name:
                 flag = service_name + '_' + model_name
                 if index2 != 0:
                     all_model_list.append(model_list)
                 model_list = []
-                lib_name = self._write_robot_file_settings(service_name, model_name, api_codes_list)
+                lib_name = self._write_robot_file_settings(service_name, model_name)
                 self._write_library_head(lib_name, model_name)
             api_list.append(service_name)
             api_list.append(model_name)
@@ -214,7 +231,7 @@ class AutoWriteRobot(object):
         lib_file.close()
 
     # 根据爬取的数据生成robot文件头
-    def _write_robot_file_settings(self, service_name, model_name, api_codes_list):
+    def _write_robot_file_settings(self, service_name, model_name):
         full_name = service_name+'_'+model_name
         folder = os.path.exists('../tests/'+full_name)
         if not folder:

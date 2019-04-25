@@ -33,13 +33,6 @@ Get Admin Wechat Keywords Success
    [Tags]           Respcode:200
     Get Admin Wechat Keywords Success 200
 
-Get Admin Wechat Keywords Fail With Wrong Url
-   [Documentation]  接口名:查询--公众号关键字回复${\n}
-   ...              请求方式:Get${\n}
-   ...              预期结果:输入正确参数及错误的url,http响应码返回 404,无Json数据返回。
-   [Tags]           Respcode:404
-    Get Admin Wechat Keywords Fail 404
-
 Put Admin Wechat Keywords By Wechat Keyword Id Success 
    [Documentation]  接口名:修改--公众号关键字回复${\n}
    ...              请求方式:Put${\n}
@@ -105,11 +98,6 @@ Get Admin Wechat Keywords Success 200
    expect status is 200  ${resp}  admin_wechat_keyword/Get_Admin_Wechat_Keywords_200.json
    ${wechat_keyword_id}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][wechat_keyword_id]}
    set global variable   ${wechat_keyword_id}
-
-Get Admin Wechat Keywords Fail 404
-   [Arguments]  &{kwargs}
-   ${resp}=  Get Admin Wechat Keywords   &{kwargs}
-   expect status is 404  ${resp}  
 
 Put Admin Wechat Keywords By Wechat Keyword Id Success 204
    [Arguments]  &{kwargs}

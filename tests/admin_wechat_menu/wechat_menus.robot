@@ -33,13 +33,6 @@ Get Admin Wechat Menus Success
    [Tags]           Respcode:200
     Get Admin Wechat Menus Success 200
 
-Get Admin Wechat Menus Fail With Wrong Url
-   [Documentation]  接口名:获取自定义菜单${\n}
-   ...              请求方式:Get${\n}
-   ...              预期结果:输入正确参数及错误的url,http响应码返回 404,无Json数据返回。
-   [Tags]           Respcode:404
-    Get Admin Wechat Menus Fail 404
-
 
 *** Keywords ***
 Post Admin Wechat Menus Success 201
@@ -56,9 +49,4 @@ Get Admin Wechat Menus Success 200
    [Arguments]  &{kwargs}
    ${resp}=  Get Admin Wechat Menus   &{kwargs}
    expect status is 200  ${resp}  admin_wechat_menu/Get_Admin_Wechat_Menus_200.json
-
-Get Admin Wechat Menus Fail 404
-   [Arguments]  &{kwargs}
-   ${resp}=  Get Admin Wechat Menus   &{kwargs}
-   expect status is 404  ${resp}  
 

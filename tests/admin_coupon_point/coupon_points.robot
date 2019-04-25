@@ -44,15 +44,6 @@ Post Admin Coupon Point Records Success
    ${unessential_params}  create list  
    run every case by params  Post Admin Coupon Point Records Success 200  ${essential_params}  ${unessential_params}
 
-Post coupon Point Records upload Fail With Wrong Url
-   [Documentation]  接口名:文件上传(已停用)${\n}
-   ...              请求方式:Post${\n}
-   ...              预期结果:输入正确参数及错误的url,http响应码返回 404,无Json数据返回。
-   [Tags]           Respcode:404
-   ${essential_params}  create list  coupon_pool_id=${coupon_pool_id}  
-   ${unessential_params}  create list  
-   run every case by params  Post coupon Point Records upload Fail 404  ${essential_params}  ${unessential_params}
-
 Post coupon Point Records upload Success 
    [Documentation]  接口名:文件上传(已停用)${\n}
    ...              请求方式:Post${\n}
@@ -195,11 +186,6 @@ Post Admin Coupon Point Records Success 200
    expect status is 200  ${resp}  admin_coupon_point/Post_Admin_Coupon_Point_Records_200.json
    ${coupon_point_record_id}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][coupon_point_record_id]}
    set global variable   ${coupon_point_record_id}
-
-Post coupon Point Records upload Fail 404
-   [Arguments]  &{kwargs}
-   ${resp}=  Post coupon Point Records upload   &{kwargs}
-   expect status is 404  ${resp}  
 
 Post coupon Point Records upload Success 200
    [Arguments]  &{kwargs}

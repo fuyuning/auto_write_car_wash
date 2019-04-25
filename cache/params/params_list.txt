@@ -1115,7 +1115,6 @@ ${coupon_pool_id}
 ${coupon_pool_id}
 ${coupon_pool_id}
 ${coupon_pool_id}
-${coupon_pool_id}
 ${coupon_name}
 ${created_section}
 ${page_num}
@@ -1773,12 +1772,6 @@ ${parking_id}
 ${wash_area_id}
 ${order_by}
 ${section}
-${page_num}
-${page_size}
-${username}
-${mobile}
-${section}
-${order_by}
 ${page_num}
 ${page_size}
 ${username}
@@ -2046,7 +2039,6 @@ ${page_size}
 ${type}
 ${type}
 ${type}
-${type}
 ${parking_id}
 ${car_id}
 ${parking_coupon_no}
@@ -2207,8 +2199,6 @@ ${wash_area_id}
 ${order_by}
 ${floor}
 ${zone}
-${parking_id}
-${car_id}
 ${parking_id}
 ${car_id}
 ${parking_id}
@@ -2405,7 +2395,6 @@ ${union_id}
 ${mn_open_id}
 ${tokenid}
 ${tokenid}
-${tokenid}
 ${wash_able_group_id}
 ${parking_id}
 ${wash_able_group_id}
@@ -2497,7 +2486,6 @@ ${wash_able_group_id}
 ${order_id}
 ${order_id}
 ${order_id}
-${order_id}
 ${status}
 ${order_status}
 ${section}
@@ -2513,14 +2501,6 @@ ${order_status}
 ${section}
 ${page_limit}
 ${comment_status}
-${status}
-${order_status}
-${section}
-${page_limit}
-${comment_status}
-${wash_group_id}
-${section}
-${page_limit}
 ${wash_group_id}
 ${section}
 ${page_limit}
@@ -2611,9 +2591,6 @@ ${mobile}
 ${key}
 ${mobile}
 ${key}
-${mobile}
-${key}
-${key}
 ${key}
 ${key}
 ${wash_record_id}
@@ -2637,13 +2614,9 @@ ${page_size}
 ${status}
 ${page_num}
 ${page_size}
-${status}
-${page_num}
-${page_size}
 ${mobile}
 ${mobile}
 ${mobile}
-${wash_area_id}
 ${wash_area_id}
 ${wash_area_id}
 ${wash_area_id}

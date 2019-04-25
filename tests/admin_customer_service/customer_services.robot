@@ -31,7 +31,7 @@ Post Finish By Customer Service Id Fail With Wrong Params
    ...              请求方式:Post${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  opinion=${opinion}  is_refund=${is_refund}  
+   ${essential_params}  create list  opinion=${opinion_422}  is_refund=${is_refund_422}  
    ${unessential_params}  create list  
    run every case by params  Post Finish By Customer Service Id Fail 422  ${essential_params}  ${unessential_params}  customer_service_id/finish=${customer_service_id/finish}
 
@@ -49,8 +49,8 @@ Get Admin Customer Services Fail With Wrong Params
    ...              请求方式:Get${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  page_num=${page_num}  page_size=${page_size}  
-   ${unessential_params}  create list  order_no=${order_no}  customer_service_no=${customer_service_no}  car_id=${car_id}  mobile=${mobile}  user_id=${user_id}  reason=${reason}  status=${status}  order_status=${order_status}  start_section=${start_section}  
+   ${essential_params}  create list  page_num=${page_num_422}  page_size=${page_size_422}  
+   ${unessential_params}  create list  order_no=${order_no_422}  customer_service_no=${customer_service_no_422}  car_id=${car_id_422}  mobile=${mobile_422}  user_id=${user_id_422}  reason=${reason_422}  status=${status_422}  order_status=${order_status_422}  start_section=${start_section_422}  
    run every case by params  Get Admin Customer Services Fail 422  ${essential_params}  ${unessential_params}
 
 Get Admin Customer Services By Customer Service Id Fail With Wrong Url

@@ -22,8 +22,8 @@ Post Admin Coupon Pools Fail With Wrong Params
    ...              请求方式:Post${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  coupon_template_name=${coupon_template_name}  discount_money=${discount_money}  coupon_number=${coupon_number}  allow_gain_number=${allow_gain_number}  coupon_type=${coupon_type}  is_fixed_time=False  allow_use_days=${allow_use_days}  allow_use_start_time=${Please_input}  allow_use_end_time=${Please_input}  service_types=${service_types}  order_types=${order_types}  service_group_ids=${service_group_ids}  parking_ids=${parking_ids}  
-   ${unessential_params}  create list  is_coupon_number_limit=False  is_allow_gain_number_limit=False  discount=${discount}  condition_money=${condition_money}  is_point=${is_point}  wash_area_ids=${wash_area_ids}  
+   ${essential_params}  create list  coupon_template_name=${coupon_template_name_422}  discount_money=${discount_money_422}  coupon_number=${coupon_number_422}  allow_gain_number=${allow_gain_number_422}  coupon_type=${coupon_type_422}  is_fixed_time=ThisIsRobot!  allow_use_days=${allow_use_days_422}  allow_use_start_time=${Please_input}  allow_use_end_time=${Please_input}  service_types=${service_types_422}  order_types=${order_types_422}  service_group_ids=${service_group_ids_422}  parking_ids=${parking_ids_422}  
+   ${unessential_params}  create list  is_coupon_number_limit=ThisIsRobot!  is_allow_gain_number_limit=ThisIsRobot!  discount=${discount_422}  condition_money=${condition_money_422}  is_point=${is_point_422}  wash_area_ids=${wash_area_ids_422}  
    run every case by params  Post Admin Coupon Pools Fail 422  ${essential_params}  ${unessential_params}
 
 Get coupon Pools point Success 
@@ -40,8 +40,8 @@ Get coupon Pools point Fail With Wrong Params
    ...              请求方式:Get${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  is_point=${is_point}  
-   ${unessential_params}  create list  page_num=${page_num}  page_size=${page_size}  
+   ${essential_params}  create list  is_point=${is_point_422}  
+   ${unessential_params}  create list  page_num=${page_num_422}  page_size=${page_size_422}  
    run every case by params  Get coupon Pools point Fail 422  ${essential_params}  ${unessential_params}
 
 Get Admin Coupons Success 
@@ -59,7 +59,7 @@ Get Admin Coupons Fail With Wrong Params
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  
-   ${unessential_params}  create list  coupon_pool_id=${coupon_pool_id}  coupon_id=${coupon_id}  order_no=${order_no}  mobile=${mobile}  status=${status}  car_id=${car_id}  page_num=${page_num}  page_size=${page_size}  
+   ${unessential_params}  create list  coupon_pool_id=${coupon_pool_id_422}  coupon_id=${coupon_id_422}  order_no=${order_no_422}  mobile=${mobile_422}  status=${status_422}  car_id=${car_id_422}  page_num=${page_num_422}  page_size=${page_size_422}  
    run every case by params  Get Admin Coupons Fail 422  ${essential_params}  ${unessential_params}
 
 Get Admin Coupon Pools Success 
@@ -77,7 +77,7 @@ Get Admin Coupon Pools Fail With Wrong Params
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  
-   ${unessential_params}  create list  coupon_pool_id=${coupon_pool_id}  coupon_template_name=${coupon_template_name}  status=${status}  is_point=${is_point}  page_num=${page_num}  page_size=${page_size}  
+   ${unessential_params}  create list  coupon_pool_id=${coupon_pool_id_422}  coupon_template_name=${coupon_template_name_422}  status=${status_422}  is_point=${is_point_422}  page_num=${page_num_422}  page_size=${page_size_422}  
    run every case by params  Get Admin Coupon Pools Fail 422  ${essential_params}  ${unessential_params}
 
 Get Admin Coupon Pools By Coupon Pool Id Fail With Wrong Url
@@ -99,8 +99,8 @@ Put Admin Coupon Pools By Coupon Pool Id Fail With Wrong Params
    ...              请求方式:Put${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  coupon_template_name=${coupon_template_name}  discount_money=${discount_money}  coupon_number=${coupon_number}  allow_gain_number=${allow_gain_number}  condition_money=${condition_money}  is_fixed_time=False  allow_use_days=${allow_use_days}  allow_use_start_time=${Please_input}  allow_use_end_time=${Please_input}  service_types=${service_types}  order_types=${order_types}  service_group_ids=${service_group_ids}  coupon_type=${coupon_type}  parking_ids=${parking_ids}  
-   ${unessential_params}  create list  is_coupon_number_limit=False  is_allow_gain_number_limit=False  discount=${discount}  is_point=${is_point}  wash_area_ids=${wash_area_ids}  
+   ${essential_params}  create list  coupon_template_name=${coupon_template_name_422}  discount_money=${discount_money_422}  coupon_number=${coupon_number_422}  allow_gain_number=${allow_gain_number_422}  condition_money=${condition_money_422}  is_fixed_time=ThisIsRobot!  allow_use_days=${allow_use_days_422}  allow_use_start_time=${Please_input}  allow_use_end_time=${Please_input}  service_types=${service_types_422}  order_types=${order_types_422}  service_group_ids=${service_group_ids_422}  coupon_type=${coupon_type_422}  parking_ids=${parking_ids_422}  
+   ${unessential_params}  create list  is_coupon_number_limit=ThisIsRobot!  is_allow_gain_number_limit=ThisIsRobot!  discount=${discount_422}  is_point=${is_point_422}  wash_area_ids=${wash_area_ids_422}  
    run every case by params  Put Admin Coupon Pools By Coupon Pool Id Fail 422  ${essential_params}  ${unessential_params}  coupon_pool_id=${coupon_pool_id}
 
 Put Admin Coupon Pools By Coupon Pool Id Success 

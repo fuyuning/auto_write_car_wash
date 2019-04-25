@@ -22,8 +22,8 @@ Post Admin Intelligent Services Fail With Wrong Params
    ...              请求方式:Post${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  name=${name}  choose_car_model_id=${choose_car_model_id}  cost_price=${cost_price}  min_cost_price=${min_cost_price}  max_cost_price=${max_cost_price}  price=${price}  min_price=${min_price}  max_price=${max_price}  wash_normal_price=${wash_normal_price}  min_wash_normal_price=${min_wash_normal_price}  max_wash_normal_price=${max_wash_normal_price}  wash_group_price=${wash_group_price}  min_wash_group_price=${min_wash_group_price}  max_wash_group_price=${max_wash_group_price}  member_price=${member_price}  min_member_price=${min_member_price}  max_member_price=${max_member_price}  commission_percent=${commission_percent}  standard_time=${standard_time}  special_car_models=${special_car_models}  
-   ${unessential_params}  create list  order_by=${order_by}  description=${description}  
+   ${essential_params}  create list  name=${name_422}  choose_car_model_id=${choose_car_model_id_422}  cost_price=${cost_price_422}  min_cost_price=${min_cost_price_422}  max_cost_price=${max_cost_price_422}  price=${price_422}  min_price=${min_price_422}  max_price=${max_price_422}  wash_normal_price=${wash_normal_price_422}  min_wash_normal_price=${min_wash_normal_price_422}  max_wash_normal_price=${max_wash_normal_price_422}  wash_group_price=${wash_group_price_422}  min_wash_group_price=${min_wash_group_price_422}  max_wash_group_price=${max_wash_group_price_422}  member_price=${member_price_422}  min_member_price=${min_member_price_422}  max_member_price=${max_member_price_422}  commission_percent=${commission_percent_422}  standard_time=${standard_time_422}  special_car_models=${special_car_models_422}  
+   ${unessential_params}  create list  order_by=${order_by_422}  description=${description_422}  
    run every case by params  Post Admin Intelligent Services Fail 422  ${essential_params}  ${unessential_params}
 
 Get Admin Intelligent Services By Intelligent Service Id Fail With Wrong Url
@@ -55,7 +55,7 @@ Get Admin Intelligent Services Fail With Wrong Params
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  
-   ${unessential_params}  create list  page_num=${page_num}  page_size=${page_size}  
+   ${unessential_params}  create list  page_num=${page_num_422}  page_size=${page_size_422}  
    run every case by params  Get Admin Intelligent Services Fail 422  ${essential_params}  ${unessential_params}
 
 Put Admin Intelligent Services By Intelligent Service Id Success 
@@ -81,8 +81,8 @@ Put Admin Intelligent Services By Intelligent Service Id Fail With Wrong Params
    ...              请求方式:Put${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  name=${name}  choose_car_model_id=${choose_car_model_id}  cost_price=${cost_price}  min_cost_price=${min_cost_price}  max_cost_price=${max_cost_price}  price=${price}  min_price=${min_price}  max_price=${max_price}  wash_normal_price=${wash_normal_price}  min_wash_normal_price=${min_wash_normal_price}  max_wash_normal_price=${max_wash_normal_price}  wash_group_price=${wash_group_price}  min_wash_group_price=${min_wash_group_price}  max_wash_group_price=${max_wash_group_price}  member_price=${member_price}  min_member_price=${min_member_price}  max_member_price=${max_member_price}  commission_percent=${commission_percent}  standard_time=${standard_time}  special_car_models=${special_car_models}  
-   ${unessential_params}  create list  order_by=${order_by}  description=${description}  
+   ${essential_params}  create list  name=${name_422}  choose_car_model_id=${choose_car_model_id_422}  cost_price=${cost_price_422}  min_cost_price=${min_cost_price_422}  max_cost_price=${max_cost_price_422}  price=${price_422}  min_price=${min_price_422}  max_price=${max_price_422}  wash_normal_price=${wash_normal_price_422}  min_wash_normal_price=${min_wash_normal_price_422}  max_wash_normal_price=${max_wash_normal_price_422}  wash_group_price=${wash_group_price_422}  min_wash_group_price=${min_wash_group_price_422}  max_wash_group_price=${max_wash_group_price_422}  member_price=${member_price_422}  min_member_price=${min_member_price_422}  max_member_price=${max_member_price_422}  commission_percent=${commission_percent_422}  standard_time=${standard_time_422}  special_car_models=${special_car_models_422}  
+   ${unessential_params}  create list  order_by=${order_by_422}  description=${description_422}  
    run every case by params  Put Admin Intelligent Services By Intelligent Service Id Fail 422  ${essential_params}  ${unessential_params}  intelligent_service_id=${intelligent_service_id}
 
 Delete Admin Intelligent Services By Intelligent Service Id Fail With Wrong Url

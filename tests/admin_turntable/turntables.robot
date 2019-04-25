@@ -22,7 +22,7 @@ Post Admin Turntables Fail With Wrong Params
    ...              请求方式:Post${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  name=${name}  wash_user_group_ids=${wash_user_group_ids}  prizes=${Please_input}  enabled=False  
+   ${essential_params}  create list  name=${name_422}  wash_user_group_ids=${wash_user_group_ids_422}  prizes=${Please_input}  enabled=ThisIsRobot!  
    ${unessential_params}  create list  
    run every case by params  Post Admin Turntables Fail 422  ${essential_params}  ${unessential_params}
 
@@ -41,7 +41,7 @@ Get Admin Turntables Fail With Wrong Params
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  
-   ${unessential_params}  create list  name=${name}  wash_user_group_id=${wash_user_group_id}  enabled=False  
+   ${unessential_params}  create list  name=${name_422}  wash_user_group_id=${wash_user_group_id_422}  enabled=ThisIsRobot!  
    run every case by params  Get Admin Turntables Fail 422  ${essential_params}  ${unessential_params}
 
 Get Admin Turntables By Turntable Id Fail With Wrong Url
@@ -73,7 +73,7 @@ Get Admin Turntable Awards Fail With Wrong Params
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  
-   ${unessential_params}  create list  turntable_id=${turntable_id}  userid=${userid}  mobile=${mobile}  status=${status}  is_awarded=False  prize_name=${prize_name}  page_num=${page_num}  page_size=${page_size}  
+   ${unessential_params}  create list  turntable_id=${turntable_id_422}  userid=${userid_422}  mobile=${mobile_422}  status=${status_422}  is_awarded=ThisIsRobot!  prize_name=${prize_name_422}  page_num=${page_num_422}  page_size=${page_size_422}  
    run every case by params  Get Admin Turntable Awards Fail 422  ${essential_params}  ${unessential_params}
 
 Put Admin Turntables By Turntable Id Fail With Wrong Url
@@ -99,7 +99,7 @@ Put Admin Turntables By Turntable Id Fail With Wrong Params
    ...              请求方式:Put${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  name=${name}  wash_user_group_ids=${wash_user_group_ids}  prizes=${Please_input}  enabled=False  
+   ${essential_params}  create list  name=${name_422}  wash_user_group_ids=${wash_user_group_ids_422}  prizes=${Please_input}  enabled=ThisIsRobot!  
    ${unessential_params}  create list  
    run every case by params  Put Admin Turntables By Turntable Id Fail 422  ${essential_params}  ${unessential_params}  turntable_id=${turntable_id}
 
@@ -126,7 +126,7 @@ Patch Enabled By Turntable Id Fail With Wrong Params
    ...              请求方式:Patch${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  enabled=False  
+   ${essential_params}  create list  enabled=ThisIsRobot!  
    ${unessential_params}  create list  
    run every case by params  Patch Enabled By Turntable Id Fail 422  ${essential_params}  ${unessential_params}  turntable_id/enabled=${turntable_id/enabled}
 

@@ -21,7 +21,7 @@ Get car Wash car infos Fail With Wrong Params
    ...              请求方式:Get${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  car_ids=${car_ids}  
+   ${essential_params}  create list  car_ids=${car_ids_422}  
    ${unessential_params}  create list  
    run every case by params  Get car Wash car infos Fail 422  ${essential_params}  ${unessential_params}
 

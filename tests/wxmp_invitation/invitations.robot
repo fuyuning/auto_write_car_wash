@@ -22,7 +22,7 @@ Post Invitation Accept Fail With Wrong Params
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  
-   ${unessential_params}  create list  invite_code=${invite_code}  mobile=${mobile}  
+   ${unessential_params}  create list  invite_code=${invite_code_422}  mobile=${mobile_422}  
    run every case by params  Post Invitation Accept Fail 422  ${essential_params}  ${unessential_params}
 
 Get User Invite Code Success 
@@ -40,7 +40,7 @@ Get User Invite Code Fail With Wrong Params
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  
-   ${unessential_params}  create list  mobile=${mobile}  
+   ${unessential_params}  create list  mobile=${mobile_422}  
    run every case by params  Get User Invite Code Fail 422  ${essential_params}  ${unessential_params}
 
 

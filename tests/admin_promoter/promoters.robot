@@ -22,8 +22,8 @@ Post Admin Promoters Fail With Wrong Params
    ...              请求方式:Post${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  promoter_no=${promoter_no}  
-   ${unessential_params}  create list  name=${name}  mobile=${mobile}  promoter_remark=${promoter_remark}  enabled=False  
+   ${essential_params}  create list  promoter_no=${promoter_no_422}  
+   ${unessential_params}  create list  name=${name_422}  mobile=${mobile_422}  promoter_remark=${promoter_remark_422}  enabled=ThisIsRobot!  
    run every case by params  Post Admin Promoters Fail 422  ${essential_params}  ${unessential_params}
 
 Get Admin Promoters Success 
@@ -41,7 +41,7 @@ Get Admin Promoters Fail With Wrong Params
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  
-   ${unessential_params}  create list  name=${name}  mobile=${mobile}  promoter_remark=${promoter_remark}  
+   ${unessential_params}  create list  name=${name_422}  mobile=${mobile_422}  promoter_remark=${promoter_remark_422}  
    run every case by params  Get Admin Promoters Fail 422  ${essential_params}  ${unessential_params}
 
 Get Admin Promotions Success 
@@ -58,8 +58,8 @@ Get Admin Promotions Fail With Wrong Params
    ...              请求方式:Get${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  promoter_id=${promoter_id}  
-   ${unessential_params}  create list  user_id=${user_id}  mobile=${mobile}  car_id=${car_id}  created_section=${created_section}  
+   ${essential_params}  create list  promoter_id=${promoter_id_422}  
+   ${unessential_params}  create list  user_id=${user_id_422}  mobile=${mobile_422}  car_id=${car_id_422}  created_section=${created_section_422}  
    run every case by params  Get Admin Promotions Fail 422  ${essential_params}  ${unessential_params}
 
 Get Admin Promotion Count Success 
@@ -77,7 +77,7 @@ Get Admin Promotion Count Fail With Wrong Params
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  
-   ${unessential_params}  create list  promoter_id=${promoter_id}  created_section=${created_section}  
+   ${unessential_params}  create list  promoter_id=${promoter_id_422}  created_section=${created_section_422}  
    run every case by params  Get Admin Promotion Count Fail 422  ${essential_params}  ${unessential_params}
 
 Put Admin Promoters By Promoter Id Fail With Wrong Params
@@ -86,7 +86,7 @@ Put Admin Promoters By Promoter Id Fail With Wrong Params
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  
-   ${unessential_params}  create list  name=${name}  mobile=${mobile}  promoter_remark=${promoter_remark}  enabled=False  
+   ${unessential_params}  create list  name=${name_422}  mobile=${mobile_422}  promoter_remark=${promoter_remark_422}  enabled=ThisIsRobot!  
    run every case by params  Put Admin Promoters By Promoter Id Fail 422  ${essential_params}  ${unessential_params}  promoter_id=${promoter_id}
 
 Put Admin Promoters By Promoter Id Success 
@@ -131,7 +131,7 @@ Patch Enabled By Promoter Id Fail With Wrong Params
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  
-   ${unessential_params}  create list  enabled=False  
+   ${unessential_params}  create list  enabled=ThisIsRobot!  
    run every case by params  Patch Enabled By Promoter Id Fail 422  ${essential_params}  ${unessential_params}  promoter_id/enabled=${promoter_id/enabled}
 
 Delete Admin Promoters By Promoter Id Fail With Wrong Url

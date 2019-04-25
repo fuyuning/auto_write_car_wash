@@ -23,7 +23,7 @@ Get Admin Car Statistics Fail With Wrong Params
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  
-   ${unessential_params}  create list  car_id=${car_id}  last_section=${last_section}  order_by=${order_by}  wash_area_id=${wash_area_id}  parking_id=${parking_id}  page_num=${page_num}  page_size=${page_size}  
+   ${unessential_params}  create list  car_id=${car_id_422}  last_section=${last_section_422}  order_by=${order_by_422}  wash_area_id=${wash_area_id_422}  parking_id=${parking_id_422}  page_num=${page_num_422}  page_size=${page_size_422}  
    run every case by params  Get Admin Car Statistics Fail 422  ${essential_params}  ${unessential_params}
 
 Patch Visible By Car Statistic Id Fail With Wrong Url
@@ -49,7 +49,7 @@ Patch Visible By Car Statistic Id Fail With Wrong Params
    ...              请求方式:Patch${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  visible=False  
+   ${essential_params}  create list  visible=ThisIsRobot!  
    ${unessential_params}  create list  
    run every case by params  Patch Visible By Car Statistic Id Fail 422  ${essential_params}  ${unessential_params}  car_statistic_id/visible=${car_statistic_id/visible}
 

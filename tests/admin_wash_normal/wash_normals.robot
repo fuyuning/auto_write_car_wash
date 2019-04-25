@@ -37,7 +37,7 @@ Get Admin Wash Normals Fail With Wrong Params
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  
-   ${unessential_params}  create list  page_num=${page_num}  page_size=${page_size}  
+   ${unessential_params}  create list  page_num=${page_num_422}  page_size=${page_size_422}  
    run every case by params  Get Admin Wash Normals Fail 422  ${essential_params}  ${unessential_params}
 
 Put Admin Wash Normals By Wash Normal Id Fail With Wrong Url
@@ -54,8 +54,8 @@ Put Admin Wash Normals By Wash Normal Id Fail With Wrong Params
    ...              请求方式:Put${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  start_time=${start_time}  end_time=${end_time}  is_diff_car_type=False  people_day_num=${people_day_num}  expect_type=${expect_type}  car_washer_ids=${Please_input}  service_groups=${service_groups}  day_in_week=${day_in_week}  time_loop_set=${time_loop_set}  
-   ${unessential_params}  create list  expect_time=${expect_time}  expect_day=${expect_day}  expect_hour=${expect_hour}  spec_people_day_num=${spec_people_day_num}  
+   ${essential_params}  create list  start_time=${start_time_422}  end_time=${end_time_422}  is_diff_car_type=ThisIsRobot!  people_day_num=${people_day_num_422}  expect_type=${expect_type_422}  car_washer_ids=${Please_input}  service_groups=${service_groups_422}  day_in_week=${day_in_week_422}  time_loop_set=${time_loop_set_422}  
+   ${unessential_params}  create list  expect_time=${expect_time_422}  expect_day=${expect_day_422}  expect_hour=${expect_hour_422}  spec_people_day_num=${spec_people_day_num_422}  
    run every case by params  Put Admin Wash Normals By Wash Normal Id Fail 422  ${essential_params}  ${unessential_params}  wash_normal_id=${wash_normal_id}
 
 Put Admin Wash Normals By Wash Normal Id Success 
@@ -81,8 +81,8 @@ Put Admin Wash Normals By Wash Normal Id Fail With Wrong Params
    ...              请求方式:Put${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  start_time=${start_time}  end_time=${end_time}  is_diff_car_type=False  people_day_num=${people_day_num}  expect_type=${expect_type}  car_washer_ids=${Please_input}  service_groups=${service_groups}  
-   ${unessential_params}  create list  expect_time=${expect_time}  expect_day=${expect_day}  expect_hour=${expect_hour}  
+   ${essential_params}  create list  start_time=${start_time_422}  end_time=${end_time_422}  is_diff_car_type=ThisIsRobot!  people_day_num=${people_day_num_422}  expect_type=${expect_type_422}  car_washer_ids=${Please_input}  service_groups=${service_groups_422}  
+   ${unessential_params}  create list  expect_time=${expect_time_422}  expect_day=${expect_day_422}  expect_hour=${expect_hour_422}  
    run every case by params  Put Admin Wash Normals By Wash Normal Id Fail 422  ${essential_params}  ${unessential_params}  wash_normal_id=${wash_normal_id}
 
 Put Admin Wash Normals By Wash Normal Id Success 
@@ -117,7 +117,7 @@ Patch Admin Wash Normal By Wash Normal Id Fail With Wrong Params
    ...              请求方式:Patch${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  spec_people_day_num=${spec_people_day_num}  
+   ${essential_params}  create list  spec_people_day_num=${spec_people_day_num_422}  
    ${unessential_params}  create list  
    run every case by params  Patch Admin Wash Normal By Wash Normal Id Fail 422  ${essential_params}  ${unessential_params}  wash_normal_id=${wash_normal_id}
 

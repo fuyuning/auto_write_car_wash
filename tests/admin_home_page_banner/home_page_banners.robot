@@ -14,7 +14,7 @@ Post Admin Parkings Fail With Wrong Params
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  
-   ${unessential_params}  create list  banners=${banners}  service_introduce=${service_introduce}  
+   ${unessential_params}  create list  banners=${banners_422}  service_introduce=${service_introduce_422}  
    run every case by params  Post Admin Parkings Fail 422  ${essential_params}  ${unessential_params}
 
 Post Admin Parkings Success 
@@ -39,7 +39,7 @@ Put Admin Home Page Banners By Home Page Banner Id Fail With Wrong Params
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  
-   ${unessential_params}  create list  banners=${banners}  service_introduce=${service_introduce}  
+   ${unessential_params}  create list  banners=${banners_422}  service_introduce=${service_introduce_422}  
    run every case by params  Put Admin Home Page Banners By Home Page Banner Id Fail 422  ${essential_params}  ${unessential_params}  home_page_banner_id=${home_page_banner_id}
 
 Put Admin Home Page Banners By Home Page Banner Id Success 

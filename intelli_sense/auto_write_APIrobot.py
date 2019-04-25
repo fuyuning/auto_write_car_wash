@@ -359,9 +359,15 @@ class AutoWriteRobot(object):
                 not_none = api_params_nn_list[i]
                 params_type = api_params_type_list[i].lower()
                 if params_type == 'bool' or params_type == 'boolean':
-                    params_value = 'False'
+                    if api_code != '422':
+                        params_value = 'False'
+                    else:
+                        params_value = 'ThisIsRobot!'
                 elif params_type in ('string', 'int', 'json', 'array', 'float'):
-                    params_value = '${' + params_name + '}'
+                    if api_code != '422':
+                        params_value = '${' + params_name + '}'
+                    else:
+                        params_value = '${' + params_name + '_422}'
                     ptxt.write(params_value+'\n')
                 else:
                     params_value = '${Please_input}'

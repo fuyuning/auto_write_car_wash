@@ -20,8 +20,8 @@ Post car Positions manual Fail With Wrong Params
    ...              请求方式:Post${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  car_id=${car_id}  parking_id=${parking_id}  
-   ${unessential_params}  create list  wash_area_id=${wash_area_id}  entry_time=${entry_time}  lon=${lon}  lat=${lat}  phase=${phase}  floor=${floor}  zone=${zone}  space_no=${space_no}  ownership=${ownership}  
+   ${essential_params}  create list  car_id=${car_id_422}  parking_id=${parking_id_422}  
+   ${unessential_params}  create list  wash_area_id=${wash_area_id_422}  entry_time=${entry_time_422}  lon=${lon_422}  lat=${lat_422}  phase=${phase_422}  floor=${floor_422}  zone=${zone_422}  space_no=${space_no_422}  ownership=${ownership_422}  
    run every case by params  Post car Positions manual Fail 422  ${essential_params}  ${unessential_params}
 
 Post car Positions manual Success 
@@ -47,8 +47,8 @@ Get Admin Car Positions Fail With Wrong Params
    ...              请求方式:Get${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  car_id=${car_id}  
-   ${unessential_params}  create list  page_num=${page_num}  page_size=${page_size}  
+   ${essential_params}  create list  car_id=${car_id_422}  
+   ${unessential_params}  create list  page_num=${page_num_422}  page_size=${page_size_422}  
    run every case by params  Get Admin Car Positions Fail 422  ${essential_params}  ${unessential_params}
 
 Get car Postion Id Fail With Wrong Url
@@ -79,8 +79,8 @@ Put Admin Car Positions By Car Position Id Fail With Wrong Params
    ...              请求方式:Put${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  car_id=${car_id}  parking_id=${parking_id}  
-   ${unessential_params}  create list  wash_area_id=${wash_area_id}  entry_time=${entry_time}  lon=${lon}  lat=${lat}  phase=${phase}  floor=${floor}  zone=${zone}  space_no=${space_no}  ownership=${ownership}  
+   ${essential_params}  create list  car_id=${car_id_422}  parking_id=${parking_id_422}  
+   ${unessential_params}  create list  wash_area_id=${wash_area_id_422}  entry_time=${entry_time_422}  lon=${lon_422}  lat=${lat_422}  phase=${phase_422}  floor=${floor_422}  zone=${zone_422}  space_no=${space_no_422}  ownership=${ownership_422}  
    run every case by params  Put Admin Car Positions By Car Position Id Fail 422  ${essential_params}  ${unessential_params}  car_position_id=${car_position_id}
 
 Put Admin Car Positions By Car Position Id Success 

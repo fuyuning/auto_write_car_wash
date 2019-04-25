@@ -22,8 +22,8 @@ Post Admin Coupon Point Autos Fail With Wrong Params
    ...              请求方式:Post${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  coupon_pool_id=${coupon_pool_id}  record_num_last_30_day=${record_num_last_30_day}  average_price_last_30_day=${average_price_last_30_day}  wash_interval=${wash_interval}  user_type=${user_type}  
-   ${unessential_params}  create list  is_record_num_last_30_day=False  is_average_price_last_30_day=False  is_wash_interval=False  enable=False  
+   ${essential_params}  create list  coupon_pool_id=${coupon_pool_id_422}  record_num_last_30_day=${record_num_last_30_day_422}  average_price_last_30_day=${average_price_last_30_day_422}  wash_interval=${wash_interval_422}  user_type=${user_type_422}  
+   ${unessential_params}  create list  is_record_num_last_30_day=ThisIsRobot!  is_average_price_last_30_day=ThisIsRobot!  is_wash_interval=ThisIsRobot!  enable=ThisIsRobot!  
    run every case by params  Post Admin Coupon Point Autos Fail 422  ${essential_params}  ${unessential_params}
 
 Post Admin Coupon Point Records Fail With Wrong Params
@@ -31,7 +31,7 @@ Post Admin Coupon Point Records Fail With Wrong Params
    ...              请求方式:Post${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  user_ids=${user_ids}  coupon_pool_id=${coupon_pool_id}  
+   ${essential_params}  create list  user_ids=${user_ids_422}  coupon_pool_id=${coupon_pool_id_422}  
    ${unessential_params}  create list  
    run every case by params  Post Admin Coupon Point Records Fail 422  ${essential_params}  ${unessential_params}
 
@@ -58,7 +58,7 @@ Post coupon Point Records upload Fail With Wrong Params
    ...              请求方式:Post${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  coupon_pool_id=${coupon_pool_id}  
+   ${essential_params}  create list  coupon_pool_id=${coupon_pool_id_422}  
    ${unessential_params}  create list  
    run every case by params  Post coupon Point Records upload Fail 422  ${essential_params}  ${unessential_params}
 
@@ -77,7 +77,7 @@ Get Admin Coupon Point Autos Fail With Wrong Params
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  
-   ${unessential_params}  create list  coupon_name=${coupon_name}  created_section=${created_section}  page_num=${page_num}  page_size=${page_size}  
+   ${unessential_params}  create list  coupon_name=${coupon_name_422}  created_section=${created_section_422}  page_num=${page_num_422}  page_size=${page_size_422}  
    run every case by params  Get Admin Coupon Point Autos Fail 422  ${essential_params}  ${unessential_params}
 
 Get Admin Coupon Point Records Success 
@@ -95,7 +95,7 @@ Get Admin Coupon Point Records Fail With Wrong Params
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  
-   ${unessential_params}  create list  coupon_name=${coupon_name}  point_remark=${point_remark}  created_section=${created_section}  page_num=${page_num}  page_size=${page_size}  
+   ${unessential_params}  create list  coupon_name=${coupon_name_422}  point_remark=${point_remark_422}  created_section=${created_section_422}  page_num=${page_num_422}  page_size=${page_size_422}  
    run every case by params  Get Admin Coupon Point Records Fail 422  ${essential_params}  ${unessential_params}
 
 Get Admin Coupon Points Success 
@@ -112,8 +112,8 @@ Get Admin Coupon Points Fail With Wrong Params
    ...              请求方式:Get${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  coupon_point_record_id=${coupon_point_record_id}  
-   ${unessential_params}  create list  user_id=${user_id}  mobile=${mobile}  status=${status}  is_used=${is_used}  page_num=${page_num}  page_size=${page_size}  
+   ${essential_params}  create list  coupon_point_record_id=${coupon_point_record_id_422}  
+   ${unessential_params}  create list  user_id=${user_id_422}  mobile=${mobile_422}  status=${status_422}  is_used=${is_used_422}  page_num=${page_num_422}  page_size=${page_size_422}  
    run every case by params  Get Admin Coupon Points Fail 422  ${essential_params}  ${unessential_params}
 
 Patch Admin Coupon Point Records By Coupon Point Record Id Success 
@@ -140,7 +140,7 @@ Patch Admin Coupon Point Records By Coupon Point Record Id Fail With Wrong Param
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  
-   ${unessential_params}  create list  point_remark=${point_remark}  
+   ${unessential_params}  create list  point_remark=${point_remark_422}  
    run every case by params  Patch Admin Coupon Point Records By Coupon Point Record Id Fail 422  ${essential_params}  ${unessential_params}  coupon_point_record_id=${coupon_point_record_id}
 
 Delete Admin Coupon Point Records By Coupon Point Record Id Fail With Wrong Url

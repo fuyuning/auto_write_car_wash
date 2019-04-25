@@ -21,8 +21,8 @@ Post Order Service Group Fail With Wrong Params
    ...              请求方式:Post${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  service_group_id=${service_group_id}  old_order_id=${old_order_id}  
-   ${unessential_params}  create list  coupon_id=${coupon_id}  car_type=${car_type}  
+   ${essential_params}  create list  service_group_id=${service_group_id_422}  old_order_id=${old_order_id_422}  
+   ${unessential_params}  create list  coupon_id=${coupon_id_422}  car_type=${car_type_422}  
    run every case by params  Post Order Service Group Fail 422  ${essential_params}  ${unessential_params}
 
 Post Orders Success 
@@ -39,8 +39,8 @@ Post Orders Fail With Wrong Params
    ...              请求方式:Post${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  service_group_id=${service_group_id}  mobile=${mobile}  name=${name}  order_type=${order_type}  user_car_id=${user_car_id}  user_contact_id=${user_contact_id}  
-   ${unessential_params}  create list  wash_group_id=${wash_group_id}  wash_normal_id=${wash_normal_id}  parking_id=${parking_id}  wxmp_remark=${wxmp_remark}  coupon_id=${coupon_id}  car_id=${car_id}  car_type=${car_type}  car_place=${car_place}  card_id=${card_id}  
+   ${essential_params}  create list  service_group_id=${service_group_id_422}  mobile=${mobile_422}  name=${name_422}  order_type=${order_type_422}  user_car_id=${user_car_id_422}  user_contact_id=${user_contact_id_422}  
+   ${unessential_params}  create list  wash_group_id=${wash_group_id_422}  wash_normal_id=${wash_normal_id_422}  parking_id=${parking_id_422}  wxmp_remark=${wxmp_remark_422}  coupon_id=${coupon_id_422}  car_id=${car_id_422}  car_type=${car_type_422}  car_place=${car_place_422}  card_id=${card_id_422}  
    run every case by params  Post Orders Fail 422  ${essential_params}  ${unessential_params}
 
 Post Pay By Order Id Fail With Wrong Url
@@ -66,7 +66,7 @@ Post Pay By Order Id Fail With Wrong Params
    ...              请求方式:Post${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  pay_type=${pay_type}  
+   ${essential_params}  create list  pay_type=${pay_type_422}  
    ${unessential_params}  create list  
    run every case by params  Post Pay By Order Id Fail 422  ${essential_params}  ${unessential_params}  order_id/pay=${order_id/pay}
 
@@ -85,7 +85,7 @@ Get Price Range Fail With Wrong Params
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  
-   ${unessential_params}  create list  wash_normal_id=${wash_normal_id}  wash_group_id=${wash_group_id}  wash_able_group_id=${wash_able_group_id}  
+   ${unessential_params}  create list  wash_normal_id=${wash_normal_id_422}  wash_group_id=${wash_group_id_422}  wash_able_group_id=${wash_able_group_id_422}  
    run every case by params  Get Price Range Fail 422  ${essential_params}  ${unessential_params}
 
 Get Orders By Order Id Fail With Wrong Url

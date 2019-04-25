@@ -13,8 +13,8 @@ Post Admin Services Fail With Wrong Params
    ...              请求方式:Post${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  service_name=${service_name}  cost_price=${cost_price}  price=${price}  wash_normal_price=${wash_normal_price}  wash_group_price=${wash_group_price}  member_price=${member_price}  commission_price=${commission_price}  standard_time=${standard_time}  
-   ${unessential_params}  create list  description=${description}  order_by=${order_by}  
+   ${essential_params}  create list  service_name=${service_name_422}  cost_price=${cost_price_422}  price=${price_422}  wash_normal_price=${wash_normal_price_422}  wash_group_price=${wash_group_price_422}  member_price=${member_price_422}  commission_price=${commission_price_422}  standard_time=${standard_time_422}  
+   ${unessential_params}  create list  description=${description_422}  order_by=${order_by_422}  
    run every case by params  Post Admin Services Fail 422  ${essential_params}  ${unessential_params}
 
 Post Admin Services Success 
@@ -41,7 +41,7 @@ Get Admin Services Fail With Wrong Params
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  
-   ${unessential_params}  create list  page_num=${page_num}  page_size=${page_size}  
+   ${unessential_params}  create list  page_num=${page_num_422}  page_size=${page_size_422}  
    run every case by params  Get Admin Services Fail 422  ${essential_params}  ${unessential_params}
 
 Put Admin Services By Service Id Fail With Wrong Url
@@ -58,8 +58,8 @@ Put Admin Services By Service Id Fail With Wrong Params
    ...              请求方式:Put${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  service_name=${service_name}  cost_price=${cost_price}  price=${price}  wash_normal_price=${wash_normal_price}  wash_group_price=${wash_group_price}  member_price=${member_price}  commission_price=${commission_price}  standard_time=${standard_time}  
-   ${unessential_params}  create list  description=${description}  order_by=${order_by}  
+   ${essential_params}  create list  service_name=${service_name_422}  cost_price=${cost_price_422}  price=${price_422}  wash_normal_price=${wash_normal_price_422}  wash_group_price=${wash_group_price_422}  member_price=${member_price_422}  commission_price=${commission_price_422}  standard_time=${standard_time_422}  
+   ${unessential_params}  create list  description=${description_422}  order_by=${order_by_422}  
    run every case by params  Put Admin Services By Service Id Fail 422  ${essential_params}  ${unessential_params}  service_id=${service_id}
 
 Put Admin Services By Service Id Success 

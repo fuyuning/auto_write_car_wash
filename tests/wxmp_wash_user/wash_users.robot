@@ -21,7 +21,7 @@ Post User User Forms Fail With Wrong Params
    ...              请求方式:Post${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  formid=${formid}  
+   ${essential_params}  create list  formid=${formid_422}  
    ${unessential_params}  create list  
    run every case by params  Post User User Forms Fail 422  ${essential_params}  ${unessential_params}
 
@@ -39,7 +39,7 @@ Get User User Info Fail With Wrong Params
    ...              请求方式:Get${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  unionid=${unionid}  
+   ${essential_params}  create list  unionid=${unionid_422}  
    ${unessential_params}  create list  
    run every case by params  Get User User Info Fail 422  ${essential_params}  ${unessential_params}
 
@@ -57,7 +57,7 @@ Put User User Info Fail With Wrong Params
    ...              请求方式:Put${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  wx_nickname=${wx_nickname}  wx_avatarurl=${wx_avatarurl}  unionid=${unionid}  mobile=${mobile}  
+   ${essential_params}  create list  wx_nickname=${wx_nickname_422}  wx_avatarurl=${wx_avatarurl_422}  unionid=${unionid_422}  mobile=${mobile_422}  
    ${unessential_params}  create list  
    run every case by params  Put User User Info Fail 422  ${essential_params}  ${unessential_params}
 

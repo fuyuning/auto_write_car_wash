@@ -22,7 +22,7 @@ Post Admin Robots Fail With Wrong Params
    ...              请求方式:Post${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  mobile=${mobile}  name=${name}  car_id=${car_id}  
+   ${essential_params}  create list  mobile=${mobile_422}  name=${name_422}  car_id=${car_id_422}  
    ${unessential_params}  create list  
    run every case by params  Post Admin Robots Fail 422  ${essential_params}  ${unessential_params}
 
@@ -41,7 +41,7 @@ Get Admin Robots Fail With Wrong Params
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  
-   ${unessential_params}  create list  mobile=${mobile}  car_id=${car_id}  page_num=${page_num}  page_size=${page_size}  
+   ${unessential_params}  create list  mobile=${mobile_422}  car_id=${car_id_422}  page_num=${page_num_422}  page_size=${page_size_422}  
    run every case by params  Get Admin Robots Fail 422  ${essential_params}  ${unessential_params}
 
 Delete Cancel By Robot Id Fail With Wrong Url

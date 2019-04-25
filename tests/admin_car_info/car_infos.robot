@@ -30,7 +30,7 @@ Get Admin Car Infos Fail With Wrong Params
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  
-   ${unessential_params}  create list  car_id=${car_id}  car_type=${car_type}  page_num=${page_num}  page_size=${page_size}  
+   ${unessential_params}  create list  car_id=${car_id_422}  car_type=${car_type_422}  page_num=${page_num_422}  page_size=${page_size_422}  
    run every case by params  Get Admin Car Infos Fail 422  ${essential_params}  ${unessential_params}
 
 Get Admin Car Infos By Car Info Id Fail With Wrong Url
@@ -61,8 +61,8 @@ Put Admin Car Infos By Car Info Id Fail With Wrong Params
    ...              请求方式:Put${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  car_id=${car_id}  
-   ${unessential_params}  create list  car_type=${car_type}  car_brand=${car_brand}  car_series=${car_series}  car_color=${car_color}  car_frame_no=${car_frame_no}  licensed_time=${licensed_time}  car_year=${car_year}  car_images=${car_images}  car_tire_pressure=${car_tire_pressure}  description=${description}  
+   ${essential_params}  create list  car_id=${car_id_422}  
+   ${unessential_params}  create list  car_type=${car_type_422}  car_brand=${car_brand_422}  car_series=${car_series_422}  car_color=${car_color_422}  car_frame_no=${car_frame_no_422}  licensed_time=${licensed_time_422}  car_year=${car_year_422}  car_images=${car_images_422}  car_tire_pressure=${car_tire_pressure_422}  description=${description_422}  
    run every case by params  Put Admin Car Infos By Car Info Id Fail 422  ${essential_params}  ${unessential_params}  car_info_id=${car_info_id}
 
 Put Admin Car Infos By Car Info Id Fail With Wrong Url

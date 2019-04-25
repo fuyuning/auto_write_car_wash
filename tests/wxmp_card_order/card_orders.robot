@@ -21,7 +21,7 @@ Post Card Orders Fail With Wrong Params
    ...              请求方式:Post${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  card_id=${card_id}  
+   ${essential_params}  create list  card_id=${card_id_422}  
    ${unessential_params}  create list  
    run every case by params  Post Card Orders Fail 422  ${essential_params}  ${unessential_params}
 
@@ -48,7 +48,7 @@ Post Pay By Card Order Id Fail With Wrong Params
    ...              请求方式:Post${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  pay_type=${pay_type}  openid=${openid}  
+   ${essential_params}  create list  pay_type=${pay_type_422}  openid=${openid_422}  
    ${unessential_params}  create list  
    run every case by params  Post Pay By Card Order Id Fail 422  ${essential_params}  ${unessential_params}  card_order_id/pay=${card_order_id/pay}
 

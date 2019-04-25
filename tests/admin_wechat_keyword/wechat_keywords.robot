@@ -22,7 +22,7 @@ Post Admin Wechat Keywords Fail With Wrong Params
    ...              请求方式:Post${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  name=${name}  keyword=${keyword}  reply_type=${reply_type}  content=${content}  
+   ${essential_params}  create list  name=${name_422}  keyword=${keyword_422}  reply_type=${reply_type_422}  content=${content_422}  
    ${unessential_params}  create list  
    run every case by params  Post Admin Wechat Keywords Fail 422  ${essential_params}  ${unessential_params}
 
@@ -47,7 +47,7 @@ Put Admin Wechat Keywords By Wechat Keyword Id Fail With Wrong Params
    ...              请求方式:Put${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  name=${name}  keyword=${keyword}  reply_type=${reply_type}  content=${content}  
+   ${essential_params}  create list  name=${name_422}  keyword=${keyword_422}  reply_type=${reply_type_422}  content=${content_422}  
    ${unessential_params}  create list  
    run every case by params  Put Admin Wechat Keywords By Wechat Keyword Id Fail 422  ${essential_params}  ${unessential_params}  wechat_keyword_id=${wechat_keyword_id}
 

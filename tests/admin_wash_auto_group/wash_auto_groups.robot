@@ -23,7 +23,7 @@ Get Admin Wash Auto Groups Fail With Wrong Params
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  
-   ${unessential_params}  create list  page_num=${page_num}  page_size=${page_size}  
+   ${unessential_params}  create list  page_num=${page_num_422}  page_size=${page_size_422}  
    run every case by params  Get Admin Wash Auto Groups Fail 422  ${essential_params}  ${unessential_params}
 
 Get Admin Wash Auto Groups By Wash Auto Group Id Fail With Wrong Url
@@ -45,8 +45,8 @@ Put Admin Wash Auto Groups By Wash Auto Group Id Fail With Wrong Params
    ...              请求方式:Put${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  name=${name}  group_time_range=${group_time_range}  expect_time=${expect_time}  expect_day=${expect_day}  is_diff_car_type=False  people_num=${people_num}  people_day_num=${people_day_num}  service_groups=${service_groups}  status=${status}  start_time=${start_time}  end_time=${end_time}  day_in_week=${day_in_week}  car_washers=${car_washers}  
-   ${unessential_params}  create list  is_auto_robot=False  auto_group=False  subscribe=False  subscribe_name=${subscribe_name}  subscribe_day_num=${subscribe_day_num}  subscribe_expect_time=${subscribe_expect_time}  subscribe_expect_day=${subscribe_expect_day}  
+   ${essential_params}  create list  name=${name_422}  group_time_range=${group_time_range_422}  expect_time=${expect_time_422}  expect_day=${expect_day_422}  is_diff_car_type=ThisIsRobot!  people_num=${people_num_422}  people_day_num=${people_day_num_422}  service_groups=${service_groups_422}  status=${status_422}  start_time=${start_time_422}  end_time=${end_time_422}  day_in_week=${day_in_week_422}  car_washers=${car_washers_422}  
+   ${unessential_params}  create list  is_auto_robot=ThisIsRobot!  auto_group=ThisIsRobot!  subscribe=ThisIsRobot!  subscribe_name=${subscribe_name_422}  subscribe_day_num=${subscribe_day_num_422}  subscribe_expect_time=${subscribe_expect_time_422}  subscribe_expect_day=${subscribe_expect_day_422}  
    run every case by params  Put Admin Wash Auto Groups By Wash Auto Group Id Fail 422  ${essential_params}  ${unessential_params}  wash_auto_group_id=${wash_auto_group_id}
 
 Put Admin Wash Auto Groups By Wash Auto Group Id Success 
@@ -90,7 +90,7 @@ Patch Admin Wash Auto Group By Wash Auto Group Id Fail With Wrong Params
    ...              请求方式:Patch${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  status=${status}  
+   ${essential_params}  create list  status=${status_422}  
    ${unessential_params}  create list  
    run every case by params  Patch Admin Wash Auto Group By Wash Auto Group Id Fail 422  ${essential_params}  ${unessential_params}  wash_auto_group_id=${wash_auto_group_id}
 

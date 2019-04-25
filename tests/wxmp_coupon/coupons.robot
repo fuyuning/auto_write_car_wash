@@ -21,7 +21,7 @@ Post coupon Pools achieve Fail With Wrong Params
    ...              请求方式:Post${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  coupon_pool_ids=${coupon_pool_ids}  
+   ${essential_params}  create list  coupon_pool_ids=${coupon_pool_ids_422}  
    ${unessential_params}  create list  
    run every case by params  Post coupon Pools achieve Fail 422  ${essential_params}  ${unessential_params}
 
@@ -39,8 +39,8 @@ Post achieve By Mobile by coupon pool id Fail With Wrong Params
    ...              请求方式:Post${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  mobile=${mobile}  serie=${serie}  captcha=${captcha}  
-   ${unessential_params}  create list  client_id=${client_id}  secret=${secret}  
+   ${essential_params}  create list  mobile=${mobile_422}  serie=${serie_422}  captcha=${captcha_422}  
+   ${unessential_params}  create list  client_id=${client_id_422}  secret=${secret_422}  
    run every case by params  Post achieve By Mobile by coupon pool id Fail 422  ${essential_params}  ${unessential_params}  coupon_pool_id/achieve_by_mobile=${coupon_pool_id/achieve_by_mobile}
 
 Post achieve By Mobile by coupon pool id Fail With Wrong Url
@@ -80,8 +80,8 @@ Get Coupons Usable Fail With Wrong Params
    ...              请求方式:Get${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  order_price=${order_price}  
-   ${unessential_params}  create list  wash_area_id=${wash_area_id}  service_group_id=${service_group_id}  parking_id=${parking_id}  order_type=${order_type}  service_type=${service_type}  
+   ${essential_params}  create list  order_price=${order_price_422}  
+   ${unessential_params}  create list  wash_area_id=${wash_area_id_422}  service_group_id=${service_group_id_422}  parking_id=${parking_id_422}  order_type=${order_type_422}  service_type=${service_type_422}  
    run every case by params  Get Coupons Usable Fail 422  ${essential_params}  ${unessential_params}
 
 Get User Coupon Pools By Coupon Pool Id Success 
@@ -98,7 +98,7 @@ Get User Coupon Pools By Coupon Pool Id Fail With Wrong Params
    ...              请求方式:Get${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  is_point=${is_point}  
+   ${essential_params}  create list  is_point=${is_point_422}  
    ${unessential_params}  create list  
    run every case by params  Get User Coupon Pools By Coupon Pool Id Fail 422  ${essential_params}  ${unessential_params}  coupon_pool_id=${coupon_pool_id}
 
@@ -126,7 +126,7 @@ Get Mobile Coupon Pools Fail With Wrong Params
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  
-   ${unessential_params}  create list  section=${section}  page_limit=${page_limit}  
+   ${unessential_params}  create list  section=${section_422}  page_limit=${page_limit_422}  
    run every case by params  Get Mobile Coupon Pools Fail 422  ${essential_params}  ${unessential_params}
 
 Get User Coupons Success 
@@ -143,8 +143,8 @@ Get User Coupons Fail With Wrong Params
    ...              请求方式:Get${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  status=${status}  
-   ${unessential_params}  create list  section=${section}  page_limit=${page_limit}  
+   ${essential_params}  create list  status=${status_422}  
+   ${unessential_params}  create list  section=${section_422}  page_limit=${page_limit_422}  
    run every case by params  Get User Coupons Fail 422  ${essential_params}  ${unessential_params}
 
 Get User Coupon Pools Success 
@@ -162,7 +162,7 @@ Get User Coupon Pools Fail With Wrong Params
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  
-   ${unessential_params}  create list  section=${section}  page_limit=${page_limit}  
+   ${unessential_params}  create list  section=${section_422}  page_limit=${page_limit_422}  
    run every case by params  Get User Coupon Pools Fail 422  ${essential_params}  ${unessential_params}
 
 

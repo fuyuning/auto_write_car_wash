@@ -21,8 +21,8 @@ Post Turntable Award Fail With Wrong Params
    ...              请求方式:Post${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  key=${key}  
-   ${unessential_params}  create list  mobile=${mobile}  
+   ${essential_params}  create list  key=${key_422}  
+   ${unessential_params}  create list  mobile=${mobile_422}  
    run every case by params  Post Turntable Award Fail 422  ${essential_params}  ${unessential_params}
 
 Get User Turntable Success 
@@ -39,7 +39,7 @@ Get User Turntable Fail With Wrong Params
    ...              请求方式:Get${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  key=${key}  
+   ${essential_params}  create list  key=${key_422}  
    ${unessential_params}  create list  
    run every case by params  Get User Turntable Fail 422  ${essential_params}  ${unessential_params}
 

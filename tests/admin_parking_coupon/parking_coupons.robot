@@ -23,7 +23,7 @@ Get Admin Parking Coupons Fail With Wrong Params
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  
-   ${unessential_params}  create list  car_id=${car_id}  order_no=${order_no}  car_washer=${car_washer}  parking_id=${parking_id}  created_section=${created_section}  page_num=${page_num}  page_size=${page_size}  
+   ${unessential_params}  create list  car_id=${car_id_422}  order_no=${order_no_422}  car_washer=${car_washer_422}  parking_id=${parking_id_422}  created_section=${created_section_422}  page_num=${page_num_422}  page_size=${page_size_422}  
    run every case by params  Get Admin Parking Coupons Fail 422  ${essential_params}  ${unessential_params}
 
 Delete Admin Parking Coupons By Parking Coupon Id Fail With Wrong Url

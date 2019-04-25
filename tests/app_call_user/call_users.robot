@@ -21,7 +21,7 @@ Post car Wash send mobile short message Fail With Wrong Params
    ...              请求方式:Post${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  type=${type}  
+   ${essential_params}  create list  type=${type_422}  
    ${unessential_params}  create list  
    run every case by params  Post car Wash send mobile short message Fail 422  ${essential_params}  ${unessential_params}
 

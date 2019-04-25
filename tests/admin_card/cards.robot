@@ -13,8 +13,8 @@ Post Admin Cards Fail With Wrong Params
    ...              请求方式:Post${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  card_name=${card_name}  days=${days}  grant_way=${grant_way}  price=${price}  first_price=${first_price}  recharge_price=${recharge_price}  first_recharge_price=${first_recharge_price}  card_remark=${card_remark}  
-   ${unessential_params}  create list  auto_recharge=False  coupons=${coupons}  
+   ${essential_params}  create list  card_name=${card_name_422}  days=${days_422}  grant_way=${grant_way_422}  price=${price_422}  first_price=${first_price_422}  recharge_price=${recharge_price_422}  first_recharge_price=${first_recharge_price_422}  card_remark=${card_remark_422}  
+   ${unessential_params}  create list  auto_recharge=ThisIsRobot!  coupons=${coupons_422}  
    run every case by params  Post Admin Cards Fail 422  ${essential_params}  ${unessential_params}
 
 Post Admin Cards Success 
@@ -41,7 +41,7 @@ Get Admin Cards Fail With Wrong Params
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  
-   ${unessential_params}  create list  card_id=${card_id}  page_num=${page_num}  page_size=${page_size}  
+   ${unessential_params}  create list  card_id=${card_id_422}  page_num=${page_num_422}  page_size=${page_size_422}  
    run every case by params  Get Admin Cards Fail 422  ${essential_params}  ${unessential_params}
 
 Put Admin Cards By Card Id Success 
@@ -58,8 +58,8 @@ Put Admin Cards By Card Id Fail With Wrong Params
    ...              请求方式:Put${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  card_name=${card_name}  days=${days}  grant_way=${grant_way}  price=${price}  first_price=${first_price}  recharge_price=${recharge_price}  first_recharge_price=${first_recharge_price}  card_remark=${card_remark}  
-   ${unessential_params}  create list  auto_recharge=False  coupons=${coupons}  
+   ${essential_params}  create list  card_name=${card_name_422}  days=${days_422}  grant_way=${grant_way_422}  price=${price_422}  first_price=${first_price_422}  recharge_price=${recharge_price_422}  first_recharge_price=${first_recharge_price_422}  card_remark=${card_remark_422}  
+   ${unessential_params}  create list  auto_recharge=ThisIsRobot!  coupons=${coupons_422}  
    run every case by params  Put Admin Cards By Card Id Fail 422  ${essential_params}  ${unessential_params}  card_id=${card_id}
 
 Put Admin Cards By Card Id Fail With Wrong Url

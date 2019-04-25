@@ -30,8 +30,8 @@ Post Update By Wash Record Id Fail With Wrong Params
    ...              请求方式:Post${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  status=${status}  
-   ${unessential_params}  create list  before_wash_images=${before_wash_images}  after_wash_images=${after_wash_images}  wash_tags=${wash_tags}  description=${description}  start_time=${start_time}  end_time=${end_time}  dirty_percent=${dirty_percent}  washer_remark=${washer_remark}  mark=${mark}  
+   ${essential_params}  create list  status=${status_422}  
+   ${unessential_params}  create list  before_wash_images=${before_wash_images_422}  after_wash_images=${after_wash_images_422}  wash_tags=${wash_tags_422}  description=${description_422}  start_time=${start_time_422}  end_time=${end_time_422}  dirty_percent=${dirty_percent_422}  washer_remark=${washer_remark_422}  mark=${mark_422}  
    run every case by params  Post Update By Wash Record Id Fail 422  ${essential_params}  ${unessential_params}  wash_record_id/update=${wash_record_id/update}
 
 Post upload Mark by wash record id Fail With Wrong Url
@@ -58,7 +58,7 @@ Post upload Mark by wash record id Fail With Wrong Params
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  
-   ${unessential_params}  create list  washer_remark=${washer_remark}  mark=${mark}  
+   ${unessential_params}  create list  washer_remark=${washer_remark_422}  mark=${mark_422}  
    run every case by params  Post upload Mark by wash record id Fail 422  ${essential_params}  ${unessential_params}  wash_record_id/upload_mark=${wash_record_id/upload_mark}
 
 Post Upload By Wash Record Id Fail With Wrong Url
@@ -84,8 +84,8 @@ Post Upload By Wash Record Id Fail With Wrong Params
    ...              请求方式:Post${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  before_wash_images=${before_wash_images}  status=${status}  after_wash_images=${after_wash_images}  start_time=${start_time}  end_time=${end_time}  dirty_percent=${dirty_percent}  
-   ${unessential_params}  create list  tags=${Please_input}  description=${description}  
+   ${essential_params}  create list  before_wash_images=${before_wash_images_422}  status=${status_422}  after_wash_images=${after_wash_images_422}  start_time=${start_time_422}  end_time=${end_time_422}  dirty_percent=${dirty_percent_422}  
+   ${unessential_params}  create list  tags=${Please_input}  description=${description_422}  
    run every case by params  Post Upload By Wash Record Id Fail 422  ${essential_params}  ${unessential_params}  wash_record_id/upload=${wash_record_id/upload}
 
 Post Wash By Wash Record Id Fail With Wrong Url
@@ -111,8 +111,8 @@ Post Wash By Wash Record Id Fail With Wrong Params
    ...              请求方式:Post${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  before_wash_images=${before_wash_images}  
-   ${unessential_params}  create list  tags=${Please_input}  description=${description}  
+   ${essential_params}  create list  before_wash_images=${before_wash_images_422}  
+   ${unessential_params}  create list  tags=${Please_input}  description=${description_422}  
    run every case by params  Post Wash By Wash Record Id Fail 422  ${essential_params}  ${unessential_params}  wash_record_id/wash=${wash_record_id/wash}
 
 Post Finish By Wash Record Id Fail With Wrong Url
@@ -138,7 +138,7 @@ Post Finish By Wash Record Id Fail With Wrong Params
    ...              请求方式:Post${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  after_wash_images=${after_wash_images}  
+   ${essential_params}  create list  after_wash_images=${after_wash_images_422}  
    ${unessential_params}  create list  
    run every case by params  Post Finish By Wash Record Id Fail 422  ${essential_params}  ${unessential_params}  wash_record_id/finish=${wash_record_id/finish}
 
@@ -157,7 +157,7 @@ Get User Wash Records Fail With Wrong Params
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  
-   ${unessential_params}  create list  section=${section}  page_limit=${page_limit}  
+   ${unessential_params}  create list  section=${section_422}  page_limit=${page_limit_422}  
    run every case by params  Get User Wash Records Fail 422  ${essential_params}  ${unessential_params}
 
 Get Cars In Parking Success 
@@ -174,8 +174,8 @@ Get Cars In Parking Fail With Wrong Params
    ...              请求方式:Get${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  car_ids=${car_ids}  
-   ${unessential_params}  create list  parking_id=${parking_id}  
+   ${essential_params}  create list  car_ids=${car_ids_422}  
+   ${unessential_params}  create list  parking_id=${parking_id_422}  
    run every case by params  Get Cars In Parking Fail 422  ${essential_params}  ${unessential_params}
 
 Get wash Records group by zone Success 
@@ -192,8 +192,8 @@ Get wash Records group by zone Fail With Wrong Params
    ...              请求方式:Get${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  status=${status}  wash_area_id=${wash_area_id}  
-   ${unessential_params}  create list  parking_id=${parking_id}  
+   ${essential_params}  create list  status=${status_422}  wash_area_id=${wash_area_id_422}  
+   ${unessential_params}  create list  parking_id=${parking_id_422}  
    run every case by params  Get wash Records group by zone Fail 422  ${essential_params}  ${unessential_params}
 
 Get wash Records nearby Success 
@@ -210,7 +210,7 @@ Get wash Records nearby Fail With Wrong Params
    ...              请求方式:Get${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  radius=${radius}  center=${center}  status=${status}  limit=${limit}  wash_area_id=${wash_area_id}  
+   ${essential_params}  create list  radius=${radius_422}  center=${center_422}  status=${status_422}  limit=${limit_422}  wash_area_id=${wash_area_id_422}  
    ${unessential_params}  create list  
    run every case by params  Get wash Records nearby Fail 422  ${essential_params}  ${unessential_params}
 
@@ -229,7 +229,7 @@ Get car Wash wash records Fail With Wrong Params
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  
-   ${unessential_params}  create list  status=${status}  car_id=${car_id}  wash_group_id=${wash_group_id}  section=${section}  page_limit=${page_limit}  wash_area_id=${wash_area_id}  order_by=${order_by}  floor=${floor}  zone=${zone}  
+   ${unessential_params}  create list  status=${status_422}  car_id=${car_id_422}  wash_group_id=${wash_group_id_422}  section=${section_422}  page_limit=${page_limit_422}  wash_area_id=${wash_area_id_422}  order_by=${order_by_422}  floor=${floor_422}  zone=${zone_422}  
    run every case by params  Get car Wash wash records Fail 422  ${essential_params}  ${unessential_params}
 
 Get car Wash wash records by wash record id Fail With Wrong Url
@@ -267,8 +267,8 @@ Get Car In Parking Fail With Wrong Params
    ...              请求方式:Get${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  car_id=${car_id}  
-   ${unessential_params}  create list  parking_id=${parking_id}  
+   ${essential_params}  create list  car_id=${car_id_422}  
+   ${unessential_params}  create list  parking_id=${parking_id_422}  
    run every case by params  Get Car In Parking Fail 422  ${essential_params}  ${unessential_params}
 
 Patch washer Remark by wash record id Success 
@@ -295,7 +295,7 @@ Patch washer Remark by wash record id Fail With Wrong Params
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  
-   ${unessential_params}  create list  washer_remark=${washer_remark}  
+   ${unessential_params}  create list  washer_remark=${washer_remark_422}  
    run every case by params  Patch washer Remark by wash record id Fail 422  ${essential_params}  ${unessential_params}  wash_record_id/washer_remark=${wash_record_id/washer_remark}
 
 Patch Mark By Wash Record Id Success 
@@ -322,7 +322,7 @@ Patch Mark By Wash Record Id Fail With Wrong Params
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  
-   ${unessential_params}  create list  mark=${mark}  
+   ${unessential_params}  create list  mark=${mark_422}  
    run every case by params  Patch Mark By Wash Record Id Fail 422  ${essential_params}  ${unessential_params}  wash_record_id/mark=${wash_record_id/mark}
 
 Patch Status By Wash Record Id Fail With Wrong Url
@@ -348,7 +348,7 @@ Patch Status By Wash Record Id Fail With Wrong Params
    ...              请求方式:Patch${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  status=${status}  
+   ${essential_params}  create list  status=${status_422}  
    ${unessential_params}  create list  
    run every case by params  Patch Status By Wash Record Id Fail 422  ${essential_params}  ${unessential_params}  wash_record_id/status=${wash_record_id/status}
 

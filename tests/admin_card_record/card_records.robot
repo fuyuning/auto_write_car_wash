@@ -23,7 +23,7 @@ Get Admin Card Records Fail With Wrong Params
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  
-   ${unessential_params}  create list  user_id=${user_id}  mobile=${mobile}  mode=${mode}  created_section=${created_section}  page_num=${page_num}  page_size=${page_size}  
+   ${unessential_params}  create list  user_id=${user_id_422}  mobile=${mobile_422}  mode=${mode_422}  created_section=${created_section_422}  page_num=${page_num_422}  page_size=${page_size_422}  
    run every case by params  Get Admin Card Records Fail 422  ${essential_params}  ${unessential_params}
 
 Delete Admin Card Records By Card Record Id Fail With Wrong Url

@@ -23,7 +23,7 @@ Get Admin Car Series Fail With Wrong Params
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  
-   ${unessential_params}  create list  car_brand=${car_brand}  car_series_name=${car_series_name}  car_scale=${car_scale}  car_model=${car_model}  is_active=False  is_car_model=False  page_num=${page_num}  page_size=${page_size}  
+   ${unessential_params}  create list  car_brand=${car_brand_422}  car_series_name=${car_series_name_422}  car_scale=${car_scale_422}  car_model=${car_model_422}  is_active=ThisIsRobot!  is_car_model=ThisIsRobot!  page_num=${page_num_422}  page_size=${page_size_422}  
    run every case by params  Get Admin Car Series Fail 422  ${essential_params}  ${unessential_params}
 
 Put Admin Car Series By Car Series Id Success 
@@ -49,7 +49,7 @@ Put Admin Car Series By Car Series Id Fail With Wrong Params
    ...              请求方式:Put${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  car_model_id=${car_model_id}  
+   ${essential_params}  create list  car_model_id=${car_model_id_422}  
    ${unessential_params}  create list  
    run every case by params  Put Admin Car Series By Car Series Id Fail 422  ${essential_params}  ${unessential_params}  car_series_id=${car_series_id}
 
@@ -76,7 +76,7 @@ Patch Admin Car Series By Car Series Id Fail With Wrong Params
    ...              请求方式:Patch${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  is_active=False  
+   ${essential_params}  create list  is_active=ThisIsRobot!  
    ${unessential_params}  create list  
    run every case by params  Patch Admin Car Series By Car Series Id Fail 422  ${essential_params}  ${unessential_params}  car_series_id=${car_series_id}
 

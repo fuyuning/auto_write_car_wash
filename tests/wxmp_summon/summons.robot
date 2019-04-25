@@ -21,8 +21,8 @@ Post User Summons Fail With Wrong Params
    ...              请求方式:Post${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  name=${name}  
-   ${unessential_params}  create list  lon=${lon}  lat=${lat}  
+   ${essential_params}  create list  name=${name_422}  
+   ${unessential_params}  create list  lon=${lon_422}  lat=${lat_422}  
    run every case by params  Post User Summons Fail 422  ${essential_params}  ${unessential_params}
 
 

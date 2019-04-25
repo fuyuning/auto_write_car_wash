@@ -23,7 +23,7 @@ Get Admin Promoter Statistics Fail With Wrong Params
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  
-   ${unessential_params}  create list  promoter_no=${promoter_no}  name=${name}  mobile=${mobile}  section=${section}  order_by=${order_by}  page_num=${page_num}  page_size=${page_size}  
+   ${unessential_params}  create list  promoter_no=${promoter_no_422}  name=${name_422}  mobile=${mobile_422}  section=${section_422}  order_by=${order_by_422}  page_num=${page_num_422}  page_size=${page_size_422}  
    run every case by params  Get Admin Promoter Statistics Fail 422  ${essential_params}  ${unessential_params}
 
 Patch Visible By Promoter Statistic Id Fail With Wrong Url
@@ -49,7 +49,7 @@ Patch Visible By Promoter Statistic Id Fail With Wrong Params
    ...              请求方式:Patch${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  visible=False  
+   ${essential_params}  create list  visible=ThisIsRobot!  
    ${unessential_params}  create list  
    run every case by params  Patch Visible By Promoter Statistic Id Fail 422  ${essential_params}  ${unessential_params}  promoter_statistic_id/visible=${promoter_statistic_id/visible}
 

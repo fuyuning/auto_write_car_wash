@@ -14,80 +14,80 @@ admin_promoter:推广二维码列表GET方法：缺少 422,加入后:['403', '20
 admin_promoter:二维码用户列表GET方法：缺少 422,加入后:['403', '200', '422']
 admin_car_washer:编辑虾客PUT方法：文档含有过多 404,移除后应为:['404', '204', '403', '422']
 admin_car_washer:虾客接单记录GET方法：缺少 422,加入后:['404', '403', '200', '422']
-admin_wash_group:一键虾滑POST方法：应该返回 201, 但返回 204,请判断是否为文档错误
+admin_wash_group:一键虾滑POST方法：应该返回 201, 但返回 204,请判断是否为代码或文档错误
 admin_wash_record:洗车记录列表GET方法：缺少 422,加入后:['200', '422']
-admin_wash_record:订单部分退款POST方法：应该返回 201, 但返回 204,请判断是否为文档错误
-admin_wash_record:关闭洗车订单POST方法：应该返回 201, 但返回 204,请判断是否为文档错误
-admin_wash_area:服务区域_查询GET方法：应该返回 200, 但 未识别到2xx的返回 ,请判断是否为文档错误
-admin_coupon_point:添加自动定向券POST方法：应该返回 201, 但返回 200,请判断是否为文档错误
-admin_coupon_point:批量添加定向券POST方法：应该返回 201, 但返回 200,请判断是否为文档错误
+admin_wash_record:订单部分退款POST方法：应该返回 201, 但返回 204,请判断是否为代码或文档错误
+admin_wash_record:关闭洗车订单POST方法：应该返回 201, 但返回 204,请判断是否为代码或文档错误
+admin_wash_area:服务区域_查询GET方法：应该返回 200, 但 未识别到2xx的返回 ,请判断是否为代码或文档错误
+admin_coupon_point:添加自动定向券POST方法：应该返回 201, 但返回 200,请判断是否为代码或文档错误
+admin_coupon_point:批量添加定向券POST方法：应该返回 201, 但返回 200,请判断是否为代码或文档错误
 admin_coupon_point:定向发券列表GET方法：缺少 422,加入后:['403', '200', '422']
 admin_coupon_point:发放记录列表GET方法：缺少 422,加入后:['403', '200', '422']
 admin_coupon_point:文件上传(已停用)POST方法：缺少 422,加入后:['403', '404', '200', '422']
-admin_coupon_point:文件上传(已停用)POST方法：应该返回 201, 但返回 200,请判断是否为文档错误
+admin_coupon_point:文件上传(已停用)POST方法：应该返回 201, 但返回 200,请判断是否为代码或文档错误
 admin_coupon_point:文件上传(已停用)POST方法：不该含有 404,移除后:['403', '200', '422']
-admin_service:删除服务DELETE方法：应该返回 204, 但 未识别到2xx的返回 ,请判断是否为文档错误
+admin_service:删除服务DELETE方法：应该返回 204, 但 未识别到2xx的返回 ,请判断是否为代码或文档错误
 admin_service_group:套餐列表GET方法：缺少 422,加入后:['403', '200', '422']
-admin_wash_auto_group:更新自动建团PUT方法：应该返回 204, 但返回 201,请判断是否为文档错误
+admin_wash_auto_group:更新自动建团PUT方法：应该返回 204, 但返回 201,请判断是否为代码或文档错误
 admin_wash_auto_group:建团列表GET方法：缺少 422,加入后:['403', '200', '422']
 admin_invitation:邀请记录GET方法：缺少 422,加入后:['403', '200', '422']
-admin_wash_user_group:分组信息获取GET方法：应该返回 200, 但 未识别到2xx的返回 ,请判断是否为文档错误
+admin_wash_user_group:分组信息获取GET方法：应该返回 200, 但 未识别到2xx的返回 ,请判断是否为代码或文档错误
 admin_wash_user:用户信息查询GET方法：不该含有 404,移除后:['403', '200']
 admin_wash_user:用户数据清除POST方法：缺少 404,加入后:['204', '403', '422', '404']
-admin_wash_user:用户数据清除POST方法：应该返回 201, 但返回 204,请判断是否为文档错误
-admin_car_info:文件上传POST方法：应该返回 201, 但返回 200,请判断是否为文档错误
-admin_car_position:文件上传POST方法：应该返回 201, 但返回 200,请判断是否为文档错误
-admin_customer_service:售后修改POST方法：应该返回 201, 但返回 204,请判断是否为文档错误
+admin_wash_user:用户数据清除POST方法：应该返回 201, 但返回 204,请判断是否为代码或文档错误
+admin_car_info:文件上传POST方法：应该返回 201, 但返回 200,请判断是否为代码或文档错误
+admin_car_position:文件上传POST方法：应该返回 201, 但返回 200,请判断是否为代码或文档错误
+admin_customer_service:售后修改POST方法：应该返回 201, 但返回 204,请判断是否为代码或文档错误
 admin_car_washer_statistic:统计列表GET方法：不该含有 404,移除后:['403', '200', '422']
-admin_car_move_qrcode:申请通过POST方法：应该返回 201, 但返回 204,请判断是否为文档错误
+admin_car_move_qrcode:申请通过POST方法：应该返回 201, 但返回 204,请判断是否为代码或文档错误
 admin_wash_comment:获取评价列表GET方法：缺少 422,加入后:['403', '200', '422']
 admin_notice_mail:邮件通知列表GET方法：缺少 422,加入后:['403', '200', '422']
 admin_refund:获取退款GET方法：缺少 422,加入后:['200', '422']
-app_call_user:电话联系车主GET方法：应该返回 200, 但返回 201,请判断是否为文档错误
+app_call_user:电话联系车主GET方法：应该返回 200, 但返回 201,请判断是否为代码或文档错误
 app_call_user:电话联系车主GET方法：不该含有 404,移除后:['403', '201', '422']
-app_call_user:短信联系车主POST方法：应该返回 201, 但返回 200,请判断是否为文档错误
+app_call_user:短信联系车主POST方法：应该返回 201, 但返回 200,请判断是否为代码或文档错误
 app_call_user:短信联系车主POST方法：不该含有 404,移除后:['403', '200', '422']
 app_car_washer_order_statistic:车辆信息详情GET方法：不该含有 404,移除后:['403', '200']
 app_car_washer:获取虾客二维码GET方法：不该含有 404,移除后:['403', '200']
-app_wash_record:修改单个洗车记录状态PATCH方法：应该返回 204, 但返回 200,请判断是否为文档错误
-app_wash_record:完成洗车POST方法：应该返回 201, 但返回 204,请判断是否为文档错误
+app_wash_record:修改单个洗车记录状态PATCH方法：应该返回 204, 但返回 200,请判断是否为代码或文档错误
+app_wash_record:完成洗车POST方法：应该返回 201, 但返回 204,请判断是否为代码或文档错误
 app_wash_record:查询车辆是否在场内GET方法：不该含有 404,移除后:['403', '200', '422']
 app_wash_tag:获取wash_tags列表GET方法：不该含有 404,移除后:['200']
-app_oauth2:账号密码授权POST方法：应该返回 201, 但返回 200,请判断是否为文档错误
-app_oauth2:刷新秘钥POST方法：应该返回 201, 但返回 200,请判断是否为文档错误
+app_oauth2:账号密码授权POST方法：应该返回 201, 但返回 200,请判断是否为代码或文档错误
+app_oauth2:刷新秘钥POST方法：应该返回 201, 但返回 200,请判断是否为代码或文档错误
 app_car_position:车位增量更新GET方法：缺少 422,加入后:['403', '422']
-app_car_position:车位增量更新GET方法：应该返回 200, 但 未识别到2xx的返回 ,请判断是否为文档错误
-wxmp_card_order:支付订单POST方法：应该返回 201, 但返回 200,请判断是否为文档错误
+app_car_position:车位增量更新GET方法：应该返回 200, 但 未识别到2xx的返回 ,请判断是否为代码或文档错误
+wxmp_card_order:支付订单POST方法：应该返回 201, 但返回 200,请判断是否为代码或文档错误
 wxmp_card_sale:可购买的会员卡列表GET方法：缺少 422,加入后:['403', '200', '422']
 wxmp_membership:我的会员GET方法：缺少 422,加入后:['403', '200', '422']
 wxmp_card:可购买的会员卡列表GET方法：缺少 404,加入后:['403', '200', '404']
-wxmp_coupon_code:添加优惠码POST方法：应该返回 201, 但返回 204,请判断是否为文档错误
+wxmp_coupon_code:添加优惠码POST方法：应该返回 201, 但返回 204,请判断是否为代码或文档错误
 wxmp_refund:user获取退款GET方法：缺少 422,加入后:['200', '422']
-wxmp_login:小程序解密数据POST方法：应该返回 201, 但返回 200,请判断是否为文档错误
-wxmp_login:unionid登录POST方法：应该返回 201, 但返回 200,请判断是否为文档错误
-wxmp_login:openid登录POST方法：应该返回 201, 但返回 200,请判断是否为文档错误
-wxmp_login:手机号验证码注册POST方法：应该返回 201, 但返回 200,请判断是否为文档错误
+wxmp_login:小程序解密数据POST方法：应该返回 201, 但返回 200,请判断是否为代码或文档错误
+wxmp_login:unionid登录POST方法：应该返回 201, 但返回 200,请判断是否为代码或文档错误
+wxmp_login:openid登录POST方法：应该返回 201, 但返回 200,请判断是否为代码或文档错误
+wxmp_login:手机号验证码注册POST方法：应该返回 201, 但返回 200,请判断是否为代码或文档错误
 wxmp_login:通过tokenid获取openidGET方法：缺少 422,加入后:['200', '404', '422']
 wxmp_login:通过tokenid获取openidGET方法：不该含有 404,移除后:['200', '422']
 wxmp_order:查价格区间GET方法：缺少 422,加入后:['403', '200', '422']
-wxmp_order:支付订单POST方法：应该返回 201, 但返回 200,请判断是否为文档错误
+wxmp_order:支付订单POST方法：应该返回 201, 但返回 200,请判断是否为代码或文档错误
 wxmp_wash_record:用订单id获取一洗车记录GET方法：不该含有 404,移除后:['403', '200', '422']
 wxmp_wash_record:获取洗车记录列表GET方法：不该含有 404,移除后:['403', '200', '422']
 wxmp_wash_record:获取记录列表GET方法：缺少 422,加入后:['404', '403', '200', '422']
 wxmp_wash_record:获取记录列表GET方法：不该含有 404,移除后:['403', '200', '422']
 wxmp_coupon:带参数的,我能领的优惠券GET方法：缺少 404,加入后:['403', '200', '422', '404']
 wxmp_coupon:公众号外领取优惠券POST方法：缺少 404,加入后:['200', '422', '404']
-wxmp_coupon:公众号外领取优惠券POST方法：应该返回 201, 但返回 200,请判断是否为文档错误
+wxmp_coupon:公众号外领取优惠券POST方法：应该返回 201, 但返回 200,请判断是否为代码或文档错误
 wxmp_coupon:领取优惠券POST方法：缺少 404,加入后:['403', '204', '404']
-wxmp_coupon:领取优惠券POST方法：应该返回 201, 但返回 204,请判断是否为文档错误
+wxmp_coupon:领取优惠券POST方法：应该返回 201, 但返回 204,请判断是否为代码或文档错误
 wxmp_invitation:获取我的邀请码GET方法：缺少 422,加入后:['403', '200', '422']
-wxmp_invitation:接受邀请POST方法：应该返回 201, 但返回 204,请判断是否为文档错误
+wxmp_invitation:接受邀请POST方法：应该返回 201, 但返回 204,请判断是否为代码或文档错误
 wxmp_turntable:获取我的抽奖资格GET方法：不该含有 404,移除后:['403', '200', '422']
-wxmp_turntable:抽奖POST方法：应该返回 201, 但返回 200,请判断是否为文档错误
+wxmp_turntable:抽奖POST方法：应该返回 201, 但返回 200,请判断是否为代码或文档错误
 wxmp_turntable:抽奖POST方法：不该含有 404,移除后:['403', '200', '422']
 wxmp_customer_service:获取售后服务列表GET方法：缺少 422,加入后:['404', '403', '200', '422']
 wxmp_customer_service:获取售后服务列表GET方法：不该含有 404,移除后:['403', '200', '422']
-wxmp_car_move_qrcode:申请二维码POST方法：应该返回 201, 但返回 204,请判断是否为文档错误
+wxmp_car_move_qrcode:申请二维码POST方法：应该返回 201, 但返回 204,请判断是否为代码或文档错误
 wxmp_car_move_qrcode:申请状态查询GET方法：不该含有 404,移除后:['403', '200']
 wxmp_wash_normal:用洗车区域id获取单买详情GET方法：不该含有 404,移除后:['403', '200', '422']
 wxmp_parking:模糊查询停车场信息GET方法：缺少 422,加入后:['403', '200', '422']

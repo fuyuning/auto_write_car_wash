@@ -22,8 +22,8 @@ Post Admin Wash Areas Fail With Wrong Params
    ...              请求方式:Post${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  name=${name}  province=${province}  city=${city}  district=${district}  service_type=${service_type}  
-   ${unessential_params}  create list  wash_normal=False  wash_group=False  user_group=False  enabled=False  
+   ${essential_params}  create list  name=${name_422}  province=${province_422}  city=${city_422}  district=${district_422}  service_type=${service_type_422}  
+   ${unessential_params}  create list  wash_normal=ThisIsRobot!  wash_group=ThisIsRobot!  user_group=ThisIsRobot!  enabled=ThisIsRobot!  
    run every case by params  Post Admin Wash Areas Fail 422  ${essential_params}  ${unessential_params}
 
 Get Admin Wash Areas Success 
@@ -40,8 +40,8 @@ Get Admin Wash Areas Fail With Wrong Params
    ...              请求方式:Get${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  page_num=${page_num}  page_size=${page_size}  
-   ${unessential_params}  create list  name=${name}  enabled=False  
+   ${essential_params}  create list  page_num=${page_num_422}  page_size=${page_size_422}  
+   ${unessential_params}  create list  name=${name_422}  enabled=ThisIsRobot!  
    run every case by params  Get Admin Wash Areas Fail 422  ${essential_params}  ${unessential_params}
 
 Get Admin Wash Areas By Wash Area Id Fail With Wrong Url
@@ -74,8 +74,8 @@ Put Admin Wash Areas By Wash Area Id Fail With Wrong Params
    ...              请求方式:Put${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  name=${name}  province=${province}  city=${city}  district=${district}  service_type=${service_type}  
-   ${unessential_params}  create list  wash_normal=False  wash_group=False  user_group=False  enabled=False  
+   ${essential_params}  create list  name=${name_422}  province=${province_422}  city=${city_422}  district=${district_422}  service_type=${service_type_422}  
+   ${unessential_params}  create list  wash_normal=ThisIsRobot!  wash_group=ThisIsRobot!  user_group=ThisIsRobot!  enabled=ThisIsRobot!  
    run every case by params  Put Admin Wash Areas By Wash Area Id Fail 422  ${essential_params}  ${unessential_params}  wash_area_id=${wash_area_id}
 
 Patch (wash Normal|wash Group|user Group|enabled) by wash area id Success 
@@ -102,7 +102,7 @@ Patch (wash Normal|wash Group|user Group|enabled) by wash area id Fail With Wron
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  
-   ${unessential_params}  create list  wash_normal=False  wash_group=False  user_group=False  enabled=False  
+   ${unessential_params}  create list  wash_normal=ThisIsRobot!  wash_group=ThisIsRobot!  user_group=ThisIsRobot!  enabled=ThisIsRobot!  
    run every case by params  Patch (wash Normal|wash Group|user Group|enabled) by wash area id Fail 422  ${essential_params}  ${unessential_params}  wash_area_id/(wash_normal|wash_group|user_group|enabled)=${wash_area_id/(wash_normal|wash_group|user_group|enabled)}
 
 Delete Admin Wash Areas By Wash Area Id Success 

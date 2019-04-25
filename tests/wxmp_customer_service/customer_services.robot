@@ -12,7 +12,7 @@ Post User Customer Services Fail With Wrong Params
    ...              请求方式:Post${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  wash_record_id=${wash_record_id}  reason=${reason}  description=${description}  is_refund=${is_refund}  
+   ${essential_params}  create list  wash_record_id=${wash_record_id_422}  reason=${reason_422}  description=${description_422}  is_refund=${is_refund_422}  
    ${unessential_params}  create list  
    run every case by params  Post User Customer Services Fail 422  ${essential_params}  ${unessential_params}
 
@@ -40,7 +40,7 @@ Get User Customer Services Fail With Wrong Params
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  
-   ${unessential_params}  create list  status=${status}  page_num=${page_num}  page_size=${page_size}  
+   ${unessential_params}  create list  status=${status_422}  page_num=${page_num_422}  page_size=${page_size_422}  
    run every case by params  Get User Customer Services Fail 422  ${essential_params}  ${unessential_params}
 
 Get User Customer Services By Customer Service Id Fail With Wrong Url

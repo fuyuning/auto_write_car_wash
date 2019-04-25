@@ -32,7 +32,7 @@ Post Finish By Car Move Qrcode Id Fail With Wrong Params
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  
-   ${unessential_params}  create list  qrcode_remark=${qrcode_remark}  status=${status}  
+   ${unessential_params}  create list  qrcode_remark=${qrcode_remark_422}  status=${status_422}  
    run every case by params  Post Finish By Car Move Qrcode Id Fail 422  ${essential_params}  ${unessential_params}  car_move_qrcode_id/finish=${car_move_qrcode_id/finish}
 
 Get Admin Car Move Qrcodes Success 
@@ -49,8 +49,8 @@ Get Admin Car Move Qrcodes Fail With Wrong Params
    ...              请求方式:Get${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  page_num=${page_num}  page_size=${page_size}  
-   ${unessential_params}  create list  car_move_qrcode_id=${car_move_qrcode_id}  user_id=${user_id}  mobile=${mobile}  status=${status}  created_section=${created_section}  
+   ${essential_params}  create list  page_num=${page_num_422}  page_size=${page_size_422}  
+   ${unessential_params}  create list  car_move_qrcode_id=${car_move_qrcode_id_422}  user_id=${user_id_422}  mobile=${mobile_422}  status=${status_422}  created_section=${created_section_422}  
    run every case by params  Get Admin Car Move Qrcodes Fail 422  ${essential_params}  ${unessential_params}
 
 Delete Admin Car Move Qrcodes By Car Move Qrcode Id Fail With Wrong Url

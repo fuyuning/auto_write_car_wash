@@ -22,8 +22,8 @@ Post Admin Coupon Code Records Fail With Wrong Params
    ...              请求方式:Post${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  coupon_pool_id=${coupon_pool_id}  created_number=${created_number}  
-   ${unessential_params}  create list  is_new_user=False  
+   ${essential_params}  create list  coupon_pool_id=${coupon_pool_id_422}  created_number=${created_number_422}  
+   ${unessential_params}  create list  is_new_user=ThisIsRobot!  
    run every case by params  Post Admin Coupon Code Records Fail 422  ${essential_params}  ${unessential_params}
 
 Get Admin Coupon Code Records Success 
@@ -41,7 +41,7 @@ Get Admin Coupon Code Records Fail With Wrong Params
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  
-   ${unessential_params}  create list  coupon_code_name=${coupon_code_name}  coupon_code_remark=${coupon_code_remark}  page_num=${page_num}  page_size=${page_size}  
+   ${unessential_params}  create list  coupon_code_name=${coupon_code_name_422}  coupon_code_remark=${coupon_code_remark_422}  page_num=${page_num_422}  page_size=${page_size_422}  
    run every case by params  Get Admin Coupon Code Records Fail 422  ${essential_params}  ${unessential_params}
 
 Get Admin Coupon Codes Success 
@@ -59,7 +59,7 @@ Get Admin Coupon Codes Fail With Wrong Params
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  
-   ${unessential_params}  create list  coupon_code_record_id=${coupon_code_record_id}  coupon_code_no=${coupon_code_no}  user_id=${user_id}  mobile=${mobile}  status=${status}  car_id=${car_id}  page_num=${page_num}  page_size=${page_size}  
+   ${unessential_params}  create list  coupon_code_record_id=${coupon_code_record_id_422}  coupon_code_no=${coupon_code_no_422}  user_id=${user_id_422}  mobile=${mobile_422}  status=${status_422}  car_id=${car_id_422}  page_num=${page_num_422}  page_size=${page_size_422}  
    run every case by params  Get Admin Coupon Codes Fail 422  ${essential_params}  ${unessential_params}
 
 Get coupon Codes export by coupon code record id Fail With Wrong Url
@@ -99,7 +99,7 @@ Patch Remark By Coupon Code Record Id Fail With Wrong Params
    ...              请求方式:Patch${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  coupon_code_remark=${coupon_code_remark}  
+   ${essential_params}  create list  coupon_code_remark=${coupon_code_remark_422}  
    ${unessential_params}  create list  
    run every case by params  Patch Remark By Coupon Code Record Id Fail 422  ${essential_params}  ${unessential_params}  coupon_code_record_id/remark=${coupon_code_record_id/remark}
 

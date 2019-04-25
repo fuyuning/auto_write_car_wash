@@ -13,8 +13,8 @@ Post Admin Wash Groups Fail With Wrong Params
    ...              请求方式:Post${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  name=${name}  valid_start_time=${Please_input}  valid_end_time=${Please_input}  is_diff_car_type=False  service_groups=${Please_input}  people_num=${people_num}  wash_area_id=${wash_area_id}  expect_time=${Please_input}  car_washer_ids=${car_washer_ids}  
-   ${unessential_params}  create list  auto_group=False  
+   ${essential_params}  create list  name=${name_422}  valid_start_time=${Please_input}  valid_end_time=${Please_input}  is_diff_car_type=ThisIsRobot!  service_groups=${Please_input}  people_num=${people_num_422}  wash_area_id=${wash_area_id_422}  expect_time=${Please_input}  car_washer_ids=${car_washer_ids_422}  
+   ${unessential_params}  create list  auto_group=ThisIsRobot!  
    run every case by params  Post Admin Wash Groups Fail 422  ${essential_params}  ${unessential_params}
 
 Post Admin Wash Groups Success 
@@ -40,7 +40,7 @@ Post Join By Wash Group Id Fail With Wrong Params
    ...              请求方式:Post${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  robot_num=${robot_num}  
+   ${essential_params}  create list  robot_num=${robot_num_422}  
    ${unessential_params}  create list  
    run every case by params  Post Join By Wash Group Id Fail 422  ${essential_params}  ${unessential_params}  wash_group_id/join=${wash_group_id/join}
 
@@ -82,7 +82,7 @@ Get Admin Wash Groups Fail With Wrong Params
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  
-   ${unessential_params}  create list  wash_group_no=${wash_group_no}  status=${status}  wash_area_id=${wash_area_id}  valid_start_section=${valid_start_section}  page_num=${page_num}  page_size=${page_size}  
+   ${unessential_params}  create list  wash_group_no=${wash_group_no_422}  status=${status_422}  wash_area_id=${wash_area_id_422}  valid_start_section=${valid_start_section_422}  page_num=${page_num_422}  page_size=${page_size_422}  
    run every case by params  Get Admin Wash Groups Fail 422  ${essential_params}  ${unessential_params}
 
 Put Admin Wash Groups By Wash Group Id Fail With Wrong Url
@@ -99,8 +99,8 @@ Put Admin Wash Groups By Wash Group Id Fail With Wrong Params
    ...              请求方式:Put${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  valid_start_time=${Please_input}  valid_end_time=${Please_input}  is_diff_car_type=False  service_groups=${Please_input}  wash_area_id=${wash_area_id}  expect_time=${Please_input}  car_washer_ids=${car_washer_ids}  
-   ${unessential_params}  create list  name=${name}  people_num=${people_num}  auto_group=False  
+   ${essential_params}  create list  valid_start_time=${Please_input}  valid_end_time=${Please_input}  is_diff_car_type=ThisIsRobot!  service_groups=${Please_input}  wash_area_id=${wash_area_id_422}  expect_time=${Please_input}  car_washer_ids=${car_washer_ids_422}  
+   ${unessential_params}  create list  name=${name_422}  people_num=${people_num_422}  auto_group=ThisIsRobot!  
    run every case by params  Put Admin Wash Groups By Wash Group Id Fail 422  ${essential_params}  ${unessential_params}  wash_group_id=${wash_group_id}
 
 Put Admin Wash Groups By Wash Group Id Success 

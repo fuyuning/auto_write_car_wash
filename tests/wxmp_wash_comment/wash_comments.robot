@@ -21,8 +21,8 @@ Post User Wash Comments Fail With Wrong Params
    ...              请求方式:Post${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  wash_record_id=${wash_record_id}  level=${level}  
-   ${unessential_params}  create list  car_images=${car_images}  comment_remark=${comment_remark}  
+   ${essential_params}  create list  wash_record_id=${wash_record_id_422}  level=${level_422}  
+   ${unessential_params}  create list  car_images=${car_images_422}  comment_remark=${comment_remark_422}  
    run every case by params  Post User Wash Comments Fail 422  ${essential_params}  ${unessential_params}
 
 Get User Wash Comments By Wash Record Id Fail With Wrong Url
@@ -53,7 +53,7 @@ Get Image Upload Fail With Wrong Params
    ...              请求方式:Get${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  media_id=${media_id}  
+   ${essential_params}  create list  media_id=${media_id_422}  
    ${unessential_params}  create list  
    run every case by params  Get Image Upload Fail 422  ${essential_params}  ${unessential_params}
 

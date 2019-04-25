@@ -23,7 +23,7 @@ Get Admin Wash Comments Fail With Wrong Params
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  
-   ${unessential_params}  create list  order_no=${order_no}  user_id=${user_id}  car_id=${car_id}  mobile=${mobile}  level=${level}  created_section=${created_section}  page_num=${page_num}  page_size=${page_size}  
+   ${unessential_params}  create list  order_no=${order_no_422}  user_id=${user_id_422}  car_id=${car_id_422}  mobile=${mobile_422}  level=${level_422}  created_section=${created_section_422}  page_num=${page_num_422}  page_size=${page_size_422}  
    run every case by params  Get Admin Wash Comments Fail 422  ${essential_params}  ${unessential_params}
 
 Delete Admin Wash Comments By Comment Id Fail With Wrong Url

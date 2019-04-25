@@ -12,8 +12,8 @@ Post car Wash car positions Fail With Wrong Params
    ...              请求方式:Post${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  car_id=${car_id}  parking_id=${parking_id}  
-   ${unessential_params}  create list  wash_area_id=${wash_area_id}  entry_time=${entry_time}  lon=${lon}  lat=${lat}  phase=${phase}  floor=${floor}  zone=${zone}  space_no=${space_no}  
+   ${essential_params}  create list  car_id=${car_id_422}  parking_id=${parking_id_422}  
+   ${unessential_params}  create list  wash_area_id=${wash_area_id_422}  entry_time=${entry_time_422}  lon=${lon_422}  lat=${lat_422}  phase=${phase_422}  floor=${floor_422}  zone=${zone_422}  space_no=${space_no_422}  
    run every case by params  Post car Wash car positions Fail 422  ${essential_params}  ${unessential_params}
 
 Post car Wash car positions Success 
@@ -39,8 +39,8 @@ Get car Wash car positions Fail With Wrong Params
    ...              请求方式:Get${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  car_ids=${car_ids}  
-   ${unessential_params}  create list  parking_id=${parking_id}  wash_area_id=${wash_area_id}  
+   ${essential_params}  create list  car_ids=${car_ids_422}  
+   ${unessential_params}  create list  parking_id=${parking_id_422}  wash_area_id=${wash_area_id_422}  
    run every case by params  Get car Wash car positions Fail 422  ${essential_params}  ${unessential_params}
 
 Get car Wash new car positions Fail With Wrong Params
@@ -48,8 +48,8 @@ Get car Wash new car positions Fail With Wrong Params
    ...              请求方式:Get${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  parking_id=${parking_id}  
-   ${unessential_params}  create list  wash_area_id=${wash_area_id}  section=${section}  
+   ${essential_params}  create list  parking_id=${parking_id_422}  
+   ${unessential_params}  create list  wash_area_id=${wash_area_id_422}  section=${section_422}  
    run every case by params  Get car Wash new car positions Fail 422  ${essential_params}  ${unessential_params}
 
 

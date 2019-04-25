@@ -21,8 +21,8 @@ Get User Wash Record By Order Fail With Wrong Params
    ...              请求方式:Get${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  order_id=${order_id}  
-   ${unessential_params}  create list  refresh=False  
+   ${essential_params}  create list  order_id=${order_id_422}  
+   ${unessential_params}  create list  refresh=ThisIsRobot!  
    run every case by params  Get User Wash Record By Order Fail 422  ${essential_params}  ${unessential_params}
 
 Get User Wash Records Success 
@@ -40,7 +40,7 @@ Get User Wash Records Fail With Wrong Params
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  
-   ${unessential_params}  create list  status=${status}  order_status=${order_status}  section=${section}  page_limit=${page_limit}  comment_status=${comment_status}  
+   ${unessential_params}  create list  status=${status_422}  order_status=${order_status_422}  section=${section_422}  page_limit=${page_limit_422}  comment_status=${comment_status_422}  
    run every case by params  Get User Wash Records Fail 422  ${essential_params}  ${unessential_params}
 
 Get Wash Records Success 
@@ -57,8 +57,8 @@ Get Wash Records Fail With Wrong Params
    ...              请求方式:Get${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  wash_group_id=${wash_group_id}  
-   ${unessential_params}  create list  section=${section}  page_limit=${page_limit}  
+   ${essential_params}  create list  wash_group_id=${wash_group_id_422}  
+   ${unessential_params}  create list  section=${section_422}  page_limit=${page_limit_422}  
    run every case by params  Get Wash Records Fail 422  ${essential_params}  ${unessential_params}
 
 Get User Wash Records By Wash Record Id Fail With Wrong Url
@@ -84,7 +84,7 @@ Get User Wash Records By Wash Record Id Fail With Wrong Params
    ...              请求方式:Get${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  status=${status}  
+   ${essential_params}  create list  status=${status_422}  
    ${unessential_params}  create list  
    run every case by params  Get User Wash Records By Wash Record Id Fail 422  ${essential_params}  ${unessential_params}  wash_record_id=${wash_record_id}
 

@@ -22,7 +22,7 @@ Post Practice Orders Fail With Wrong Params
    ...              请求方式:Post${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  wash_area_id=${wash_area_id}  car_id=${car_id}  mobile=${mobile}  name=${name}  
+   ${essential_params}  create list  wash_area_id=${wash_area_id_422}  car_id=${car_id_422}  mobile=${mobile_422}  name=${name_422}  
    ${unessential_params}  create list  
    run every case by params  Post Practice Orders Fail 422  ${essential_params}  ${unessential_params}
 

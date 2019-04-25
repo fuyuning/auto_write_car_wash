@@ -23,7 +23,7 @@ Get Admin User Contacts Fail With Wrong Params
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  
-   ${unessential_params}  create list  user_id=${user_id}  
+   ${unessential_params}  create list  user_id=${user_id_422}  
    run every case by params  Get Admin User Contacts Fail 422  ${essential_params}  ${unessential_params}
 
 

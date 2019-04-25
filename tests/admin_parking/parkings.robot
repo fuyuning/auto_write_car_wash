@@ -22,8 +22,8 @@ Post Admin Parkings Fail With Wrong Params
    ...              请求方式:Post${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  parking_name=${parking_name}  position=${position}  
-   ${unessential_params}  create list  alias_name=${alias_name}  wash_area_id=${wash_area_id}  out_parking_id=${out_parking_id}  enabled=False  lon=${lon}  lat=${lat}  parking_banners=${parking_banners}  use_home_banner=False  service_introduce=${service_introduce}  address=${address}  use_home_illustrate=False  province=${province}  city=${city}  district=${district}  
+   ${essential_params}  create list  parking_name=${parking_name_422}  position=${position_422}  
+   ${unessential_params}  create list  alias_name=${alias_name_422}  wash_area_id=${wash_area_id_422}  out_parking_id=${out_parking_id_422}  enabled=ThisIsRobot!  lon=${lon_422}  lat=${lat_422}  parking_banners=${parking_banners_422}  use_home_banner=ThisIsRobot!  service_introduce=${service_introduce_422}  address=${address_422}  use_home_illustrate=ThisIsRobot!  province=${province_422}  city=${city_422}  district=${district_422}  
    run every case by params  Post Admin Parkings Fail 422  ${essential_params}  ${unessential_params}
 
 Get Admin Parkings Success 
@@ -41,7 +41,7 @@ Get Admin Parkings Fail With Wrong Params
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  
-   ${unessential_params}  create list  parking_name=${parking_name}  wash_area_id=${wash_area_id}  enabled=False  page_num=${page_num}  page_size=${page_size}  
+   ${unessential_params}  create list  parking_name=${parking_name_422}  wash_area_id=${wash_area_id_422}  enabled=ThisIsRobot!  page_num=${page_num_422}  page_size=${page_size_422}  
    run every case by params  Get Admin Parkings Fail 422  ${essential_params}  ${unessential_params}
 
 Get Admin Parkings By Parking Id Fail With Wrong Url
@@ -81,8 +81,8 @@ Put Admin Parkings By Parking Id Fail With Wrong Params
    ...              请求方式:Put${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  parking_name=${parking_name}  position=${position}  
-   ${unessential_params}  create list  alias_name=${alias_name}  wash_area_id=${wash_area_id}  out_parking_id=${out_parking_id}  enabled=False  lon=${lon}  lat=${lat}  parking_banners=${parking_banners}  use_home_banner=False  service_introduce=${service_introduce}  address=${address}  use_home_illustrate=False  province=${province}  city=${city}  district=${district}  
+   ${essential_params}  create list  parking_name=${parking_name_422}  position=${position_422}  
+   ${unessential_params}  create list  alias_name=${alias_name_422}  wash_area_id=${wash_area_id_422}  out_parking_id=${out_parking_id_422}  enabled=ThisIsRobot!  lon=${lon_422}  lat=${lat_422}  parking_banners=${parking_banners_422}  use_home_banner=ThisIsRobot!  service_introduce=${service_introduce_422}  address=${address_422}  use_home_illustrate=ThisIsRobot!  province=${province_422}  city=${city_422}  district=${district_422}  
    run every case by params  Put Admin Parkings By Parking Id Fail 422  ${essential_params}  ${unessential_params}  parking_id=${parking_id}
 
 Patch Enabled By Parking Id Fail With Wrong Url
@@ -108,7 +108,7 @@ Patch Enabled By Parking Id Fail With Wrong Params
    ...              请求方式:Patch${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  enabled=False  
+   ${essential_params}  create list  enabled=ThisIsRobot!  
    ${unessential_params}  create list  
    run every case by params  Patch Enabled By Parking Id Fail 422  ${essential_params}  ${unessential_params}  parking_id/enabled=${parking_id/enabled}
 

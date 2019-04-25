@@ -13,7 +13,7 @@ Post Admin Wash User Groups Fail With Wrong Params
    ...              请求方式:Post${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  name=${name}  order_by=${order_by}  
+   ${essential_params}  create list  name=${name_422}  order_by=${order_by_422}  
    ${unessential_params}  create list  
    run every case by params  Post Admin Wash User Groups Fail 422  ${essential_params}  ${unessential_params}
 
@@ -45,7 +45,7 @@ Put Admin Wash User Groups By Wash User Group Id Fail With Wrong Params
    ...              请求方式:Put${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  name=${name}  order_by=${order_by}  
+   ${essential_params}  create list  name=${name_422}  order_by=${order_by_422}  
    ${unessential_params}  create list  
    run every case by params  Put Admin Wash User Groups By Wash User Group Id Fail 422  ${essential_params}  ${unessential_params}  wash_user_group_id=${wash_user_group_id}
 

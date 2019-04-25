@@ -21,7 +21,7 @@ Post car Wash parking coupons Fail With Wrong Params
    ...              请求方式:Post${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  parking_id=${parking_id}  car_id=${car_id}  parking_coupon_no=${parking_coupon_no}  
+   ${essential_params}  create list  parking_id=${parking_id_422}  car_id=${car_id_422}  parking_coupon_no=${parking_coupon_no_422}  
    ${unessential_params}  create list  
    run every case by params  Post car Wash parking coupons Fail 422  ${essential_params}  ${unessential_params}
 

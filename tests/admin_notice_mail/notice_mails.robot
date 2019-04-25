@@ -13,8 +13,8 @@ Post Admin Notice Mails Fail With Wrong Params
    ...              请求方式:Post${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  notice_mail=${notice_mail}  
-   ${unessential_params}  create list  comment_status=False  money_status=False  car_move_qrcode_status=False  wxmp_remark_status=False  washer_remark_status=False  
+   ${essential_params}  create list  notice_mail=${notice_mail_422}  
+   ${unessential_params}  create list  comment_status=ThisIsRobot!  money_status=ThisIsRobot!  car_move_qrcode_status=ThisIsRobot!  wxmp_remark_status=ThisIsRobot!  washer_remark_status=ThisIsRobot!  
    run every case by params  Post Admin Notice Mails Fail 422  ${essential_params}  ${unessential_params}
 
 Post Admin Notice Mails Success 
@@ -41,7 +41,7 @@ Get Admin Notice Mails Fail With Wrong Params
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  
-   ${unessential_params}  create list  page_num=${page_num}  page_size=${page_size}  
+   ${unessential_params}  create list  page_num=${page_num_422}  page_size=${page_size_422}  
    run every case by params  Get Admin Notice Mails Fail 422  ${essential_params}  ${unessential_params}
 
 Patch (comment Status|money Status|car Move Qrcode Status|wxmp Remark Status|washer Remark Status) by notice mail id Success 
@@ -68,7 +68,7 @@ Patch (comment Status|money Status|car Move Qrcode Status|wxmp Remark Status|was
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  
-   ${unessential_params}  create list  comment_status=False  money_status=False  car_move_qrcode_status=False  wxmp_remark_status=False  washer_remark_status=False  
+   ${unessential_params}  create list  comment_status=ThisIsRobot!  money_status=ThisIsRobot!  car_move_qrcode_status=ThisIsRobot!  wxmp_remark_status=ThisIsRobot!  washer_remark_status=ThisIsRobot!  
    run every case by params  Patch (comment Status|money Status|car Move Qrcode Status|wxmp Remark Status|washer Remark Status) by notice mail id Fail 422  ${essential_params}  ${unessential_params}  notice_mail_id/(comment_status|money_status|car_move_qrcode_status|wxmp_remark_status|washer_remark_status)=${notice_mail_id/(comment_status|money_status|car_move_qrcode_status|wxmp_remark_status|washer_remark_status)}
 
 Delete Admin Notice Mails By Notice Mail Id Success 

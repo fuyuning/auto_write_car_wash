@@ -22,7 +22,7 @@ Post Clear By Userid Fail With Wrong Params
    ...              请求方式:Post${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  mobile=${mobile}  
+   ${essential_params}  create list  mobile=${mobile_422}  
    ${unessential_params}  create list  
    run every case by params  Post Clear By Userid Fail 422  ${essential_params}  ${unessential_params}  userid/clear=${userid/clear}
 
@@ -49,8 +49,8 @@ Get Admin Wash Users Fail With Wrong Params
    ...              请求方式:Get${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  page_num=${page_num}  page_size=${page_size}  
-   ${unessential_params}  create list  userid=${userid}  wash_user_group_id=${wash_user_group_id}  created_section=${created_section}  
+   ${essential_params}  create list  page_num=${page_num_422}  page_size=${page_size_422}  
+   ${unessential_params}  create list  userid=${userid_422}  wash_user_group_id=${wash_user_group_id_422}  created_section=${created_section_422}  
    run every case by params  Get Admin Wash Users Fail 422  ${essential_params}  ${unessential_params}
 
 Get wash Users userid Success 
@@ -75,7 +75,7 @@ Get Admin Wechat Info Fail With Wrong Params
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  
-   ${unessential_params}  create list  userid=${userid}  
+   ${unessential_params}  create list  userid=${userid_422}  
    run every case by params  Get Admin Wechat Info Fail 422  ${essential_params}  ${unessential_params}
 
 Patch wash User Group by userid Fail With Wrong Url
@@ -92,7 +92,7 @@ Patch wash User Group by userid Fail With Wrong Params
    ...              请求方式:Patch${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  wash_user_group_id=${wash_user_group_id}  
+   ${essential_params}  create list  wash_user_group_id=${wash_user_group_id_422}  
    ${unessential_params}  create list  
    run every case by params  Patch wash User Group by userid Fail 422  ${essential_params}  ${unessential_params}  userid/wash_user_group=${userid/wash_user_group}
 

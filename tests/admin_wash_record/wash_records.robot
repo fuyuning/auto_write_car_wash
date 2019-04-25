@@ -31,8 +31,8 @@ Post Refund By Wash Record Id Fail With Wrong Params
    ...              请求方式:Post${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  refunds=${refunds}  
-   ${unessential_params}  create list  refund_description=${refund_description}  
+   ${essential_params}  create list  refunds=${refunds_422}  
+   ${unessential_params}  create list  refund_description=${refund_description_422}  
    run every case by params  Post Refund By Wash Record Id Fail 422  ${essential_params}  ${unessential_params}  wash_record_id/refund=${wash_record_id/refund}
 
 Post Close By Wash Record Id Success 
@@ -59,7 +59,7 @@ Post Close By Wash Record Id Fail With Wrong Params
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  
-   ${unessential_params}  create list  close_description=${close_description}  
+   ${unessential_params}  create list  close_description=${close_description_422}  
    run every case by params  Post Close By Wash Record Id Fail 422  ${essential_params}  ${unessential_params}  wash_record_id/close=${wash_record_id/close}
 
 Get Admin Wash Records Success 
@@ -76,8 +76,8 @@ Get Admin Wash Records Fail With Wrong Params
    ...              请求方式:Get${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  page_num=${page_num}  page_size=${page_size}  
-   ${unessential_params}  create list  order_no=${order_no}  status=${status}  car_id=${car_id}  mobile=${mobile}  wash_area_id=${wash_area_id}  submit_section=${submit_section}  user_id=${user_id}  wash_seconds=${wash_seconds}  order_type=${order_type}  is_deleted=False  
+   ${essential_params}  create list  page_num=${page_num_422}  page_size=${page_size_422}  
+   ${unessential_params}  create list  order_no=${order_no_422}  status=${status_422}  car_id=${car_id_422}  mobile=${mobile_422}  wash_area_id=${wash_area_id_422}  submit_section=${submit_section_422}  user_id=${user_id_422}  wash_seconds=${wash_seconds_422}  order_type=${order_type_422}  is_deleted=ThisIsRobot!  
    run every case by params  Get Admin Wash Records Fail 422  ${essential_params}  ${unessential_params}
 
 Get Admin Wash Records By Wash Record Id Success 
@@ -117,7 +117,7 @@ Patch is Deleted by wash record id Fail With Wrong Params
    ...              请求方式:Patch${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  is_deleted=False  
+   ${essential_params}  create list  is_deleted=ThisIsRobot!  
    ${unessential_params}  create list  
    run every case by params  Patch is Deleted by wash record id Fail 422  ${essential_params}  ${unessential_params}  wash_record_id/is_deleted=${wash_record_id/is_deleted}
 
@@ -144,7 +144,7 @@ Patch Admin Wash Record By Wash Record Id Fail With Wrong Params
    ...              请求方式:Patch${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  admin_remark=${admin_remark}  
+   ${essential_params}  create list  admin_remark=${admin_remark_422}  
    ${unessential_params}  create list  
    run every case by params  Patch Admin Wash Record By Wash Record Id Fail 422  ${essential_params}  ${unessential_params}  wash_record_id=${wash_record_id}
 
@@ -154,7 +154,7 @@ Patch (car Id|mobile|name) by wash record id Fail With Wrong Params
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  
-   ${unessential_params}  create list  car_id=${car_id}  mobile=${mobile}  name=${name}  
+   ${unessential_params}  create list  car_id=${car_id_422}  mobile=${mobile_422}  name=${name_422}  
    run every case by params  Patch (car Id|mobile|name) by wash record id Fail 422  ${essential_params}  ${unessential_params}  wash_record_id/(car_id|mobile|name)=${wash_record_id/(car_id|mobile|name)}
 
 Patch (car Id|mobile|name) by wash record id Success 

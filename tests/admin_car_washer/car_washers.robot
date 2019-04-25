@@ -13,8 +13,8 @@ Post Admin Car Washers Fail With Wrong Params
    ...              请求方式:Post${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  username=${username}  name=${name}  mobile=${mobile}  password=${password}  
-   ${unessential_params}  create list  birthday=${birthday}  ID_card=${ID_card}  address=${address}  sex=${sex}  promoter_no=${promoter_no}  is_active=False  
+   ${essential_params}  create list  username=${username_422}  name=${name_422}  mobile=${mobile_422}  password=${password_422}  
+   ${unessential_params}  create list  birthday=${birthday_422}  ID_card=${ID_card_422}  address=${address_422}  sex=${sex_422}  promoter_no=${promoter_no_422}  is_active=ThisIsRobot!  
    run every case by params  Post Admin Car Washers Fail 422  ${essential_params}  ${unessential_params}
 
 Post Admin Car Washers Success 
@@ -40,8 +40,8 @@ Get Admin Car Washers Fail With Wrong Params
    ...              请求方式:Get${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create list  page_num=${page_num}  page_size=${page_size}  
-   ${unessential_params}  create list  username=${username}  mobile=${mobile}  name=${name}  
+   ${essential_params}  create list  page_num=${page_num_422}  page_size=${page_size_422}  
+   ${unessential_params}  create list  username=${username_422}  mobile=${mobile_422}  name=${name_422}  
    run every case by params  Get Admin Car Washers Fail 422  ${essential_params}  ${unessential_params}
 
 Get Admin Car Washers By Username Fail With Wrong Url
@@ -82,7 +82,7 @@ Get wash Records by username Fail With Wrong Params
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  
-   ${unessential_params}  create list  page_num=${page_num}  page_size=${page_size}  
+   ${unessential_params}  create list  page_num=${page_num_422}  page_size=${page_size_422}  
    run every case by params  Get wash Records by username Fail 422  ${essential_params}  ${unessential_params}  username/wash_records=${username/wash_records}
 
 Put Admin Car Washers By Username Success 
@@ -109,7 +109,7 @@ Put Admin Car Washers By Username Fail With Wrong Params
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  
-   ${unessential_params}  create list  name=${name}  mobile=${mobile}  sex=${sex}  birthday=${birthday}  ID_card=${ID_card}  address=${address}  promoter_no=${promoter_no}  password=${password}  is_active=False  
+   ${unessential_params}  create list  name=${name_422}  mobile=${mobile_422}  sex=${sex_422}  birthday=${birthday_422}  ID_card=${ID_card_422}  address=${address_422}  promoter_no=${promoter_no_422}  password=${password_422}  is_active=ThisIsRobot!  
    run every case by params  Put Admin Car Washers By Username Fail 422  ${essential_params}  ${unessential_params}  username=${username}
 
 Patch is Active by username Fail With Wrong Url
@@ -136,7 +136,7 @@ Patch is Active by username Fail With Wrong Params
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  
-   ${unessential_params}  create list  is_active=False  
+   ${unessential_params}  create list  is_active=ThisIsRobot!  
    run every case by params  Patch is Active by username Fail 422  ${essential_params}  ${unessential_params}  username/is_active=${username/is_active}
 
 

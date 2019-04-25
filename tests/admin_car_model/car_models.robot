@@ -23,7 +23,7 @@ Get Admin Car Models Fail With Wrong Params
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  
-   ${unessential_params}  create list  car_brand=${car_brand}  car_series=${car_series}  car_scale=${car_scale}  car_model=${car_model}  is_car_model=False  page_num=${page_num}  page_size=${page_size}  
+   ${unessential_params}  create list  car_brand=${car_brand_422}  car_series=${car_series_422}  car_scale=${car_scale_422}  car_model=${car_model_422}  is_car_model=ThisIsRobot!  page_num=${page_num_422}  page_size=${page_size_422}  
    run every case by params  Get Admin Car Models Fail 422  ${essential_params}  ${unessential_params}
 
 Get Admin Car Models By Car Model Id Fail With Wrong Url
@@ -55,7 +55,7 @@ Get Admin Car Model Count Fail With Wrong Params
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  
-   ${unessential_params}  create list  car_brand=${car_brand}  car_series=${car_series}  car_scale=${car_scale}  car_model=${car_model}  is_car_model=False  
+   ${unessential_params}  create list  car_brand=${car_brand_422}  car_series=${car_series_422}  car_scale=${car_scale_422}  car_model=${car_model_422}  is_car_model=ThisIsRobot!  
    run every case by params  Get Admin Car Model Count Fail 422  ${essential_params}  ${unessential_params}
 
 

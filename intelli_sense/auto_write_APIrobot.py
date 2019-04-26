@@ -12,15 +12,19 @@ class AutoWriteRobot(object):
         ptxt.write('')
         ptxt.close()
         file = open('../cache/document/auto_write_robot.txt', 'r')
-        old_file = open('../cache/document/old_auto_write_robot.txt', 'r')
-        old_file_line = []
-        for line in old_file:
-            old_file_line.append(line)
-        new_line = []
-        for line in file:
-            if line not in old_file_line:
-                new_line.append(line)
-                print(line)
+        folder = os.path.exists('../cache/document/old_auto_write_robot.txt')
+        if folder:
+            old_file = open('../cache/document/old_auto_write_robot.txt', 'r')
+            old_file_line = []
+            for line in old_file:
+                old_file_line.append(line)
+            new_line = []
+            for line in file:
+                if line not in old_file_line:
+                    new_line.append(line)
+                    print(line)
+        else:
+            new_line = file
         index2 = 0
         flag = ''
         lib_name = ''

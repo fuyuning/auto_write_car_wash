@@ -11,3 +11,8 @@ class WechatMenuLibrary(CommonLibrary):
                 data[k] = v
         return self.client.post(url)
 
+    def get_admin_wechat_menus(self):
+        url = "{SERVER_DOMAIN}/admin/wechat_menus".format(
+            SERVER_DOMAIN=self.SERVER_DOMAIN)
+        return self.client.get(url)
+

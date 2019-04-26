@@ -11,7 +11,7 @@ Post car Wash send mobile short message Fail Without Login
    ...              请求方式:Post${\n}
    ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
    [Tags]           Respcode:403
-   ${essential_params}  create list  type=${type}  
+   ${essential_params}  create list  type=${type}  wash_record_id=${wash_record_id}  
    ${unessential_params}  create list  
    run every case by params  Post car Wash send mobile short message Fail 403  ${essential_params}  ${unessential_params}
 
@@ -20,7 +20,9 @@ Get car Wash get virtual mobile Fail Without Login
    ...              请求方式:Get${\n}
    ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
    [Tags]           Respcode:403
-    Get car Wash get virtual mobile Fail 403
+   ${essential_params}  create list  wash_record_id=${wash_record_id}  
+   ${unessential_params}  create list  
+   run every case by params  Get car Wash get virtual mobile Fail 403  ${essential_params}  ${unessential_params}
 
 
 *** Keywords ***

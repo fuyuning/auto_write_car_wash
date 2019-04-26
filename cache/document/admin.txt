@@ -16,7 +16,7 @@ http://10.1.50.100/car-wash/admin/car_model/car_model.html
 http://10.1.50.100/car-wash/admin/coupon_code/coupon_code.html
 http://10.1.50.100/car-wash/admin/promoter/promoter.html
 http://10.1.50.100/car-wash/admin/parking_coupon/parking_coupon.html
-http://10.1.50.100/car-wash/admin/admin_user/admin_user.html
+http://10.1.50.100/car-wash/admin/admin_user/user.html
 http://10.1.50.100/car-wash/admin/car_washer/car_washer.html
 http://10.1.50.100/car-wash/admin/robot/robot.html
 http://10.1.50.100/car-wash/admin/wash_group/wash_group.html

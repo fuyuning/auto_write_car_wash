@@ -7,12 +7,16 @@ class CallUserLibrary(CommonLibrary):
             SERVER_DOMAIN=self.SERVER_DOMAIN)
         data = {}
         for k, v in kwargs.items():
-            if k in ("type", ):
+            if k in ("type", "wash_record_id"):
                 data[k] = v
-        return self.client.post(url)
+        return self.client.post(url, json=data)
 
-    def get_car_wash_get_virtual_mobile(self):
+    def get_car_wash_get_virtual_mobile(self, **kwargs):
         url = "{SERVER_DOMAIN}car_wash/get_virtual_mobile".format(
             SERVER_DOMAIN=self.SERVER_DOMAIN)
+        data = {}
+        for k, v in kwargs.items():
+            if k in ("wash_record_id", ):
+                data[k] = v
         return self.client.get(url)
 

@@ -7,11 +7,20 @@ import os
 # 自动生成robot文件类
 class AutoWriteRobot(object):
     # 解析爬取的数据
-    def _parse_file(self, file_name):
+    def _parse_file(self):
         ptxt = open('../cache/params/params_list.txt', "w+")
         ptxt.write('')
         ptxt.close()
-        file = open(file_name, 'r')
+        file = open('../cache/document/auto_write_robot.txt', 'r')
+        old_file = open('../cache/document/old_auto_write_robot.txt', 'r')
+        old_file_line = []
+        for line in old_file:
+            old_file_line.append(line)
+        new_line = []
+        for line in file:
+            if line not in old_file_line:
+                new_line.append(line)
+        print(new_line)
         index2 = 0
         flag = ''
         lib_name = ''
@@ -25,7 +34,7 @@ class AutoWriteRobot(object):
             fieldnames = ['问题类型', '服务端', '模块名', '接口名', '请求方式', '问题', '预期']
             writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
             writer.writeheader()
-            for line in file:
+            for line in new_line:
                 line = line.replace(' ', '')
                 data = line.split('||')
                 data[5] = data[5][1:-1].replace('\'', '').split(',')
@@ -527,7 +536,7 @@ class AutoWriteRobot(object):
 
     # run方法
     def run(self):
-        self._parse_file('../cache/document/auto_write_robot.txt')
+        self._parse_file()
 
 
 if __name__ == '__main__':

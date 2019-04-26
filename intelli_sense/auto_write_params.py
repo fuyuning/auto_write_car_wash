@@ -12,6 +12,9 @@ class AutoWriteParams(object):
         for line in file:
             if line not in params_list:
                 params_list.append(line)
+        folder = os.path.exists('../tests/resources/params.robot')
+        if folder:
+            os.rename('../tests/resources/params.robot', '../tests/resources/old_params.robot')
         params_robot = open('../tests/resources/params.robot', "w+")
         params_robot.write('*** Variables ***\n')
         for i in params_list:

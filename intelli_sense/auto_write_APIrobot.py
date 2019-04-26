@@ -20,7 +20,7 @@ class AutoWriteRobot(object):
         for line in file:
             if line not in old_file_line:
                 new_line.append(line)
-        print(new_line)
+                print(line)
         index2 = 0
         flag = ''
         lib_name = ''
@@ -29,6 +29,9 @@ class AutoWriteRobot(object):
         folder = os.path.exists('../cache/log')
         if not folder:
             os.makedirs('../cache/log')
+        folder = os.path.exists('../cache/log/文档状态码问题.csv')
+        if folder:
+            os.rename('../cache/log/文档状态码问题.csv', '../cache/log/old_文档状态码问题.csv')
         with open('../cache/log/文档状态码问题.csv', 'w+', newline='') as csv_file:
             # 表头
             fieldnames = ['问题类型', '服务端', '模块名', '接口名', '请求方式', '问题', '预期']
@@ -182,6 +185,9 @@ class AutoWriteRobot(object):
         class_name = self._upper_name(model_name)
         lib_import = lib_name.split('/')[1]
         open(lib_name + '/' + '__init__.py', 'w+')
+        folder = os.path.exists(lib_name + '/' + class_name + 'Library.py')
+        if folder:
+            os.rename(lib_name + '/' + class_name + 'Library.py', lib_name+'/'+'old_'+class_name+'Library.py')
         lib_file = open(lib_name + '/' + class_name + 'Library.py', 'w+')
         lib_file.write('from '+lib_import+'.common import CommonLibrary\n\n\n')
         lib_file.write('class ' + class_name + 'Library(CommonLibrary):\n')
@@ -284,6 +290,13 @@ class AutoWriteRobot(object):
             name_tag = '车主微信端'
         lib_name = lib_name[:-1]+'.'+model_name
         class_name = self._upper_name(model_name)
+        folder = os.path.exists('../tests/'+full_name+'/'+model_name+'s.robot')
+        if folder:
+            os.rename('../tests/'+full_name+'/'+model_name+'s.robot', '../tests/'+full_name+'/old_'+model_name+'s.robot')
+        folder = os.path.exists('../tests/' + full_name + '/' + model_name + 's.unauthorized.robot')
+        if folder:
+            os.rename('../tests/' + full_name + '/' + model_name + 's.unauthorized.robot',
+                      '../tests/' + full_name + '/old_' + model_name + 's.unauthorized.robot')
         robot = open('../tests/'+full_name+'/'+model_name+'s.robot', 'w+')
         robot.write('*** Settings ***\n')
         robot.write('Documentation  '+full_name+'\n')

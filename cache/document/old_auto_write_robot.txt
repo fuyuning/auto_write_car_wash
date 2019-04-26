@@ -1,13 +1,15 @@
 admin  ||  wechat_menu  ||  获取自定义菜单  ||  GET  ||    /admin/wechat_menus  ||    ||    ||    ||  ['200', '403', '404']  ||    ||  
-admin  ||  wechat_menu  ||  编辑自定义菜单  ||  POST  ||    /admin/wechat_menus  ||  ['menu']  ||  ['json']  ||  ['T']  ||  ['201', '403', '422']  ||    ||  
+admin  ||  wechat_menu  ||  编辑自定义菜单  ||  POST  ||    /admin/wechat_menus  ||  ['button']  ||  ['json']  ||  ['T']  ||  ['201', '403', '422']  ||    ||  
+admin  ||  wechat_keyword  ||  微信图片上传  ||  POST  ||   admin/wechat_keyword/import  ||    ||    ||    ||  ['403', '200']  ||    ||  
 admin  ||  wechat_keyword  ||  添加--公众号关键字回复  ||  POST  ||   /admin/wechat_keywords  ||  ['name', 'keyword', 'reply_type', 'content']  ||  ['string', 'array', 'string', 'json']  ||  ['T', 'T', 'T', 'T']  ||  ['201', '403', '422']  ||    ||  
 admin  ||  wechat_keyword  ||  修改--公众号关键字回复  ||  PUT  ||   /admin/wechat_keywords/:wechat_keyword_id  ||  ['name', 'keyword', 'reply_type', 'content']  ||  ['string', 'array', 'string', 'json']  ||  ['T', 'T', 'T', 'T']  ||  ['204', '403', '422']  ||    ||  
 admin  ||  wechat_keyword  ||  查询--公众号关键字回复  ||  GET  ||   /admin/wechat_keywords  ||    ||    ||    ||  ['200', '403', '404']  ||  WechatKeyword  ||  
 admin  ||  wechat_keyword  ||  添删除--公众号关键字回复  ||  DELETE  ||   /admin/wechat_keywords/:wechat_keyword_id  ||    ||    ||    ||  ['204', '404', '403']  ||    ||  
-admin  ||  wechat_reply  ||  添加--公众号关注/自定义回复  ||  POST  ||   /admin/wachat_replys  ||  ['category', 'reply_type', 'content']  ||  ['int', 'string', 'json']  ||  ['T', 'T', 'T']  ||  ['201', '403', '422']  ||    ||  
-admin  ||  wechat_reply  ||  修改--公众号关注/自定义回复  ||  PUT  ||   /admin/wachat_replys/:wechat_reply_id  ||  ['category', 'reply_type', 'content']  ||  ['int', 'string', 'json']  ||  ['T', 'T', 'T']  ||  ['204', '403', '422']  ||    ||  
-admin  ||  wechat_reply  ||  查询--公众号关注/自定义回复  ||  GET  ||   /admin/wachat_replys  ||    ||    ||    ||  ['200', '403', '404']  ||  WechatReply  ||  
-admin  ||  wechat_reply  ||  添删除--公众号关注/自定义回复  ||  DELETE  ||   /admin/wachat_replys/:wechat_reply_id  ||    ||    ||    ||  ['204', '404', '403']  ||    ||  
+admin  ||  wechat_keyword  ||  修改查询[1条]--公众号关键字回复  ||  GET  ||   /admin/wechat_keywords/:wechat_keyword_id  ||    ||    ||    ||  ['200', '403', '404']  ||  WechatKeyword  ||  
+admin  ||  wechat_reply  ||  添加--公众号关注/自定义回复  ||  POST  ||   /admin/wechat_replys  ||  ['category', 'reply_type', 'content']  ||  ['int', 'string', 'json']  ||  ['T', 'T', 'T']  ||  ['201', '403', '422']  ||    ||  
+admin  ||  wechat_reply  ||  修改--公众号关注/自定义回复  ||  PUT  ||   /admin/wechat_replys/:wechat_reply_id  ||  ['category', 'reply_type', 'content']  ||  ['int', 'string', 'json']  ||  ['T', 'T', 'T']  ||  ['204', '403', '422']  ||    ||  
+admin  ||  wechat_reply  ||  查询--公众号关注/自定义回复  ||  GET  ||   /admin/wechat_replys  ||    ||    ||    ||  ['200', '403', '404']  ||  WechatReply  ||  
+admin  ||  wechat_reply  ||  添删除--公众号关注/自定义回复  ||  DELETE  ||   /admin/wechat_replys/:wechat_reply_id  ||    ||    ||    ||  ['204', '404', '403']  ||    ||  
 admin  ||  wash_normal  ||  改人数  ||  PATCH  ||   /admin/wash_normal/:wash_normal_id  ||  ['spec_people_day_num']  ||  ['int']  ||  ['T']  ||  ['204', '403', '404', '422']  ||    ||  
 admin  ||  wash_normal  ||  编辑单买  ||  PUT  ||   /admin/wash_normals/:wash_normal_id  ||  ['start_time', 'end_time', 'is_diff_car_type', 'people_day_num', 'expect_time', 'expect_day', 'expect_type', 'expect_hour', 'car_washer_ids', 'service_groups', 'day_in_week', 'spec_people_day_num', 'time_loop_set']  ||  ['int', 'int', 'boolean', 'int', 'int', 'int', 'int', 'int', '<CarWasher>', 'array', 'array', 'int', 'int']  ||  ['T', 'T', 'T', 'T', 'F', 'F', 'T', 'F', 'T', 'T', 'T', 'F', 'T']  ||  ['204', '404', '422', '403']  ||    ||  
 admin  ||  wash_normal  ||  查询单个单买  ||  GET  ||   /admin/wash_normals/:wash_normal_id  ||    ||    ||    ||  ['404', '403', '200']  ||  WashNormal  ||  
@@ -58,12 +60,22 @@ admin  ||  promoter  ||  二维码推广启用  ||  PATCH  ||   /admin/promoters
 admin  ||  promoter  ||  二维码推广统计  ||  GET  ||   /admin/promotion_count  ||  ['promoter_id', 'created_section']  ||  ['string', 'string']  ||  ['F', 'F']  ||  ['403', '200', '422']  ||    ||  
 admin  ||  parking_coupon  ||  停车场劵列表  ||  GET  ||   /admin/parking_coupons  ||  ['car_id', 'order_no', 'car_washer', 'parking_id', 'created_section', 'page_num', 'page_size']  ||  ['string', 'string', 'string', 'string', 'float', 'int', 'int']  ||  ['F', 'F', 'F', 'F', 'F', 'F', 'F']  ||  ['403', '200', '422']  ||  ParkingCoupon  ||  
 admin  ||  parking_coupon  ||  删除优惠券  ||  DELETE  ||   /admin/parking_coupons/:parking_coupon_id  ||    ||    ||    ||  ['204', '404', '403']  ||    ||  
+admin  ||  admin_user  ||  添加管理员  ||  POST  ||   /admin/admin_users  ||  ['username', 'name', 'mobile', 'email', 'password']  ||  ['string', 'string', 'String', 'String', 'String']  ||  ['T', 'T', 'T', 'F', 'T']  ||  ['201', '403', '422']  ||    ||  
+admin  ||  admin_user  ||  修改管理员信息  ||  PUT  ||   /admin/admin_users/:username  ||  ['username', 'name', 'mobile', 'email', 'password']  ||  ['string', 'string', 'String', 'String', 'String']  ||  ['T', 'T', 'T', 'F', 'T']  ||  ['204', '403', '404', '422']  ||    ||  
+admin  ||  admin_user  ||  获取管理员信息列表  ||  GET  ||   /admin/admin_users  ||  ['username', 'name', 'mobile', 'page_num', 'page_size']  ||  ['string', 'string', 'String', 'int', 'int']  ||  ['F', 'F', 'F', 'F', 'F']  ||  ['403', '200', '422']  ||  User  ||  
+admin  ||  admin_user  ||  获取管理员信息详情  ||  GET  ||   /admin/admin_users/:username  ||    ||    ||    ||  ['404', '403', '200']  ||  User  ||  
+admin  ||  admin_user  ||  管理员启用/禁用  ||  PATCH  ||   /admin/admin_users/:username/is_active  ||  ['is_active']  ||  ['boolean']  ||  ['F']  ||  ['204', '404', '403', '422']  ||    ||  
+admin  ||  admin_user  ||  帐号登录  ||  POST  ||   /admin/login  ||  ['password', 'username', 'num', 'vk']  ||  ['string', 'string', 'int', 'string']  ||  ['T', 'T', 'F', 'T']  ||  ['204', '403', '422']  ||    ||  
+admin  ||  admin_user  ||  帐号注销  ||  POST  ||   /admin/logout  ||    ||    ||    ||  ['204', '403']  ||    ||  
+admin  ||  admin_user  ||  获取信息  ||  GET  ||   /admin/user  ||    ||    ||    ||  ['404', '403', '200']  ||  User  ||  
+admin  ||  admin_user  ||  获取验证码  ||  GET  ||   /admin/get_verify_code  ||  ['num', 'vk']  ||  ['int', 'string']  ||  ['F', 'T']  ||  ['200']  ||    ||  
 admin  ||  car_washer  ||  新增虾客  ||  POST  ||   /admin/car_washers  ||  ['username', 'name', 'mobile', 'birthday', 'ID_card', 'address', 'sex', 'promoter_no', 'password', 'is_active']  ||  ['string', 'string', 'string', 'string', 'string', 'string', 'int', 'string', 'string', 'boolean']  ||  ['T', 'T', 'T', 'F', 'F', 'F', 'F', 'F', 'T', 'F']  ||  ['201', '422', '403']  ||    ||  
 admin  ||  car_washer  ||  获取虾客列表  ||  GET  ||   /admin/car_washers  ||  ['username', 'mobile', 'name', 'page_num', 'page_size']  ||  ['string', 'string', 'string', 'int', 'int']  ||  ['F', 'F', 'F', 'T', 'T']  ||  ['403', '200', '422']  ||  CarWasher  ||  
 admin  ||  car_washer  ||  获取虾客详情  ||  GET  ||   /admin/car_washers/:username  ||    ||    ||    ||  ['404', '403', '200']  ||  CarWash  ||  
 admin  ||  car_washer  ||  编辑虾客  ||  PUT  ||   /admin/car_washers/:username  ||  ['name', 'mobile', 'sex', 'birthday', 'ID_card', 'address', 'promoter_no', 'password', 'is_active']  ||  ['string', 'string', 'int', 'string', 'string', 'string', 'string', 'string', 'boolean']  ||  ['F', 'F', 'F', 'F', 'F', 'F', 'F', 'F', 'F']  ||  ['404', '204', '403', '404', '422']  ||    ||  
 admin  ||  car_washer  ||  编辑启用/禁用  ||  PATCH  ||   /admin/car_washers/:username/is_active  ||  ['is_active']  ||  ['boolean']  ||  ['F']  ||  ['204', '404', '403', '422']  ||    ||  
 admin  ||  car_washer  ||  虾客接单记录  ||  GET  ||   /admin/car_washers/:username/wash_records  ||  ['page_num', 'page_size']  ||  ['int', 'int']  ||  ['F', 'F']  ||  ['404', '403', '200']  ||  WashRecord  ||  
+admin  ||  car_washer  ||  虾客接单数量  ||  GET  ||   /admin/car_washers/:username/order_count  ||  ['section']  ||  ['string']  ||  ['F']  ||  ['403', '200', '422']  ||    ||  
 admin  ||  robot  ||  新增虾滑  ||  POST  ||   /admin/robots  ||  ['mobile', 'name', 'car_id']  ||  ['string', 'string', 'string']  ||  ['T', 'T', 'T']  ||  ['403', '201', '422']  ||    ||  
 admin  ||  robot  ||  获取虾滑列表  ||  GET  ||   /admin/robots  ||  ['mobile', 'car_id', 'page_num', 'page_size']  ||  ['string', 'string', 'int', 'int']  ||  ['F', 'F', 'F', 'F']  ||  ['403', '200', '422']  ||  Robot  ||  
 admin  ||  robot  ||  删除虾滑  ||  DELETE  ||   /admin/robots/:robot_id/cancel  ||    ||    ||    ||  ['204', '404', '403']  ||    ||  
@@ -184,8 +196,8 @@ admin  ||  home_page_banner  ||  添加首页信息  ||  POST  ||   /admin/parki
 admin  ||  refund  ||  获取退款  ||  GET  ||   /admin/refunds  ||  ['order_id']  ||  ['string']  ||  ['T']  ||  ['200']  ||  Refund  ||  
 admin  ||  parking_statistic  ||  停车场统计  ||  GET  ||   /admin/parking_statistics_by_day  ||  ['order_by', 'section', 'page_num', 'page_size']  ||  ['string', 'Float', 'int', 'int']  ||  ['F', 'F', 'F', 'F']  ||  ['403', '200', '422']  ||  ParkingStatistic  ||  
 admin  ||  parking_statistic  ||  停车场数据隐藏  ||  PATCH  ||   /admin/parking_statistics_by_day/:parking_statistic_id/visible  ||  ['visible']  ||  ['boolean']  ||  ['T']  ||  ['404', '403', '204', '422']  ||    ||  
-app  ||  call_user  ||  电话联系车主  ||  GET  ||   car_wash/get_virtual_mobile  ||    ||    ||    ||  ['403', '404', '201', '422']  ||    ||  
-app  ||  call_user  ||  短信联系车主  ||  POST  ||   car_wash/send_mobile_short_message  ||  ['type']  ||  ['int']  ||  ['T']  ||  ['403', '404', '200', '422']  ||    ||  
+app  ||  call_user  ||  电话联系车主  ||  GET  ||   car_wash/get_virtual_mobile  ||  ['wash_record_id']  ||  ['string']  ||  ['T']  ||  ['403', '404', '201', '422']  ||    ||  
+app  ||  call_user  ||  短信联系车主  ||  POST  ||   car_wash/send_mobile_short_message  ||  ['type', 'wash_record_id']  ||  ['int', 'string']  ||  ['T', 'T']  ||  ['403', '404', '200', '422']  ||    ||  
 app  ||  car_washer_order_statistic  ||  车辆信息详情  ||  GET  ||   /car_wash/car_washers/order_statistic  ||    ||    ||    ||  ['404', '403', '200']  ||    ||  
 app  ||  car_washer  ||  获取虾客二维码  ||  GET  ||   /car_wash/promoter_qrcode  ||    ||    ||    ||  ['404', '403', '200']  ||    ||  
 app  ||  parking_coupon  ||  添加停车优惠劵  ||  POST  ||   /car_wash/parking_coupons  ||  ['parking_id', 'car_id', 'parking_coupon_no']  ||  ['string', 'string', 'string']  ||  ['T', 'T', 'T']  ||  ['201', '403', '422']  ||    ||  
@@ -238,6 +250,7 @@ wxmp  ||  order  ||  更换套餐  ||  POST  ||   /order/service_group  ||  ['co
 wxmp  ||  order  ||  创建订单  ||  POST  ||   /orders  ||  ['wash_group_id', 'wash_normal_id', 'parking_id', 'wxmp_remark', 'coupon_id', 'service_group_id', 'car_id', 'mobile', 'name', 'car_type', 'order_type', 'user_car_id', 'user_contact_id', 'car_place', 'card_id']  ||  ['string', 'string', 'string', 'string', 'string', 'string', 'string', 'string', 'string', 'string', 'int', 'string', 'string', 'string', 'string']  ||  ['F', 'F', 'F', 'F', 'F', 'T', 'F', 'T', 'T', 'F', 'T', 'T', 'T', 'F', 'F']  ||  ['403', '201', '422']  ||    ||  
 wxmp  ||  order  ||  获取订单  ||  GET  ||   /orders/:order_id  ||    ||    ||    ||  ['404', '403', '200']  ||  Order  ||  
 wxmp  ||  order  ||  支付订单  ||  POST  ||   /orders/:order_id/pay  ||  ['pay_type']  ||  ['string']  ||  ['T']  ||  ['404', '403', '200', '422']  ||    ||  
+wxmp  ||  wash_record  ||  售后与退款  ||  GET  ||   /user/after_sales  ||  ['status', 'order_status', 'after_sale', 'section', 'page_limit']  ||  ['string', 'string', 'string', 'string', 'int']  ||  ['F', 'F', 'F', 'F', 'F']  ||  ['403', '404', '200', '422']  ||  WashRecord  ||  
 wxmp  ||  wash_record  ||  用订单id获取一洗车记录  ||  GET  ||   /user/wash_record_by_order  ||  ['refresh', 'order_id']  ||  ['boolean', 'string']  ||  ['F', 'T']  ||  ['403', '404', '200', '422']  ||  WashRecord  ||  
 wxmp  ||  wash_record  ||  获取洗车记录列表  ||  GET  ||   /user/wash_records  ||  ['status', 'order_status', 'section', 'page_limit', 'comment_status']  ||  ['string', 'string', 'string', 'int', 'int']  ||  ['F', 'F', 'F', 'F', 'F']  ||  ['403', '404', '200', '422']  ||  WashRecord  ||  
 wxmp  ||  wash_record  ||  获取记录列表  ||  GET  ||   /wash_records  ||  ['wash_group_id', 'section', 'page_limit']  ||  ['string', 'string', 'int']  ||  ['T', 'F', 'F']  ||  ['404', '403', '200']  ||  WashRecord  ||  

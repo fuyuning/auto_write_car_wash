@@ -121,7 +121,8 @@ class AutoWriteRobot(object):
                 if index2 == 10000:
                     break
                 index2 += 1
-            print(len(all_model_list))
+        all_model_list.append(model_list)
+        print(len(all_model_list))
         for i in range(0, len(all_model_list)):
             self.parse_model_file(all_model_list[i])
 

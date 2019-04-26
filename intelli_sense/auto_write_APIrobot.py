@@ -8,10 +8,16 @@ import os
 class AutoWriteRobot(object):
     # 解析爬取的数据
     def _parse_file(self):
+        folder = os.path.exists('../cache/params')
+        if not folder:
+            os.makedirs('../cache/params')
         ptxt = open('../cache/params/params_list.txt', "w+")
         ptxt.write('')
         ptxt.close()
         file = open('../cache/document/auto_write_robot.txt', 'r')
+        folder = os.path.exists('../cache/old')
+        if not folder:
+            os.makedirs('../cache/old')
         folder = os.path.exists('../cache/document/old_auto_write_robot.txt')
         if folder:
             old_file = open('../cache/document/old_auto_write_robot.txt', 'r')

@@ -191,7 +191,7 @@ class AutoWriteRobot(object):
         open(lib_name + '/' + '__init__.py', 'w+')
         folder = os.path.exists(lib_name + '/' + class_name + 'Library.py')
         if folder:
-            os.rename(lib_name + '/' + class_name + 'Library.py', lib_name+'/'+'old_'+class_name+'Library.py')
+            os.rename(lib_name + '/' + class_name + 'Library.py', '../cache/old/old_'+class_name+'Library.py')
         lib_file = open(lib_name + '/' + class_name + 'Library.py', 'w+')
         lib_file.write('from '+lib_import+'.common import CommonLibrary\n\n\n')
         lib_file.write('class ' + class_name + 'Library(CommonLibrary):\n')
@@ -296,11 +296,11 @@ class AutoWriteRobot(object):
         class_name = self._upper_name(model_name)
         folder = os.path.exists('../tests/'+full_name+'/'+model_name+'s.robot')
         if folder:
-            os.rename('../tests/'+full_name+'/'+model_name+'s.robot', '../tests/'+full_name+'/old_'+model_name+'s.robot')
+            os.rename('../tests/'+full_name+'/'+model_name+'s.robot', '../cache/old/old_'+model_name+'s.robot')
         folder = os.path.exists('../tests/' + full_name + '/' + model_name + 's.unauthorized.robot')
         if folder:
-            os.rename('../tests/' + full_name + '/' + model_name + 's.unauthorized.robot',
-                      '../tests/' + full_name + '/old_' + model_name + 's.unauthorized.robot')
+            os.rename('../tests/'+full_name+'/'+model_name+'s.unauthorized.robot',
+                      '../cache/old/old_'+model_name+'s.unauthorized.robot')
         robot = open('../tests/'+full_name+'/'+model_name+'s.robot', 'w+')
         robot.write('*** Settings ***\n')
         robot.write('Documentation  '+full_name+'\n')

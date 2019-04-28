@@ -1,0 +1,52 @@
+{
+  "type": [
+    "object",
+    "null"
+  ],
+  "required": [
+    "wash_normal_price",
+    "normal_max",
+    "group_max",
+    "wash_group_price",
+    "normal_min",
+    "group_min"
+  ],
+  "properties": {
+    "wash_normal_price": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "normal_max": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "group_max": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "wash_group_price": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "normal_min": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "group_min": {
+      "type": [
+        "number",
+        "null"
+      ]
+    }
+  }
+}

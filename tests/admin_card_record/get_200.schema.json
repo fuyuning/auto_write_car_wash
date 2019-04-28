@@ -1,0 +1,123 @@
+{
+  "definitions": {},
+  "type": [
+    "array",
+    "null"
+  ],
+  "items": {
+    "type": [
+      "object",
+      "null"
+    ],
+    "required": [
+      "card_remark",
+      "is_deleted",
+      "mobile",
+      "deleted_time",
+      "remark",
+      "user_id",
+      "price",
+      "card_record_id",
+      "card_name",
+      "mode",
+      "created_time",
+      "updated_time",
+      "end_time",
+      "card_id",
+      "card_no",
+      "card_from"
+    ],
+    "properties": {
+      "card_remark": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "is_deleted": {
+        "type": [
+          "boolean",
+          "null"
+        ]
+      },
+      "mobile": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "deleted_time": {
+        "type": "null"
+      },
+      "remark": {
+        "type": "null"
+      },
+      "user_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "price": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "card_record_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "card_name": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "mode": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "created_time": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "updated_time": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "end_time": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "card_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "card_no": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "card_from": {
+        "type": [
+          "number",
+          "null"
+        ]
+      }
+    }
+  }
+}

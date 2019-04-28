@@ -1,0 +1,10 @@
+{
+  "type":"array",
+  "items":{
+    "type":"object",
+    "properties":{
+      "car_id":{"type":["null","string"]},
+      "status":{"type":["null","number"]}
+    }
+  }
+}

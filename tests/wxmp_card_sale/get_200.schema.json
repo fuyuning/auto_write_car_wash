@@ -1,0 +1,229 @@
+{
+  "definitions": {},
+  "type": [
+    "array",
+    "null"
+  ],
+  "items": {
+    "type": [
+      "object",
+      "null"
+    ],
+    "required": [
+      "card_sale_id",
+      "deleted_time",
+      "card_id",
+      "created_time",
+      "order_by",
+      "remark",
+      "card",
+      "is_deleted",
+      "enabled",
+      "updated_time"
+    ],
+    "properties": {
+      "card_sale_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "deleted_time": {
+        "type": "null"
+      },
+      "card_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "created_time": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "order_by": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "remark": {
+        "type": "null"
+      },
+      "card": {
+        "type": [
+          "object",
+          "null"
+        ],
+        "required": [
+          "first_price",
+          "card_remark",
+          "remark",
+          "auto_recharge",
+          "created_time",
+          "is_deleted",
+          "deleted_time",
+          "price",
+          "card_name",
+          "coupons",
+          "card_id",
+          "recharge_price",
+          "first_recharge_price",
+          "days",
+          "grant_way",
+          "updated_time"
+        ],
+        "properties": {
+          "first_price": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "card_remark": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "remark": {
+            "type": "null"
+          },
+          "auto_recharge": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "created_time": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "is_deleted": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "deleted_time": {
+            "type": "null"
+          },
+          "price": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "card_name": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "coupons": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": [
+                "object",
+                "null"
+              ],
+              "required": [
+                "num",
+                "id",
+                "cycle",
+                "name"
+              ],
+              "properties": {
+                "num": {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                },
+                "id": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "cycle": {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                },
+                "name": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              }
+            }
+          },
+          "card_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "recharge_price": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "first_recharge_price": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "days": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "grant_way": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "updated_time": {
+            "type": [
+              "number",
+              "null"
+            ]
+          }
+        }
+      },
+      "is_deleted": {
+        "type": [
+          "boolean",
+          "null"
+        ]
+      },
+      "enabled": {
+        "type": [
+          "boolean",
+          "null"
+        ]
+      },
+      "updated_time": {
+        "type": [
+          "number",
+          "null"
+        ]
+      }
+    }
+  }
+}

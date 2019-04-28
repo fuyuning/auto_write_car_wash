@@ -1,0 +1,69 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": [
+    "object",
+    "null"
+  ],
+  "required": [
+    "ht_userid",
+    "unionid",
+    "wx_nickname",
+    "wx_avatarurl",
+    "mobile",
+    "session_key",
+    "uu_userid",
+    "wechat_user_info_id"
+  ],
+  "properties": {
+    "ht_userid": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "unionid": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "wx_nickname": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "wx_avatarurl": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "mobile": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "session_key": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "uu_userid": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "wechat_user_info_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

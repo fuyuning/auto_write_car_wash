@@ -1,0 +1,43 @@
+{
+  "type": "object",
+  "properties": {
+    "created_time": { "type": "number" },
+    "remark": { "type": "null" },
+    "name": { "type": "string" },
+    "updated_time": { "type": "number" },
+    "wash_user_groups": {
+      "type": "array",
+      "items": {
+        "allOf": [
+          {
+            "type": "object",
+            "properties": {
+              "wash_user_group_id": { "type": "string" },
+              "name": { "type": "string" }
+            }
+          }
+        ]
+      }
+    },
+    "turntable_id": { "type": "string" },
+    "prizes": {
+      "type": "array",
+      "items": {
+        "allOf": [
+          {
+            "type": "object",
+            "properties": {
+              "rate": { "type": "number" },
+              "id": { "type": "string" },
+              "description": { "type": "string" },
+              "name": { "type": "string" },
+              "type": { "type": "number" },
+              "title": { "type": "string" }
+            }
+          }
+        ]
+      }
+    },
+    "enabled": { "type": "boolean" }
+  }
+}

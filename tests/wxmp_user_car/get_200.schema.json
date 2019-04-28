@@ -1,0 +1,116 @@
+{
+  "definitions": {},
+  "type": [
+    "array",
+    "null"
+  ],
+  "items": {
+    "type": [
+      "object",
+      "null"
+    ],
+    "required": [
+      "car_series",
+      "user_car_id",
+      "updated_time",
+      "car_id",
+      "car_series_id",
+      "car_brand",
+      "car_brand_id",
+      "is_default",
+      "deleted_time",
+      "is_deleted",
+      "user_id",
+      "created_time",
+      "car_model",
+      "car_scale",
+      "remark"
+    ],
+    "properties": {
+      "car_series": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "user_car_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "updated_time": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "car_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "car_series_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "car_brand": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "car_brand_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "is_default": {
+        "type": [
+          "boolean",
+          "null"
+        ]
+      },
+      "deleted_time": {
+        "type": "null"
+      },
+      "is_deleted": {
+        "type": [
+          "boolean",
+          "null"
+        ]
+      },
+      "user_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "created_time": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "car_model": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "car_scale": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "remark": {
+        "type": "null"
+      }
+    }
+  }
+}

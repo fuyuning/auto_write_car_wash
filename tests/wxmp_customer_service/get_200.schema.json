@@ -1,0 +1,165 @@
+{
+  "definitions": {},
+  "type": [
+    "array",
+    "null"
+  ],
+  "items": {
+    "type": [
+      "object",
+      "null"
+    ],
+    "required": [
+      "title",
+      "customer_service_no",
+      "solve_seconds",
+      "mobile",
+      "order_id",
+      "order_status",
+      "reason",
+      "description",
+      "end_time",
+      "updated_time",
+      "car_id",
+      "opinion",
+      "name",
+      "created_time",
+      "remark",
+      "wash_record_id",
+      "customer_service_id",
+      "start_time",
+      "order_no",
+      "operator",
+      "user_id",
+      "status"
+    ],
+    "properties": {
+      "title": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "customer_service_no": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "solve_seconds": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "mobile": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "order_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "order_status": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "reason": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "description": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "end_time": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "updated_time": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "car_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "opinion": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "name": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "created_time": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "remark": {
+        "type": "null"
+      },
+      "wash_record_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "customer_service_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "start_time": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "order_no": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "operator": {
+        "type": "null"
+      },
+      "user_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "status": {
+        "type": [
+          "number",
+          "null"
+        ]
+      }
+    }
+  }
+}

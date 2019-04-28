@@ -1,0 +1,103 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": [
+    "array",
+    "null"
+  ],
+  "items": {
+    "type": [
+      "object",
+      "null"
+    ],
+    "required": [
+      "car_model_id",
+      "series_id",
+      "contractor",
+      "car_brand",
+      "car_series_id",
+      "car_series_name",
+      "is_active",
+      "brand_id",
+      "car_model",
+      "created_time",
+      "updated_time",
+      "car_scale"
+    ],
+    "properties": {
+      "car_model_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "series_id": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "contractor": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "car_brand": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "car_series_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "car_series_name": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "is_active": {
+        "type": [
+          "boolean",
+          "null"
+        ]
+      },
+      "brand_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "car_model": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "created_time": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "updated_time": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "car_scale": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    }
+  }
+}

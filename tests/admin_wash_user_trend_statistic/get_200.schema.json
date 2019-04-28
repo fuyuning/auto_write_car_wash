@@ -1,0 +1,63 @@
+{
+  "definitions": {},
+  "type": [
+    "array",
+    "null"
+  ],
+  "items": {
+    "type": [
+      "object",
+      "null"
+    ],
+    "required": [
+      "remark",
+      "wash_user_num",
+      "created_time",
+      "wash_user_trend_statistic_id",
+      "total_wash_user_num",
+      "time_point",
+      "updated_time"
+    ],
+    "properties": {
+      "remark": {
+        "type": "null"
+      },
+      "wash_user_num": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "created_time": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "wash_user_trend_statistic_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "total_wash_user_num": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "time_point": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "updated_time": {
+        "type": [
+          "number",
+          "null"
+        ]
+      }
+    }
+  }
+}

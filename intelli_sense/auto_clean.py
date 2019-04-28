@@ -30,6 +30,7 @@ if __name__ == '__main__':
         '../robot_car_wash_app_library/oauth2',
         '../robot_car_wash_wxmp_library/login',
         '../tests/app_oauth2',
+        '../tests/app_login',
         '../tests/wxmp_login/logins.unauthorized.robot',
         '../tests/wxmp_login/logins.robot',
     ]

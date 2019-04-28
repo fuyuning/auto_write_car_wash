@@ -1,0 +1,39 @@
+{
+  "definitions": {},
+  "type": [
+    "object",
+    "null"
+  ],
+  "required": [
+    "username",
+    "name",
+    "sex",
+    "mobile"
+  ],
+  "properties": {
+    "username": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "sex": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "mobile": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

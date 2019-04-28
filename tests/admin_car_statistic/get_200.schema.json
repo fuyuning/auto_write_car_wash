@@ -1,0 +1,86 @@
+{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "car_statistic_id",
+      "parking",
+      "avg_dirty_percent",
+      "car_id",
+      "updated_time",
+      "wash_num",
+      "remark",
+      "avg_amount",
+      "created_time",
+      "wash_area",
+      "total_amount",
+      "wash_num_last_30_day",
+      "last_time"
+    ],
+    "properties": {
+      "car_statistic_id": {
+        "type": "string"
+      },
+      "parking": {
+        "type": "object",
+        "required": [
+          "parking_name",
+          "parking_id"
+        ],
+        "properties": {
+          "parking_name": {
+            "type": "string"
+          },
+          "parking_id": {
+            "type": "string"
+          }
+        }
+      },
+      "avg_dirty_percent": {
+        "type": "number"
+      },
+      "car_id": {
+        "type": "string"
+      },
+      "updated_time": {
+        "type": "number"
+      },
+      "wash_num": {
+        "type": "number"
+      },
+      "remark": {
+        "type": "null"
+      },
+      "avg_amount": {
+        "type": "number"
+      },
+      "created_time": {
+        "type": "number"
+      },
+      "wash_area": {
+        "type": "object",
+        "required": [
+          "wash_area_id",
+          "name"
+        ],
+        "properties": {
+          "wash_area_id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          }
+        }
+      },
+      "total_amount": {
+        "type": "number"
+      },
+      "wash_num_last_30_day": {
+        "type": "number"
+      },
+      "last_time": {
+        "type": "number"
+      }
+    }
+  }
+}

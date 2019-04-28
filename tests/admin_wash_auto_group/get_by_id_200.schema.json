@@ -1,0 +1,321 @@
+{
+  "type": [
+    "object",
+    "null"
+  ],
+  "required": [
+    "end_time",
+    "expect_time",
+    "subscribe_expect_time",
+    "service_groups",
+    "status",
+    "subscribe_expect_day",
+    "is_diff_car_type",
+    "subscribe_name",
+    "wash_area",
+    "created_time",
+    "car_washers",
+    "updated_time",
+    "auto_group",
+    "people_num",
+    "start_time",
+    "people_day_num",
+    "wash_auto_group_id",
+    "name",
+    "subscribe_day_num",
+    "group_time_range",
+    "subscribe",
+    "expect_day",
+    "day_in_week",
+    "is_auto_robot",
+    "active_time"
+  ],
+  "properties": {
+    "end_time": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "expect_time": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "subscribe_expect_time": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "service_groups": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "required": [
+        "-"
+      ],
+      "properties": {
+        "-": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "required": [
+              "name",
+              "service_group_id",
+              "real_price",
+              "car_type",
+              "description",
+              "price",
+              "services"
+            ],
+            "properties": {
+              "name": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "service_group_id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "real_price": {
+                "type": [
+                  "string",
+                  "number",
+                  "null"
+                ]
+              },
+              "car_type": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "description": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "price": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "services": {
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "items": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "status": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "subscribe_expect_day": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "is_diff_car_type": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "subscribe_name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "wash_area": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "required": [
+        "name",
+        "wash_area_id"
+      ],
+      "properties": {
+        "name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "wash_area_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "created_time": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "car_washers": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "object",
+          "null"
+        ],
+        "required": [
+          "name",
+          "sex",
+          "mobile",
+          "username"
+        ],
+        "properties": {
+          "name": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "sex": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "mobile": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "username": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "updated_time": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "auto_group": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "people_num": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "start_time": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "people_day_num": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "wash_auto_group_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "subscribe_day_num": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "group_time_range": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "subscribe": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "expect_day": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "day_in_week": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    },
+    "is_auto_robot": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "active_time": {
+      "type": "null"
+    }
+  }
+}

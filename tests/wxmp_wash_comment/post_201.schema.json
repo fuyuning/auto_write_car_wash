@@ -1,0 +1,16 @@
+{
+  "definitions": {},
+  "type": "object",
+  "required": [
+    "created_time",
+    "comment_id"
+  ],
+  "properties": {
+    "created_time": {
+      "type": "number"
+    },
+    "comment_id": {
+      "type": "string"
+    }
+  }
+}

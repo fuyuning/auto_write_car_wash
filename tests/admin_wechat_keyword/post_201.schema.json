@@ -1,0 +1,25 @@
+{
+  "definitions": {},
+  "type": [
+    "object",
+    "null"
+  ],
+  "required": [
+    "wechat_keyword_id",
+    "created_time"
+  ],
+  "properties": {
+    "wechat_keyword_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "created_time": {
+      "type": [
+        "number",
+        "null"
+      ]
+    }
+  }
+}

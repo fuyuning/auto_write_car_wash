@@ -1,0 +1,132 @@
+{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "wash_area",
+      "phase",
+      "entry_time",
+      "car_position_id",
+      "created_time",
+      "space_no",
+      "parking",
+      "parking_id",
+      "floor",
+      "car_id",
+      "ownership",
+      "lat",
+      "zone",
+      "lon"
+    ],
+    "properties": {
+      "wash_area": {
+        "type": "object",
+        "required": [
+          "name",
+          "wash_area_id"
+        ],
+        "properties": {
+          "name": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "wash_area_id": {
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        }
+      },
+      "phase": {
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "entry_time": {
+        "type": [
+          "null",
+          "number"
+        ]
+      },
+      "car_position_id": {
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "created_time": {
+        "type": "number"
+      },
+      "space_no": {
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "parking": {
+        "type": "object",
+        "required": [
+          "parking_name",
+          "parking_id"
+        ],
+        "properties": {
+          "parking_name": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "parking_id": {
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        }
+      },
+      "parking_id": {
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "floor": {
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "car_id": {
+        "type": "string"
+      },
+      "ownership": {
+        "type": [
+          "null",
+          "number"
+        ]
+      },
+      "lat": {
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "zone": {
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "lon": {
+        "type": [
+          "null",
+          "string"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "type":"object",
+  "required": [
+    "wash_area_id"
+  ],
+  "properties":{
+    "wash_area_id":{"type":"string"}
+  }
+}

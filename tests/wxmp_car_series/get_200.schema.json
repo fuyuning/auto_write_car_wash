@@ -1,0 +1,101 @@
+{
+  "definitions": {},
+  "type": [
+    "array",
+    "null"
+  ],
+  "items": {
+    "type": [
+      "object",
+      "null"
+    ],
+    "required": [
+      "created_time",
+      "car_model",
+      "series_id",
+      "car_series_id",
+      "updated_time",
+      "contractor",
+      "car_series_name",
+      "car_model_id",
+      "car_brand",
+      "car_scale",
+      "is_active",
+      "brand_id"
+    ],
+    "properties": {
+      "created_time": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "car_model": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "series_id": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "car_series_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "updated_time": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "contractor": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "car_series_name": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "car_model_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "car_brand": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "car_scale": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "is_active": {
+        "type": [
+          "boolean",
+          "null"
+        ]
+      },
+      "brand_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    }
+  }
+}

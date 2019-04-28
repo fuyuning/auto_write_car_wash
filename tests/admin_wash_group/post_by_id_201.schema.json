@@ -1,0 +1,7 @@
+{
+  "type":"object",
+  "properties":{
+    "robot_num":{"type":"number"}
+  },
+  "required": ["robot_num"]
+}

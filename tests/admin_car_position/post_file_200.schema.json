@@ -1,0 +1,69 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": [
+    "object",
+    "null"
+  ],
+  "required": [
+    "fail_info",
+    "success_rows",
+    "failed_rows"
+  ],
+  "properties": {
+    "fail_info": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "object",
+          "null"
+        ],
+        "required": [
+          "row",
+          "fail_reason",
+          "car_id"
+        ],
+        "properties": {
+          "row": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": [
+                "string",
+                "number",
+                "null"
+              ]
+            }
+          },
+          "fail_reason": {
+            "type": "null"
+          },
+          "car_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "success_rows": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "failed_rows": {
+      "type": [
+        "number",
+        "null"
+      ]
+    }
+  }
+}

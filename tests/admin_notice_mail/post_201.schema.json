@@ -1,0 +1,24 @@
+{
+  "type": [
+    "object",
+    "null"
+  ],
+  "required": [
+    "wash_user_group_id",
+    "created_time"
+  ],
+  "properties": {
+    "wash_user_group_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "created_time": {
+      "type": [
+        "number",
+        "null"
+      ]
+    }
+  }
+}

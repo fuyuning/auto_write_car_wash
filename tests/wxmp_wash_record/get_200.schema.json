@@ -1,0 +1,591 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "order_no",
+      "possible_zone",
+      "car_id",
+      "parking",
+      "wxmp_remark",
+      "comment_status",
+      "start_time",
+      "close_description",
+      "status",
+      "lon",
+      "real_price",
+      "discount_money",
+      "mobile",
+      "wash_record_id",
+      "wash_area",
+      "after_sale",
+      "user_info",
+      "mark",
+      "possible_space_no",
+      "service_group",
+      "description",
+      "wash_tags",
+      "is_deleted",
+      "wash_group",
+      "car_washer",
+      "order_status",
+      "dirty_percent",
+      "expect_time",
+      "car_type",
+      "price",
+      "created_time",
+      "complete_time",
+      "updated_time",
+      "user_id",
+      "possible_phase",
+      "lat",
+      "group_identity",
+      "admin_remark",
+      "washer_remark",
+      "order_id",
+      "before_wash_images",
+      "after_wash_images",
+      "end_time",
+      "wash_normal",
+      "possible_floor",
+      "wash_seconds",
+      "submit_time",
+      "close_time",
+      "name",
+      "order_type"
+    ],
+    "properties": {
+      "order_no": {
+        "type": "string"
+      },
+      "possible_zone": {
+        "type": "null"
+      },
+      "car_id": {
+        "type": "string"
+      },
+      "parking": {
+        "type": "object",
+        "required": [
+          "parking_name",
+          "parking_id"
+        ],
+        "properties": {
+          "parking_name": {
+            "type": "string"
+          },
+          "parking_id": {
+            "type": "string"
+          }
+        }
+      },
+      "wxmp_remark": {"type": ["string", "null"]},
+      "comment_status": {
+        "type": "number"
+      },
+      "start_time": {
+        "type": "number"
+      },
+      "close_description": {
+        "type": ["string", "null"]
+      },
+      "status": {
+        "type": "number"
+      },
+      "lon": {
+        "type": "null"
+      },
+      "real_price": {
+        "type": "number"
+      },
+      "discount_money": {
+        "type": "number"
+      },
+      "mobile": {
+        "type": "string"
+      },
+      "wash_record_id": {
+        "type": "string"
+      },
+      "wash_area": {
+        "type": "object",
+        "required": [
+          "wash_area_id",
+          "name"
+        ],
+        "properties": {
+          "wash_area_id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          }
+        }
+      },
+      "after_sale": {
+        "type": "number"
+      },
+      "user_info": {
+        "type": "object",
+        "required": [
+          "wechat_user"
+        ],
+        "properties": {
+          "wechat_user": {
+            "type": "object",
+            "required": [
+              "wx_nickname",
+              "wx_avatarurl"
+            ],
+            "properties": {
+              "wx_nickname": {
+                "type": "string"
+              },
+              "wx_avatarurl": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "mark": {
+        "type": "number"
+      },
+      "possible_space_no": {
+        "type": "null"
+      },
+      "service_group": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": [
+            "service_group_id",
+            "name",
+            "services",
+            "description",
+            "car_type",
+            "price",
+            "real_price"
+          ],
+          "properties": {
+            "service_group_id": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "services": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "description": {
+              "type": "string"
+            },
+            "car_type": {
+              "type": "string"
+            },
+            "price": {
+              "type": "number"
+            },
+            "real_price": {
+              "type": "number"
+            }
+          }
+        }
+      },
+      "description": {
+        "type": "string"
+      },
+      "wash_tags": {
+        "type": "null"
+      },
+      "is_deleted": {
+        "type": "boolean"
+      },
+      "wash_group": {
+        "type": "object",
+        "required": [
+          "group_creater",
+          "has_people_num",
+          "valid_start_time",
+          "name",
+          "valid_end_time",
+          "status",
+          "expect_time",
+          "created_time",
+          "updated_time",
+          "people_num",
+          "complete_time",
+          "parking",
+          "is_auto_robot",
+          "service_groups",
+          "wash_group_id",
+          "finished_time",
+          "auto_group",
+          "group_creater_mobile",
+          "group_creater_info",
+          "wash_auto_group_id",
+          "wash_area",
+          "robot_num",
+          "wash_group_no",
+          "is_diff_car_type",
+          "group_type",
+          "car_washers"
+        ],
+        "properties": {
+          "group_creater": {
+            "type": "null"
+          },
+          "has_people_num": {
+            "type": "number"
+          },
+          "valid_start_time": {
+            "type": "number"
+          },
+          "name": {
+            "type": "string"
+          },
+          "valid_end_time": {
+            "type": "number"
+          },
+          "status": {
+            "type": "number"
+          },
+          "expect_time": {
+            "type": "number"
+          },
+          "created_time": {
+            "type": "number"
+          },
+          "updated_time": {
+            "type": "number"
+          },
+          "people_num": {
+            "type": "number"
+          },
+          "complete_time": {
+            "type": "number"
+          },
+          "parking": {
+            "type": "object",
+            "required": [
+              "parking_name",
+              "parking_id"
+            ],
+            "properties": {
+              "parking_name": {
+                "type": "string"
+              },
+              "parking_id": {
+                "type": "string"
+              }
+            }
+          },
+          "is_auto_robot": {
+            "type": "boolean"
+          },
+          "service_groups": {
+            "type": "object",
+            "required": [
+              "-"
+            ],
+            "properties": {
+              "-": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "service_group_id",
+                    "name",
+                    "services",
+                    "description",
+                    "car_type",
+                    "price",
+                    "real_price"
+                  ],
+                  "properties": {
+                    "service_group_id": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "services": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "car_type": {
+                      "type": "string"
+                    },
+                    "price": {
+                      "type": "number"
+                    },
+                    "real_price": {
+                      "type": "number"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "wash_group_id": {
+            "type": "string"
+          },
+          "finished_time": {
+            "type": "number"
+          },
+          "auto_group": {
+            "type": "boolean"
+          },
+          "group_creater_mobile": {
+            "type": "null"
+          },
+          "group_creater_info": {
+            "type": "object",
+            "required": [
+              "group_creater_info"
+            ],
+            "properties": {
+              "group_creater_info": {
+                "type": "object",
+                "required": [
+                  "wx_nickname",
+                  "wx_avatarurl"
+                ],
+                "properties": {
+                  "wx_nickname": {
+                    "type": "string"
+                  },
+                  "wx_avatarurl": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "wash_auto_group_id": {
+            "type": "string"
+          },
+          "wash_area": {
+            "type": "object",
+            "required": [
+              "service_type",
+              "wash_area_id",
+              "name"
+            ],
+            "properties": {
+              "service_type": {
+                "type": "number"
+              },
+              "wash_area_id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              }
+            }
+          },
+          "robot_num": {
+            "type": "number"
+          },
+          "wash_group_no": {
+            "type": "string"
+          },
+          "is_diff_car_type": {
+            "type": "boolean"
+          },
+          "group_type": {
+            "type": "number"
+          },
+          "car_washers": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "mobile",
+                "sex",
+                "username",
+                "name"
+              ],
+              "properties": {
+                "mobile": {
+                  "type": "string"
+                },
+                "sex": {
+                  "type": "number"
+                },
+                "username": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "car_washer": {
+        "type": "object",
+        "required": [
+          "mobile",
+          "sex",
+          "username",
+          "name"
+        ],
+        "properties": {
+          "mobile": {
+            "type": "string"
+          },
+          "sex": {
+            "type": "number"
+          },
+          "username": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          }
+        }
+      },
+      "order_status": {
+        "type": "number"
+      },
+      "dirty_percent": {
+        "type": "number"
+      },
+      "expect_time": {
+        "type": "number"
+      },
+      "car_type": {
+        "type": "string"
+      },
+      "price": {
+        "type": "number"
+      },
+      "created_time": {
+        "type": "number"
+      },
+      "complete_time": {
+        "type": "number"
+      },
+      "updated_time": {
+        "type": "number"
+      },
+      "user_id": {
+        "type": "string"
+      },
+      "possible_phase": {
+        "type": "null"
+      },
+      "lat": {
+        "type": "null"
+      },
+      "group_identity": {
+        "type": "number"
+      },
+      "admin_remark": {
+        "type": "null"
+      },
+      "washer_remark": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": [
+            "time",
+            "content",
+            "username",
+            "name"
+          ],
+          "properties": {
+            "time": {
+              "type": "number"
+            },
+            "content": {
+              "type": "string"
+            },
+            "username": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "order_id": {
+        "type": "string"
+      },
+      "before_wash_images": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": [
+            "type",
+            "url"
+          ],
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "after_wash_images": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": [
+            "type",
+            "url"
+          ],
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "end_time": {
+        "type": "number"
+      },
+      "wash_normal": {
+        "type": "null"
+      },
+      "possible_floor": {
+        "type": "null"
+      },
+      "wash_seconds": {
+        "type": "number"
+      },
+      "submit_time": {
+        "type": "number"
+      },
+      "close_time": {
+        "type": "null"
+      },
+      "name": {
+        "type": "string"
+      },
+      "order_type": {
+        "type": "number"
+      }
+    }
+  }
+}

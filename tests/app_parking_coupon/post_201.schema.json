@@ -1,0 +1,24 @@
+{
+  "type": [
+    "object",
+    "null"
+  ],
+  "required": [
+    "created_time",
+    "parking_coupon_id"
+  ],
+  "properties": {
+    "created_time": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "parking_coupon_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

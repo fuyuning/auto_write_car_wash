@@ -1,0 +1,108 @@
+{
+  "definitions": {},
+  "type": [
+    "array",
+    "null"
+  ],
+  "items": {
+    "type": [
+      "object",
+      "null"
+    ],
+    "required": [
+      "updated_time",
+      "cost_price",
+      "price",
+      "created_time",
+      "member_price",
+      "service_name",
+      "description",
+      "wash_normal_price",
+      "status",
+      "commission_price",
+      "wash_group_price",
+      "service_id",
+      "order_by"
+    ],
+    "properties": {
+      "updated_time": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "cost_price": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "price": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "created_time": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "member_price": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "service_name": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "description": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "wash_normal_price": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "status": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "commission_price": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "wash_group_price": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "service_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "order_by": {
+        "type": [
+          "number",
+          "null"
+        ]
+      }
+    }
+  }
+}

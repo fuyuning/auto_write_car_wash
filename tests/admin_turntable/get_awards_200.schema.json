@@ -1,0 +1,136 @@
+{
+  "type": [
+    "array",
+    "null"
+  ],
+  "items": {
+    "type": [
+      "object",
+      "null"
+    ],
+    "required": [
+      "updated_time",
+      "is_awarded",
+      "remark",
+      "status",
+      "mobile",
+      "turntable_id",
+      "userid",
+      "award_time",
+      "turntable_award_id",
+      "prize",
+      "created_time"
+    ],
+    "properties": {
+      "updated_time": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "is_awarded": {
+        "type": [
+          "boolean",
+          "null"
+        ]
+      },
+      "remark": {
+        "type": "null"
+      },
+      "status": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "mobile": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "turntable_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "userid": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "award_time": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "turntable_award_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "prize": {
+        "type": [
+          "object",
+          "null"
+        ],
+        "required": [
+          "description",
+          "name",
+          "rate",
+          "title",
+          "id",
+          "type"
+        ],
+        "properties": {
+          "description": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "name": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "rate": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "title": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "type": {
+            "type": [
+              "number",
+              "null"
+            ]
+          }
+        }
+      },
+      "created_time": {
+        "type": [
+          "number",
+          "null"
+        ]
+      }
+    }
+  }
+}

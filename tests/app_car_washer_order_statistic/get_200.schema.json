@@ -1,0 +1,8 @@
+{
+  "type": "object",
+  "properties": {
+    "price_by_month": { "type": "number" },
+    "wash_record_num_by_month": { "type": "number" },
+    "wash_record_num": { "type": "number" }
+  }
+}

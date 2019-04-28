@@ -1,0 +1,77 @@
+{
+  "definitions": {},
+  "type": [
+    "object",
+    "null"
+  ],
+  "required": [
+    "menu"
+  ],
+  "properties": {
+    "menu": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "required": [
+        "button"
+      ],
+      "properties": {
+        "button": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "required": [
+              "name",
+              "sub_button"
+            ],
+            "properties": {
+              "name": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "pagepath": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "sub_button": {
+                "type": [
+                  "array",
+                  "null"
+                ]
+              },
+              "url": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "appid": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "type": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "type": [
+    "array",
+    "null"
+  ],
+  "items": {
+    "type": [
+      "object",
+      "null"
+    ],
+    "required": [
+      "name",
+      "updated_time",
+      "is_deleted",
+      "car_id",
+      "created_time",
+      "deleted_time",
+      "is_default",
+      "mobile",
+      "user_contact_id",
+      "car_type",
+      "remark",
+      "user_id"
+    ],
+    "properties": {
+      "name": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "updated_time": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "is_deleted": {
+        "type": [
+          "boolean",
+          "null"
+        ]
+      },
+      "car_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "created_time": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "deleted_time": {
+        "type": "null"
+      },
+      "is_default": {
+        "type": [
+          "boolean",
+          "null"
+        ]
+      },
+      "mobile": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "user_contact_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "car_type": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "remark": {
+        "type": "null"
+      },
+      "user_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    }
+  }
+}

@@ -15,22 +15,6 @@ post admin admin users Fail Without Login
    ${unessential_params}  create list  email=${email}  
    run every case by params  post admin admin users Fail 403  ${essential_params}  ${unessential_params}
 
-post admin login Fail Without Login
-   [Documentation]  接口名:帐号登录${\n}
-   ...              请求方式:Post${\n}
-   ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
-   [Tags]           Respcode:403
-   ${essential_params}  create list  password=${password}  username=${username}  vk=${vk}  
-   ${unessential_params}  create list  num=${num}  
-   run every case by params  post admin login Fail 403  ${essential_params}  ${unessential_params}
-
-post admin logout Fail Without Login
-   [Documentation]  接口名:帐号注销${\n}
-   ...              请求方式:Post${\n}
-   ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
-   [Tags]           Respcode:403
-    post admin logout Fail 403
-
 get admin admin users Fail Without Login
    [Documentation]  接口名:获取管理员信息列表${\n}
    ...              请求方式:Get${\n}
@@ -46,13 +30,6 @@ get admin admin users by username Fail Without Login
    ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
    [Tags]           Respcode:403
    get admin admin users by username Fail 403    username=${username}
-
-get admin user Fail Without Login
-   [Documentation]  接口名:获取信息${\n}
-   ...              请求方式:Get${\n}
-   ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
-   [Tags]           Respcode:403
-    get admin user Fail 403
 
 put admin admin users by username Fail Without Login
    [Documentation]  接口名:修改管理员信息${\n}

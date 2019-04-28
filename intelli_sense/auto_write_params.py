@@ -15,7 +15,7 @@ class AutoWriteParams(object):
             print(types)
             if name.endswith('422}'):
                 if types == 'string':
-                    value = '[]'
+                    value = 'ThisIsRobot  ThisIsRobot  ThisIsRobot'
                 elif types == 'int':
                     value = 'ThisIsRobot'
                 elif types == 'json':

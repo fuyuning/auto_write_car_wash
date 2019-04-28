@@ -34,7 +34,7 @@ class ParkingLibrary(CommonLibrary):
                 data[k] = v
         return self.client.put(url, json=data)
 
-    def patch_enabled_by_parking_id(self, parking_id, **kwargs):
+    def patch_admin_parkings_enabled_by_parking_id(self, parking_id, **kwargs):
         url = "{SERVER_DOMAIN}/admin/parkings/{parking_id}/enabled".format(
             SERVER_DOMAIN=self.SERVER_DOMAIN, parking_id=parking_id)
         data = {}

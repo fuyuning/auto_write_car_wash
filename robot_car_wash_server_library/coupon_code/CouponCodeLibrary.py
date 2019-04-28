@@ -29,12 +29,12 @@ class CouponCodeLibrary(CommonLibrary):
                 data[k] = v
         return self.client.get(url, params=data)
 
-    def get_coupon_codes_export_by_coupon_code_record_id(self, coupon_code_record_id):
+    def get_admin_coupon_codes_export_by_coupon_code_record_id(self, coupon_code_record_id):
         url = "{SERVER_DOMAIN}/admin/coupon_codes/export/{coupon_code_record_id}".format(
             SERVER_DOMAIN=self.SERVER_DOMAIN, coupon_code_record_id=coupon_code_record_id)
         return self.client.get(url)
 
-    def patch_remark_by_coupon_code_record_id(self, coupon_code_record_id, **kwargs):
+    def patch_admin_coupon_code_records_remark_by_coupon_code_record_id(self, coupon_code_record_id, **kwargs):
         url = "{SERVER_DOMAIN}/admin/coupon_code_records/{coupon_code_record_id}/remark".format(
             SERVER_DOMAIN=self.SERVER_DOMAIN, coupon_code_record_id=coupon_code_record_id)
         data = {}

@@ -2,7 +2,7 @@ from robot_car_wash_server_library.common import CommonLibrary
 
 
 class CustomerServiceLibrary(CommonLibrary):
-    def post_finish_by_customer_service_id(self, customer_service_id, **kwargs):
+    def post_admin_customer_services_finish_by_customer_service_id(self, customer_service_id, **kwargs):
         url = "{SERVER_DOMAIN}/admin/customer_services/{customer_service_id}/finish".format(
             SERVER_DOMAIN=self.SERVER_DOMAIN, customer_service_id=customer_service_id)
         data = {}

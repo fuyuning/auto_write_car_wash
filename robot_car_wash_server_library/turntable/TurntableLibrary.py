@@ -43,7 +43,7 @@ class TurntableLibrary(CommonLibrary):
                 data[k] = v
         return self.client.put(url, json=data)
 
-    def patch_enabled_by_turntable_id(self, turntable_id, **kwargs):
+    def patch_admin_turntables_enabled_by_turntable_id(self, turntable_id, **kwargs):
         url = "{SERVER_DOMAIN}/admin/turntables/{turntable_id}/enabled".format(
             SERVER_DOMAIN=self.SERVER_DOMAIN, turntable_id=turntable_id)
         data = {}

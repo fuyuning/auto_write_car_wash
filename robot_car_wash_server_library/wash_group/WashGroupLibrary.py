@@ -11,7 +11,7 @@ class WashGroupLibrary(CommonLibrary):
                 data[k] = v
         return self.client.post(url, json=data)
 
-    def post_join_by_wash_group_id(self, wash_group_id, **kwargs):
+    def post_admin_wash_groups_join_by_wash_group_id(self, wash_group_id, **kwargs):
         url = "{SERVER_DOMAIN}/admin/wash_groups/{wash_group_id}/join".format(
             SERVER_DOMAIN=self.SERVER_DOMAIN, wash_group_id=wash_group_id)
         data = {}

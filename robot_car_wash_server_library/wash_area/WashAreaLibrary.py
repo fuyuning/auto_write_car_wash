@@ -34,7 +34,7 @@ class WashAreaLibrary(CommonLibrary):
                 data[k] = v
         return self.client.put(url, json=data)
 
-    def patch_(wash_normal|wash_group|user_group|enabled)_by_wash_area_id(self, wash_area_id, **kwargs):
+    def patch_admin_wash_areas_(wash_normal|wash_group|user_group|enabled)_by_wash_area_id(self, wash_area_id, **kwargs):
         url = "{SERVER_DOMAIN}/admin/wash_areas/{wash_area_id}/(wash_normal|wash_group|user_group|enabled)".format(
             SERVER_DOMAIN=self.SERVER_DOMAIN, wash_area_id=wash_area_id)
         data = {}

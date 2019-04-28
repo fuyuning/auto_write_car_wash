@@ -6,48 +6,48 @@ Force Tags  model:admin_wash_user  虾洗后台
 
 
 *** Test Cases ***
-Post Clear By Userid Fail Without Login
+post admin wash users clear by userid Fail Without Login
    [Documentation]  接口名:用户数据清除${\n}
    ...              请求方式:Post${\n}
    ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
    [Tags]           Respcode:403
    ${essential_params}  create list  mobile=${mobile}  
    ${unessential_params}  create list  
-   run every case by params  Post Clear By Userid Fail 403  ${essential_params}  ${unessential_params}  userid/clear=${userid/clear}
+   run every case by params  post admin wash users clear by userid Fail 403  ${essential_params}  ${unessential_params}    userid/clear=${userid/clear}  userid/wash_user_group=${userid/wash_user_group}
 
-Get Admin Wash Users Fail Without Login
+get admin wash users Fail Without Login
    [Documentation]  接口名:用户查询${\n}
    ...              请求方式:Get${\n}
    ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
    [Tags]           Respcode:403
    ${essential_params}  create list  page_num=${page_num}  page_size=${page_size}  
    ${unessential_params}  create list  userid=${userid}  wash_user_group_id=${wash_user_group_id}  created_section=${created_section}  
-   run every case by params  Get Admin Wash Users Fail 403  ${essential_params}  ${unessential_params}
+   run every case by params  get admin wash users Fail 403  ${essential_params}  ${unessential_params}
 
-Get wash Users userid Fail Without Login
+get admin wash users userid Fail Without Login
    [Documentation]  接口名:用户信息查询${\n}
    ...              请求方式:Get${\n}
    ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
    [Tags]           Respcode:403
-    Get wash Users userid Fail 403
+    get admin wash users userid Fail 403
 
-Get Admin Wechat Info Fail Without Login
+get admin wechat info Fail Without Login
    [Documentation]  接口名:微信信息查询${\n}
    ...              请求方式:Get${\n}
    ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
    [Tags]           Respcode:403
    ${essential_params}  create list  
    ${unessential_params}  create list  userid=${userid}  
-   run every case by params  Get Admin Wechat Info Fail 403  ${essential_params}  ${unessential_params}
+   run every case by params  get admin wechat info Fail 403  ${essential_params}  ${unessential_params}
 
-Patch wash User Group by userid Fail Without Login
+patch admin wash users wash user group by userid Fail Without Login
    [Documentation]  接口名:修改用户分组${\n}
    ...              请求方式:Patch${\n}
    ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
    [Tags]           Respcode:403
    ${essential_params}  create list  wash_user_group_id=${wash_user_group_id}  
    ${unessential_params}  create list  
-   run every case by params  Patch wash User Group by userid Fail 403  ${essential_params}  ${unessential_params}  userid/wash_user_group=${userid/wash_user_group}
+   run every case by params  patch admin wash users wash user group by userid Fail 403  ${essential_params}  ${unessential_params}    userid/clear=${userid/clear}  userid/wash_user_group=${userid/wash_user_group}
 
 
 *** Variables ***
@@ -56,28 +56,28 @@ ${userid/wash_user_group}  12345678909876543
 
 
 *** Keywords ***
-Post Clear By Userid Fail 403
+post admin wash users clear by userid Fail 403
    [Arguments]  &{kwargs}
-   ${resp}=  Post Clear By Userid   &{kwargs}
+   ${resp}=  post admin wash users clear by userid  &{kwargs}
    expect status is 403  ${resp}  
 
-Get Admin Wash Users Fail 403
+get admin wash users Fail 403
    [Arguments]  &{kwargs}
-   ${resp}=  Get Admin Wash Users   &{kwargs}
+   ${resp}=  get admin wash users  &{kwargs}
    expect status is 403  ${resp}  
 
-Get wash Users userid Fail 403
+get admin wash users userid Fail 403
    [Arguments]  &{kwargs}
-   ${resp}=  Get wash Users userid   &{kwargs}
+   ${resp}=  get admin wash users userid  &{kwargs}
    expect status is 403  ${resp}  
 
-Get Admin Wechat Info Fail 403
+get admin wechat info Fail 403
    [Arguments]  &{kwargs}
-   ${resp}=  Get Admin Wechat Info   &{kwargs}
+   ${resp}=  get admin wechat info  &{kwargs}
    expect status is 403  ${resp}  
 
-Patch wash User Group by userid Fail 403
+patch admin wash users wash user group by userid Fail 403
    [Arguments]  &{kwargs}
-   ${resp}=  Patch wash User Group by userid   &{kwargs}
+   ${resp}=  patch admin wash users wash user group by userid  &{kwargs}
    expect status is 403  ${resp}  
 

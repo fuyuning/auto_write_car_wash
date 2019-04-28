@@ -2,12 +2,12 @@ from robot_car_wash_server_library.common import CommonLibrary
 
 
 class CarPositionLibrary(CommonLibrary):
-    def post_car_positions_import(self):
-        url = "{SERVER_DOMAIN}admin/car_positions/import".format(
+    def post_admin_car_positions_import(self):
+        url = "{SERVER_DOMAIN}/admin/car_positions/import".format(
             SERVER_DOMAIN=self.SERVER_DOMAIN)
         return self.client.post(url)
 
-    def post_car_positions_manual(self, **kwargs):
+    def post_admin_car_positions_manual(self, **kwargs):
         url = "{SERVER_DOMAIN}/admin/car_positions/manual".format(
             SERVER_DOMAIN=self.SERVER_DOMAIN)
         data = {}
@@ -25,9 +25,9 @@ class CarPositionLibrary(CommonLibrary):
                 data[k] = v
         return self.client.get(url, params=data)
 
-    def get_car_postion_id(self, ):
-        url = "{SERVER_DOMAIN}/admin/car_positions/car_postion_id".format(
-            SERVER_DOMAIN=self.SERVER_DOMAIN)
+    def get_admin_car_positions_car_postion_id_by_(self, ):
+        url = "{SERVER_DOMAIN}/admin/car_positions/{}/car_postion_id".format(
+            SERVER_DOMAIN=self.SERVER_DOMAIN, =)
         return self.client.get(url)
 
     def put_admin_car_positions_by_car_position_id(self, car_position_id, **kwargs):

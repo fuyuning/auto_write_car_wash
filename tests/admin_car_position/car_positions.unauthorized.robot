@@ -6,53 +6,53 @@ Force Tags  model:admin_car_position  虾洗后台
 
 
 *** Test Cases ***
-Post car Positions import Fail Without Login
+post admin car positions import Fail Without Login
    [Documentation]  接口名:文件上传${\n}
    ...              请求方式:Post${\n}
    ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
    [Tags]           Respcode:403
-    Post car Positions import Fail 403
+    post admin car positions import Fail 403
 
-Post car Positions manual Fail Without Login
+post admin car positions manual Fail Without Login
    [Documentation]  接口名:手动添加车辆位置${\n}
    ...              请求方式:Post${\n}
    ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
    [Tags]           Respcode:403
    ${essential_params}  create list  car_id=${car_id}  parking_id=${parking_id}  
    ${unessential_params}  create list  wash_area_id=${wash_area_id}  entry_time=${entry_time}  lon=${lon}  lat=${lat}  phase=${phase}  floor=${floor}  zone=${zone}  space_no=${space_no}  ownership=${ownership}  
-   run every case by params  Post car Positions manual Fail 403  ${essential_params}  ${unessential_params}
+   run every case by params  post admin car positions manual Fail 403  ${essential_params}  ${unessential_params}
 
-Get Admin Car Positions Fail Without Login
+get admin car positions Fail Without Login
    [Documentation]  接口名:车辆位置列表${\n}
    ...              请求方式:Get${\n}
    ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
    [Tags]           Respcode:403
    ${essential_params}  create list  car_id=${car_id}  
    ${unessential_params}  create list  page_num=${page_num}  page_size=${page_size}  
-   run every case by params  Get Admin Car Positions Fail 403  ${essential_params}  ${unessential_params}
+   run every case by params  get admin car positions Fail 403  ${essential_params}  ${unessential_params}
 
-Get car Postion Id Fail Without Login
+get admin car positions car postion id by  Fail Without Login
    [Documentation]  接口名:车辆位置详情${\n}
    ...              请求方式:Get${\n}
    ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
    [Tags]           Respcode:403
-   Get car Postion Id Fail 403  /car_postion_id=${/car_postion_id}
+   get admin car positions car postion id by  Fail 403    /car_postion_id=${/car_postion_id}  car_position_id=${car_position_id}
 
-Put Admin Car Positions By Car Position Id Fail Without Login
+put admin car positions by car position id Fail Without Login
    [Documentation]  接口名:修改车辆位置${\n}
    ...              请求方式:Put${\n}
    ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
    [Tags]           Respcode:403
    ${essential_params}  create list  car_id=${car_id}  parking_id=${parking_id}  
    ${unessential_params}  create list  wash_area_id=${wash_area_id}  entry_time=${entry_time}  lon=${lon}  lat=${lat}  phase=${phase}  floor=${floor}  zone=${zone}  space_no=${space_no}  ownership=${ownership}  
-   run every case by params  Put Admin Car Positions By Car Position Id Fail 403  ${essential_params}  ${unessential_params}  car_position_id=${car_position_id}
+   run every case by params  put admin car positions by car position id Fail 403  ${essential_params}  ${unessential_params}    /car_postion_id=${/car_postion_id}  car_position_id=${car_position_id}
 
-Delete Admin Car Positions By Car Position Id Fail Without Login
+delete admin car positions by car position id Fail Without Login
    [Documentation]  接口名:删除车辆位置${\n}
    ...              请求方式:Delete${\n}
    ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
    [Tags]           Respcode:403
-   Delete Admin Car Positions By Car Position Id Fail 403  car_position_id=${car_position_id}
+   delete admin car positions by car position id Fail 403    /car_postion_id=${/car_postion_id}  car_position_id=${car_position_id}
 
 
 *** Variables ***
@@ -61,33 +61,33 @@ ${car_position_id}  12345678909876543
 
 
 *** Keywords ***
-Post car Positions import Fail 403
+post admin car positions import Fail 403
    [Arguments]  &{kwargs}
-   ${resp}=  Post car Positions import   &{kwargs}
+   ${resp}=  post admin car positions import  &{kwargs}
    expect status is 403  ${resp}  
 
-Post car Positions manual Fail 403
+post admin car positions manual Fail 403
    [Arguments]  &{kwargs}
-   ${resp}=  Post car Positions manual   &{kwargs}
+   ${resp}=  post admin car positions manual  &{kwargs}
    expect status is 403  ${resp}  
 
-Get Admin Car Positions Fail 403
+get admin car positions Fail 403
    [Arguments]  &{kwargs}
-   ${resp}=  Get Admin Car Positions   &{kwargs}
+   ${resp}=  get admin car positions  &{kwargs}
    expect status is 403  ${resp}  
 
-Get car Postion Id Fail 403
+get admin car positions car postion id by  Fail 403
    [Arguments]  &{kwargs}
-   ${resp}=  Get car Postion Id   &{kwargs}
+   ${resp}=  get admin car positions car postion id by   &{kwargs}
    expect status is 403  ${resp}  
 
-Put Admin Car Positions By Car Position Id Fail 403
+put admin car positions by car position id Fail 403
    [Arguments]  &{kwargs}
-   ${resp}=  Put Admin Car Positions By Car Position Id   &{kwargs}
+   ${resp}=  put admin car positions by car position id  &{kwargs}
    expect status is 403  ${resp}  
 
-Delete Admin Car Positions By Car Position Id Fail 403
+delete admin car positions by car position id Fail 403
    [Arguments]  &{kwargs}
-   ${resp}=  Delete Admin Car Positions By Car Position Id   &{kwargs}
+   ${resp}=  delete admin car positions by car position id  &{kwargs}
    expect status is 403  ${resp}  
 

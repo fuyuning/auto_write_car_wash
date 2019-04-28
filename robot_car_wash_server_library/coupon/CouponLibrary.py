@@ -11,7 +11,7 @@ class CouponLibrary(CommonLibrary):
                 data[k] = v
         return self.client.post(url, json=data)
 
-    def get_coupon_pools_point(self, **kwargs):
+    def get_admin_coupon_pools_point(self, **kwargs):
         url = "{SERVER_DOMAIN}/admin/coupon_pools/point".format(
             SERVER_DOMAIN=self.SERVER_DOMAIN)
         data = {}

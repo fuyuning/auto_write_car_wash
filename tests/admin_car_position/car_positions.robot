@@ -8,103 +8,103 @@ Force Tags  model:admin_car_position  虾洗后台
 
 
 *** Test Cases ***
-Post car Positions import Success 
+post admin car positions import Success 
    [Documentation]  接口名:文件上传${\n}
    ...              请求方式:Post${\n}
    ...              预期结果:输入正确参数,http响应码返回 200,返回的Json数据为  列表。
    [Tags]           Respcode:200
-    Post car Positions import Success 200
+    post admin car positions import Success 200
 
-Post car Positions manual Fail With Wrong Params
+post admin car positions manual Fail With Wrong Params
    [Documentation]  接口名:手动添加车辆位置${\n}
    ...              请求方式:Post${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  car_id=${car_id_422}  parking_id=${parking_id_422}  
    ${unessential_params}  create list  wash_area_id=${wash_area_id_422}  entry_time=${entry_time_422}  lon=${lon_422}  lat=${lat_422}  phase=${phase_422}  floor=${floor_422}  zone=${zone_422}  space_no=${space_no_422}  ownership=${ownership_422}  
-   run every case by params  Post car Positions manual Fail 422  ${essential_params}  ${unessential_params}
+   run every case by params  post admin car positions manual Fail 422  ${essential_params}  ${unessential_params}  success=False
 
-Post car Positions manual Success 
+post admin car positions manual Success 
    [Documentation]  接口名:手动添加车辆位置${\n}
    ...              请求方式:Post${\n}
    ...              预期结果:输入正确参数,http响应码返回 201,返回的Json数据符合验证。
    [Tags]           Respcode:201
    ${essential_params}  create list  car_id=${car_id}  parking_id=${parking_id}  
    ${unessential_params}  create list  wash_area_id=${wash_area_id}  entry_time=${entry_time}  lon=${lon}  lat=${lat}  phase=${phase}  floor=${floor}  zone=${zone}  space_no=${space_no}  ownership=${ownership}  
-   run every case by params  Post car Positions manual Success 201  ${essential_params}  ${unessential_params}
+   run every case by params  post admin car positions manual Success 201  ${essential_params}  ${unessential_params}
 
-Get Admin Car Positions Success 
+get admin car positions Success 
    [Documentation]  接口名:车辆位置列表${\n}
    ...              请求方式:Get${\n}
    ...              预期结果:输入正确参数,http响应码返回 200,返回的Json数据为 CarPosition 列表。
    [Tags]           Respcode:200
    ${essential_params}  create list  car_id=${car_id}  
    ${unessential_params}  create list  page_num=${page_num}  page_size=${page_size}  
-   run every case by params  Get Admin Car Positions Success 200  ${essential_params}  ${unessential_params}
+   run every case by params  get admin car positions Success 200  ${essential_params}  ${unessential_params}
 
-Get Admin Car Positions Fail With Wrong Params
+get admin car positions Fail With Wrong Params
    [Documentation]  接口名:车辆位置列表${\n}
    ...              请求方式:Get${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  car_id=${car_id_422}  
    ${unessential_params}  create list  page_num=${page_num_422}  page_size=${page_size_422}  
-   run every case by params  Get Admin Car Positions Fail 422  ${essential_params}  ${unessential_params}
+   run every case by params  get admin car positions Fail 422  ${essential_params}  ${unessential_params}  success=False
 
-Get car Postion Id Fail With Wrong Url
+get admin car positions car postion id by  Fail With Wrong Url
    [Documentation]  接口名:车辆位置详情${\n}
    ...              请求方式:Get${\n}
    ...              预期结果:输入正确参数及错误的url,http响应码返回 404,无Json数据返回。
    [Tags]           Respcode:404
-   Get car Postion Id Fail 404  /car_postion_id=${wrong_url_id}
+   get admin car positions car postion id by  Fail 404    /car_postion_id=${w}  car_position_id=${r}
 
-Get car Postion Id Success 
+get admin car positions car postion id by  Success 
    [Documentation]  接口名:车辆位置详情${\n}
    ...              请求方式:Get${\n}
    ...              预期结果:输入正确参数,http响应码返回 200,返回的Json数据为 CarPosition 对象。
    [Tags]           Respcode:200
-   Get car Postion Id Success 200  /car_postion_id=${/car_postion_id}
+   get admin car positions car postion id by  Success 200    /car_postion_id=${/car_postion_id}  car_position_id=${car_position_id}
 
-Put Admin Car Positions By Car Position Id Fail With Wrong Url
+put admin car positions by car position id Fail With Wrong Url
    [Documentation]  接口名:修改车辆位置${\n}
    ...              请求方式:Put${\n}
    ...              预期结果:输入正确参数及错误的url,http响应码返回 404,无Json数据返回。
    [Tags]           Respcode:404
    ${essential_params}  create list  car_id=${car_id}  parking_id=${parking_id}  
    ${unessential_params}  create list  wash_area_id=${wash_area_id}  entry_time=${entry_time}  lon=${lon}  lat=${lat}  phase=${phase}  floor=${floor}  zone=${zone}  space_no=${space_no}  ownership=${ownership}  
-   run every case by params  Put Admin Car Positions By Car Position Id Fail 404  ${essential_params}  ${unessential_params}  car_position_id=${wrong_url_id}
+   run every case by params  put admin car positions by car position id Fail 404  ${essential_params}  ${unessential_params}    /car_postion_id=${w}  car_position_id=${r}
 
-Put Admin Car Positions By Car Position Id Fail With Wrong Params
+put admin car positions by car position id Fail With Wrong Params
    [Documentation]  接口名:修改车辆位置${\n}
    ...              请求方式:Put${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create list  car_id=${car_id_422}  parking_id=${parking_id_422}  
    ${unessential_params}  create list  wash_area_id=${wash_area_id_422}  entry_time=${entry_time_422}  lon=${lon_422}  lat=${lat_422}  phase=${phase_422}  floor=${floor_422}  zone=${zone_422}  space_no=${space_no_422}  ownership=${ownership_422}  
-   run every case by params  Put Admin Car Positions By Car Position Id Fail 422  ${essential_params}  ${unessential_params}  car_position_id=${car_position_id}
+   run every case by params  put admin car positions by car position id Fail 422  ${essential_params}  ${unessential_params}    /car_postion_id=${/car_postion_id}  car_position_id=${car_position_id}  success=False
 
-Put Admin Car Positions By Car Position Id Success 
+put admin car positions by car position id Success 
    [Documentation]  接口名:修改车辆位置${\n}
    ...              请求方式:Put${\n}
    ...              预期结果:输入正确参数,http响应码返回 204,无Json数据返回。
    [Tags]           Respcode:204
    ${essential_params}  create list  car_id=${car_id}  parking_id=${parking_id}  
    ${unessential_params}  create list  wash_area_id=${wash_area_id}  entry_time=${entry_time}  lon=${lon}  lat=${lat}  phase=${phase}  floor=${floor}  zone=${zone}  space_no=${space_no}  ownership=${ownership}  
-   run every case by params  Put Admin Car Positions By Car Position Id Success 204  ${essential_params}  ${unessential_params}  car_position_id=${car_position_id}
+   run every case by params  put admin car positions by car position id Success 204  ${essential_params}  ${unessential_params}    /car_postion_id=${/car_postion_id}  car_position_id=${car_position_id}
 
-Delete Admin Car Positions By Car Position Id Fail With Wrong Url
+delete admin car positions by car position id Fail With Wrong Url
    [Documentation]  接口名:删除车辆位置${\n}
    ...              请求方式:Delete${\n}
    ...              预期结果:输入正确参数及错误的url,http响应码返回 404,无Json数据返回。
    [Tags]           Respcode:404
-   Delete Admin Car Positions By Car Position Id Fail 404  car_position_id=${wrong_url_id}
+   delete admin car positions by car position id Fail 404    /car_postion_id=${w}  car_position_id=${r}
 
-Delete Admin Car Positions By Car Position Id Success 
+delete admin car positions by car position id Success 
    [Documentation]  接口名:删除车辆位置${\n}
    ...              请求方式:Delete${\n}
    ...              预期结果:输入正确参数,http响应码返回 204,无Json数据返回。
    [Tags]           Respcode:204
-   Delete Admin Car Positions By Car Position Id Success 204  car_position_id=${car_position_id}
+   delete admin car positions by car position id Success 204    /car_postion_id=${/car_postion_id}  car_position_id=${car_position_id}
 
 
 *** Variables ***
@@ -113,79 +113,79 @@ ${car_position_id}
 
 
 *** Keywords ***
-Post car Positions import Success 200
+post admin car positions import Success 200
    [Arguments]  &{kwargs}
-   ${resp}=  Post car Positions import   &{kwargs}
-   expect status is 200  ${resp}  admin_car_position/Post_car_Positions_import_200.json
+   ${resp}=  post admin car positions import  &{kwargs}
+   expect status is 200  ${resp}  admin_car_position/post_admin_car_positions_import_200.json
    ${/car_postion_id}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][/car_postion_id]}
    set global variable   ${/car_postion_id}
    ${car_position_id}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][car_position_id]}
    set global variable   ${car_position_id}
 
-Post car Positions manual Fail 422
+post admin car positions manual Fail 422
    [Arguments]  &{kwargs}
-   ${resp}=  Post car Positions manual   &{kwargs}
+   ${resp}=  post admin car positions manual  &{kwargs}
    expect status is 422  ${resp}  
 
-Post car Positions manual Success 201
+post admin car positions manual Success 201
    [Arguments]  &{kwargs}
-   ${resp}=  Post car Positions manual   &{kwargs}
-   expect status is 201  ${resp}  admin_car_position/Post_car_Positions_manual_201.json
+   ${resp}=  post admin car positions manual  &{kwargs}
+   expect status is 201  ${resp}  admin_car_position/post_admin_car_positions_manual_201.json
    ${/car_postion_id}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][/car_postion_id]}
    set global variable   ${/car_postion_id}
    ${car_position_id}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][car_position_id]}
    set global variable   ${car_position_id}
 
-Get Admin Car Positions Success 200
+get admin car positions Success 200
    [Arguments]  &{kwargs}
-   ${resp}=  Get Admin Car Positions   &{kwargs}
-   expect status is 200  ${resp}  admin_car_position/Get_Admin_Car_Positions_200.json
+   ${resp}=  get admin car positions  &{kwargs}
+   expect status is 200  ${resp}  admin_car_position/get_admin_car_positions_200.json
    ${/car_postion_id}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][/car_postion_id]}
    set global variable   ${/car_postion_id}
    ${car_position_id}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][car_position_id]}
    set global variable   ${car_position_id}
 
-Get Admin Car Positions Fail 422
+get admin car positions Fail 422
    [Arguments]  &{kwargs}
-   ${resp}=  Get Admin Car Positions   &{kwargs}
+   ${resp}=  get admin car positions  &{kwargs}
    expect status is 422  ${resp}  
 
-Get car Postion Id Fail 404
+get admin car positions car postion id by  Fail 404
    [Arguments]  &{kwargs}
-   ${resp}=  Get car Postion Id   &{kwargs}
+   ${resp}=  get admin car positions car postion id by   &{kwargs}
    expect status is 404  ${resp}  
 
-Get car Postion Id Success 200
+get admin car positions car postion id by  Success 200
    [Arguments]  &{kwargs}
-   ${resp}=  Get car Postion Id   &{kwargs}
-   expect status is 200  ${resp}  admin_car_position/Get_car_Postion_Id_200.json
+   ${resp}=  get admin car positions car postion id by   &{kwargs}
+   expect status is 200  ${resp}  admin_car_position/get_admin_car_positions_car_postion_id_by__200.json
    ${/car_postion_id}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][/car_postion_id]}
    set global variable   ${/car_postion_id}
    ${car_position_id}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][car_position_id]}
    set global variable   ${car_position_id}
 
-Put Admin Car Positions By Car Position Id Fail 404
+put admin car positions by car position id Fail 404
    [Arguments]  &{kwargs}
-   ${resp}=  Put Admin Car Positions By Car Position Id   &{kwargs}
+   ${resp}=  put admin car positions by car position id  &{kwargs}
    expect status is 404  ${resp}  
 
-Put Admin Car Positions By Car Position Id Fail 422
+put admin car positions by car position id Fail 422
    [Arguments]  &{kwargs}
-   ${resp}=  Put Admin Car Positions By Car Position Id   &{kwargs}
+   ${resp}=  put admin car positions by car position id  &{kwargs}
    expect status is 422  ${resp}  
 
-Put Admin Car Positions By Car Position Id Success 204
+put admin car positions by car position id Success 204
    [Arguments]  &{kwargs}
-   ${resp}=  Put Admin Car Positions By Car Position Id   &{kwargs}
+   ${resp}=  put admin car positions by car position id  &{kwargs}
    expect status is 204  ${resp}  
 
-Delete Admin Car Positions By Car Position Id Fail 404
+delete admin car positions by car position id Fail 404
    [Arguments]  &{kwargs}
-   ${resp}=  Delete Admin Car Positions By Car Position Id   &{kwargs}
+   ${resp}=  delete admin car positions by car position id  &{kwargs}
    expect status is 404  ${resp}  
 
-Delete Admin Car Positions By Car Position Id Success 204
+delete admin car positions by car position id Success 204
    [Arguments]  &{kwargs}
-   ${resp}=  Delete Admin Car Positions By Car Position Id   &{kwargs}
+   ${resp}=  delete admin car positions by car position id  &{kwargs}
    expect status is 204  ${resp}  
 

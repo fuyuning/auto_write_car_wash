@@ -2,7 +2,7 @@ from robot_car_wash_server_library.common import CommonLibrary
 
 
 class WashUserLibrary(CommonLibrary):
-    def post_clear_by_userid(self, userid, **kwargs):
+    def post_admin_wash_users_clear_by_userid(self, userid, **kwargs):
         url = "{SERVER_DOMAIN}/admin/wash_users/{userid}/clear".format(
             SERVER_DOMAIN=self.SERVER_DOMAIN, userid=userid)
         data = {}
@@ -20,7 +20,7 @@ class WashUserLibrary(CommonLibrary):
                 data[k] = v
         return self.client.get(url, params=data)
 
-    def get_wash_users_userid(self):
+    def get_admin_wash_users_userid(self):
         url = "{SERVER_DOMAIN}/admin/wash_users/userid".format(
             SERVER_DOMAIN=self.SERVER_DOMAIN)
         return self.client.get(url)
@@ -34,7 +34,7 @@ class WashUserLibrary(CommonLibrary):
                 data[k] = v
         return self.client.get(url)
 
-    def patch_wash_user_group_by_userid(self, userid, **kwargs):
+    def patch_admin_wash_users_wash_user_group_by_userid(self, userid, **kwargs):
         url = "{SERVER_DOMAIN}/admin/wash_users/{userid}/wash_user_group".format(
             SERVER_DOMAIN=self.SERVER_DOMAIN, userid=userid)
         data = {}

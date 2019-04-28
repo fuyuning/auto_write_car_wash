@@ -6,37 +6,37 @@ Force Tags  model:admin_customer_service  虾洗后台
 
 
 *** Test Cases ***
-Post Finish By Customer Service Id Fail Without Login
+post admin customer services finish by customer service id Fail Without Login
    [Documentation]  接口名:售后修改${\n}
    ...              请求方式:Post${\n}
    ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
    [Tags]           Respcode:403
    ${essential_params}  create list  opinion=${opinion}  is_refund=${is_refund}  
    ${unessential_params}  create list  
-   run every case by params  Post Finish By Customer Service Id Fail 403  ${essential_params}  ${unessential_params}  customer_service_id/finish=${customer_service_id/finish}
+   run every case by params  post admin customer services finish by customer service id Fail 403  ${essential_params}  ${unessential_params}    customer_service_id/finish=${customer_service_id/finish}  customer_service_id=${customer_service_id}
 
-Get Admin Customer Services Fail Without Login
+get admin customer services Fail Without Login
    [Documentation]  接口名:售后查询${\n}
    ...              请求方式:Get${\n}
    ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
    [Tags]           Respcode:403
    ${essential_params}  create list  page_num=${page_num}  page_size=${page_size}  
    ${unessential_params}  create list  order_no=${order_no}  customer_service_no=${customer_service_no}  car_id=${car_id}  mobile=${mobile}  user_id=${user_id}  reason=${reason}  status=${status}  order_status=${order_status}  start_section=${start_section}  
-   run every case by params  Get Admin Customer Services Fail 403  ${essential_params}  ${unessential_params}
+   run every case by params  get admin customer services Fail 403  ${essential_params}  ${unessential_params}
 
-Get Admin Customer Services By Customer Service Id Fail Without Login
+get admin customer services by customer service id Fail Without Login
    [Documentation]  接口名:售后查询${\n}
    ...              请求方式:Get${\n}
    ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
    [Tags]           Respcode:403
-   Get Admin Customer Services By Customer Service Id Fail 403  customer_service_id=${customer_service_id}
+   get admin customer services by customer service id Fail 403    customer_service_id/finish=${customer_service_id/finish}  customer_service_id=${customer_service_id}
 
-Delete Admin Customer Services By Customer Service Id Fail Without Login
+delete admin customer services by customer service id Fail Without Login
    [Documentation]  接口名:售后删除记录${\n}
    ...              请求方式:Delete${\n}
    ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
    [Tags]           Respcode:403
-   Delete Admin Customer Services By Customer Service Id Fail 403  customer_service_id=${customer_service_id}
+   delete admin customer services by customer service id Fail 403    customer_service_id/finish=${customer_service_id/finish}  customer_service_id=${customer_service_id}
 
 
 *** Variables ***
@@ -45,23 +45,23 @@ ${customer_service_id}  12345678909876543
 
 
 *** Keywords ***
-Post Finish By Customer Service Id Fail 403
+post admin customer services finish by customer service id Fail 403
    [Arguments]  &{kwargs}
-   ${resp}=  Post Finish By Customer Service Id   &{kwargs}
+   ${resp}=  post admin customer services finish by customer service id  &{kwargs}
    expect status is 403  ${resp}  
 
-Get Admin Customer Services Fail 403
+get admin customer services Fail 403
    [Arguments]  &{kwargs}
-   ${resp}=  Get Admin Customer Services   &{kwargs}
+   ${resp}=  get admin customer services  &{kwargs}
    expect status is 403  ${resp}  
 
-Get Admin Customer Services By Customer Service Id Fail 403
+get admin customer services by customer service id Fail 403
    [Arguments]  &{kwargs}
-   ${resp}=  Get Admin Customer Services By Customer Service Id   &{kwargs}
+   ${resp}=  get admin customer services by customer service id  &{kwargs}
    expect status is 403  ${resp}  
 
-Delete Admin Customer Services By Customer Service Id Fail 403
+delete admin customer services by customer service id Fail 403
    [Arguments]  &{kwargs}
-   ${resp}=  Delete Admin Customer Services By Customer Service Id   &{kwargs}
+   ${resp}=  delete admin customer services by customer service id  &{kwargs}
    expect status is 403  ${resp}  
 

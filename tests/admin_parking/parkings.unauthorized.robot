@@ -6,55 +6,55 @@ Force Tags  model:admin_parking  虾洗后台
 
 
 *** Test Cases ***
-Post Admin Parkings Fail Without Login
+post admin parkings Fail Without Login
    [Documentation]  接口名:添加停车场信息${\n}
    ...              请求方式:Post${\n}
    ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
    [Tags]           Respcode:403
    ${essential_params}  create list  parking_name=${parking_name}  position=${position}  
    ${unessential_params}  create list  alias_name=${alias_name}  wash_area_id=${wash_area_id}  out_parking_id=${out_parking_id}  enabled=False  lon=${lon}  lat=${lat}  parking_banners=${parking_banners}  use_home_banner=False  service_introduce=${service_introduce}  address=${address}  use_home_illustrate=False  province=${province}  city=${city}  district=${district}  
-   run every case by params  Post Admin Parkings Fail 403  ${essential_params}  ${unessential_params}
+   run every case by params  post admin parkings Fail 403  ${essential_params}  ${unessential_params}
 
-Get Admin Parkings Fail Without Login
+get admin parkings Fail Without Login
    [Documentation]  接口名:停车场信息列表${\n}
    ...              请求方式:Get${\n}
    ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
    [Tags]           Respcode:403
    ${essential_params}  create list  
    ${unessential_params}  create list  parking_name=${parking_name}  wash_area_id=${wash_area_id}  enabled=False  page_num=${page_num}  page_size=${page_size}  
-   run every case by params  Get Admin Parkings Fail 403  ${essential_params}  ${unessential_params}
+   run every case by params  get admin parkings Fail 403  ${essential_params}  ${unessential_params}
 
-Get Admin Parkings By Parking Id Fail Without Login
+get admin parkings by parking id Fail Without Login
    [Documentation]  接口名:停车场信息详情${\n}
    ...              请求方式:Get${\n}
    ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
    [Tags]           Respcode:403
-   Get Admin Parkings By Parking Id Fail 403  parking_id=${parking_id}
+   get admin parkings by parking id Fail 403    parking_id=${parking_id}  parking_id/enabled=${parking_id/enabled}
 
-Put Admin Parkings By Parking Id Fail Without Login
+put admin parkings by parking id Fail Without Login
    [Documentation]  接口名:修改停车场信息${\n}
    ...              请求方式:Put${\n}
    ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
    [Tags]           Respcode:403
    ${essential_params}  create list  parking_name=${parking_name}  position=${position}  
    ${unessential_params}  create list  alias_name=${alias_name}  wash_area_id=${wash_area_id}  out_parking_id=${out_parking_id}  enabled=False  lon=${lon}  lat=${lat}  parking_banners=${parking_banners}  use_home_banner=False  service_introduce=${service_introduce}  address=${address}  use_home_illustrate=False  province=${province}  city=${city}  district=${district}  
-   run every case by params  Put Admin Parkings By Parking Id Fail 403  ${essential_params}  ${unessential_params}  parking_id=${parking_id}
+   run every case by params  put admin parkings by parking id Fail 403  ${essential_params}  ${unessential_params}    parking_id=${parking_id}  parking_id/enabled=${parking_id/enabled}
 
-Patch Enabled By Parking Id Fail Without Login
+patch admin parkings enabled by parking id Fail Without Login
    [Documentation]  接口名:停车场服务状态${\n}
    ...              请求方式:Patch${\n}
    ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
    [Tags]           Respcode:403
    ${essential_params}  create list  enabled=False  
    ${unessential_params}  create list  
-   run every case by params  Patch Enabled By Parking Id Fail 403  ${essential_params}  ${unessential_params}  parking_id/enabled=${parking_id/enabled}
+   run every case by params  patch admin parkings enabled by parking id Fail 403  ${essential_params}  ${unessential_params}    parking_id=${parking_id}  parking_id/enabled=${parking_id/enabled}
 
-Delete Admin Parkings By Parking Id Fail Without Login
+delete admin parkings by parking id Fail Without Login
    [Documentation]  接口名:删除停车场信息${\n}
    ...              请求方式:Delete${\n}
    ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
    [Tags]           Respcode:403
-   Delete Admin Parkings By Parking Id Fail 403  parking_id=${parking_id}
+   delete admin parkings by parking id Fail 403    parking_id=${parking_id}  parking_id/enabled=${parking_id/enabled}
 
 
 *** Variables ***
@@ -63,33 +63,33 @@ ${parking_id/enabled}  12345678909876543
 
 
 *** Keywords ***
-Post Admin Parkings Fail 403
+post admin parkings Fail 403
    [Arguments]  &{kwargs}
-   ${resp}=  Post Admin Parkings   &{kwargs}
+   ${resp}=  post admin parkings  &{kwargs}
    expect status is 403  ${resp}  
 
-Get Admin Parkings Fail 403
+get admin parkings Fail 403
    [Arguments]  &{kwargs}
-   ${resp}=  Get Admin Parkings   &{kwargs}
+   ${resp}=  get admin parkings  &{kwargs}
    expect status is 403  ${resp}  
 
-Get Admin Parkings By Parking Id Fail 403
+get admin parkings by parking id Fail 403
    [Arguments]  &{kwargs}
-   ${resp}=  Get Admin Parkings By Parking Id   &{kwargs}
+   ${resp}=  get admin parkings by parking id  &{kwargs}
    expect status is 403  ${resp}  
 
-Put Admin Parkings By Parking Id Fail 403
+put admin parkings by parking id Fail 403
    [Arguments]  &{kwargs}
-   ${resp}=  Put Admin Parkings By Parking Id   &{kwargs}
+   ${resp}=  put admin parkings by parking id  &{kwargs}
    expect status is 403  ${resp}  
 
-Patch Enabled By Parking Id Fail 403
+patch admin parkings enabled by parking id Fail 403
    [Arguments]  &{kwargs}
-   ${resp}=  Patch Enabled By Parking Id   &{kwargs}
+   ${resp}=  patch admin parkings enabled by parking id  &{kwargs}
    expect status is 403  ${resp}  
 
-Delete Admin Parkings By Parking Id Fail 403
+delete admin parkings by parking id Fail 403
    [Arguments]  &{kwargs}
-   ${resp}=  Delete Admin Parkings By Parking Id   &{kwargs}
+   ${resp}=  delete admin parkings by parking id  &{kwargs}
    expect status is 403  ${resp}  
 

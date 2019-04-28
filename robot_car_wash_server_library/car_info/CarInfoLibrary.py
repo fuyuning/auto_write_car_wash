@@ -2,8 +2,8 @@ from robot_car_wash_server_library.common import CommonLibrary
 
 
 class CarInfoLibrary(CommonLibrary):
-    def post_car_infos_import(self):
-        url = "{SERVER_DOMAIN}admin/car_infos/import".format(
+    def post_admin_car_infos_import(self):
+        url = "{SERVER_DOMAIN}/admin/car_infos/import".format(
             SERVER_DOMAIN=self.SERVER_DOMAIN)
         return self.client.post(url)
 

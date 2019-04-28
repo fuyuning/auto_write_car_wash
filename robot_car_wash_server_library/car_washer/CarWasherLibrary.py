@@ -25,7 +25,7 @@ class CarWasherLibrary(CommonLibrary):
             SERVER_DOMAIN=self.SERVER_DOMAIN, username=username)
         return self.client.get(url)
 
-    def get_wash_records_by_username(self, username, **kwargs):
+    def get_admin_car_washers_wash_records_by_username(self, username, **kwargs):
         url = "{SERVER_DOMAIN}/admin/car_washers/{username}/wash_records".format(
             SERVER_DOMAIN=self.SERVER_DOMAIN, username=username)
         data = {}
@@ -34,7 +34,7 @@ class CarWasherLibrary(CommonLibrary):
                 data[k] = v
         return self.client.get(url, params=data)
 
-    def get_order_count_by_username(self, username, **kwargs):
+    def get_admin_car_washers_order_count_by_username(self, username, **kwargs):
         url = "{SERVER_DOMAIN}/admin/car_washers/{username}/order_count".format(
             SERVER_DOMAIN=self.SERVER_DOMAIN, username=username)
         data = {}
@@ -52,7 +52,7 @@ class CarWasherLibrary(CommonLibrary):
                 data[k] = v
         return self.client.put(url, json=data)
 
-    def patch_is_active_by_username(self, username, **kwargs):
+    def patch_admin_car_washers_is_active_by_username(self, username, **kwargs):
         url = "{SERVER_DOMAIN}/admin/car_washers/{username}/is_active".format(
             SERVER_DOMAIN=self.SERVER_DOMAIN, username=username)
         data = {}

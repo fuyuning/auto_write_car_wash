@@ -2,7 +2,7 @@ from robot_car_wash_server_library.common import CommonLibrary
 
 
 class CarMoveQrcodeLibrary(CommonLibrary):
-    def post_finish_by_car_move_qrcode_id(self, car_move_qrcode_id, **kwargs):
+    def post_admin_car_move_qrcodes_finish_by_car_move_qrcode_id(self, car_move_qrcode_id, **kwargs):
         url = "{SERVER_DOMAIN}/admin/car_move_qrcodes/{car_move_qrcode_id}/finish".format(
             SERVER_DOMAIN=self.SERVER_DOMAIN, car_move_qrcode_id=car_move_qrcode_id)
         data = {}

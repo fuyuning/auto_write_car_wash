@@ -2,7 +2,7 @@ from robot_car_wash_server_library.common import CommonLibrary
 
 
 class WashRecordLibrary(CommonLibrary):
-    def post_refund_by_wash_record_id(self, wash_record_id, **kwargs):
+    def post_admin_wash_records_refund_by_wash_record_id(self, wash_record_id, **kwargs):
         url = "{SERVER_DOMAIN}/admin/wash_records/{wash_record_id}/refund".format(
             SERVER_DOMAIN=self.SERVER_DOMAIN, wash_record_id=wash_record_id)
         data = {}
@@ -11,7 +11,7 @@ class WashRecordLibrary(CommonLibrary):
                 data[k] = v
         return self.client.post(url, json=data)
 
-    def post_close_by_wash_record_id(self, wash_record_id, **kwargs):
+    def post_admin_wash_records_close_by_wash_record_id(self, wash_record_id, **kwargs):
         url = "{SERVER_DOMAIN}/admin/wash_records/{wash_record_id}/close".format(
             SERVER_DOMAIN=self.SERVER_DOMAIN, wash_record_id=wash_record_id)
         data = {}
@@ -34,7 +34,7 @@ class WashRecordLibrary(CommonLibrary):
             SERVER_DOMAIN=self.SERVER_DOMAIN, wash_record_id=wash_record_id)
         return self.client.get(url)
 
-    def patch_is_deleted_by_wash_record_id(self, wash_record_id, **kwargs):
+    def patch_admin_wash_records_is_deleted_by_wash_record_id(self, wash_record_id, **kwargs):
         url = "{SERVER_DOMAIN}/admin/wash_records/{wash_record_id}/is_deleted".format(
             SERVER_DOMAIN=self.SERVER_DOMAIN, wash_record_id=wash_record_id)
         data = {}
@@ -52,7 +52,7 @@ class WashRecordLibrary(CommonLibrary):
                 data[k] = v
         return self.client.patch(url)
 
-    def patch_(car_id|mobile|name)_by_wash_record_id(self, wash_record_id, **kwargs):
+    def patch_admin_wash_records_(car_id|mobile|name)_by_wash_record_id(self, wash_record_id, **kwargs):
         url = "{SERVER_DOMAIN}/admin/wash_records/{wash_record_id}/(car_id|mobile|name)".format(
             SERVER_DOMAIN=self.SERVER_DOMAIN, wash_record_id=wash_record_id)
         data = {}

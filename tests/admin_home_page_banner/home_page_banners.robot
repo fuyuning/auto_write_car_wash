@@ -58,7 +58,7 @@ put admin home page banners by home page banner id Fail With Wrong Url
    [Tags]           Respcode:404
    ${essential_params}  create list  
    ${unessential_params}  create list  banners=${banners}  service_introduce=${service_introduce}  
-   run every case by params  put admin home page banners by home page banner id Fail 404  ${essential_params}  ${unessential_params}    home_page_banner_id=${w}
+   run every case by params  put admin home page banners by home page banner id Fail 404  ${essential_params}  ${unessential_params}    home_page_banner_id=${wrong_url_id}
 
 
 *** Variables ***

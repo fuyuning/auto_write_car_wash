@@ -151,9 +151,12 @@ class AutoWriteRobot(object):
                 if j[3] == 'DELETE' and i == 4:
                     model_list_sort.append(j)
         for i in model_list_sort:
-            urls_id = i[4].split(':')
-            if len(urls_id) > 1 and urls_id[1] not in id_in_url:
-                id_in_url.append(urls_id[1])
+            url_parts = i[4].split('/')
+            for j in url_parts:
+                if j.find(':') != -1:
+                    j = j.replace(':', '')
+                    if j not in id_in_url:
+                        id_in_url.append(j)
         for i in range(0, 3):
             for api in model_list_sort:
                 ptxt = open('../cache/params/params_list.txt', "a+")
@@ -378,7 +381,7 @@ class AutoWriteRobot(object):
                         params_value = '${' + params_name + '}'
                     else:
                         params_value = '${' + params_name + '_422}'
-                    ptxt.write(params_value+'\n')
+                    ptxt.write(params_value+','+params_type+'\n')
                 else:
                     params_value = '${Please_input}'
 
@@ -386,17 +389,17 @@ class AutoWriteRobot(object):
                     essential_params_part = essential_params_part+params_name+'='+params_value+'  '
                 else:
                     unessential_params_part = unessential_params_part+params_name+'='+params_value+'  '
-            if api_code == '404':
-                id_name_value = wrong_id_value
-            else:
-                id_name_value = id_name
             if api_code != '403':
                 name_part = ''
             else:
                 name_part = 'unauthorized.'
             format_kwp = ''
             for i in range(0, len(id_name)):
-                format_kwp = format_kwp+'  '+id_name[i]+'=${'+id_name_value[i]+'}'
+                if api_code == '404':
+                    id_name_value = wrong_id_value
+                else:
+                    id_name_value = id_name[i]
+                format_kwp = format_kwp+'  '+id_name[i]+'=${'+id_name_value+'}'
             robot = open('../tests/' + full_name + '/' + model_name + 's.'+name_part+'robot', 'a+')
             if case_switch is True:
                 robot.write('*** Test Cases ***\n')

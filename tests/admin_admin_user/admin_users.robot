@@ -74,14 +74,14 @@ get admin admin users by username Fail With Wrong Url
    ...              请求方式:Get${\n}
    ...              预期结果:输入正确参数及错误的url,http响应码返回 404,无Json数据返回。
    [Tags]           Respcode:404
-   get admin admin users by username Fail 404    username=${w}  username/is_active=${r}
+   get admin admin users by username Fail 404    username=${wrong_url_id}
 
 get admin admin users by username Success 
    [Documentation]  接口名:获取管理员信息详情${\n}
    ...              请求方式:Get${\n}
    ...              预期结果:输入正确参数,http响应码返回 200,返回的Json数据为 User 对象。
    [Tags]           Respcode:200
-   get admin admin users by username Success 200    username=${username}  username/is_active=${username/is_active}
+   get admin admin users by username Success 200    username=${username}
 
 get admin user Success 
    [Documentation]  接口名:获取信息${\n}
@@ -115,7 +115,7 @@ put admin admin users by username Success
    [Tags]           Respcode:204
    ${essential_params}  create list  username=${username}  name=${name}  mobile=${mobile}  password=${password}  
    ${unessential_params}  create list  email=${email}  
-   run every case by params  put admin admin users by username Success 204  ${essential_params}  ${unessential_params}    username=${username}  username/is_active=${username/is_active}
+   run every case by params  put admin admin users by username Success 204  ${essential_params}  ${unessential_params}    username=${username}
 
 put admin admin users by username Fail With Wrong Url
    [Documentation]  接口名:修改管理员信息${\n}
@@ -124,7 +124,7 @@ put admin admin users by username Fail With Wrong Url
    [Tags]           Respcode:404
    ${essential_params}  create list  username=${username}  name=${name}  mobile=${mobile}  password=${password}  
    ${unessential_params}  create list  email=${email}  
-   run every case by params  put admin admin users by username Fail 404  ${essential_params}  ${unessential_params}    username=${w}  username/is_active=${r}
+   run every case by params  put admin admin users by username Fail 404  ${essential_params}  ${unessential_params}    username=${wrong_url_id}
 
 put admin admin users by username Fail With Wrong Params
    [Documentation]  接口名:修改管理员信息${\n}
@@ -133,7 +133,7 @@ put admin admin users by username Fail With Wrong Params
    [Tags]           Respcode:422
    ${essential_params}  create list  username=${username_422}  name=${name_422}  mobile=${mobile_422}  password=${password_422}  
    ${unessential_params}  create list  email=${email_422}  
-   run every case by params  put admin admin users by username Fail 422  ${essential_params}  ${unessential_params}    username=${username}  username/is_active=${username/is_active}  success=False
+   run every case by params  put admin admin users by username Fail 422  ${essential_params}  ${unessential_params}    username=${username}  success=False
 
 patch admin admin users is active by username Fail With Wrong Url
    [Documentation]  接口名:管理员启用/禁用${\n}
@@ -142,7 +142,7 @@ patch admin admin users is active by username Fail With Wrong Url
    [Tags]           Respcode:404
    ${essential_params}  create list  
    ${unessential_params}  create list  is_active=False  
-   run every case by params  patch admin admin users is active by username Fail 404  ${essential_params}  ${unessential_params}    username=${w}  username/is_active=${r}
+   run every case by params  patch admin admin users is active by username Fail 404  ${essential_params}  ${unessential_params}    username=${wrong_url_id}
 
 patch admin admin users is active by username Success 
    [Documentation]  接口名:管理员启用/禁用${\n}
@@ -151,7 +151,7 @@ patch admin admin users is active by username Success
    [Tags]           Respcode:204
    ${essential_params}  create list  
    ${unessential_params}  create list  is_active=False  
-   run every case by params  patch admin admin users is active by username Success 204  ${essential_params}  ${unessential_params}    username=${username}  username/is_active=${username/is_active}
+   run every case by params  patch admin admin users is active by username Success 204  ${essential_params}  ${unessential_params}    username=${username}
 
 patch admin admin users is active by username Fail With Wrong Params
    [Documentation]  接口名:管理员启用/禁用${\n}
@@ -160,12 +160,11 @@ patch admin admin users is active by username Fail With Wrong Params
    [Tags]           Respcode:422
    ${essential_params}  create list  
    ${unessential_params}  create list  is_active=ThisIsRobot!  
-   run every case by params  patch admin admin users is active by username Fail 422  ${essential_params}  ${unessential_params}    username=${username}  username/is_active=${username/is_active}  success=False
+   run every case by params  patch admin admin users is active by username Fail 422  ${essential_params}  ${unessential_params}    username=${username}  success=False
 
 
 *** Variables ***
 ${username}  
-${username/is_active}  
 
 
 *** Keywords ***
@@ -175,8 +174,6 @@ post admin admin users Success 201
    expect status is 201  ${resp}  admin_admin_user/post_admin_admin_users_201.json
    ${username}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][username]}
    set global variable   ${username}
-   ${username/is_active}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][username/is_active]}
-   set global variable   ${username/is_active}
 
 post admin admin users Fail 422
    [Arguments]  &{kwargs}
@@ -204,8 +201,6 @@ get admin admin users Success 200
    expect status is 200  ${resp}  admin_admin_user/get_admin_admin_users_200.json
    ${username}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][username]}
    set global variable   ${username}
-   ${username/is_active}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][username/is_active]}
-   set global variable   ${username/is_active}
 
 get admin admin users Fail 422
    [Arguments]  &{kwargs}
@@ -223,8 +218,6 @@ get admin admin users by username Success 200
    expect status is 200  ${resp}  admin_admin_user/get_admin_admin_users_by_username_200.json
    ${username}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][username]}
    set global variable   ${username}
-   ${username/is_active}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][username/is_active]}
-   set global variable   ${username/is_active}
 
 get admin user Success 200
    [Arguments]  &{kwargs}
@@ -232,8 +225,6 @@ get admin user Success 200
    expect status is 200  ${resp}  admin_admin_user/get_admin_user_200.json
    ${username}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][username]}
    set global variable   ${username}
-   ${username/is_active}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][username/is_active]}
-   set global variable   ${username/is_active}
 
 get admin get verify code Success 200
    [Arguments]  &{kwargs}
@@ -241,8 +232,6 @@ get admin get verify code Success 200
    expect status is 200  ${resp}  admin_admin_user/get_admin_get_verify_code_200.json
    ${username}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][username]}
    set global variable   ${username}
-   ${username/is_active}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][username/is_active]}
-   set global variable   ${username/is_active}
 
 get admin get verify code Fail 422
    [Arguments]  &{kwargs}

@@ -1,0 +1,25 @@
+{
+  "definitions": {},
+  "type": [
+    "object",
+    "null"
+  ],
+  "required": [
+    "username",
+    "created_time"
+  ],
+  "properties": {
+    "username": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "created_time": {
+      "type": [
+        "number",
+        "null"
+      ]
+    }
+  }
+}

@@ -42,7 +42,7 @@ put admin car series by car series id Fail With Wrong Url
    [Tags]           Respcode:404
    ${essential_params}  create list  car_model_id=${car_model_id}  
    ${unessential_params}  create list  
-   run every case by params  put admin car series by car series id Fail 404  ${essential_params}  ${unessential_params}    car_series_id=${w}
+   run every case by params  put admin car series by car series id Fail 404  ${essential_params}  ${unessential_params}    car_series_id=${wrong_url_id}
 
 put admin car series by car series id Fail With Wrong Params
    [Documentation]  接口名:编辑车系${\n}
@@ -69,7 +69,7 @@ patch admin car series by car series id Fail With Wrong Url
    [Tags]           Respcode:404
    ${essential_params}  create list  is_active=False  
    ${unessential_params}  create list  
-   run every case by params  patch admin car series by car series id Fail 404  ${essential_params}  ${unessential_params}    car_series_id=${w}
+   run every case by params  patch admin car series by car series id Fail 404  ${essential_params}  ${unessential_params}    car_series_id=${wrong_url_id}
 
 patch admin car series by car series id Fail With Wrong Params
    [Documentation]  接口名:启用/禁用服务支持${\n}

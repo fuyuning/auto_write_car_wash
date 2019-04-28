@@ -69,14 +69,14 @@ put admin service groups by service group id Fail With Wrong Url
    [Tags]           Respcode:404
    ${essential_params}  create list  service_group_name=${service_group_name}  service_original_price=${service_original_price}  cost_price=${cost_price}  service_original_price=${service_original_price}  wash_normal_price=${wash_normal_price}  wash_group_price=${wash_group_price}  membership_price=${membership_price}  order_by=${order_by}  description=${description}  
    ${unessential_params}  create list  commission_price=${commission_price}  wash_normal_percent=${wash_normal_percent}  wash_group_percent=${wash_group_percent}  membership_percent=${membership_percent}  service_ids=${service_ids}  intelligent_service_ids=${intelligent_service_ids}  
-   run every case by params  put admin service groups by service group id Fail 404  ${essential_params}  ${unessential_params}    service_group_id=${w}
+   run every case by params  put admin service groups by service group id Fail 404  ${essential_params}  ${unessential_params}    service_group_id=${wrong_url_id}
 
 delete admin service groups by service group id Fail With Wrong Url
    [Documentation]  接口名:删除服务${\n}
    ...              请求方式:Delete${\n}
    ...              预期结果:输入正确参数及错误的url,http响应码返回 404,无Json数据返回。
    [Tags]           Respcode:404
-   delete admin service groups by service group id Fail 404    service_group_id=${w}
+   delete admin service groups by service group id Fail 404    service_group_id=${wrong_url_id}
 
 delete admin service groups by service group id Success 
    [Documentation]  接口名:删除服务${\n}

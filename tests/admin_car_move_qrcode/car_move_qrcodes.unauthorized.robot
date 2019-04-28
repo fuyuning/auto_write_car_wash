@@ -13,7 +13,7 @@ post admin car move qrcodes finish by car move qrcode id Fail Without Login
    [Tags]           Respcode:403
    ${essential_params}  create list  
    ${unessential_params}  create list  qrcode_remark=${qrcode_remark}  status=${status}  
-   run every case by params  post admin car move qrcodes finish by car move qrcode id Fail 403  ${essential_params}  ${unessential_params}    car_move_qrcode_id/finish=${car_move_qrcode_id/finish}  car_move_qrcode_id=${car_move_qrcode_id}
+   run every case by params  post admin car move qrcodes finish by car move qrcode id Fail 403  ${essential_params}  ${unessential_params}    car_move_qrcode_id=${car_move_qrcode_id}
 
 get admin car move qrcodes Fail Without Login
    [Documentation]  接口名:申请查询${\n}
@@ -29,11 +29,10 @@ delete admin car move qrcodes by car move qrcode id Fail Without Login
    ...              请求方式:Delete${\n}
    ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
    [Tags]           Respcode:403
-   delete admin car move qrcodes by car move qrcode id Fail 403    car_move_qrcode_id/finish=${car_move_qrcode_id/finish}  car_move_qrcode_id=${car_move_qrcode_id}
+   delete admin car move qrcodes by car move qrcode id Fail 403    car_move_qrcode_id=${car_move_qrcode_id}
 
 
 *** Variables ***
-${car_move_qrcode_id/finish}  12345678909876543
 ${car_move_qrcode_id}  12345678909876543
 
 

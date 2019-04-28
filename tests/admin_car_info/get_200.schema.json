@@ -1,0 +1,144 @@
+{
+  "definitions": {},
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "car_id",
+      "car_year",
+      "licensed_time",
+      "description",
+      "car_brand",
+      "order_counts",
+      "car_info_id",
+      "car_images",
+      "car_color",
+      "car_frame_no",
+      "car_series",
+      "car_type",
+      "car_tire_pressure",
+      "created_time",
+      "updated_time",
+      "motor_no",
+      "recent_order_time"
+    ],
+    "properties": {
+      "car_id": {
+        "type": "string"
+      },
+      "car_year": {
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "licensed_time": {
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "description": {
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "car_brand": {
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "order_counts": {
+        "type": "number"
+      },
+      "car_info_id": {
+        "type": "string"
+      },
+      "car_images": {
+        "anyOf": [
+          {
+            "type": "null"
+          },
+          {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "type",
+                "url"
+              ],
+              "properties": {
+                "type": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "car_color": {
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "car_frame_no": {
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "car_series": {
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "car_type": {
+        "type": "number"
+      },
+      "car_tire_pressure": {
+        "anyOf": [
+          {
+            "type": "null"
+          },
+          {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "type",
+                "car_tire_pressure"
+              ],
+              "properties": {
+                "type": {
+                  "type": "string"
+                },
+                "car_tire_pressure": {
+                  "type": ["string","number"]
+                }
+              }
+            }
+          }
+        ]
+      },
+      "created_time": {
+        "type": "number"
+      },
+      "updated_time": {
+        "type": "number"
+      },
+      "motor_no": {
+        "type": "null"
+      },
+      "recent_order_time": {
+        "type": "null"
+      }
+    }
+  }
+}

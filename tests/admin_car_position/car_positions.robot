@@ -56,14 +56,14 @@ get admin car positions car postion id by  Fail With Wrong Url
    ...              请求方式:Get${\n}
    ...              预期结果:输入正确参数及错误的url,http响应码返回 404,无Json数据返回。
    [Tags]           Respcode:404
-   get admin car positions car postion id by  Fail 404    /car_postion_id=${w}  car_position_id=${r}
+   get admin car positions car postion id by  Fail 404    =${wrong_url_id}  car_position_id=${wrong_url_id}
 
 get admin car positions car postion id by  Success 
    [Documentation]  接口名:车辆位置详情${\n}
    ...              请求方式:Get${\n}
    ...              预期结果:输入正确参数,http响应码返回 200,返回的Json数据为 CarPosition 对象。
    [Tags]           Respcode:200
-   get admin car positions car postion id by  Success 200    /car_postion_id=${/car_postion_id}  car_position_id=${car_position_id}
+   get admin car positions car postion id by  Success 200    =${}  car_position_id=${car_position_id}
 
 put admin car positions by car position id Fail With Wrong Url
    [Documentation]  接口名:修改车辆位置${\n}
@@ -72,7 +72,7 @@ put admin car positions by car position id Fail With Wrong Url
    [Tags]           Respcode:404
    ${essential_params}  create list  car_id=${car_id}  parking_id=${parking_id}  
    ${unessential_params}  create list  wash_area_id=${wash_area_id}  entry_time=${entry_time}  lon=${lon}  lat=${lat}  phase=${phase}  floor=${floor}  zone=${zone}  space_no=${space_no}  ownership=${ownership}  
-   run every case by params  put admin car positions by car position id Fail 404  ${essential_params}  ${unessential_params}    /car_postion_id=${w}  car_position_id=${r}
+   run every case by params  put admin car positions by car position id Fail 404  ${essential_params}  ${unessential_params}    =${wrong_url_id}  car_position_id=${wrong_url_id}
 
 put admin car positions by car position id Fail With Wrong Params
    [Documentation]  接口名:修改车辆位置${\n}
@@ -81,7 +81,7 @@ put admin car positions by car position id Fail With Wrong Params
    [Tags]           Respcode:422
    ${essential_params}  create list  car_id=${car_id_422}  parking_id=${parking_id_422}  
    ${unessential_params}  create list  wash_area_id=${wash_area_id_422}  entry_time=${entry_time_422}  lon=${lon_422}  lat=${lat_422}  phase=${phase_422}  floor=${floor_422}  zone=${zone_422}  space_no=${space_no_422}  ownership=${ownership_422}  
-   run every case by params  put admin car positions by car position id Fail 422  ${essential_params}  ${unessential_params}    /car_postion_id=${/car_postion_id}  car_position_id=${car_position_id}  success=False
+   run every case by params  put admin car positions by car position id Fail 422  ${essential_params}  ${unessential_params}    =${}  car_position_id=${car_position_id}  success=False
 
 put admin car positions by car position id Success 
    [Documentation]  接口名:修改车辆位置${\n}
@@ -90,25 +90,25 @@ put admin car positions by car position id Success
    [Tags]           Respcode:204
    ${essential_params}  create list  car_id=${car_id}  parking_id=${parking_id}  
    ${unessential_params}  create list  wash_area_id=${wash_area_id}  entry_time=${entry_time}  lon=${lon}  lat=${lat}  phase=${phase}  floor=${floor}  zone=${zone}  space_no=${space_no}  ownership=${ownership}  
-   run every case by params  put admin car positions by car position id Success 204  ${essential_params}  ${unessential_params}    /car_postion_id=${/car_postion_id}  car_position_id=${car_position_id}
+   run every case by params  put admin car positions by car position id Success 204  ${essential_params}  ${unessential_params}    =${}  car_position_id=${car_position_id}
 
 delete admin car positions by car position id Fail With Wrong Url
    [Documentation]  接口名:删除车辆位置${\n}
    ...              请求方式:Delete${\n}
    ...              预期结果:输入正确参数及错误的url,http响应码返回 404,无Json数据返回。
    [Tags]           Respcode:404
-   delete admin car positions by car position id Fail 404    /car_postion_id=${w}  car_position_id=${r}
+   delete admin car positions by car position id Fail 404    =${wrong_url_id}  car_position_id=${wrong_url_id}
 
 delete admin car positions by car position id Success 
    [Documentation]  接口名:删除车辆位置${\n}
    ...              请求方式:Delete${\n}
    ...              预期结果:输入正确参数,http响应码返回 204,无Json数据返回。
    [Tags]           Respcode:204
-   delete admin car positions by car position id Success 204    /car_postion_id=${/car_postion_id}  car_position_id=${car_position_id}
+   delete admin car positions by car position id Success 204    =${}  car_position_id=${car_position_id}
 
 
 *** Variables ***
-${/car_postion_id}  
+${}  
 ${car_position_id}  
 
 
@@ -117,8 +117,8 @@ post admin car positions import Success 200
    [Arguments]  &{kwargs}
    ${resp}=  post admin car positions import  &{kwargs}
    expect status is 200  ${resp}  admin_car_position/post_admin_car_positions_import_200.json
-   ${/car_postion_id}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][/car_postion_id]}
-   set global variable   ${/car_postion_id}
+   ${}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][]}
+   set global variable   ${}
    ${car_position_id}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][car_position_id]}
    set global variable   ${car_position_id}
 
@@ -131,8 +131,8 @@ post admin car positions manual Success 201
    [Arguments]  &{kwargs}
    ${resp}=  post admin car positions manual  &{kwargs}
    expect status is 201  ${resp}  admin_car_position/post_admin_car_positions_manual_201.json
-   ${/car_postion_id}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][/car_postion_id]}
-   set global variable   ${/car_postion_id}
+   ${}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][]}
+   set global variable   ${}
    ${car_position_id}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][car_position_id]}
    set global variable   ${car_position_id}
 
@@ -140,8 +140,8 @@ get admin car positions Success 200
    [Arguments]  &{kwargs}
    ${resp}=  get admin car positions  &{kwargs}
    expect status is 200  ${resp}  admin_car_position/get_admin_car_positions_200.json
-   ${/car_postion_id}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][/car_postion_id]}
-   set global variable   ${/car_postion_id}
+   ${}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][]}
+   set global variable   ${}
    ${car_position_id}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][car_position_id]}
    set global variable   ${car_position_id}
 
@@ -159,8 +159,8 @@ get admin car positions car postion id by  Success 200
    [Arguments]  &{kwargs}
    ${resp}=  get admin car positions car postion id by   &{kwargs}
    expect status is 200  ${resp}  admin_car_position/get_admin_car_positions_car_postion_id_by__200.json
-   ${/car_postion_id}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][/car_postion_id]}
-   set global variable   ${/car_postion_id}
+   ${}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][]}
+   set global variable   ${}
    ${car_position_id}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][car_position_id]}
    set global variable   ${car_position_id}
 

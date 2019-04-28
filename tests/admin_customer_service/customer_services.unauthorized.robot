@@ -13,7 +13,7 @@ post admin customer services finish by customer service id Fail Without Login
    [Tags]           Respcode:403
    ${essential_params}  create list  opinion=${opinion}  is_refund=${is_refund}  
    ${unessential_params}  create list  
-   run every case by params  post admin customer services finish by customer service id Fail 403  ${essential_params}  ${unessential_params}    customer_service_id/finish=${customer_service_id/finish}  customer_service_id=${customer_service_id}
+   run every case by params  post admin customer services finish by customer service id Fail 403  ${essential_params}  ${unessential_params}    customer_service_id=${customer_service_id}
 
 get admin customer services Fail Without Login
    [Documentation]  接口名:售后查询${\n}
@@ -29,18 +29,17 @@ get admin customer services by customer service id Fail Without Login
    ...              请求方式:Get${\n}
    ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
    [Tags]           Respcode:403
-   get admin customer services by customer service id Fail 403    customer_service_id/finish=${customer_service_id/finish}  customer_service_id=${customer_service_id}
+   get admin customer services by customer service id Fail 403    customer_service_id=${customer_service_id}
 
 delete admin customer services by customer service id Fail Without Login
    [Documentation]  接口名:售后删除记录${\n}
    ...              请求方式:Delete${\n}
    ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
    [Tags]           Respcode:403
-   delete admin customer services by customer service id Fail 403    customer_service_id/finish=${customer_service_id/finish}  customer_service_id=${customer_service_id}
+   delete admin customer services by customer service id Fail 403    customer_service_id=${customer_service_id}
 
 
 *** Variables ***
-${customer_service_id/finish}  12345678909876543
 ${customer_service_id}  12345678909876543
 
 

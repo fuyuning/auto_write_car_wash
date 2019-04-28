@@ -13,7 +13,7 @@ get admin wash normals by wash normal id Fail With Wrong Url
    ...              请求方式:Get${\n}
    ...              预期结果:输入正确参数及错误的url,http响应码返回 404,无Json数据返回。
    [Tags]           Respcode:404
-   get admin wash normals by wash normal id Fail 404    wash_normal_id=${w}
+   get admin wash normals by wash normal id Fail 404    wash_normal_id=${wrong_url_id}
 
 get admin wash normals by wash normal id Success 
    [Documentation]  接口名:查询单个单买${\n}
@@ -47,7 +47,7 @@ put admin wash normals by wash normal id Fail With Wrong Url
    [Tags]           Respcode:404
    ${essential_params}  create list  start_time=${start_time}  end_time=${end_time}  is_diff_car_type=False  people_day_num=${people_day_num}  expect_type=${expect_type}  car_washer_ids=${Please_input}  service_groups=${service_groups}  day_in_week=${day_in_week}  time_loop_set=${time_loop_set}  
    ${unessential_params}  create list  expect_time=${expect_time}  expect_day=${expect_day}  expect_hour=${expect_hour}  spec_people_day_num=${spec_people_day_num}  
-   run every case by params  put admin wash normals by wash normal id Fail 404  ${essential_params}  ${unessential_params}    wash_normal_id=${w}
+   run every case by params  put admin wash normals by wash normal id Fail 404  ${essential_params}  ${unessential_params}    wash_normal_id=${wrong_url_id}
 
 put admin wash normals by wash normal id Fail With Wrong Params
    [Documentation]  接口名:编辑单买${\n}
@@ -74,7 +74,7 @@ put admin wash normals by wash normal id Fail With Wrong Url
    [Tags]           Respcode:404
    ${essential_params}  create list  start_time=${start_time}  end_time=${end_time}  is_diff_car_type=False  people_day_num=${people_day_num}  expect_type=${expect_type}  car_washer_ids=${Please_input}  service_groups=${service_groups}  
    ${unessential_params}  create list  expect_time=${expect_time}  expect_day=${expect_day}  expect_hour=${expect_hour}  
-   run every case by params  put admin wash normals by wash normal id Fail 404  ${essential_params}  ${unessential_params}    wash_normal_id=${w}
+   run every case by params  put admin wash normals by wash normal id Fail 404  ${essential_params}  ${unessential_params}    wash_normal_id=${wrong_url_id}
 
 put admin wash normals by wash normal id Fail With Wrong Params
    [Documentation]  接口名:编辑单买${\n}
@@ -110,7 +110,7 @@ patch admin wash normal by wash normal id Fail With Wrong Url
    [Tags]           Respcode:404
    ${essential_params}  create list  spec_people_day_num=${spec_people_day_num}  
    ${unessential_params}  create list  
-   run every case by params  patch admin wash normal by wash normal id Fail 404  ${essential_params}  ${unessential_params}    wash_normal_id=${w}
+   run every case by params  patch admin wash normal by wash normal id Fail 404  ${essential_params}  ${unessential_params}    wash_normal_id=${wrong_url_id}
 
 patch admin wash normal by wash normal id Fail With Wrong Params
    [Documentation]  接口名:改人数${\n}

@@ -25,8 +25,8 @@ class WashAbleGroupLibrary(CommonLibrary):
                 data[k] = v
         return self.client.put(url, json=data)
 
-    def patch_admin_wash_able_group_by_wash_able_group_id(self, wash_able_group_id, **kwargs):
-        url = "{SERVER_DOMAIN}/admin/wash_able_group/{wash_able_group_id}".format(
+    def patch_admin_wash_able_groups_by_wash_able_group_id(self, wash_able_group_id, **kwargs):
+        url = "{SERVER_DOMAIN}/admin/wash_able_groups/{wash_able_group_id}".format(
             SERVER_DOMAIN=self.SERVER_DOMAIN, wash_able_group_id=wash_able_group_id)
         data = {}
         for k, v in kwargs.items():

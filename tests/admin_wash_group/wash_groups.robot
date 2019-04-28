@@ -33,7 +33,7 @@ post admin wash groups join by wash group id Fail With Wrong Url
    [Tags]           Respcode:404
    ${essential_params}  create list  robot_num=${robot_num}  
    ${unessential_params}  create list  
-   run every case by params  post admin wash groups join by wash group id Fail 404  ${essential_params}  ${unessential_params}    wash_group_id/join=${w}  wash_group_id=${r}
+   run every case by params  post admin wash groups join by wash group id Fail 404  ${essential_params}  ${unessential_params}    wash_group_id=${wrong_url_id}
 
 post admin wash groups join by wash group id Fail With Wrong Params
    [Documentation]  接口名:一键虾滑${\n}
@@ -42,7 +42,7 @@ post admin wash groups join by wash group id Fail With Wrong Params
    [Tags]           Respcode:422
    ${essential_params}  create list  robot_num=${robot_num_422}  
    ${unessential_params}  create list  
-   run every case by params  post admin wash groups join by wash group id Fail 422  ${essential_params}  ${unessential_params}    wash_group_id/join=${wash_group_id/join}  wash_group_id=${wash_group_id}  success=False
+   run every case by params  post admin wash groups join by wash group id Fail 422  ${essential_params}  ${unessential_params}    wash_group_id=${wash_group_id}  success=False
 
 post admin wash groups join by wash group id Success 
    [Documentation]  接口名:一键虾滑${\n}
@@ -51,21 +51,21 @@ post admin wash groups join by wash group id Success
    [Tags]           Respcode:204
    ${essential_params}  create list  robot_num=${robot_num}  
    ${unessential_params}  create list  
-   run every case by params  post admin wash groups join by wash group id Success 204  ${essential_params}  ${unessential_params}    wash_group_id/join=${wash_group_id/join}  wash_group_id=${wash_group_id}
+   run every case by params  post admin wash groups join by wash group id Success 204  ${essential_params}  ${unessential_params}    wash_group_id=${wash_group_id}
 
 get admin wash groups by wash group id Fail With Wrong Url
    [Documentation]  接口名:获取拼团详情${\n}
    ...              请求方式:Get${\n}
    ...              预期结果:输入正确参数及错误的url,http响应码返回 404,无Json数据返回。
    [Tags]           Respcode:404
-   get admin wash groups by wash group id Fail 404    wash_group_id/join=${w}  wash_group_id=${r}
+   get admin wash groups by wash group id Fail 404    wash_group_id=${wrong_url_id}
 
 get admin wash groups by wash group id Success 
    [Documentation]  接口名:获取拼团详情${\n}
    ...              请求方式:Get${\n}
    ...              预期结果:输入正确参数,http响应码返回 200,返回的Json数据为 WashGroup 对象。
    [Tags]           Respcode:200
-   get admin wash groups by wash group id Success 200    wash_group_id/join=${wash_group_id/join}  wash_group_id=${wash_group_id}
+   get admin wash groups by wash group id Success 200    wash_group_id=${wash_group_id}
 
 get admin wash groups Success 
    [Documentation]  接口名:获取拼团列表${\n}
@@ -92,7 +92,7 @@ put admin wash groups by wash group id Fail With Wrong Url
    [Tags]           Respcode:404
    ${essential_params}  create list  valid_start_time=${Please_input}  valid_end_time=${Please_input}  is_diff_car_type=False  service_groups=${service_groups}  wash_area_id=${wash_area_id}  expect_time=${Please_input}  car_washer_ids=${car_washer_ids}  
    ${unessential_params}  create list  name=${name}  people_num=${people_num}  auto_group=False  
-   run every case by params  put admin wash groups by wash group id Fail 404  ${essential_params}  ${unessential_params}    wash_group_id/join=${w}  wash_group_id=${r}
+   run every case by params  put admin wash groups by wash group id Fail 404  ${essential_params}  ${unessential_params}    wash_group_id=${wrong_url_id}
 
 put admin wash groups by wash group id Fail With Wrong Params
    [Documentation]  接口名:编辑拼团${\n}
@@ -101,7 +101,7 @@ put admin wash groups by wash group id Fail With Wrong Params
    [Tags]           Respcode:422
    ${essential_params}  create list  valid_start_time=${Please_input}  valid_end_time=${Please_input}  is_diff_car_type=ThisIsRobot!  service_groups=${service_groups_422}  wash_area_id=${wash_area_id_422}  expect_time=${Please_input}  car_washer_ids=${car_washer_ids_422}  
    ${unessential_params}  create list  name=${name_422}  people_num=${people_num_422}  auto_group=ThisIsRobot!  
-   run every case by params  put admin wash groups by wash group id Fail 422  ${essential_params}  ${unessential_params}    wash_group_id/join=${wash_group_id/join}  wash_group_id=${wash_group_id}  success=False
+   run every case by params  put admin wash groups by wash group id Fail 422  ${essential_params}  ${unessential_params}    wash_group_id=${wash_group_id}  success=False
 
 put admin wash groups by wash group id Success 
    [Documentation]  接口名:编辑拼团${\n}
@@ -110,11 +110,10 @@ put admin wash groups by wash group id Success
    [Tags]           Respcode:204
    ${essential_params}  create list  valid_start_time=${Please_input}  valid_end_time=${Please_input}  is_diff_car_type=False  service_groups=${service_groups}  wash_area_id=${wash_area_id}  expect_time=${Please_input}  car_washer_ids=${car_washer_ids}  
    ${unessential_params}  create list  name=${name}  people_num=${people_num}  auto_group=False  
-   run every case by params  put admin wash groups by wash group id Success 204  ${essential_params}  ${unessential_params}    wash_group_id/join=${wash_group_id/join}  wash_group_id=${wash_group_id}
+   run every case by params  put admin wash groups by wash group id Success 204  ${essential_params}  ${unessential_params}    wash_group_id=${wash_group_id}
 
 
 *** Variables ***
-${wash_group_id/join}  
 ${wash_group_id}  
 
 
@@ -128,8 +127,6 @@ post admin wash groups Success 201
    [Arguments]  &{kwargs}
    ${resp}=  post admin wash groups  &{kwargs}
    expect status is 201  ${resp}  admin_wash_group/post_admin_wash_groups_201.json
-   ${wash_group_id/join}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][wash_group_id/join]}
-   set global variable   ${wash_group_id/join}
    ${wash_group_id}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][wash_group_id]}
    set global variable   ${wash_group_id}
 
@@ -157,8 +154,6 @@ get admin wash groups by wash group id Success 200
    [Arguments]  &{kwargs}
    ${resp}=  get admin wash groups by wash group id  &{kwargs}
    expect status is 200  ${resp}  admin_wash_group/get_admin_wash_groups_by_wash_group_id_200.json
-   ${wash_group_id/join}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][wash_group_id/join]}
-   set global variable   ${wash_group_id/join}
    ${wash_group_id}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][wash_group_id]}
    set global variable   ${wash_group_id}
 
@@ -166,8 +161,6 @@ get admin wash groups Success 200
    [Arguments]  &{kwargs}
    ${resp}=  get admin wash groups  &{kwargs}
    expect status is 200  ${resp}  admin_wash_group/get_admin_wash_groups_200.json
-   ${wash_group_id/join}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][wash_group_id/join]}
-   set global variable   ${wash_group_id/join}
    ${wash_group_id}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][wash_group_id]}
    set global variable   ${wash_group_id}
 

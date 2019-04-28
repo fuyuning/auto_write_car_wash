@@ -13,7 +13,7 @@ post admin wash users clear by userid Fail Without Login
    [Tags]           Respcode:403
    ${essential_params}  create list  mobile=${mobile}  
    ${unessential_params}  create list  
-   run every case by params  post admin wash users clear by userid Fail 403  ${essential_params}  ${unessential_params}    userid/clear=${userid/clear}  userid/wash_user_group=${userid/wash_user_group}
+   run every case by params  post admin wash users clear by userid Fail 403  ${essential_params}  ${unessential_params}    userid=${userid}
 
 get admin wash users Fail Without Login
    [Documentation]  接口名:用户查询${\n}
@@ -47,12 +47,11 @@ patch admin wash users wash user group by userid Fail Without Login
    [Tags]           Respcode:403
    ${essential_params}  create list  wash_user_group_id=${wash_user_group_id}  
    ${unessential_params}  create list  
-   run every case by params  patch admin wash users wash user group by userid Fail 403  ${essential_params}  ${unessential_params}    userid/clear=${userid/clear}  userid/wash_user_group=${userid/wash_user_group}
+   run every case by params  patch admin wash users wash user group by userid Fail 403  ${essential_params}  ${unessential_params}    userid=${userid}
 
 
 *** Variables ***
-${userid/clear}  12345678909876543
-${userid/wash_user_group}  12345678909876543
+${userid}  12345678909876543
 
 
 *** Keywords ***

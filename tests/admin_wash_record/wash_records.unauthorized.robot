@@ -13,7 +13,7 @@ post admin wash records refund by wash record id Fail Without Login
    [Tags]           Respcode:403
    ${essential_params}  create list  refunds=${refunds}  
    ${unessential_params}  create list  refund_description=${refund_description}  
-   run every case by params  post admin wash records refund by wash record id Fail 403  ${essential_params}  ${unessential_params}    wash_record_id/refund=${wash_record_id/refund}  wash_record_id/close=${wash_record_id/close}  wash_record_id=${wash_record_id}  wash_record_id/is_deleted=${wash_record_id/is_deleted}  wash_record_id/(car_id|mobile|name)=${wash_record_id/(car_id|mobile|name)}
+   run every case by params  post admin wash records refund by wash record id Fail 403  ${essential_params}  ${unessential_params}    wash_record_id=${wash_record_id}
 
 patch admin wash records is deleted by wash record id Fail Without Login
    [Documentation]  接口名:回收站恢复${\n}
@@ -22,7 +22,7 @@ patch admin wash records is deleted by wash record id Fail Without Login
    [Tags]           Respcode:403
    ${essential_params}  create list  is_deleted=False  
    ${unessential_params}  create list  
-   run every case by params  patch admin wash records is deleted by wash record id Fail 403  ${essential_params}  ${unessential_params}    wash_record_id/refund=${wash_record_id/refund}  wash_record_id/close=${wash_record_id/close}  wash_record_id=${wash_record_id}  wash_record_id/is_deleted=${wash_record_id/is_deleted}  wash_record_id/(car_id|mobile|name)=${wash_record_id/(car_id|mobile|name)}
+   run every case by params  patch admin wash records is deleted by wash record id Fail 403  ${essential_params}  ${unessential_params}    wash_record_id=${wash_record_id}
 
 patch admin wash record by wash record id Fail Without Login
    [Documentation]  接口名:洗车订单添加备注${\n}
@@ -31,7 +31,7 @@ patch admin wash record by wash record id Fail Without Login
    [Tags]           Respcode:403
    ${essential_params}  create list  admin_remark=${admin_remark}  
    ${unessential_params}  create list  
-   run every case by params  patch admin wash record by wash record id Fail 403  ${essential_params}  ${unessential_params}    wash_record_id/refund=${wash_record_id/refund}  wash_record_id/close=${wash_record_id/close}  wash_record_id=${wash_record_id}  wash_record_id/is_deleted=${wash_record_id/is_deleted}  wash_record_id/(car_id|mobile|name)=${wash_record_id/(car_id|mobile|name)}
+   run every case by params  patch admin wash record by wash record id Fail 403  ${essential_params}  ${unessential_params}    wash_record_id=${wash_record_id}
 
 patch admin wash records (car id|mobile|name) by wash record id Fail Without Login
    [Documentation]  接口名:订单详情修改（车牌,手机号,名字）${\n}
@@ -40,22 +40,18 @@ patch admin wash records (car id|mobile|name) by wash record id Fail Without Log
    [Tags]           Respcode:403
    ${essential_params}  create list  
    ${unessential_params}  create list  car_id=${car_id}  mobile=${mobile}  name=${name}  
-   run every case by params  patch admin wash records (car id|mobile|name) by wash record id Fail 403  ${essential_params}  ${unessential_params}    wash_record_id/refund=${wash_record_id/refund}  wash_record_id/close=${wash_record_id/close}  wash_record_id=${wash_record_id}  wash_record_id/is_deleted=${wash_record_id/is_deleted}  wash_record_id/(car_id|mobile|name)=${wash_record_id/(car_id|mobile|name)}
+   run every case by params  patch admin wash records (car id|mobile|name) by wash record id Fail 403  ${essential_params}  ${unessential_params}    wash_record_id=${wash_record_id}
 
 delete admin wash records by wash record id Fail Without Login
    [Documentation]  接口名:删除洗车订单${\n}
    ...              请求方式:Delete${\n}
    ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
    [Tags]           Respcode:403
-   delete admin wash records by wash record id Fail 403    wash_record_id/refund=${wash_record_id/refund}  wash_record_id/close=${wash_record_id/close}  wash_record_id=${wash_record_id}  wash_record_id/is_deleted=${wash_record_id/is_deleted}  wash_record_id/(car_id|mobile|name)=${wash_record_id/(car_id|mobile|name)}
+   delete admin wash records by wash record id Fail 403    wash_record_id=${wash_record_id}
 
 
 *** Variables ***
-${wash_record_id/refund}  12345678909876543
-${wash_record_id/close}  12345678909876543
 ${wash_record_id}  12345678909876543
-${wash_record_id/is_deleted}  12345678909876543
-${wash_record_id/(car_id|mobile|name)}  12345678909876543
 
 
 *** Keywords ***

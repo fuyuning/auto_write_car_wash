@@ -15,7 +15,7 @@ post admin car move qrcodes finish by car move qrcode id Fail With Wrong Url
    [Tags]           Respcode:404
    ${essential_params}  create list  
    ${unessential_params}  create list  qrcode_remark=${qrcode_remark}  status=${status}  
-   run every case by params  post admin car move qrcodes finish by car move qrcode id Fail 404  ${essential_params}  ${unessential_params}    car_move_qrcode_id/finish=${w}  car_move_qrcode_id=${r}
+   run every case by params  post admin car move qrcodes finish by car move qrcode id Fail 404  ${essential_params}  ${unessential_params}    car_move_qrcode_id=${wrong_url_id}
 
 post admin car move qrcodes finish by car move qrcode id Success 
    [Documentation]  接口名:申请通过${\n}
@@ -24,7 +24,7 @@ post admin car move qrcodes finish by car move qrcode id Success
    [Tags]           Respcode:204
    ${essential_params}  create list  
    ${unessential_params}  create list  qrcode_remark=${qrcode_remark}  status=${status}  
-   run every case by params  post admin car move qrcodes finish by car move qrcode id Success 204  ${essential_params}  ${unessential_params}    car_move_qrcode_id/finish=${car_move_qrcode_id/finish}  car_move_qrcode_id=${car_move_qrcode_id}
+   run every case by params  post admin car move qrcodes finish by car move qrcode id Success 204  ${essential_params}  ${unessential_params}    car_move_qrcode_id=${car_move_qrcode_id}
 
 post admin car move qrcodes finish by car move qrcode id Fail With Wrong Params
    [Documentation]  接口名:申请通过${\n}
@@ -33,7 +33,7 @@ post admin car move qrcodes finish by car move qrcode id Fail With Wrong Params
    [Tags]           Respcode:422
    ${essential_params}  create list  
    ${unessential_params}  create list  qrcode_remark=${qrcode_remark_422}  status=${status_422}  
-   run every case by params  post admin car move qrcodes finish by car move qrcode id Fail 422  ${essential_params}  ${unessential_params}    car_move_qrcode_id/finish=${car_move_qrcode_id/finish}  car_move_qrcode_id=${car_move_qrcode_id}  success=False
+   run every case by params  post admin car move qrcodes finish by car move qrcode id Fail 422  ${essential_params}  ${unessential_params}    car_move_qrcode_id=${car_move_qrcode_id}  success=False
 
 get admin car move qrcodes Success 
    [Documentation]  接口名:申请查询${\n}
@@ -58,18 +58,17 @@ delete admin car move qrcodes by car move qrcode id Fail With Wrong Url
    ...              请求方式:Delete${\n}
    ...              预期结果:输入正确参数及错误的url,http响应码返回 404,无Json数据返回。
    [Tags]           Respcode:404
-   delete admin car move qrcodes by car move qrcode id Fail 404    car_move_qrcode_id/finish=${w}  car_move_qrcode_id=${r}
+   delete admin car move qrcodes by car move qrcode id Fail 404    car_move_qrcode_id=${wrong_url_id}
 
 delete admin car move qrcodes by car move qrcode id Success 
    [Documentation]  接口名:二维码删除${\n}
    ...              请求方式:Delete${\n}
    ...              预期结果:输入正确参数,http响应码返回 204,无Json数据返回。
    [Tags]           Respcode:204
-   delete admin car move qrcodes by car move qrcode id Success 204    car_move_qrcode_id/finish=${car_move_qrcode_id/finish}  car_move_qrcode_id=${car_move_qrcode_id}
+   delete admin car move qrcodes by car move qrcode id Success 204    car_move_qrcode_id=${car_move_qrcode_id}
 
 
 *** Variables ***
-${car_move_qrcode_id/finish}  
 ${car_move_qrcode_id}  
 
 
@@ -93,8 +92,6 @@ get admin car move qrcodes Success 200
    [Arguments]  &{kwargs}
    ${resp}=  get admin car move qrcodes  &{kwargs}
    expect status is 200  ${resp}  admin_car_move_qrcode/get_admin_car_move_qrcodes_200.json
-   ${car_move_qrcode_id/finish}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][car_move_qrcode_id/finish]}
-   set global variable   ${car_move_qrcode_id/finish}
    ${car_move_qrcode_id}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][car_move_qrcode_id]}
    set global variable   ${car_move_qrcode_id}
 

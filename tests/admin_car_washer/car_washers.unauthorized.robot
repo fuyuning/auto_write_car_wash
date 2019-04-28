@@ -29,7 +29,7 @@ get admin car washers by username Fail Without Login
    ...              请求方式:Get${\n}
    ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
    [Tags]           Respcode:403
-   get admin car washers by username Fail 403    username=${username}  username/wash_records=${username/wash_records}  username/order_count=${username/order_count}  username/is_active=${username/is_active}
+   get admin car washers by username Fail 403    username=${username}
 
 get admin car washers wash records by username Fail Without Login
    [Documentation]  接口名:虾客接单记录${\n}
@@ -38,7 +38,7 @@ get admin car washers wash records by username Fail Without Login
    [Tags]           Respcode:403
    ${essential_params}  create list  
    ${unessential_params}  create list  page_num=${page_num}  page_size=${page_size}  
-   run every case by params  get admin car washers wash records by username Fail 403  ${essential_params}  ${unessential_params}    username=${username}  username/wash_records=${username/wash_records}  username/order_count=${username/order_count}  username/is_active=${username/is_active}
+   run every case by params  get admin car washers wash records by username Fail 403  ${essential_params}  ${unessential_params}    username=${username}
 
 get admin car washers order count by username Fail Without Login
    [Documentation]  接口名:虾客接单数量${\n}
@@ -47,7 +47,7 @@ get admin car washers order count by username Fail Without Login
    [Tags]           Respcode:403
    ${essential_params}  create list  
    ${unessential_params}  create list  section=${section}  
-   run every case by params  get admin car washers order count by username Fail 403  ${essential_params}  ${unessential_params}    username=${username}  username/wash_records=${username/wash_records}  username/order_count=${username/order_count}  username/is_active=${username/is_active}
+   run every case by params  get admin car washers order count by username Fail 403  ${essential_params}  ${unessential_params}    username=${username}
 
 put admin car washers by username Fail Without Login
    [Documentation]  接口名:编辑虾客${\n}
@@ -56,7 +56,7 @@ put admin car washers by username Fail Without Login
    [Tags]           Respcode:403
    ${essential_params}  create list  
    ${unessential_params}  create list  name=${name}  mobile=${mobile}  sex=${sex}  birthday=${birthday}  ID_card=${ID_card}  address=${address}  promoter_no=${promoter_no}  password=${password}  is_active=False  
-   run every case by params  put admin car washers by username Fail 403  ${essential_params}  ${unessential_params}    username=${username}  username/wash_records=${username/wash_records}  username/order_count=${username/order_count}  username/is_active=${username/is_active}
+   run every case by params  put admin car washers by username Fail 403  ${essential_params}  ${unessential_params}    username=${username}
 
 patch admin car washers is active by username Fail Without Login
    [Documentation]  接口名:编辑启用/禁用${\n}
@@ -65,14 +65,11 @@ patch admin car washers is active by username Fail Without Login
    [Tags]           Respcode:403
    ${essential_params}  create list  
    ${unessential_params}  create list  is_active=False  
-   run every case by params  patch admin car washers is active by username Fail 403  ${essential_params}  ${unessential_params}    username=${username}  username/wash_records=${username/wash_records}  username/order_count=${username/order_count}  username/is_active=${username/is_active}
+   run every case by params  patch admin car washers is active by username Fail 403  ${essential_params}  ${unessential_params}    username=${username}
 
 
 *** Variables ***
 ${username}  12345678909876543
-${username/wash_records}  12345678909876543
-${username/order_count}  12345678909876543
-${username/is_active}  12345678909876543
 
 
 *** Keywords ***

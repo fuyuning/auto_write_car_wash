@@ -29,7 +29,7 @@ get admin wash areas by wash area id Fail Without Login
    ...              请求方式:Get${\n}
    ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
    [Tags]           Respcode:403
-   get admin wash areas by wash area id Fail 403    wash_area_id=${wash_area_id}  wash_area_id/(wash_normal|wash_group|user_group|enabled)=${wash_area_id/(wash_normal|wash_group|user_group|enabled)}
+   get admin wash areas by wash area id Fail 403    wash_area_id=${wash_area_id}
 
 put admin wash areas by wash area id Fail Without Login
    [Documentation]  接口名:服务区域_编辑${\n}
@@ -38,7 +38,7 @@ put admin wash areas by wash area id Fail Without Login
    [Tags]           Respcode:403
    ${essential_params}  create list  name=${name}  province=${province}  city=${city}  district=${district}  service_type=${service_type}  
    ${unessential_params}  create list  wash_normal=False  wash_group=False  user_group=False  enabled=False  
-   run every case by params  put admin wash areas by wash area id Fail 403  ${essential_params}  ${unessential_params}    wash_area_id=${wash_area_id}  wash_area_id/(wash_normal|wash_group|user_group|enabled)=${wash_area_id/(wash_normal|wash_group|user_group|enabled)}
+   run every case by params  put admin wash areas by wash area id Fail 403  ${essential_params}  ${unessential_params}    wash_area_id=${wash_area_id}
 
 patch admin wash areas (wash normal|wash group|user group|enabled) by wash area id Fail Without Login
    [Documentation]  接口名:服务区域_四个开关${\n}
@@ -47,19 +47,18 @@ patch admin wash areas (wash normal|wash group|user group|enabled) by wash area 
    [Tags]           Respcode:403
    ${essential_params}  create list  
    ${unessential_params}  create list  wash_normal=False  wash_group=False  user_group=False  enabled=False  
-   run every case by params  patch admin wash areas (wash normal|wash group|user group|enabled) by wash area id Fail 403  ${essential_params}  ${unessential_params}    wash_area_id=${wash_area_id}  wash_area_id/(wash_normal|wash_group|user_group|enabled)=${wash_area_id/(wash_normal|wash_group|user_group|enabled)}
+   run every case by params  patch admin wash areas (wash normal|wash group|user group|enabled) by wash area id Fail 403  ${essential_params}  ${unessential_params}    wash_area_id=${wash_area_id}
 
 delete admin wash areas by wash area id Fail Without Login
    [Documentation]  接口名:服务区域_删除${\n}
    ...              请求方式:Delete${\n}
    ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
    [Tags]           Respcode:403
-   delete admin wash areas by wash area id Fail 403    wash_area_id=${wash_area_id}  wash_area_id/(wash_normal|wash_group|user_group|enabled)=${wash_area_id/(wash_normal|wash_group|user_group|enabled)}
+   delete admin wash areas by wash area id Fail 403    wash_area_id=${wash_area_id}
 
 
 *** Variables ***
 ${wash_area_id}  12345678909876543
-${wash_area_id/(wash_normal|wash_group|user_group|enabled)}  12345678909876543
 
 
 *** Keywords ***

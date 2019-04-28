@@ -15,7 +15,7 @@ post admin wash users clear by userid Success
    [Tags]           Respcode:204
    ${essential_params}  create list  mobile=${mobile}  
    ${unessential_params}  create list  
-   run every case by params  post admin wash users clear by userid Success 204  ${essential_params}  ${unessential_params}    userid/clear=${userid/clear}  userid/wash_user_group=${userid/wash_user_group}
+   run every case by params  post admin wash users clear by userid Success 204  ${essential_params}  ${unessential_params}    userid=${userid}
 
 post admin wash users clear by userid Fail With Wrong Params
    [Documentation]  接口名:用户数据清除${\n}
@@ -24,7 +24,7 @@ post admin wash users clear by userid Fail With Wrong Params
    [Tags]           Respcode:422
    ${essential_params}  create list  mobile=${mobile_422}  
    ${unessential_params}  create list  
-   run every case by params  post admin wash users clear by userid Fail 422  ${essential_params}  ${unessential_params}    userid/clear=${userid/clear}  userid/wash_user_group=${userid/wash_user_group}  success=False
+   run every case by params  post admin wash users clear by userid Fail 422  ${essential_params}  ${unessential_params}    userid=${userid}  success=False
 
 post admin wash users clear by userid Fail With Wrong Url
    [Documentation]  接口名:用户数据清除${\n}
@@ -33,7 +33,7 @@ post admin wash users clear by userid Fail With Wrong Url
    [Tags]           Respcode:404
    ${essential_params}  create list  mobile=${mobile}  
    ${unessential_params}  create list  
-   run every case by params  post admin wash users clear by userid Fail 404  ${essential_params}  ${unessential_params}    userid/clear=${w}  userid/wash_user_group=${r}
+   run every case by params  post admin wash users clear by userid Fail 404  ${essential_params}  ${unessential_params}    userid=${wrong_url_id}
 
 get admin wash users Success 
    [Documentation]  接口名:用户查询${\n}
@@ -85,7 +85,7 @@ patch admin wash users wash user group by userid Fail With Wrong Url
    [Tags]           Respcode:404
    ${essential_params}  create list  wash_user_group_id=${wash_user_group_id}  
    ${unessential_params}  create list  
-   run every case by params  patch admin wash users wash user group by userid Fail 404  ${essential_params}  ${unessential_params}    userid/clear=${w}  userid/wash_user_group=${r}
+   run every case by params  patch admin wash users wash user group by userid Fail 404  ${essential_params}  ${unessential_params}    userid=${wrong_url_id}
 
 patch admin wash users wash user group by userid Fail With Wrong Params
    [Documentation]  接口名:修改用户分组${\n}
@@ -94,7 +94,7 @@ patch admin wash users wash user group by userid Fail With Wrong Params
    [Tags]           Respcode:422
    ${essential_params}  create list  wash_user_group_id=${wash_user_group_id_422}  
    ${unessential_params}  create list  
-   run every case by params  patch admin wash users wash user group by userid Fail 422  ${essential_params}  ${unessential_params}    userid/clear=${userid/clear}  userid/wash_user_group=${userid/wash_user_group}  success=False
+   run every case by params  patch admin wash users wash user group by userid Fail 422  ${essential_params}  ${unessential_params}    userid=${userid}  success=False
 
 patch admin wash users wash user group by userid Success 
    [Documentation]  接口名:修改用户分组${\n}
@@ -103,12 +103,11 @@ patch admin wash users wash user group by userid Success
    [Tags]           Respcode:204
    ${essential_params}  create list  wash_user_group_id=${wash_user_group_id}  
    ${unessential_params}  create list  
-   run every case by params  patch admin wash users wash user group by userid Success 204  ${essential_params}  ${unessential_params}    userid/clear=${userid/clear}  userid/wash_user_group=${userid/wash_user_group}
+   run every case by params  patch admin wash users wash user group by userid Success 204  ${essential_params}  ${unessential_params}    userid=${userid}
 
 
 *** Variables ***
-${userid/clear}  
-${userid/wash_user_group}  
+${userid}  
 
 
 *** Keywords ***
@@ -131,10 +130,8 @@ get admin wash users Success 200
    [Arguments]  &{kwargs}
    ${resp}=  get admin wash users  &{kwargs}
    expect status is 200  ${resp}  admin_wash_user/get_admin_wash_users_200.json
-   ${userid/clear}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][userid/clear]}
-   set global variable   ${userid/clear}
-   ${userid/wash_user_group}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][userid/wash_user_group]}
-   set global variable   ${userid/wash_user_group}
+   ${userid}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][userid]}
+   set global variable   ${userid}
 
 get admin wash users Fail 422
    [Arguments]  &{kwargs}
@@ -145,19 +142,15 @@ get admin wash users userid Success 200
    [Arguments]  &{kwargs}
    ${resp}=  get admin wash users userid  &{kwargs}
    expect status is 200  ${resp}  admin_wash_user/get_admin_wash_users_userid_200.json
-   ${userid/clear}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][userid/clear]}
-   set global variable   ${userid/clear}
-   ${userid/wash_user_group}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][userid/wash_user_group]}
-   set global variable   ${userid/wash_user_group}
+   ${userid}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][userid]}
+   set global variable   ${userid}
 
 get admin wechat info Success 200
    [Arguments]  &{kwargs}
    ${resp}=  get admin wechat info  &{kwargs}
    expect status is 200  ${resp}  admin_wash_user/get_admin_wechat_info_200.json
-   ${userid/clear}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][userid/clear]}
-   set global variable   ${userid/clear}
-   ${userid/wash_user_group}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][userid/wash_user_group]}
-   set global variable   ${userid/wash_user_group}
+   ${userid}  set variable if  ${resp.json()}!=[]  ${resp.json()[0][userid]}
+   set global variable   ${userid}
 
 get admin wechat info Fail 422
    [Arguments]  &{kwargs}

@@ -58,14 +58,14 @@ put admin card sales by card sale id Fail With Wrong Url
    [Tags]           Respcode:404
    ${essential_params}  create list  card_id=${card_id}  enabled=False  order_by=${order_by}  
    ${unessential_params}  create list  
-   run every case by params  put admin card sales by card sale id Fail 404  ${essential_params}  ${unessential_params}    card_sale_id=${w}
+   run every case by params  put admin card sales by card sale id Fail 404  ${essential_params}  ${unessential_params}    card_sale_id=${wrong_url_id}
 
 delete admin card sales by card sale id Fail With Wrong Url
    [Documentation]  接口名:删除可购买会员卡${\n}
    ...              请求方式:Delete${\n}
    ...              预期结果:输入正确参数及错误的url,http响应码返回 404,无Json数据返回。
    [Tags]           Respcode:404
-   delete admin card sales by card sale id Fail 404    card_sale_id=${w}
+   delete admin card sales by card sale id Fail 404    card_sale_id=${wrong_url_id}
 
 delete admin card sales by card sale id Success 
    [Documentation]  接口名:删除可购买会员卡${\n}

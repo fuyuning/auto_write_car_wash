@@ -13,7 +13,7 @@ post car wash wash records update by wash record id Fail Without Login
    [Tags]           Respcode:403
    ${essential_params}  create list  status=${status}  
    ${unessential_params}  create list  before_wash_images=${before_wash_images}  after_wash_images=${after_wash_images}  wash_tags=${wash_tags}  description=${description}  start_time=${start_time}  end_time=${end_time}  dirty_percent=${dirty_percent}  washer_remark=${washer_remark}  mark=${mark}  
-   run every case by params  post car wash wash records update by wash record id Fail 403  ${essential_params}  ${unessential_params}    wash_record_id/update=${wash_record_id/update}  wash_record_id/upload_mark=${wash_record_id/upload_mark}  wash_record_id/upload=${wash_record_id/upload}  wash_record_id/wash=${wash_record_id/wash}  wash_record_id/finish=${wash_record_id/finish}  wash_record_id=${wash_record_id}  wash_record_id/washer_remark=${wash_record_id/washer_remark}  wash_record_id/mark=${wash_record_id/mark}  wash_record_id/status=${wash_record_id/status}
+   run every case by params  post car wash wash records update by wash record id Fail 403  ${essential_params}  ${unessential_params}    wash_record_id=${wash_record_id}
 
 post car wash wash records upload mark by wash record id Fail Without Login
    [Documentation]  接口名:上传洗车备注及标记${\n}
@@ -22,7 +22,7 @@ post car wash wash records upload mark by wash record id Fail Without Login
    [Tags]           Respcode:403
    ${essential_params}  create list  
    ${unessential_params}  create list  washer_remark=${washer_remark}  mark=${mark}  
-   run every case by params  post car wash wash records upload mark by wash record id Fail 403  ${essential_params}  ${unessential_params}    wash_record_id/update=${wash_record_id/update}  wash_record_id/upload_mark=${wash_record_id/upload_mark}  wash_record_id/upload=${wash_record_id/upload}  wash_record_id/wash=${wash_record_id/wash}  wash_record_id/finish=${wash_record_id/finish}  wash_record_id=${wash_record_id}  wash_record_id/washer_remark=${wash_record_id/washer_remark}  wash_record_id/mark=${wash_record_id/mark}  wash_record_id/status=${wash_record_id/status}
+   run every case by params  post car wash wash records upload mark by wash record id Fail 403  ${essential_params}  ${unessential_params}    wash_record_id=${wash_record_id}
 
 post car wash wash records upload by wash record id Fail Without Login
    [Documentation]  接口名:上传洗车记录${\n}
@@ -31,7 +31,7 @@ post car wash wash records upload by wash record id Fail Without Login
    [Tags]           Respcode:403
    ${essential_params}  create list  before_wash_images=${before_wash_images}  status=${status}  after_wash_images=${after_wash_images}  start_time=${start_time}  end_time=${end_time}  dirty_percent=${dirty_percent}  
    ${unessential_params}  create list  tags=${Please_input}  description=${description}  
-   run every case by params  post car wash wash records upload by wash record id Fail 403  ${essential_params}  ${unessential_params}    wash_record_id/update=${wash_record_id/update}  wash_record_id/upload_mark=${wash_record_id/upload_mark}  wash_record_id/upload=${wash_record_id/upload}  wash_record_id/wash=${wash_record_id/wash}  wash_record_id/finish=${wash_record_id/finish}  wash_record_id=${wash_record_id}  wash_record_id/washer_remark=${wash_record_id/washer_remark}  wash_record_id/mark=${wash_record_id/mark}  wash_record_id/status=${wash_record_id/status}
+   run every case by params  post car wash wash records upload by wash record id Fail 403  ${essential_params}  ${unessential_params}    wash_record_id=${wash_record_id}
 
 post car wash wash records wash by wash record id Fail Without Login
    [Documentation]  接口名:洗车${\n}
@@ -40,7 +40,7 @@ post car wash wash records wash by wash record id Fail Without Login
    [Tags]           Respcode:403
    ${essential_params}  create list  before_wash_images=${before_wash_images}  
    ${unessential_params}  create list  tags=${Please_input}  description=${description}  
-   run every case by params  post car wash wash records wash by wash record id Fail 403  ${essential_params}  ${unessential_params}    wash_record_id/update=${wash_record_id/update}  wash_record_id/upload_mark=${wash_record_id/upload_mark}  wash_record_id/upload=${wash_record_id/upload}  wash_record_id/wash=${wash_record_id/wash}  wash_record_id/finish=${wash_record_id/finish}  wash_record_id=${wash_record_id}  wash_record_id/washer_remark=${wash_record_id/washer_remark}  wash_record_id/mark=${wash_record_id/mark}  wash_record_id/status=${wash_record_id/status}
+   run every case by params  post car wash wash records wash by wash record id Fail 403  ${essential_params}  ${unessential_params}    wash_record_id=${wash_record_id}
 
 post car wash wash records finish by wash record id Fail Without Login
    [Documentation]  接口名:完成洗车${\n}
@@ -49,7 +49,7 @@ post car wash wash records finish by wash record id Fail Without Login
    [Tags]           Respcode:403
    ${essential_params}  create list  after_wash_images=${after_wash_images}  
    ${unessential_params}  create list  
-   run every case by params  post car wash wash records finish by wash record id Fail 403  ${essential_params}  ${unessential_params}    wash_record_id/update=${wash_record_id/update}  wash_record_id/upload_mark=${wash_record_id/upload_mark}  wash_record_id/upload=${wash_record_id/upload}  wash_record_id/wash=${wash_record_id/wash}  wash_record_id/finish=${wash_record_id/finish}  wash_record_id=${wash_record_id}  wash_record_id/washer_remark=${wash_record_id/washer_remark}  wash_record_id/mark=${wash_record_id/mark}  wash_record_id/status=${wash_record_id/status}
+   run every case by params  post car wash wash records finish by wash record id Fail 403  ${essential_params}  ${unessential_params}    wash_record_id=${wash_record_id}
 
 get car wash user wash records Fail Without Login
    [Documentation]  接口名:获取虾克历史订单列表${\n}
@@ -101,7 +101,7 @@ get car wash wash records by wash record id Fail Without Login
    ...              请求方式:Get${\n}
    ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
    [Tags]           Respcode:403
-   get car wash wash records by wash record id Fail 403    wash_record_id/update=${wash_record_id/update}  wash_record_id/upload_mark=${wash_record_id/upload_mark}  wash_record_id/upload=${wash_record_id/upload}  wash_record_id/wash=${wash_record_id/wash}  wash_record_id/finish=${wash_record_id/finish}  wash_record_id=${wash_record_id}  wash_record_id/washer_remark=${wash_record_id/washer_remark}  wash_record_id/mark=${wash_record_id/mark}  wash_record_id/status=${wash_record_id/status}
+   get car wash wash records by wash record id Fail 403    wash_record_id=${wash_record_id}
 
 get car wash car in parking Fail Without Login
    [Documentation]  接口名:查询车辆是否在场内${\n}
@@ -119,7 +119,7 @@ patch car wash wash records washer remark by wash record id Fail Without Login
    [Tags]           Respcode:403
    ${essential_params}  create list  
    ${unessential_params}  create list  washer_remark=${washer_remark}  
-   run every case by params  patch car wash wash records washer remark by wash record id Fail 403  ${essential_params}  ${unessential_params}    wash_record_id/update=${wash_record_id/update}  wash_record_id/upload_mark=${wash_record_id/upload_mark}  wash_record_id/upload=${wash_record_id/upload}  wash_record_id/wash=${wash_record_id/wash}  wash_record_id/finish=${wash_record_id/finish}  wash_record_id=${wash_record_id}  wash_record_id/washer_remark=${wash_record_id/washer_remark}  wash_record_id/mark=${wash_record_id/mark}  wash_record_id/status=${wash_record_id/status}
+   run every case by params  patch car wash wash records washer remark by wash record id Fail 403  ${essential_params}  ${unessential_params}    wash_record_id=${wash_record_id}
 
 patch car wash wash records mark by wash record id Fail Without Login
    [Documentation]  接口名:标记${\n}
@@ -128,7 +128,7 @@ patch car wash wash records mark by wash record id Fail Without Login
    [Tags]           Respcode:403
    ${essential_params}  create list  
    ${unessential_params}  create list  mark=${mark}  
-   run every case by params  patch car wash wash records mark by wash record id Fail 403  ${essential_params}  ${unessential_params}    wash_record_id/update=${wash_record_id/update}  wash_record_id/upload_mark=${wash_record_id/upload_mark}  wash_record_id/upload=${wash_record_id/upload}  wash_record_id/wash=${wash_record_id/wash}  wash_record_id/finish=${wash_record_id/finish}  wash_record_id=${wash_record_id}  wash_record_id/washer_remark=${wash_record_id/washer_remark}  wash_record_id/mark=${wash_record_id/mark}  wash_record_id/status=${wash_record_id/status}
+   run every case by params  patch car wash wash records mark by wash record id Fail 403  ${essential_params}  ${unessential_params}    wash_record_id=${wash_record_id}
 
 patch car wash wash records status by wash record id Fail Without Login
    [Documentation]  接口名:修改单个洗车记录状态${\n}
@@ -137,19 +137,11 @@ patch car wash wash records status by wash record id Fail Without Login
    [Tags]           Respcode:403
    ${essential_params}  create list  status=${status}  
    ${unessential_params}  create list  
-   run every case by params  patch car wash wash records status by wash record id Fail 403  ${essential_params}  ${unessential_params}    wash_record_id/update=${wash_record_id/update}  wash_record_id/upload_mark=${wash_record_id/upload_mark}  wash_record_id/upload=${wash_record_id/upload}  wash_record_id/wash=${wash_record_id/wash}  wash_record_id/finish=${wash_record_id/finish}  wash_record_id=${wash_record_id}  wash_record_id/washer_remark=${wash_record_id/washer_remark}  wash_record_id/mark=${wash_record_id/mark}  wash_record_id/status=${wash_record_id/status}
+   run every case by params  patch car wash wash records status by wash record id Fail 403  ${essential_params}  ${unessential_params}    wash_record_id=${wash_record_id}
 
 
 *** Variables ***
-${wash_record_id/update}  12345678909876543
-${wash_record_id/upload_mark}  12345678909876543
-${wash_record_id/upload}  12345678909876543
-${wash_record_id/wash}  12345678909876543
-${wash_record_id/finish}  12345678909876543
 ${wash_record_id}  12345678909876543
-${wash_record_id/washer_remark}  12345678909876543
-${wash_record_id/mark}  12345678909876543
-${wash_record_id/status}  12345678909876543
 
 
 *** Keywords ***

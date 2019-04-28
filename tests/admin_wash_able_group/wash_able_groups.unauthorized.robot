@@ -31,14 +31,14 @@ put admin wash able groups by wash able group id Fail Without Login
    ${unessential_params}  create list  spec_people_day_num=${spec_people_day_num}  auto_group=False  
    run every case by params  put admin wash able groups by wash able group id Fail 403  ${essential_params}  ${unessential_params}    wash_auto_group_id=${wash_auto_group_id}  wash_able_group_id=${wash_able_group_id}
 
-patch admin wash able group by wash able group id Fail Without Login
+patch admin wash able groups by wash able group id Fail Without Login
    [Documentation]  接口名:改人数${\n}
    ...              请求方式:Patch${\n}
    ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
    [Tags]           Respcode:403
    ${essential_params}  create list  spec_people_day_num=${spec_people_day_num}  
    ${unessential_params}  create list  
-   run every case by params  patch admin wash able group by wash able group id Fail 403  ${essential_params}  ${unessential_params}    wash_auto_group_id=${wash_auto_group_id}  wash_able_group_id=${wash_able_group_id}
+   run every case by params  patch admin wash able groups by wash able group id Fail 403  ${essential_params}  ${unessential_params}    wash_auto_group_id=${wash_auto_group_id}  wash_able_group_id=${wash_able_group_id}
 
 
 *** Variables ***
@@ -62,8 +62,8 @@ put admin wash able groups by wash able group id Fail 403
    ${resp}=  put admin wash able groups by wash able group id  &{kwargs}
    expect status is 403  ${resp}  
 
-patch admin wash able group by wash able group id Fail 403
+patch admin wash able groups by wash able group id Fail 403
    [Arguments]  &{kwargs}
-   ${resp}=  patch admin wash able group by wash able group id  &{kwargs}
+   ${resp}=  patch admin wash able groups by wash able group id  &{kwargs}
    expect status is 403  ${resp}  
 

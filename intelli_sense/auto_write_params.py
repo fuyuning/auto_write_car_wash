@@ -9,15 +9,40 @@ class AutoWriteParams(object):
         file = open('../cache/params/params_list.txt', "r")
         params_list = []
         for line in file:
-            if line not in params_list:
-                params_list.append(line)
+            name = line.split(',')[0]
+            print(name)
+            types = line.split(',')[1].replace('\n', '')
+            print(types)
+            if name.endswith('422}'):
+                if types == 'string':
+                    value = '[]'
+                elif types == 'int':
+                    value = 'ThisIsRobot'
+                elif types == 'json':
+                    value = 'ThisIsRobot'
+                elif types == 'array':
+                    value = 'ThisIsRobot'
+                elif types == 'float':
+                    value = 'ThisIsRobot'
+                elif types == 'integer':
+                    value = 'ThisIsRobot'
+                elif types == 'object':
+                    value = 'ThisIsRobot'
+                else:
+                    value = ''
+            else:
+                value = ''
+            name = name+'  '+value
+            print(name)
+            if name not in params_list:
+                params_list.append(name)
         folder = os.path.exists('../tests/resources/params.robot')
         if folder:
             os.rename('../tests/resources/params.robot', '../tests/resources/old_params.robot')
         params_robot = open('../tests/resources/params.robot', "w+")
         params_robot.write('*** Variables ***\n')
         for i in params_list:
-            params_robot.write(i)
+            params_robot.write(i+'\n')
         params_robot.close()
 
     # run方法

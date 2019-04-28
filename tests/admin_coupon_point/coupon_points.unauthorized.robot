@@ -60,6 +60,15 @@ get admin coupon points Fail Without Login
    ${unessential_params}  create list  user_id=${user_id}  mobile=${mobile}  status=${status}  is_used=${is_used}  page_num=${page_num}  page_size=${page_size}  
    run every case by params  get admin coupon points Fail 403  ${essential_params}  ${unessential_params}
 
+patch admin coupon point autos enable by coupon point auto id Fail Without Login
+   [Documentation]  接口名:自动定向发券启用${\n}
+   ...              请求方式:Patch${\n}
+   ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
+   [Tags]           Respcode:403
+   ${essential_params}  create list  
+   ${unessential_params}  create list  enable=False  
+   run every case by params  patch admin coupon point autos enable by coupon point auto id Fail 403  ${essential_params}  ${unessential_params}    coupon_point_auto_id=${coupon_point_auto_id}  coupon_point_record_id=${coupon_point_record_id}
+
 patch admin coupon point records by coupon point record id Fail Without Login
    [Documentation]  接口名:定向发券备注${\n}
    ...              请求方式:Patch${\n}
@@ -67,17 +76,25 @@ patch admin coupon point records by coupon point record id Fail Without Login
    [Tags]           Respcode:403
    ${essential_params}  create list  
    ${unessential_params}  create list  point_remark=${point_remark}  
-   run every case by params  patch admin coupon point records by coupon point record id Fail 403  ${essential_params}  ${unessential_params}    coupon_point_record_id=${coupon_point_record_id}
+   run every case by params  patch admin coupon point records by coupon point record id Fail 403  ${essential_params}  ${unessential_params}    coupon_point_auto_id=${coupon_point_auto_id}  coupon_point_record_id=${coupon_point_record_id}
+
+delete admin coupon point autos by coupon point auto id Fail Without Login
+   [Documentation]  接口名:删除自动定向发券${\n}
+   ...              请求方式:Delete${\n}
+   ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
+   [Tags]           Respcode:403
+   delete admin coupon point autos by coupon point auto id Fail 403    coupon_point_auto_id=${coupon_point_auto_id}  coupon_point_record_id=${coupon_point_record_id}
 
 delete admin coupon point records by coupon point record id Fail Without Login
    [Documentation]  接口名:删除定向发券${\n}
    ...              请求方式:Delete${\n}
    ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
    [Tags]           Respcode:403
-   delete admin coupon point records by coupon point record id Fail 403    coupon_point_record_id=${coupon_point_record_id}
+   delete admin coupon point records by coupon point record id Fail 403    coupon_point_auto_id=${coupon_point_auto_id}  coupon_point_record_id=${coupon_point_record_id}
 
 
 *** Variables ***
+${coupon_point_auto_id}  12345678909876543
 ${coupon_point_record_id}  12345678909876543
 
 
@@ -112,9 +129,19 @@ get admin coupon points Fail 403
    ${resp}=  get admin coupon points  &{kwargs}
    expect status is 403  ${resp}  
 
+patch admin coupon point autos enable by coupon point auto id Fail 403
+   [Arguments]  &{kwargs}
+   ${resp}=  patch admin coupon point autos enable by coupon point auto id  &{kwargs}
+   expect status is 403  ${resp}  
+
 patch admin coupon point records by coupon point record id Fail 403
    [Arguments]  &{kwargs}
    ${resp}=  patch admin coupon point records by coupon point record id  &{kwargs}
+   expect status is 403  ${resp}  
+
+delete admin coupon point autos by coupon point auto id Fail 403
+   [Arguments]  &{kwargs}
+   ${resp}=  delete admin coupon point autos by coupon point auto id  &{kwargs}
    expect status is 403  ${resp}  
 
 delete admin coupon point records by coupon point record id Fail 403

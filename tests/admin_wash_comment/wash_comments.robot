@@ -31,7 +31,7 @@ delete admin wash comments by comment id Fail With Wrong Url
    ...              请求方式:Delete${\n}
    ...              预期结果:输入正确参数及错误的url,http响应码返回 404,无Json数据返回。
    [Tags]           Respcode:404
-   delete admin wash comments by comment id Fail 404    comment_id=${w}
+   delete admin wash comments by comment id Fail 404    comment_id=${wrong_url_id}
 
 delete admin wash comments by comment id Success 
    [Documentation]  接口名:删除评价${\n}

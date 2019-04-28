@@ -29,7 +29,7 @@ get admin turntables by turntable id Fail Without Login
    ...              请求方式:Get${\n}
    ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
    [Tags]           Respcode:403
-   get admin turntables by turntable id Fail 403    turntable_id=${turntable_id}  turntable_id/enabled=${turntable_id/enabled}
+   get admin turntables by turntable id Fail 403    turntable_id=${turntable_id}
 
 get admin turntable awards Fail Without Login
    [Documentation]  接口名:获奖记录${\n}
@@ -47,7 +47,7 @@ put admin turntables by turntable id Fail Without Login
    [Tags]           Respcode:403
    ${essential_params}  create list  name=${name}  wash_user_group_ids=${wash_user_group_ids}  prizes=${Please_input}  enabled=False  
    ${unessential_params}  create list  
-   run every case by params  put admin turntables by turntable id Fail 403  ${essential_params}  ${unessential_params}    turntable_id=${turntable_id}  turntable_id/enabled=${turntable_id/enabled}
+   run every case by params  put admin turntables by turntable id Fail 403  ${essential_params}  ${unessential_params}    turntable_id=${turntable_id}
 
 patch admin turntables enabled by turntable id Fail Without Login
    [Documentation]  接口名:转盘启用/关闭${\n}
@@ -56,19 +56,18 @@ patch admin turntables enabled by turntable id Fail Without Login
    [Tags]           Respcode:403
    ${essential_params}  create list  enabled=False  
    ${unessential_params}  create list  
-   run every case by params  patch admin turntables enabled by turntable id Fail 403  ${essential_params}  ${unessential_params}    turntable_id=${turntable_id}  turntable_id/enabled=${turntable_id/enabled}
+   run every case by params  patch admin turntables enabled by turntable id Fail 403  ${essential_params}  ${unessential_params}    turntable_id=${turntable_id}
 
 delete admin turntables by turntable id Fail Without Login
    [Documentation]  接口名:转盘删除${\n}
    ...              请求方式:Delete${\n}
    ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
    [Tags]           Respcode:403
-   delete admin turntables by turntable id Fail 403    turntable_id=${turntable_id}  turntable_id/enabled=${turntable_id/enabled}
+   delete admin turntables by turntable id Fail 403    turntable_id=${turntable_id}
 
 
 *** Variables ***
 ${turntable_id}  12345678909876543
-${turntable_id/enabled}  12345678909876543
 
 
 *** Keywords ***

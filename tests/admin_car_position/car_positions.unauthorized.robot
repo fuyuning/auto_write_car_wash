@@ -36,7 +36,7 @@ get admin car positions car postion id by  Fail Without Login
    ...              请求方式:Get${\n}
    ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
    [Tags]           Respcode:403
-   get admin car positions car postion id by  Fail 403    /car_postion_id=${/car_postion_id}  car_position_id=${car_position_id}
+   get admin car positions car postion id by  Fail 403    =${}  car_position_id=${car_position_id}
 
 put admin car positions by car position id Fail Without Login
    [Documentation]  接口名:修改车辆位置${\n}
@@ -45,18 +45,18 @@ put admin car positions by car position id Fail Without Login
    [Tags]           Respcode:403
    ${essential_params}  create list  car_id=${car_id}  parking_id=${parking_id}  
    ${unessential_params}  create list  wash_area_id=${wash_area_id}  entry_time=${entry_time}  lon=${lon}  lat=${lat}  phase=${phase}  floor=${floor}  zone=${zone}  space_no=${space_no}  ownership=${ownership}  
-   run every case by params  put admin car positions by car position id Fail 403  ${essential_params}  ${unessential_params}    /car_postion_id=${/car_postion_id}  car_position_id=${car_position_id}
+   run every case by params  put admin car positions by car position id Fail 403  ${essential_params}  ${unessential_params}    =${}  car_position_id=${car_position_id}
 
 delete admin car positions by car position id Fail Without Login
    [Documentation]  接口名:删除车辆位置${\n}
    ...              请求方式:Delete${\n}
    ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
    [Tags]           Respcode:403
-   delete admin car positions by car position id Fail 403    /car_postion_id=${/car_postion_id}  car_position_id=${car_position_id}
+   delete admin car positions by car position id Fail 403    =${}  car_position_id=${car_position_id}
 
 
 *** Variables ***
-${/car_postion_id}  12345678909876543
+${}  12345678909876543
 ${car_position_id}  12345678909876543
 
 

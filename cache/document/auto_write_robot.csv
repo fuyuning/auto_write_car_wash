@@ -1,0 +1,22 @@
+服务端,模块名,接口名,请求方式,url,参数名,参数类型,是否必传,响应码情况,返回实体
+server,user,用户登录,POST, /login,"['username', 'password']","['string', 'string']","['T', 'T']","['204', '422']",
+server,user,用户退出,POST, /logout,,,,['204'],
+server,user,获取用户信息,GET, /user,,,,"['200', '403']",User
+server,project,项目导入,POST, /projects/import,['file'],['file'],['T'],"['204', '403', '422']",
+server,project,更新项目数据,PUT, /projects/:project_id,['file'],['file'],['T'],"['204', '404', '403', '422']",
+server,project,上传配置,PATCH, /projects/:project_id/upload_platforms,['upload_platforms'],['string'],['T'],"['204', '403', '404', '422']",
+server,project,获取项目列表,GET, /projects,"['project_name', 'page_size', 'page_num', 'order_by']","['string', 'integer', 'integer', 'string']","['F', 'F', 'F', 'F']","['200', '403', '422']",Project
+server,project,删除项目,DELETE, /projects/:project_id,,,,"['204', '403', '404']",
+server,camera,获取相机列表,GET, /projects/:project_id/cameras,"['reg_code', 'work_status', 'network_status', 'camera_brand_id', 'camera_model_id', 'draw_status', 'spot_num', 'page_size', 'page_num', 'order_by']","['string', 'integer', 'integer', 'string', 'string', 'integer', 'string', 'integer', 'integer', 'string']","['F', 'F', 'F', 'F', 'F', 'F', 'F', 'F', 'F', 'F']","['200', '403', '404', '422']",Camera
+server,camera,获取电子泊位列表图片/相机详情图片,GET, /projects/:project_id/cameras/:camera_id/images,"['page_size', 'page_num']","['integer', 'integer']","['F', 'F']","['200', '403', '404']",UploadImage
+server,camera,编辑单个相机工作状态,PATCH, /projects/:project_id/cameras/:camera_id,['work_status'],['integer'],['T'],"['204', '403', '404', '422']",
+server,camera,编辑单个相机参数配置,PUT, /projects/:project_id/cameras/:camera_id,"['work_time', 'upload_cycle', 'reg_code']","['string', 'integer', 'string']","['T', 'T', 'F']","['204', '403', '404', '422']",
+server,camera,编辑批量相机工作状态,PATCH, /projects/:project_id/cameras,"['work_status', 'camera_ids']","['integer', 'string']","['T', 'T']","['204', '403', '404', '422']",
+server,camera,编辑批量相机参数配置,PUT, /projects/:project_id/cameras,"['work_time', 'upload_cycle', 'camera_ids']","['string', 'integer', 'string']","['T', 'T', 'T']","['204', '403', '404', '422']",
+server,camera,获取相机详情,GET, /projects/:project_id/cameras/:camera_id,,,,"['200', '403', '404']",Camera
+server,camera,获取相机品牌列表,GET, /projects/:project_id/camera_brands,,,,"['200', '403', '404']",CameraBrand
+server,camera,获取相机型号列表,GET, /projects/:project_id/camera_brands/:camera_brand_id/camera_models,,,,"['200', '403', '404']",CameraModel
+server,spot,获取泊位,GET, /projects/:project_id/cameras/:camera_id/spots,,,,"['200', '403', '404']",Spot
+server,spot,编辑泊位坐标,PUT, projects/:project_id/cameras/:camera_id/spots/:spot_id,['draw_coordinate'],['string'],['T'],"['204', '403', '404', '422']",
+server,record,获取停车记录列表,GET, projects/:project_id/cameras/:camera_id/spot_records/:spot_record_id/parking_records,"['car_id', 'vehicle_id', 'entry_section', 'exit_section', 'page_size', 'page_num']","['string', 'string', 'string', 'string', 'integer', 'integer']","['F', 'F', 'F', 'F', 'F', 'F']","['200', '403', '404', '422']",ParkingRecord
+server,record,获取泊位记录列表,GET, projects/:project_id/cameras/:camera_id/spot_records,"['spot_num', 'reg_code', 'section', 'page_size', 'page_num']","['string', 'string', 'string', 'integer', 'integer']","['F', 'F', 'F', 'F', 'F']","['200', '403', '404', '422']",SpotRecord

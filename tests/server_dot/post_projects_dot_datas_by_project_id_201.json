@@ -1,0 +1,14 @@
+{
+  "definitions": {
+    "new_dotdata":{
+      "type":"object",
+      "properties":{
+        "dot_data_id": {"type":"string"},
+        "created_time": {"type":"number"}
+      },
+      "required": ["dot_data_id", "created_time"]
+    }
+  },
+  "type": "object",
+  "$ref": "#/definitions/new_dotdata"
+}

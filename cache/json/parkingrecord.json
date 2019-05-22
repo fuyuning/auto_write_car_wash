@@ -1,0 +1,40 @@
+{
+  "definitions": {
+    "parkingrecord": {
+      "type":"object",
+      "properties":{
+        "parking_record_id": {"type":"string"},
+        "vehicle_id": {"type":"string"},
+        "car_id": {"type":"string"},
+        "spot_num": {"type":"string"},
+        "entry_time": {"type":"number"},
+        "exit_time": {"type":"number"},
+        "stop_time": {"type":"string"},
+        "reg_code": {"type":"string"},
+        "vehicle_type": {"type":"string"},
+        "created_time": {"type":"number"},
+        "updated_time": {"type":"number"}
+      },
+      "required": [
+        "parking_record_id",
+        "vehicle_id",
+        "car_id",
+        "spot_num",
+        "entry_time",
+        "exit_time",
+        "stop_time",
+        "reg_code",
+        "vehicle_type",
+        "created_time",
+        "updated_time"
+      ]
+    }
+  },
+  "type": "object",
+  "$ref": "#/definitions/parkingrecord"
+//  "type": "array",
+//  "minItems":0,
+//  "items": {
+//    "$ref": "#/definitions/parkingrecord"
+//  }
+}

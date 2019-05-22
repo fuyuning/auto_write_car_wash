@@ -1,0 +1,30 @@
+{
+  "definitions": {
+    "camerabrand": {
+      "type":"object",
+      "properties":{
+        "camera_brand_id": {"type":"string"},
+        "project": {"type":"object"},
+        "brand_name": {"type":"string"},
+        "brand_short": {"type":"string"},
+        "updated_time": {"type":"number"},
+        "created_time": {"type":"number"}
+      },
+      "required": [
+        "camera_brand_id",
+        "project",
+        "brand_name",
+        "brand_short",
+        "updated_time",
+        "created_time"
+      ]
+    }
+  },
+  "type": "object",
+  "$ref": "#/definitions/camerabrand"
+//  "type": "array",
+//  "minItems":0,
+//  "items": {
+//    "$ref": "#/definitions/camerabrand"
+//  }
+}

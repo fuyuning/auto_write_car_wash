@@ -1,0 +1,44 @@
+{
+  "definitions": {
+    "project": {
+      "type":"object",
+      "properties":{
+        "project_id": {"type":"string"},
+        "project_name": {"type":"string"},
+        "province": {"type":"string"},
+        "city": {"type":"string"},
+        "district": {"type":"string"},
+        "address": {"type":"string"},
+        "region_id": {"type":"string"},
+        "leader": {"type":"string"},
+        "mobile": {"type":"string"},
+        "upload_platforms": {"type":"string"},
+        "is_deleted": {"type":"bool"},
+        "updated_time": {"type":"number"},
+        "created_time": {"type":"number"}
+      },
+      "required": [
+        "project_id",
+        "project_name",
+        "province",
+        "city",
+        "district",
+        "address",
+        "region_id",
+        "leader",
+        "mobile",
+        "upload_platforms",
+        "is_deleted",
+        "updated_time",
+        "created_time"
+      ]
+    }
+  },
+  "type": "object",
+  "$ref": "#/definitions/project"
+//  "type": "array",
+//  "minItems":0,
+//  "items": {
+//    "$ref": "#/definitions/project"
+//  }
+}

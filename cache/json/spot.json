@@ -1,0 +1,32 @@
+{
+  "definitions": {
+    "spot": {
+      "type":"object",
+      "properties":{
+        "spot_id": {"type":"string"},
+        "camera": {"type":"object"},
+        "spot_num": {"type":"string"},
+        "draw_status": {"type":"number"},
+        "draw_coordinate": {"type":"string"},
+        "updated_time": {"type":"number"},
+        "created_time": {"type":"number"}
+      },
+      "required": [
+        "spot_id",
+        "camera",
+        "spot_num",
+        "draw_status",
+        "draw_coordinate",
+        "updated_time",
+        "created_time"
+      ]
+    }
+  },
+  "type": "object",
+  "$ref": "#/definitions/spot"
+//  "type": "array",
+//  "minItems":0,
+//  "items": {
+//    "$ref": "#/definitions/spot"
+//  }
+}

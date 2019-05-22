@@ -1,0 +1,29 @@
+{
+  "definitions": {
+    "spots": {
+      "type": "object",
+      "properties": {
+        "spot_id": { "type": "string" },
+        "project": { "type": "object" },
+        "spot_num": { "type": ["null", "string"] },
+        "spot_type": { "type": ["null", "string"] },
+        "spot_len": { "type": ["null", "number"] },
+        "spot_wid": { "type": ["null", "number"] },
+        "lon": { "type": ["null", "string"] },
+        "lat": { "type": ["null", "string"] },
+        "road_name": { "type": ["null", "string"] },
+        "start_road": { "type": ["null", "string"] },
+        "end_road": { "type": ["null", "string"] },
+        "is_deleted": { "type": "boolean" },
+        "updated_time": { "type": ["null", "number"] },
+        "created_time": { "type": ["null", "number"] }
+      },
+      "required": ["spot_id", "project","spot_num","spot_type","spot_len","spot_wid","lon","lat","road_name", "start_road","end_road","is_deleted","updated_time","created_time"]
+    }
+  },
+  "type": "array",
+  "minItems": 0,
+  "items": {
+    "$ref": "#/definitions/spots"
+  }
+}

@@ -33,3 +33,12 @@ Running
 
     # 测试不登录
     robot -d results --pythonpath . -v VERSION:d -i WithoutLogin tests/
+
+    # 自动生成robot和libarary已知缺陷：
+    1.文档中多个开关在一个url中的无法拆分
+    2.登录功能生成错误需要手写，并删除错误文件
+    3.参数赋值可能不同需要人工校验
+    4.jsonschema无法自动生成
+    5.有些无法测试的功能，在生成后需要删除
+    6.多模块引用需要手动添加
+    7.取url中的id时取不到

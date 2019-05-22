@@ -1,0 +1,37 @@
+{
+  "definitions": {
+    "camera_info":{
+      "type":"object",
+      "properties":{
+        "camera_info_id": {"type":"string"},
+        "camera_num":{"type":"number"},
+        "brand_name":{"type":"string"},
+        "brand_short":{"type":"string"},
+        "brand_model":{"type":"string"},
+        "power_type":{"type":"number"},
+        "spot_num":{"type":"string"},
+        "reg_code":{"type":"string"},
+        "coordinate":{"type":"string"},
+        "status":{"type":"number"},
+        "updated_time":{"type":["number","null"]},
+        "created_time":{"type":"number"}
+      },
+      "required": [
+        "camera_info_id",
+        "camera_num",
+        "brand_name",
+        "brand_short",
+        "brand_model",
+        "power_type",
+        "spot_num",
+        "reg_code",
+        "coordinate",
+        "status",
+        "updated_time",
+        "created_time"
+      ]
+    }
+  },
+  "type": "object",
+  "$ref": "#/definitions/camera_info"
+}

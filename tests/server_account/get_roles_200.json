@@ -1,0 +1,29 @@
+{
+  "definitions": {
+    "role":{
+      "type":"object",
+      "properties":{
+        "role_id": {"type":"string"},
+        "role_logo":{"type":"string"},
+        "role_name":{"type":"string"},
+        "is_deleted":{"type":"boolean"},
+        "updated_time":{"type":["number","null"]},
+        "created_time":{"type":"number"}
+      },
+      "required": [
+        "role_id",
+        "role_logo",
+        "role_name",
+        "is_deleted",
+        "updated_time",
+        "created_time"
+      ]
+    }
+  },
+  "type": "array",
+  "minItems":0,
+  "items":{
+    "$ref": "#/definitions/role"
+  }
+
+}

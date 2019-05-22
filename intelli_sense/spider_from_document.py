@@ -32,7 +32,7 @@ class Spider(object):
     old_save_file = '%s/old_auto_write_robot.csv' % spider_save_folder
     save_file = '%s/auto_write_robot.csv' % spider_save_folder
     old_entity_save_file = '%s/old_auto_write_schema.csv' % spider_save_folder
-    entity_save_file = '%s/auto_write_schema.csv' % spider_save_folder
+    entity_save_file = 'auto_write_schema.csv'
     entity_list_pattern = '<div class="col-md-3">([\s\S]*?)<div class="col-md-9">'
     entity_data_pattern = '<div class="panel panel-default ">[\s\S]*?<div class="list-group">([\s\S]*?)</div>'
     entity_root_pattern = '<a href="([\s\S]*?)" class="list-group-item ">'
@@ -173,8 +173,19 @@ class Spider(object):
         # folder = os.path.exists(self.entity_save_file)
         # if folder:
         #     os.rename(self.entity_save_file, self.old_entity_save_file)
-        with open(self.entity_save_file, "a+", newline='') as entity_csv:
-            fieldnames = ['实体名', '实体参数', '参数类型']
+        index = service_urls[0].rfind('_')
+        service_name = service_urls[0][index + 1:-1]
+        sever_list = []
+        sever_file = open('%s/server_list.txt' % self.spider_save_folder, "r")
+        for i in sever_file:
+            sever_list.append(i.replace('\n', ''))
+        sever_file.close()
+        sever_file = open('%s/server_list.txt' % self.spider_save_folder, "a+")
+        if service_name not in sever_list:
+            sever_file.write('%s\n' % service_name)
+        with open('%s/%s_%s' % (self.spider_save_folder, service_name, self.entity_save_file), "w+", newline='') as \
+                entity_csv:
+            fieldnames = ['服务端', '实体名', '实体参数', '参数类型']
             writer = csv.DictWriter(entity_csv, fieldnames=fieldnames)
             writer.writeheader()
             for service_url in service_urls:
@@ -194,7 +205,7 @@ class Spider(object):
                         for i in range(0, len(entity_name)):
                             params_list = re.findall(self.entity_params_pattern, table_content[i])
                             params_type_list = re.findall(self.entity_params_type_pattern, table_content[i])
-                            writer.writerow({'实体名': entity_name[i], '实体参数': params_list, '参数类型': params_type_list})
+                            writer.writerow({'服务端': service_name, '实体名': entity_name[i], '实体参数': params_list, '参数类型': params_type_list})
         entity_csv.close()
 
     def run(self, service_urls):

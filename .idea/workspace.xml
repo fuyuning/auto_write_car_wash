@@ -2,26 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b5dbe8c-edbb-41e1-bfc0-1c8862244c59" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash/README.rst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash/UtilsLibrary/BaseUtilsLibrary.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash/UtilsLibrary/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash/cache/document/admin.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash/cache/document/app.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash/cache/document/auto_write_robot.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash/cache/document/wxmp.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash/cache/log/document_wrong.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash/intelli_sense/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash/intelli_sense/auto_write_APIrobot.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash/intelli_sense/spider_for_robot.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash/requirements.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash/robot_car_wash_server_library/card/CardLibrary.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash/robot_car_wash_server_library/common/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash/robot_car_wash_server_library/utils/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash/robot_car_wash_server_library/utils/captcha.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash/robot_car_wash_server_library/utils/captcha.traineddata" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash/tests/admin_card/card.robot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash/tests/resources.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cache/document/auto_write_schema.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cache/params/params_list.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/intelli_sense/spider_for_robot.py" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cache/document/old_auto_write_robot.csv" afterPath="$PROJECT_DIR$/cache/document/old_auto_write_robot.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/intelli_sense/API_test.py" afterPath="$PROJECT_DIR$/intelli_sense/API_test.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/intelli_sense/spider_from_document.py" afterPath="$PROJECT_DIR$/intelli_sense/spider_from_document.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -32,24 +19,37 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/auto_write_robot_case$auto_write_APIrobot.coverage" NAME="auto_write_APIrobot Coverage Results" MODIFIED="1555574698413" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spider" />
-    <SUITE FILE_PATH="coverage/auto_write_robot_case$API_test.coverage" NAME="API_test Coverage Results" MODIFIED="1558505691681" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/intelli_sense" />
+    <SUITE FILE_PATH="coverage/auto_write_robot_case$API_test.coverage" NAME="API_test Coverage Results" MODIFIED="1558509673962" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/intelli_sense" />
     <SUITE FILE_PATH="coverage/auto_write_robot_case$spider.coverage" NAME="spider Coverage Results" MODIFIED="1555313409976" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spider" />
     <SUITE FILE_PATH="coverage/auto_write_robot_case$auto_write_APIrobot0_1__1_.coverage" NAME="auto_write_APIrobot0.1 (1) Coverage Results" MODIFIED="1555666048691" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/robot_car_wash/intelli_sense" />
     <SUITE FILE_PATH="coverage/auto_write_robot_case$spider_for_robot.coverage" NAME="spider_for_robot Coverage Results" MODIFIED="1558415524285" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/intelli_sense" />
     <SUITE FILE_PATH="coverage/auto_write_robot_case$auto_write_APIrobot0_1.coverage" NAME="auto_write_APIrobot0.1 Coverage Results" MODIFIED="1555579844081" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spider/intelli_sense" />
     <SUITE FILE_PATH="coverage/auto_write_robot_case$auto_write_APIrobot__2_.coverage" NAME="auto_write_APIrobot (2) Coverage Results" MODIFIED="1555918303029" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/robot_car_wash/intelli_sense" />
-    <SUITE FILE_PATH="coverage/auto_write_robot_case$spider_test.coverage" NAME="spider_test Coverage Results" MODIFIED="1558502078365" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/intelli_sense" />
+    <SUITE FILE_PATH="coverage/auto_write_robot_case$spider_test.coverage" NAME="spider_test Coverage Results" MODIFIED="1558510863601" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/intelli_sense" />
     <SUITE FILE_PATH="coverage/auto_write_robot_case$auto_write_APIrobot__1_.coverage" NAME="auto_write_APIrobot (1) Coverage Results" MODIFIED="1555557214495" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/auto_write_robot/intelli_sense" />
     <SUITE FILE_PATH="coverage/auto_write_robot_case$spider_for_robot__1_.coverage" NAME="spider_for_robot (1) Coverage Results" MODIFIED="1555910619747" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/robot_car_wash/intelli_sense" />
     <SUITE FILE_PATH="coverage/auto_write_robot_case$auto_write_params.coverage" NAME="auto_write_params Coverage Results" MODIFIED="1555919550091" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/robot_car_wash/intelli_sense" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="API_test.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="server_url.csv" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cache/document/server_url.csv">
+          <provider editor-type-id="csv-table-editor">
+            <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+          </provider>
+          <provider selected="true" editor-type-id="csv-text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="API_test.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/intelli_sense/API_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="53" column="91" lean-forward="false" selection-start-line="53" selection-start-column="91" selection-end-line="53" selection-end-column="91" />
+            <state relative-caret-position="-247">
+              <caret line="23" column="30" lean-forward="true" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -58,28 +58,76 @@
       <file leaf-file-name="camera.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cache/json/camera.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="473">
-              <caret line="28" column="8" lean-forward="true" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
+            <state relative-caret-position="-46">
+              <caret line="28" column="8" lean-forward="false" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cache/json/user.json">
-          <provider selected="true" editor-type-id="text-editor">
+      <file leaf-file-name="old_文档状态码问题.csv" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cache/log/old_文档状态码问题.csv">
+          <provider editor-type-id="csv-table-editor">
+            <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+          </provider>
+          <provider selected="true" editor-type-id="csv-text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="文档状态码问题.csv" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cache/log/文档状态码问题.csv">
+          <provider editor-type-id="csv-table-editor">
+            <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+          </provider>
+          <provider selected="true" editor-type-id="csv-text-editor">
+            <state relative-caret-position="-1246">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="params_list.csv" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cache/params/params_list.csv">
+          <provider editor-type-id="csv-table-editor">
+            <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+          </provider>
+          <provider selected="true" editor-type-id="csv-text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="spider_from_document.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/intelli_sense/spider_from_document.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="311">
+              <caret line="179" column="24" lean-forward="false" selection-start-line="179" selection-start-column="24" selection-end-line="179" selection-end-column="24" />
               <folding>
-                <marker date="1558505691696" expanded="true" signature="0:26" ph="{...}" />
-                <marker date="1558505691696" expanded="true" signature="19:26" ph="{...}" />
+                <element signature="e#20#29#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="auto_write_schema.csv" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cache/document/auto_write_schema.csv">
+      <file leaf-file-name="server_list.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cache/document/server_list.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="server_auto_write_schema.csv" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cache/document/server_auto_write_schema.csv">
           <provider editor-type-id="csv-table-editor">
             <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
           </provider>
@@ -171,13 +219,18 @@
         <option value="$PROJECT_DIR$/robot_car_wash/tests/resources/params.robot" />
         <option value="$PROJECT_DIR$/robot_car_wash/tests/resources.robot" />
         <option value="$PROJECT_DIR$/intelli_sense/spider_for_robot.py" />
-        <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/intelli_sense/spider_test.py" />
         <option value="$PROJECT_DIR$/cache/document/old_auto_write_robot.csv" />
-        <option value="$PROJECT_DIR$/intelli_sense/spider_from_document.py" />
         <option value="$PROJECT_DIR$/cache/document/auto_write_robot.csv" />
-        <option value="$PROJECT_DIR$/intelli_sense/API_test.py" />
         <option value="$PROJECT_DIR$/cache/json/camera.json" />
+        <option value="$PROJECT_DIR$/requirements.txt" />
+        <option value="$PROJECT_DIR$/intelli_sense/auto_write_params.py" />
+        <option value="$PROJECT_DIR$/intelli_sense/auto_write_APIrobot.py" />
+        <option value="$PROJECT_DIR$/intelli_sense/auto_clean.py" />
+        <option value="$PROJECT_DIR$/cache/document/server_auto_write_schema.csv" />
+        <option value="$PROJECT_DIR$/intelli_sense/API_test.py" />
+        <option value="$PROJECT_DIR$/cache/document/server_list.txt" />
+        <option value="$PROJECT_DIR$/intelli_sense/spider_from_document.py" />
       </list>
     </option>
   </component>
@@ -187,10 +240,10 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="4">
-    <option name="x" value="722" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="65" />
     <option name="y" value="24" />
-    <option name="width" value="1187" />
+    <option name="width" value="1084" />
     <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -237,7 +290,30 @@
             <path>
               <item name="auto-write-robot-case" type="b2602c69:ProjectViewProjectNode" />
               <item name="auto-write-robot-case" type="462c0819:PsiDirectoryNode" />
+              <item name="cache" type="462c0819:PsiDirectoryNode" />
+              <item name="log" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="auto-write-robot-case" type="b2602c69:ProjectViewProjectNode" />
+              <item name="auto-write-robot-case" type="462c0819:PsiDirectoryNode" />
+              <item name="cache" type="462c0819:PsiDirectoryNode" />
+              <item name="params" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="auto-write-robot-case" type="b2602c69:ProjectViewProjectNode" />
+              <item name="auto-write-robot-case" type="462c0819:PsiDirectoryNode" />
               <item name="intelli_sense" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="auto-write-robot-case" type="b2602c69:ProjectViewProjectNode" />
+              <item name="auto-write-robot-case" type="462c0819:PsiDirectoryNode" />
+              <item name="robot_car_wash_app_library" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="auto-write-robot-case" type="b2602c69:ProjectViewProjectNode" />
+              <item name="auto-write-robot-case" type="462c0819:PsiDirectoryNode" />
+              <item name="robot_car_wash_app_library" type="462c0819:PsiDirectoryNode" />
+              <item name="accredit" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -276,7 +352,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.API_test">
+  <component name="RunManager" selected="Python.spider_test">
     <configuration name="API_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -376,8 +452,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.API_test" />
-        <item index="1" class="java.lang.String" itemvalue="Python.spider_test" />
+        <item index="0" class="java.lang.String" itemvalue="Python.spider_test" />
+        <item index="1" class="java.lang.String" itemvalue="Python.API_test" />
         <item index="2" class="java.lang.String" itemvalue="Python.spider_for_robot" />
         <item index="3" class="java.lang.String" itemvalue="Python.auto_write_params" />
         <item index="4" class="java.lang.String" itemvalue="Python.auto_write_APIrobot (2)" />
@@ -386,6 +462,9 @@
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -398,18 +477,18 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="722" y="24" width="1187" height="1056" extended-state="4" />
+    <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19737992" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12465527" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21278942" sideWeight="0.5032741" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22847682" sideWeight="0.49672592" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22162741" sideWeight="0.49672592" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3072805" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30684328" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39828694" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -451,22 +530,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="25" />
+      <option name="time" value="28" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/spider/auto_write_robot.txt" />
-    <entry file="file:///usr/local/envs/auto-write-robot-test-case/lib/python3.5/os.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="240" column="0" lean-forward="false" selection-start-line="240" selection-start-column="0" selection-end-line="240" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/robot_car_wash/UtilsLibrary/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/robot_car_wash/UtilsLibrary/BaseUtilsLibrary.py" />
-    <entry file="file://$PROJECT_DIR$/spider/tests/admin_card_sale/card_sale.robot" />
     <entry file="file://$PROJECT_DIR$/spider/tests/admin_card.unauthorized/card.unauthorized.robot" />
     <entry file="file://$PROJECT_DIR$/spider/tests/admin_card/card.unauthorized.robot" />
     <entry file="file://$PROJECT_DIR$/spider/__init__.py" />
@@ -487,48 +555,9 @@
     <entry file="file://$PROJECT_DIR$/robot_car_wash/tests/resources/params.robot" />
     <entry file="file://$PROJECT_DIR$/robot_car_wash/tests/admin_card/card.robot" />
     <entry file="file://$PROJECT_DIR$/cache/document/server.txt" />
-    <entry file="file://$PROJECT_DIR$/cache/document/auto_write_robot.txt" />
     <entry file="file://$PROJECT_DIR$/cache/test/params_list.csv" />
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cache/document/.txt" />
-    <entry file="file://$PROJECT_DIR$/cache/log/old_文档状态码问题.csv" />
     <entry file="file://$PROJECT_DIR$/cache/test/auto_write_robot.csv" />
-    <entry file="file://$PROJECT_DIR$/cache/params/params_list.txt" />
-    <entry file="file://$PROJECT_DIR$/intelli_sense/spider_for_robot.py" />
-    <entry file="file://$PROJECT_DIR$/cache/document/server_url.csv">
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/intelli_sense/auto_write_params.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/intelli_sense/auto_clean.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cache/document/old_auto_write_robot.csv">
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
@@ -547,41 +576,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/intelli_sense/spider_from_document.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-203">
-          <caret line="178" column="11" lean-forward="false" selection-start-line="169" selection-start-column="0" selection-end-line="175" selection-end-column="0" />
-          <folding>
-            <element signature="e#20#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/intelli_sense/auto_write_APIrobot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-748">
-          <caret line="154" column="37" lean-forward="false" selection-start-line="154" selection-start-column="37" selection-end-line="154" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cache/document/auto_write_schema.csv">
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
       <provider selected="true" editor-type-id="csv-text-editor">
@@ -652,25 +646,179 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1558505691696" expanded="true" signature="0:26" ph="{...}" />
-            <marker date="1558505691696" expanded="true" signature="19:26" ph="{...}" />
+            <marker date="1558506221795" expanded="true" signature="0:26" ph="{...}" />
+            <marker date="1558506221795" expanded="true" signature="19:26" ph="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/intelli_sense/auto_write_APIrobot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="130" column="0" lean-forward="false" selection-start-line="130" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cache/document/auto_write_robot.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1320">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/intelli_sense/auto_write_params.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="682">
+          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/intelli_sense/auto_clean.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="473">
+          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cache/document/admin.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cache/log/old_文档状态码问题.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cache/log/文档状态码问题.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="-1246">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cache/params/params_list.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-264">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cache/params/params_list.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cache/document/auto_write_schema.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="-383">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/intelli_sense/spider_for_robot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1650">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cache/document/server_url.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cache/document/server_auto_write_schema.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cache/json/camera.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
-          <caret line="28" column="8" lean-forward="true" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
+        <state relative-caret-position="-46">
+          <caret line="28" column="8" lean-forward="false" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/intelli_sense/API_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="53" column="91" lean-forward="false" selection-start-line="53" selection-start-column="91" selection-end-line="53" selection-end-column="91" />
+        <state relative-caret-position="-247">
+          <caret line="23" column="30" lean-forward="true" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cache/document/server_list.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/intelli_sense/spider_from_document.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="179" column="24" lean-forward="false" selection-start-line="179" selection-start-column="24" selection-end-line="179" selection-end-column="24" />
+          <folding>
+            <element signature="e#20#29#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

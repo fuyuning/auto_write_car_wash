@@ -19,39 +19,44 @@ class AutoWriteRobot(object):
         folder = os.path.exists(self.old_cache_path)
         if not folder:
             os.makedirs(self.old_cache_path)
+        folder = os.path.exists('../cache/json')
+        if not folder:
+            os.makedirs('../cache/json')
         with open('%s/params_list.csv' % self.params_path, 'w+') as params_csv:
             params_csv.write('')
             params_csv.close()
-        with open('%s/auto_write_schema.csv' % self.document_path, 'r') as schema_csv:
-            folder = os.path.exists('../cache/json')
-            if not folder:
-                os.makedirs('../cache/json')
-            reader = csv.DictReader(schema_csv)
-            for row in reader:
-                with open('../cache/json/' + row['实体名'] + '.json', 'w+') as json_file:
-                    params_list = row['实体参数'][1:-1].replace('\'', '').replace(' ', '').split(',')
-                    type_list = row['参数类型'][1:-1].replace('\'', '').replace(' ', '').split(',')
-                    for i in range(0, len(type_list)):
-                        if type_list[i] in ('float', 'integer'):
-                            type_list[i] = 'number'
-                    json_file.write('{\n  "definitions": {\n    "%s": {\n      "type":"object",'
-                                    '\n      "properties":{\n' % row['实体名'])
-                    for i in range(0, len(params_list)):
-                        if i != len(params_list)-1:
-                            end_point = ','
-                        else:
-                            end_point = ''
-                        json_file.write('        "%s": {"type":"%s"}%s\n' % (params_list[i], type_list[i], end_point))
-                    json_file.write('      },\n      "required": [\n')
-                    for i in range(0, len(params_list)):
-                        if i != len(params_list)-1:
-                            end_point = ','
-                        else:
-                            end_point = ''
-                        json_file.write('        "%s"%s\n' % (params_list[i], end_point))
-                    json_file.write('      ]\n    }\n  },\n  "type": "object",\n  "$ref": "#/definitions/%s"\n'
-                                    '//  "type": "array",\n//  "minItems":0,\n//  "items": {\n//    "$ref": "'
-                                    '#/definitions/%s"\n//  }\n}' % (row['实体名'], row['实体名']))
+        with open('%s/server_list.txt' % self.document_path, 'r') as server_file:
+            for server_name in server_file:
+                server_name = server_name.replace('\n', '')
+                if server_name:
+                    with open('%s/%s_auto_write_schema.csv' % (self.document_path, server_name), 'r') as schema_csv:
+                        reader = csv.DictReader(schema_csv)
+                        for row in reader:
+                            with open('../cache/json/%s_%s.json' % (row['服务端'], row['实体名']), 'w+') as json_file:
+                                params_list = row['实体参数'][1:-1].replace('\'', '').replace(' ', '').split(',')
+                                type_list = row['参数类型'][1:-1].replace('\'', '').replace(' ', '').split(',')
+                                for i in range(0, len(type_list)):
+                                    if type_list[i] in ('float', 'integer'):
+                                        type_list[i] = 'number'
+                                json_file.write('{\n  "definitions": {\n    "%s": {\n      "type":"object",'
+                                                '\n      "properties":{\n' % row['实体名'])
+                                for i in range(0, len(params_list)):
+                                    if i != len(params_list)-1:
+                                        end_point = ','
+                                    else:
+                                        end_point = ''
+                                    json_file.write('        "%s": {"type":"%s"}%s\n' % (params_list[i], type_list[i],
+                                                                                         end_point))
+                                json_file.write('      },\n      "required": [\n')
+                                for i in range(0, len(params_list)):
+                                    if i != len(params_list)-1:
+                                        end_point = ','
+                                    else:
+                                        end_point = ''
+                                    json_file.write('        "%s"%s\n' % (params_list[i], end_point))
+                                json_file.write('      ]\n    }\n  },\n  "type": "object",\n  "$ref": "#/definitions/'
+                                                '%s"\n//  "type": "array",\n//  "minItems":0,\n//  "items": {\n//    "'
+                                                '$ref": "#/definitions/%s"\n//  }\n}' % (row['实体名'], row['实体名']))
         with open('%s/auto_write_robot.csv' % self.document_path, 'r') as file:
             reader = csv.DictReader(file)
             # for row in reader:

@@ -14,7 +14,7 @@ server,camera,编辑单个相机参数配置,PUT, /projects/:project_id/cameras/
 server,camera,编辑批量相机工作状态,PATCH, /projects/:project_id/cameras,"['work_status', 'camera_ids']","['integer', 'string']","['T', 'T']","['204', '403', '404', '422']",
 server,camera,编辑批量相机参数配置,PUT, /projects/:project_id/cameras,"['work_time', 'upload_cycle', 'camera_ids']","['string', 'integer', 'string']","['T', 'T', 'T']","['204', '403', '404', '422']",
 server,camera,获取相机详情,GET, /projects/:project_id/cameras/:camera_id,,,,"['200', '403', '404']",Camera
-server,camera,获取相机品牌列表,GET, /projects/:project_id/camera_brands,,,,"['200', '403', '404']",CameraBrand
+server,camera,获取相机品牌,GET, /projects/:project_id/camera_brands,,,,"['200', '403', '404']",CameraBrand
 server,camera,获取相机型号列表,GET, /projects/:project_id/camera_brands/:camera_brand_id/camera_models,,,,"['200', '403', '404']",CameraModel
 server,spot,获取泊位,GET, /projects/:project_id/cameras/:camera_id/spots,,,,"['200', '403', '404']",Spot
 server,spot,编辑泊位坐标,PUT, projects/:project_id/cameras/:camera_id/spots/:spot_id,['draw_coordinate'],['string'],['T'],"['204', '403', '404', '422']",

@@ -1,0 +1,89 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": [
+    "array",
+    "null"
+  ],
+  "items": {
+    "type": [
+      "object",
+      "null"
+    ],
+    "required": [
+      "mobile",
+      "coupon_pool_id",
+      "coupon_code_id",
+      "user_id",
+      "coupon_code_record_id",
+      "status",
+      "created_time",
+      "car_id",
+      "coupon_code_no",
+      "coupon_money"
+    ],
+    "properties": {
+      "mobile": {
+        "type":  [
+          "string",
+          "null"
+        ]
+      },
+      "coupon_pool_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "coupon_code_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "user_id": {
+        "type":  [
+          "string",
+          "null"
+        ]
+      },
+      "coupon_code_record_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "status": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "created_time": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "car_id": {
+        "type":  [
+          "string",
+          "null"
+        ]
+      },
+      "coupon_code_no": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "coupon_money": {
+        "type": [
+          "number",
+          "null"
+        ]
+      }
+    }
+  }
+}

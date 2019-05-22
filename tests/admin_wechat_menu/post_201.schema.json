@@ -1,0 +1,25 @@
+{
+  "definitions": {},
+  "type": [
+    "object",
+    "null"
+  ],
+  "required": [
+    "errcode",
+    "errmsg"
+  ],
+  "properties": {
+    "errcode": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "errmsg": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

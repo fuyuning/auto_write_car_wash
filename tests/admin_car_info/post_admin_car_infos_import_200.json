@@ -1,0 +1,21 @@
+{
+  "definitions": {},
+  "type": "object",
+  "required": [
+    "success_rows",
+    "failed_rows",
+    "fail_info"
+  ],
+  "properties": {
+    "success_rows": {
+      "type": "number"
+    },
+    "failed_rows": {
+      "type": "number"
+    },
+    "fail_info": {
+      "type": "array",
+      "minItems":0
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "definitions": {},
+  "type": "object",
+  "required": [
+    "created_time",
+    "user_contact_id"
+  ],
+  "properties": {
+    "created_time": {
+      "type": "number"
+    },
+    "user_contact_id": {
+      "type": "string"
+    }
+  }
+}

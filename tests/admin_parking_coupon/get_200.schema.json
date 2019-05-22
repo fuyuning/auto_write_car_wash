@@ -1,0 +1,115 @@
+{
+  "type": [
+    "array",
+    "null"
+  ],
+  "items": {
+    "type": [
+      "object",
+      "null"
+    ],
+    "required": [
+      "car_washer",
+      "parking_coupon_id",
+      "parking_coupon_no",
+      "order_no",
+      "parking",
+      "created_time",
+      "car_id"
+    ],
+    "properties": {
+      "car_washer": {
+        "type": [
+          "object",
+          "null"
+        ],
+        "required": [
+          "sex",
+          "name",
+          "username",
+          "mobile"
+        ],
+        "properties": {
+          "sex": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "name": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "username": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "mobile": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      },
+      "parking_coupon_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "parking_coupon_no": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "order_no": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "parking": {
+        "type": [
+          "object",
+          "null"
+        ],
+        "required": [
+          "parking_id",
+          "parking_name"
+        ],
+        "properties": {
+          "parking_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "parking_name": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      },
+      "created_time": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "car_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    }
+  }
+}

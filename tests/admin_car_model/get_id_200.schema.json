@@ -1,0 +1,234 @@
+{
+  "type": [
+    "object",
+    "null"
+  ],
+  "required": [
+    "contractor",
+    "max_power",
+    "car_series",
+    "car_structure",
+    "engine",
+    "tank_volume",
+    "car_length",
+    "trunk_volume",
+    "energy_type",
+    "car_quality",
+    "series_id",
+    "model_id",
+    "car_wheelbase",
+    "max_torque",
+    "created_time",
+    "quoted_time",
+    "min_ground_clearance",
+    "car_seats",
+    "car_quality_assurance",
+    "max_speed",
+    "variable_box",
+    "car_height",
+    "car_model",
+    "car_brand",
+    "oil_consumption",
+    "car_scale",
+    "guidance_price",
+    "car_wheel_pitch",
+    "car_model_id",
+    "brand_id",
+    "car_width",
+    "car_doors"
+  ],
+  "properties": {
+    "contractor": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "max_power": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "car_series": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "car_structure": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "engine": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "tank_volume": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "car_length": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "trunk_volume": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "energy_type": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "car_quality": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "series_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "model_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "car_wheelbase": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "max_torque": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "created_time": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "quoted_time": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "min_ground_clearance": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "car_seats": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "car_quality_assurance": {
+      "type":  [
+        "string",
+        "null"
+      ]
+    },
+    "max_speed": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "variable_box": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "car_height": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "car_model": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "car_brand": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "oil_consumption": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "car_scale": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "guidance_price": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "car_wheel_pitch": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "car_model_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "brand_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "car_width": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "car_doors": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

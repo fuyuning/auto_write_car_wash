@@ -1,0 +1,11 @@
+{
+    "type": "object",
+    "required": [
+      "robot_id",
+      "created_time"
+    ],
+    "properties": {
+        "robot_id": { "type": "string" },
+        "created_time": { "type": "number"}
+    }
+}

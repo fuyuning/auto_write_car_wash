@@ -1,0 +1,54 @@
+{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "coupon_type",
+      "point_remark",
+      "coupon_name",
+      "coupon_point_record_id",
+      "updated_time",
+      "created_time",
+      "point_number",
+      "remark",
+      "status",
+      "coupon_pool_id",
+      "granted_number"
+    ],
+    "properties": {
+      "coupon_type": {
+        "type": "number"
+      },
+      "point_remark": {
+        "type": ["null","string"]
+      },
+      "coupon_name": {
+        "type": "string"
+      },
+      "coupon_point_record_id": {
+        "type": "string"
+      },
+      "updated_time": {
+        "type": "number"
+      },
+      "created_time": {
+        "type": "number"
+      },
+      "point_number": {
+        "type": "number"
+      },
+      "remark": {
+        "type": "null"
+      },
+      "status": {
+        "type": "number"
+      },
+      "coupon_pool_id": {
+        "type": "string"
+      },
+      "granted_number": {
+        "type": "number"
+      }
+    }
+  }
+}

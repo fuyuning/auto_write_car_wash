@@ -1,0 +1,81 @@
+{
+  "definitions": {},
+  "type": [
+    "object",
+    "null"
+  ],
+  "required": [
+    "user_contact_id",
+    "mobile",
+    "expect_time",
+    "car_id",
+    "car_place",
+    "user_car_id",
+    "created_time",
+    "price",
+    "name",
+    "order_id"
+  ],
+  "properties": {
+    "user_contact_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "mobile": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "expect_time": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "car_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "car_place": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "user_car_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "created_time": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "price": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "order_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

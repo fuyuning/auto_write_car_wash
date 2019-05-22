@@ -1,0 +1,183 @@
+{
+  "definitions": {},
+  "type": [
+    "array",
+    "null"
+  ],
+  "items": {
+    "type": [
+      "object",
+      "null"
+    ],
+    "required": [
+      "parking_id",
+      "amount_last_30_day",
+      "increase_amount",
+      "total_wash_num",
+      "record_num_last_30_day",
+      "updated_time",
+      "increase_wash_num",
+      "wash_num",
+      "remark",
+      "created_time",
+      "amount_last_7_day",
+      "parking",
+      "wash_area",
+      "amount",
+      "wash_area_id",
+      "total_amount",
+      "wash_record_statistic_id",
+      "time_point",
+      "record_num_last_7_day"
+    ],
+    "properties": {
+      "parking_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "amount_last_30_day": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "increase_amount": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "total_wash_num": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "record_num_last_30_day": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "updated_time": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "increase_wash_num": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "wash_num": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "remark": {
+        "type": "null"
+      },
+      "created_time": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "amount_last_7_day": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "parking": {
+        "type": [
+          "object",
+          "null"
+        ],
+        "required": [
+          "name",
+          "parking_id"
+        ],
+        "properties": {
+          "name": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "parking_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      },
+      "wash_area": {
+        "type": [
+          "object",
+          "null"
+        ],
+        "required": [
+          "name",
+          "wash_area_id"
+        ],
+        "properties": {
+          "name": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "wash_area_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      },
+      "amount": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "wash_area_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "total_amount": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "wash_record_statistic_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "time_point": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "record_num_last_7_day": {
+        "type": [
+          "number",
+          "null"
+        ]
+      }
+    }
+  }
+}

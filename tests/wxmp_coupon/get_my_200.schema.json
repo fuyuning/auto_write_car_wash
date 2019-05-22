@@ -1,0 +1,223 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": [
+    "array",
+    "null"
+  ],
+  "items": {
+    "type": [
+      "object",
+      "null"
+    ],
+    "required": [
+      "condition_money",
+      "discount_money",
+      "parkings",
+      "granted_number",
+      "coupon_pool_id",
+      "allow_use_start_time",
+      "remark",
+      "wash_areas",
+      "allow_gain_end_time",
+      "allow_use_days",
+      "allow_gain_start_time",
+      "allow_gain_number",
+      "status",
+      "created_time",
+      "coupon_template_id",
+      "allow_use_end_time",
+      "coupon_template_name",
+      "discount",
+      "service_types",
+      "order_types",
+      "is_point",
+      "service_groups",
+      "coupon_number",
+      "coupon_type"
+    ],
+    "properties": {
+      "condition_money": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "discount_money": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "parkings": {
+        "type": [
+          "array",
+          "null"
+        ]
+      },
+      "granted_number": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "coupon_pool_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "allow_use_start_time": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "remark": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "wash_areas": {
+        "type": [
+          "array",
+          "null"
+        ]
+      },
+      "allow_gain_end_time": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "allow_use_days": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "allow_gain_start_time": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "allow_gain_number": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "status": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "created_time": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "coupon_template_id": {
+         "type": [
+          "string",
+          "null"
+        ]
+      },
+      "allow_use_end_time": {
+         "type": [
+          "number",
+          "null"
+        ]
+      },
+      "coupon_template_name": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "discount": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "service_types": {
+        "type": [
+          "array",
+          "null"
+        ],
+        "items": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "order_types": {
+        "type": [
+          "array",
+          "null"
+        ],
+        "items": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "is_point": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "service_groups": {
+        "type": [
+          "array",
+          "null"
+        ],
+        "items": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "required": [
+            "service_group_id",
+            "service_group_name"
+          ],
+          "properties": {
+            "service_group_id": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "service_group_name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        }
+      },
+      "coupon_number": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "coupon_type": {
+        "type": [
+          "number",
+          "null"
+        ]
+      }
+    }
+  }
+}

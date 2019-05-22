@@ -1,0 +1,121 @@
+{
+  "type": [
+    "array",
+    "null"
+  ],
+  "items": {
+    "type": [
+      "object",
+      "null"
+    ],
+    "required": [
+      "car_images",
+      "level",
+      "comment_id",
+      "updated_time",
+      "is_deleted",
+      "car_id",
+      "mobile",
+      "created_time",
+      "deleted_time",
+      "user_id",
+      "order_no",
+      "order_id",
+      "comment_remark",
+      "remark",
+      "wash_record_id"
+    ],
+    "properties": {
+      "car_images": {
+        "type": [
+          "array",
+          "null"
+        ],
+        "items": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "level": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "comment_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "updated_time": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "is_deleted": {
+        "type": [
+          "boolean",
+          "null"
+        ]
+      },
+      "car_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "mobile": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "created_time": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "deleted_time": {
+        "type": "null"
+      },
+      "user_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "order_no": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "order_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "comment_remark": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "remark": {
+        "type": "null"
+      },
+      "wash_record_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    }
+  }
+}

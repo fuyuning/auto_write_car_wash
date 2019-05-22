@@ -1,0 +1,92 @@
+{
+  "definitions": {},
+  "type": [
+    "object",
+    "null"
+  ],
+  "required": [
+    "deleted_time",
+    "keyword",
+    "content",
+    "created_time",
+    "reply_type",
+    "wechat_keyword_id",
+    "is_deleted",
+    "updated_time",
+    "remark",
+    "name"
+  ],
+  "properties": {
+    "deleted_time": {
+      "type": "null"
+    },
+    "keyword": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    },
+    "content": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "required": [
+        "content"
+      ],
+      "properties": {
+        "content": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "created_time": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "reply_type": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "wechat_keyword_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "is_deleted": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "updated_time": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "remark": {
+      "type": "null"
+    },
+    "name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

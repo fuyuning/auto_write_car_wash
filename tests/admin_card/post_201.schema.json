@@ -1,0 +1,25 @@
+{
+  "definitions": {},
+  "type": [
+    "object",
+    "null"
+  ],
+  "required": [
+    "created_time",
+    "card_id"
+  ],
+  "properties": {
+    "created_time": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "card_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "type": [
+    "object",
+    "null"
+  ],
+  "required": [
+    "phase",
+    "entry_time",
+    "car_position_id",
+    "lon",
+    "car_id",
+    "space_no",
+    "created_time",
+    "lat",
+    "parking",
+    "floor",
+    "ownership",
+    "parking_id",
+    "wash_area",
+    "zone"
+  ],
+  "properties": {
+    "phase": {
+      "type": "null"
+    },
+    "entry_time": {
+      "type": "null"
+    },
+    "car_position_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "lon": {
+      "type": "null"
+    },
+    "car_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "space_no": {
+      "type": "null"
+    },
+    "created_time": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "lat": {
+      "type": "null"
+    },
+    "parking": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "required": [
+        "parking_id",
+        "parking_name"
+      ],
+      "properties": {
+        "parking_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "parking_name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "floor": {
+      "type": "null"
+    },
+    "ownership": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "parking_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "wash_area": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "required": [
+        "wash_area_id",
+        "name"
+      ],
+      "properties": {
+        "wash_area_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "zone": {
+      "type": "null"
+    }
+  }
+}

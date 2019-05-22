@@ -1,0 +1,42 @@
+{
+  "type": [
+    "object",
+    "null"
+  ],
+  "required": [
+    "enabled",
+    "coupon_pool"
+  ],
+  "properties": {
+    "enabled": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "coupon_pool": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "required": [
+        "coupon_template_name",
+        "coupon_pool_id"
+      ],
+      "properties": {
+        "coupon_template_name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "coupon_pool_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    }
+  }
+}

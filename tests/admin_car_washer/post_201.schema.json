@@ -1,0 +1,11 @@
+{
+  "type":"object",
+  "required": [
+      "created_time",
+      "username"
+    ],
+  "properties":{
+    "username": {"type":"string"},
+    "created_time": { "type": "number" }
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "type": [
+    "array",
+    "null"
+  ],
+  "items": {
+    "type": [
+      "object",
+      "null"
+    ],
+    "required": [
+      "service_type",
+      "wash_normal",
+      "address",
+      "wash_group",
+      "wash_area_id",
+      "district",
+      "user_group",
+      "updated_time",
+      "enabled",
+      "city",
+      "name",
+      "created_time",
+      "deleted_time",
+      "status",
+      "province",
+      "city_code",
+      "remark",
+      "is_deleted"
+    ],
+    "properties": {
+      "service_type": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "wash_normal": {
+        "type": [
+          "boolean",
+          "null"
+        ]
+      },
+      "address": {
+        "type": "null"
+      },
+      "wash_group": {
+        "type": [
+          "boolean",
+          "null"
+        ]
+      },
+      "wash_area_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "district": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "user_group": {
+        "type": [
+          "boolean",
+          "null"
+        ]
+      },
+      "updated_time": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "enabled": {
+        "type": [
+          "boolean",
+          "null"
+        ]
+      },
+      "city": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "name": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "created_time": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "deleted_time": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "status": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "province": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "city_code": {
+        "type": "null"
+      },
+      "remark": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "is_deleted": {
+        "type": [
+          "boolean",
+          "null"
+        ]
+      }
+    }
+  }
+}

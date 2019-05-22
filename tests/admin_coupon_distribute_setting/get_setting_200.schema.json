@@ -1,0 +1,56 @@
+{
+  "definitions": {},
+  "type": [
+    "array",
+    "null"
+  ],
+  "items": {
+    "type": [
+      "object",
+      "null"
+    ],
+    "required": [
+      "setting_id",
+      "coupon_pool",
+      "enabled"
+    ],
+    "properties": {
+      "setting_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "coupon_pool": {
+        "type": [
+          "object",
+          "null"
+        ],
+        "required": [
+          "coupon_pool_id",
+          "coupon_template_name"
+        ],
+        "properties": {
+          "coupon_pool_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "coupon_template_name": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      },
+      "enabled": {
+        "type": [
+          "boolean",
+          "null"
+        ]
+      }
+    }
+  }
+}

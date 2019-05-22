@@ -1,0 +1,191 @@
+{
+  "definitions": {},
+  "type": [
+    "array",
+    "null"
+  ],
+  "items": {
+    "type": [
+      "object",
+      "null"
+    ],
+    "required": [
+      "card",
+      "updated_time",
+      "created_time",
+      "deleted_time",
+      "enabled",
+      "card_id",
+      "card_sale_id",
+      "remark",
+      "order_by",
+      "is_deleted"
+    ],
+    "properties": {
+      "card": {
+        "type": [
+          "object",
+          "null"
+        ],
+        "required": [
+          "updated_time",
+          "first_price",
+          "card_remark",
+          "grant_way",
+          "price",
+          "recharge_price",
+          "is_deleted",
+          "card_name",
+          "created_time",
+          "deleted_time",
+          "remark",
+          "first_recharge_price",
+          "card_id",
+          "auto_recharge",
+          "days",
+          "coupons"
+        ],
+        "properties": {
+          "updated_time": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "first_price": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "card_remark": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "grant_way": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "price": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "recharge_price": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "is_deleted": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "card_name": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "created_time": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "deleted_time": {
+            "type": "null"
+          },
+          "remark": {
+            "type": "null"
+          },
+          "first_recharge_price": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "card_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "auto_recharge": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "days": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "coupons": {
+            "type": [
+              "array",
+              "null"
+            ]
+          }
+        }
+      },
+      "updated_time": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "created_time": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "deleted_time": {
+        "type": "null"
+      },
+      "enabled": {
+        "type": [
+          "boolean",
+          "null"
+        ]
+      },
+      "card_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "card_sale_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "remark": {
+        "type": "null"
+      },
+      "order_by": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "is_deleted": {
+        "type": [
+          "boolean",
+          "null"
+        ]
+      }
+    }
+  }
+}

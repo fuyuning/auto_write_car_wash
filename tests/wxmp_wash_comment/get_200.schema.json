@@ -1,0 +1,71 @@
+{
+  "definitions": {},
+  "type": "object",
+  "required": [
+    "is_deleted",
+    "remark",
+    "level",
+    "mobile",
+    "car_images",
+    "deleted_time",
+    "wash_record_id",
+    "order_id",
+    "user_id",
+    "order_no",
+    "comment_id",
+    "car_id",
+    "created_time",
+    "updated_time",
+    "comment_remark"
+  ],
+  "properties": {
+    "is_deleted": {
+      "type": "boolean"
+    },
+    "remark": {
+      "type": "null"
+    },
+    "level": {
+      "type": "number"
+    },
+    "mobile": {
+      "type": "string"
+    },
+    "car_images": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "deleted_time": {
+      "type": "null"
+    },
+    "wash_record_id": {
+      "type": "string"
+    },
+    "order_id": {
+      "type": "string"
+    },
+    "user_id": {
+      "type": "string"
+    },
+    "order_no": {
+      "type": "string"
+    },
+    "comment_id": {
+      "type": "string"
+    },
+    "car_id": {
+      "type": "string"
+    },
+    "created_time": {
+      "type": "number"
+    },
+    "updated_time": {
+      "type": "number"
+    },
+    "comment_remark": {
+      "type": "string"
+    }
+  }
+}

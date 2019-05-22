@@ -1,0 +1,202 @@
+{
+  "definitions": {},
+  "type": [
+    "object",
+    "null"
+  ],
+  "required": [
+    "discount_money",
+    "coupon_template_name",
+    "discount",
+    "service_groups",
+    "allow_use_end_time",
+    "coupon_type",
+    "coupon_pool_id",
+    "condition_money",
+    "is_point",
+    "granted_number",
+    "order_types",
+    "allow_use_start_time",
+    "allow_use_days",
+    "created_time",
+    "wash_areas",
+    "status",
+    "allow_gain_number",
+    "coupon_template_id",
+    "remark",
+    "allow_gain_end_time",
+    "coupon_number",
+    "service_types",
+    "allow_gain_start_time"
+  ],
+  "properties": {
+    "discount_money": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "coupon_template_name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "discount": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "service_groups": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "object",
+          "null"
+        ],
+        "required": [
+          "service_group_id",
+          "service_group_name"
+        ],
+        "properties": {
+          "service_group_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "service_group_name": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "allow_use_end_time": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "coupon_type": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "coupon_pool_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "condition_money": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "is_point": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "granted_number": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "order_types": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    },
+    "allow_use_start_time": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "allow_use_days": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "created_time": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "wash_areas": {
+      "type": [
+        "array",
+        "null"
+      ]
+    },
+    "status": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "allow_gain_number": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "coupon_template_id": {
+      "type": "null"
+    },
+    "remark": {
+      "type": "null"
+    },
+    "allow_gain_end_time": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "coupon_number": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "service_types": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    },
+    "allow_gain_start_time": {
+      "type": [
+        "number",
+        "null"
+      ]
+    }
+  }
+}

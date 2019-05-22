@@ -8,9 +8,17 @@ Library         robot.libraries.Collections
 
 *** Variables ***
 @{422list}   ImRobotTest1  ImRobotTest2  ImRobotTest3
+<<<<<<< HEAD:tests/resources.robot
 ${admin_username}  admin_123
 ${admin_password}  88888888
 ${wrong_url_id}  [12345678987654321]
+=======
+${admin_username}  admin
+${admin_password}  admin123
+${app_username}  987654321
+${app_password}  fuyuning123
+${wrong_url_id}  000000000000000000ZZZZZZZZZZZZZZZZ0000000000000000000000
+>>>>>>> 1f6ffa01350121ad44f55634454bbafd71cd0e86:tests/resources.robot
 
 
 *** Keywords ***

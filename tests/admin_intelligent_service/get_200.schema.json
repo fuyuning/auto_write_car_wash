@@ -1,0 +1,214 @@
+{
+  "definitions": {},
+  "type": [
+    "array",
+    "null"
+  ],
+  "items": {
+    "type": [
+      "object",
+      "null"
+    ],
+    "required": [
+      "member_price",
+      "order_by",
+      "cost_price",
+      "created_time",
+      "choose_car_model_id",
+      "wash_normal_price",
+      "min_price",
+      "standard_time",
+      "max_wash_normal_price",
+      "updated_time",
+      "name",
+      "min_wash_group_price",
+      "intelligent_service_id",
+      "description",
+      "price",
+      "wash_group_price",
+      "commission_percent",
+      "min_wash_normal_price",
+      "max_member_price",
+      "choose_car_series_id",
+      "special_car_models",
+      "max_price",
+      "max_wash_group_price",
+      "min_cost_price",
+      "min_member_price",
+      "max_cost_price"
+    ],
+    "properties": {
+      "member_price": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "order_by": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "cost_price": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "created_time": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "choose_car_model_id": {
+        "type": [
+          "object",
+          "null"
+        ],
+        "required": [
+          "car_model_id",
+          "car_model"
+        ],
+        "properties": {
+          "car_model_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "car_model": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      },
+      "wash_normal_price": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "min_price": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "standard_time": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "max_wash_normal_price": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "updated_time": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "name": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "min_wash_group_price": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "intelligent_service_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "description": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "price": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "wash_group_price": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "commission_percent": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "min_wash_normal_price": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "max_member_price": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "choose_car_series_id": {
+        "type": "null"
+      },
+      "special_car_models": {
+        "type": [
+          "array",
+          "null"
+        ]
+      },
+      "max_price": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "max_wash_group_price": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "min_cost_price": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "min_member_price": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "max_cost_price": {
+        "type": [
+          "number",
+          "null"
+        ]
+      }
+    }
+  }
+}

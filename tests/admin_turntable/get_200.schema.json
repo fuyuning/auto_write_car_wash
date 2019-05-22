@@ -1,0 +1,145 @@
+{
+  "type": [
+    "array",
+    "null"
+  ],
+  "items": {
+    "type": [
+      "object",
+      "null"
+    ],
+    "required": [
+      "wash_user_groups",
+      "name",
+      "enabled",
+      "prizes",
+      "updated_time",
+      "turntable_id",
+      "remark",
+      "created_time"
+    ],
+    "properties": {
+      "wash_user_groups": {
+        "type": [
+          "array",
+          "null"
+        ],
+        "items": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "required": [
+            "name",
+            "wash_user_group_id"
+          ],
+          "properties": {
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "wash_user_group_id": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        }
+      },
+      "name": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "enabled": {
+        "type": [
+          "boolean",
+          "null"
+        ]
+      },
+      "prizes": {
+        "type": [
+          "array",
+          "null"
+        ],
+        "items": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "required": [
+            "description",
+            "name",
+            "rate",
+            "title",
+            "id",
+            "type"
+          ],
+          "properties": {
+            "description": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "rate": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "title": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "id": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "type": {
+              "type": [
+                "number",
+                "null"
+              ]
+            }
+          }
+        }
+      },
+      "updated_time": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "turntable_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "remark": {
+        "type": "null"
+      },
+      "created_time": {
+        "type": [
+          "number",
+          "null"
+        ]
+      }
+    }
+  }
+}

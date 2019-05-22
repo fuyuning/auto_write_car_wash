@@ -1,0 +1,8 @@
+{
+  "type": "object",
+  "properties": {
+    "total_commission_count": { "type": ["null", "number"]},
+    "total_price_count": { "type": ["null", "number"]},
+    "total_record_count":{ "type": ["null", "number"]}
+  }
+}

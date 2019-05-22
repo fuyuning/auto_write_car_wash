@@ -1,0 +1,18 @@
+{
+  "definitions": {},
+  "type": [
+    "object",
+    "null"
+  ],
+  "required": [
+    "wash_group_id"
+  ],
+  "properties": {
+    "wash_group_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

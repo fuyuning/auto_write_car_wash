@@ -1,0 +1,73 @@
+{
+  "definitions": {},
+  "type": [
+    "array",
+    "null"
+  ],
+  "items": {
+    "type": [
+      "object",
+      "null"
+    ],
+    "required": [
+      "updated_time",
+      "car_brand_logo",
+      "tag",
+      "order_by",
+      "created_time",
+      "car_brand_id",
+      "car_brand_name",
+      "brand_id"
+    ],
+    "properties": {
+      "updated_time": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "car_brand_logo": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "tag": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "order_by": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "created_time": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "car_brand_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "car_brand_name": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "brand_id": {
+        "type": [
+          "number",
+          "null"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": [
+    "array",
+    "null"
+  ],
+  "items": {
+    "type": [
+      "object",
+      "null"
+    ],
+    "required": [
+      "granted_number",
+      "coupon_code_remark",
+      "coupon_money",
+      "coupon_code_record_id",
+      "coupon_pool_id",
+      "created_time",
+      "created_number",
+      "coupon_code_name"
+    ],
+    "properties": {
+      "granted_number": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "coupon_code_remark": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "coupon_money": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "coupon_code_record_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "coupon_pool_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "created_time": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "created_number": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "coupon_code_name": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    }
+  }
+}

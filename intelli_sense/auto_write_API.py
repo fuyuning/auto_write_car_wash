@@ -44,8 +44,16 @@ class AutoWriteRobot(object):
                                 params_list = row['实体参数'][1:-1].replace('\'', '').replace(' ', '').split(',')
                                 type_list = row['参数类型'][1:-1].replace('\'', '').replace(' ', '').split(',')
                                 for i in range(0, len(type_list)):
-                                    if type_list[i] in ('float', 'integer'):
+                                    if type_list[i] in ('float', 'Float', 'integer', 'int', 'time'):
                                         type_list[i] = 'number'
+                                    if type_list[i] in ('bool', 'Boolean'):
+                                        type_list[i] = 'boolean'
+                                    if type_list[i] == 'text':
+                                        type_list[i] = 'string'
+                                    if type_list[i] == 'json':
+                                        type_list[i] = 'object'
+                                    if '<' in type_list[i] and '>' in type_list[i]:
+                                        type_list[i] = 'array'
                                 json_file.write('{\n  "definitions": {\n    "%s": {\n      "type":"object",'
                                                 '\n      "properties":{\n' % row['实体名'])
                                 for i in range(0, len(params_list)):

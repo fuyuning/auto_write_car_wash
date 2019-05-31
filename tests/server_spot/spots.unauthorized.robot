@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation  server_spot
 Resource  ../resources.robot
-Library  robot_camera_monitor_deployment_server.spot.SpotLibrary
+Library  robot_camera_monitor_server_library.spot.SpotLibrary
 Force Tags  model:server_spot  
 
 
@@ -18,7 +18,7 @@ put projects cameras spots by project id camera id spot id Fail Without Login
    ...              请求方式:Put${\n}
    ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
    [Tags]           Respcode:403
-   put projects cameras spots by project id camera id spot id fail 403     project_id=${project_id}  camera_id=${camera_id}  spot_id=${spot_id}
+   put projects cameras spots by project id camera id spot id fail 403     project_id=${project_id}  camera_id=${camera_id}  spot_id=${spot_id}  draw_coordinate=${draw_coordinate}    
 
 
 *** Variables ***

@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2b5dbe8c-edbb-41e1-bfc0-1c8862244c59" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cache/document/auto_write_robot.csv" afterPath="$PROJECT_DIR$/cache/document/auto_write_robot.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cache/params/params_list.txt" afterPath="$PROJECT_DIR$/cache/params/params_list.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/intelli_sense/auto_write_API.py" afterPath="$PROJECT_DIR$/intelli_sense/auto_write_API.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/robot_camera_monitor_deployment_server/record/RecordLibrary.py" afterPath="$PROJECT_DIR$/robot_camera_monitor_deployment_server/record/RecordLibrary.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/server_record/records.robot" afterPath="$PROJECT_DIR$/tests/server_record/records.robot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/server_record/records.unauthorized.robot" afterPath="$PROJECT_DIR$/tests/server_record/records.unauthorized.robot" />
-    </list>
+    <list default="true" id="2b5dbe8c-edbb-41e1-bfc0-1c8862244c59" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,11 +29,21 @@
       <file leaf-file-name="auto_write_API.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/intelli_sense/auto_write_API.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="50" column="61" lean-forward="false" selection-start-line="50" selection-start-column="57" selection-end-line="50" selection-end-column="61" />
+            <state relative-caret-position="408">
+              <caret line="337" column="0" lean-forward="false" selection-start-line="332" selection-start-column="0" selection-end-line="337" selection-end-column="0" />
               <folding>
                 <element signature="e#20#30#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="auto_clean.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/intelli_sense/auto_clean.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="473">
+              <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -91,7 +94,7 @@
       <file leaf-file-name="spider_from_document.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/intelli_sense/spider_from_document.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
+            <state relative-caret-position="-245">
               <caret line="189" column="4" lean-forward="false" selection-start-line="189" selection-start-column="4" selection-end-line="189" selection-end-column="4" />
               <folding />
             </state>
@@ -160,8 +163,8 @@
       <find>server_list.txt</find>
       <find>old</find>
       <find>old_cache_path</find>
-      <find>sever_file</find>
       <find>integer</find>
+      <find>sever_file</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -327,7 +330,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../robot_camera_monitor_deployment_server" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../robot-car-wash-server" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -487,11 +490,11 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21278942" sideWeight="0.5032741" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23982869" sideWeight="0.49672592" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23982869" sideWeight="0.49672592" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30620986" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30620986" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39828694" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -554,13 +557,6 @@
       <provider selected="true" editor-type-id="csv-text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/intelli_sense/auto_clean.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
-          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -808,14 +804,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/intelli_sense/spider_from_document.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="189" column="4" lean-forward="false" selection-start-line="189" selection-start-column="4" selection-end-line="189" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cache/document/old_auto_write_robot.csv">
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
@@ -854,10 +842,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/intelli_sense/auto_clean.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="473">
+          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/intelli_sense/spider_from_document.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-245">
+          <caret line="189" column="4" lean-forward="false" selection-start-line="189" selection-start-column="4" selection-end-line="189" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/intelli_sense/auto_write_API.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="50" column="61" lean-forward="false" selection-start-line="50" selection-start-column="57" selection-end-line="50" selection-end-column="61" />
+        <state relative-caret-position="408">
+          <caret line="337" column="0" lean-forward="false" selection-start-line="332" selection-start-column="0" selection-end-line="337" selection-end-column="0" />
           <folding>
             <element signature="e#20#30#0" expanded="true" />
           </folding>

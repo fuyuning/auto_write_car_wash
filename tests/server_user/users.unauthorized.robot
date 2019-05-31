@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation  server_user
 Resource  ../resources.robot
-Library  robot_camera_monitor_deployment_server.user.UserLibrary
+Library  robot_camera_monitor_server_library.user.UserLibrary
 Force Tags  model:server_user  
 
 

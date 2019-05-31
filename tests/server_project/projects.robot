@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation  server_project
 Resource  ../resources.robot
-Library  robot_camera_monitor_deployment_server.project.ProjectLibrary
+Library  robot_camera_monitor_server_library.project.ProjectLibrary
 Suite Setup  Login  ${admin_username}   ${admin_password}
 Suite Teardown  Logout
 Force Tags  model:server_project  
@@ -31,7 +31,7 @@ post projects by project id Fail With Wrong Url
    ...              请求方式:Post${\n}
    ...              预期结果:输入正确参数及错误的url,http响应码返回 404,无Json数据返回。
    [Tags]           Respcode:404
-   post projects by project id fail 404     project_id=${wrong_url_id}
+   post projects by project id fail 404     project_id=${wrong_url_id}  file=${Please_input}    
 
 post projects by project id Success 
    [Documentation]  接口名:更新项目数据${\n}
@@ -83,7 +83,7 @@ patch projects upload platforms by project id Fail With Wrong Url
    ...              请求方式:Patch${\n}
    ...              预期结果:输入正确参数及错误的url,http响应码返回 404,无Json数据返回。
    [Tags]           Respcode:404
-   patch projects upload platforms by project id fail 404     project_id=${wrong_url_id}
+   patch projects upload platforms by project id fail 404     project_id=${wrong_url_id}  upload_platforms=${upload_platforms}    
 
 patch projects upload platforms by project id Fail With Wrong Params
    [Documentation]  接口名:上传配置${\n}

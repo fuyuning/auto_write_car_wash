@@ -295,7 +295,7 @@ class AutoWriteRobot(object):
             change_data = 'params=data'
         elif api_method in ('post', 'put', 'patch'):
             change_data = 'json=data'
-        if len(api_params_name_list) > 1:
+        if len(api_params_name_list) > 0:
             change_data = ', %s' % change_data
         else:
             change_data = ''
@@ -331,7 +331,7 @@ class AutoWriteRobot(object):
         teardown = ''
         name_tag = ''
         if service_name == 'server':
-            lib_name = 'robot_camera_monitor_deployment_server.'
+            lib_name = 'robot_camera_monitor_server_library.'
             setup = 'Suite Setup  Login  ${admin_username}   ${admin_password}'
             teardown = 'Suite Teardown  Logout'
             name_tag = ''
@@ -476,7 +476,7 @@ class AutoWriteRobot(object):
             robot.write('   [Tags]           Respcode:' + api_code + '\n')
             if flag is False and api_params_name_list != ['']:
                 if api_code in ('403', '404'):
-                    robot.write('    ' + kw_name + '\n')
+                    robot.write('   ' + kw_name + '   ' + essential_params_part + '  ' + unessential_params_part + '\n')
                 else:
                     robot.write('   ${essential_params}  create dictionary  ' + essential_params_part + '\n')
                     robot.write('   ${unessential_params}  create dictionary  ' + unessential_params_part + '\n')
@@ -487,7 +487,8 @@ class AutoWriteRobot(object):
                 robot.write('    ' + kw_name + '\n')
             if flag is True and api_params_name_list != ['']:
                 if api_code in ('403', '404'):
-                    robot.write('   ' + kw_name + '   ' + format_kwp + '\n')
+                    robot.write('   ' + kw_name + '   ' + format_kwp + '  ' + essential_params_part + '  '
+                                + unessential_params_part + '\n')
                 else:
                     robot.write('   ${essential_params}  create dictionary  ' + essential_params_part + '\n')
                     robot.write('   ${unessential_params}  create dictionary  ' + unessential_params_part + '\n')

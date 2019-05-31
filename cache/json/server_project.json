@@ -13,7 +13,7 @@
         "leader": {"type":"string"},
         "mobile": {"type":"string"},
         "upload_platforms": {"type":"string"},
-        "is_deleted": {"type":"bool"},
+        "is_deleted": {"type":"boolean"},
         "updated_time": {"type":["number","null"]},
         "created_time": {"type":"number"}
       },

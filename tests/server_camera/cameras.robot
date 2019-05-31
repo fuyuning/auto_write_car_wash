@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation  server_camera
 Resource  ../resources.robot
-Library  robot_camera_monitor_deployment_server.camera.CameraLibrary
+Library  robot_camera_monitor_server_library.camera.CameraLibrary
 Suite Setup  Login  ${admin_username}   ${admin_password}
 Suite Teardown  Logout
 Force Tags  model:server_camera  
@@ -22,7 +22,7 @@ get projects cameras by project id Fail With Wrong Url
    ...              请求方式:Get${\n}
    ...              预期结果:输入正确参数及错误的url,http响应码返回 404,无Json数据返回。
    [Tags]           Respcode:404
-   get projects cameras by project id fail 404     project_id=${wrong_url_id}
+   get projects cameras by project id fail 404     project_id=${wrong_url_id}    reg_code=${reg_code}  work_status=${work_status}  network_status=${network_status}  camera_brand_id=${camera_brand_id}  camera_model_id=${camera_model_id}  draw_status=${draw_status}  spot_num=${spot_num}  page_size=${page_size}  page_num=${page_num}  order_by=${order_by}  
 
 get projects cameras by project id Fail With Wrong Params
    [Documentation]  接口名:获取相机列表${\n}
@@ -47,7 +47,7 @@ get projects cameras images by project id camera id Fail With Wrong Url
    ...              请求方式:Get${\n}
    ...              预期结果:输入正确参数及错误的url,http响应码返回 404,无Json数据返回。
    [Tags]           Respcode:404
-   get projects cameras images by project id camera id fail 404     project_id=${wrong_url_id}  camera_id=${wrong_url_id}
+   get projects cameras images by project id camera id fail 404     project_id=${wrong_url_id}  camera_id=${wrong_url_id}    page_size=${page_size}  page_num=${page_num}  
 
 get projects cameras images by project id camera id Fail With Wrong Params
    [Documentation]  接口名:获取电子泊位列表图片/相机详情图片${\n}
@@ -114,7 +114,7 @@ put projects cameras by project id camera id Fail With Wrong Url
    ...              请求方式:Put${\n}
    ...              预期结果:输入正确参数及错误的url,http响应码返回 404,无Json数据返回。
    [Tags]           Respcode:404
-   put projects cameras by project id camera id fail 404     project_id=${wrong_url_id}  camera_id=${wrong_url_id}
+   put projects cameras by project id camera id fail 404     project_id=${wrong_url_id}  camera_id=${wrong_url_id}  work_time=${work_time}  upload_cycle=${upload_cycle}    reg_code=${reg_code}  
 
 put projects cameras by project id camera id Fail With Wrong Params
    [Documentation]  接口名:编辑单个相机参数配置${\n}
@@ -139,7 +139,7 @@ put projects cameras by project id Fail With Wrong Url
    ...              请求方式:Put${\n}
    ...              预期结果:输入正确参数及错误的url,http响应码返回 404,无Json数据返回。
    [Tags]           Respcode:404
-   put projects cameras by project id fail 404     project_id=${wrong_url_id}
+   put projects cameras by project id fail 404     project_id=${wrong_url_id}  work_time=${work_time}  upload_cycle=${upload_cycle}  camera_ids=${camera_ids}    
 
 put projects cameras by project id Fail With Wrong Params
    [Documentation]  接口名:编辑批量相机参数配置${\n}
@@ -164,7 +164,7 @@ patch projects cameras by project id camera id Fail With Wrong Url
    ...              请求方式:Patch${\n}
    ...              预期结果:输入正确参数及错误的url,http响应码返回 404,无Json数据返回。
    [Tags]           Respcode:404
-   patch projects cameras by project id camera id fail 404     project_id=${wrong_url_id}  camera_id=${wrong_url_id}
+   patch projects cameras by project id camera id fail 404     project_id=${wrong_url_id}  camera_id=${wrong_url_id}  work_status=${work_status}    
 
 patch projects cameras by project id camera id Fail With Wrong Params
    [Documentation]  接口名:编辑单个相机工作状态${\n}
@@ -189,7 +189,7 @@ patch projects cameras by project id Fail With Wrong Url
    ...              请求方式:Patch${\n}
    ...              预期结果:输入正确参数及错误的url,http响应码返回 404,无Json数据返回。
    [Tags]           Respcode:404
-   patch projects cameras by project id fail 404     project_id=${wrong_url_id}
+   patch projects cameras by project id fail 404     project_id=${wrong_url_id}  work_status=${work_status}  camera_ids=${camera_ids}    
 
 patch projects cameras by project id Fail With Wrong Params
    [Documentation]  接口名:编辑批量相机工作状态${\n}

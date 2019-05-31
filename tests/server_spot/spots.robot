@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation  server_spot
 Resource  ../resources.robot
-Library  robot_camera_monitor_deployment_server.spot.SpotLibrary
+Library  robot_camera_monitor_server_library.spot.SpotLibrary
 Suite Setup  Login  ${admin_username}   ${admin_password}
 Suite Teardown  Logout
 Force Tags  model:server_spot  
@@ -36,7 +36,7 @@ put projects cameras spots by project id camera id spot id Fail With Wrong Url
    ...              请求方式:Put${\n}
    ...              预期结果:输入正确参数及错误的url,http响应码返回 404,无Json数据返回。
    [Tags]           Respcode:404
-   put projects cameras spots by project id camera id spot id fail 404     project_id=${wrong_url_id}  camera_id=${wrong_url_id}  spot_id=${wrong_url_id}
+   put projects cameras spots by project id camera id spot id fail 404     project_id=${wrong_url_id}  camera_id=${wrong_url_id}  spot_id=${wrong_url_id}  draw_coordinate=${draw_coordinate}    
 
 put projects cameras spots by project id camera id spot id Fail With Wrong Params
    [Documentation]  接口名:编辑泊位坐标${\n}

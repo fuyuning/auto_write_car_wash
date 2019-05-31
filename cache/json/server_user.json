@@ -5,7 +5,7 @@
       "properties":{
         "username": {"type":"string"},
         "password": {"type":"string"},
-        "updated_time": {"type":"number"},
+        "updated_time": {"type":["number","null"]},
         "created_time": {"type":"number"}
       },
       "required": [

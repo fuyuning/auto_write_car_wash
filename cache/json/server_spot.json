@@ -8,7 +8,8 @@
         "spot_num": {"type":"string"},
         "draw_status": {"type":"number"},
         "draw_coordinate": {"type":"string"},
-        "updated_time": {"type":"number"},
+        "carport_warnings": {"type":"array"},
+        "updated_time": {"type":["number","null"]},
         "created_time": {"type":"number"}
       },
       "required": [
@@ -17,6 +18,7 @@
         "spot_num",
         "draw_status",
         "draw_coordinate",
+        "carport_warnings",
         "updated_time",
         "created_time"
       ]

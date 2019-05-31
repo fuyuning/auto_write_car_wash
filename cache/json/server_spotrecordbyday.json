@@ -1,0 +1,36 @@
+{
+  "definitions": {
+    "spotrecordbyday": {
+      "type":"object",
+      "properties":{
+        "spot_record_id": {"type":"string"},
+        "spot": {"type":"object"},
+        "project": {"type":"object"},
+        "reg_code": {"type":"string"},
+        "stop_num": {"type":"number"},
+        "stop_time": {"type":"number"},
+        "time_point": {"type":"number"},
+        "created_time": {"type":"number"},
+        "updated_time": {"type":["number","null"]}
+      },
+      "required": [
+        "spot_record_id",
+        "spot",
+        "project",
+        "reg_code",
+        "stop_num",
+        "stop_time",
+        "time_point",
+        "created_time",
+        "updated_time"
+      ]
+    }
+  },
+  "type": "object",
+  "$ref": "#/definitions/spotrecordbyday"
+//  "type": "array",
+//  "minItems":0,
+//  "items": {
+//    "$ref": "#/definitions/spotrecordbyday"
+//  }
+}

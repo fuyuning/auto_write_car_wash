@@ -1,7 +1,0 @@
-{
-  "type": "object",
-  "properties": {
-    "created_time": { "type": "number" },
-    "coupon_code_record_id": { "type": "string" }
-  }
-}

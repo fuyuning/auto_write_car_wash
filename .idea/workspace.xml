@@ -2,12 +2,614 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b5dbe8c-edbb-41e1-bfc0-1c8862244c59" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cache/document/auto_write_schema.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cache/params/params_list.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/intelli_sense/spider_for_robot.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cache/document/auto_write_robot.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cache/document/old_auto_write_robot.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cache/document/server_auto_write_schema.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cache/document/server_list.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cache/document/server_url.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cache/json/server_camera.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cache/json/server_camerabrand.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cache/json/server_cameramodel.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cache/json/server_parkingrecord.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cache/json/server_project.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cache/json/server_spot.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cache/json/server_spotrecord.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cache/json/server_uploadimage.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cache/json/server_user.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cache/log/old_文档状态码问题.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cache/log/文档状态码问题.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cache/params/params_list.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_app_library/accredit/LoginLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_app_library/accredit/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_app_library/call_user/CallUserLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_app_library/call_user/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_app_library/car_info/CarInfoLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_app_library/car_info/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_app_library/car_position/CarPositionLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_app_library/car_position/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_app_library/car_washer/CarWasherLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_app_library/car_washer/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_app_library/car_washer_order_statistic/CarWasherOrderStatisticLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_app_library/car_washer_order_statistic/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_app_library/common/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_app_library/parking/ParkingLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_app_library/parking/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_app_library/parking_coupon/ParkingCouponLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_app_library/parking_coupon/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_app_library/user/UserLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_app_library/user/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_app_library/wash_area/WashAreaLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_app_library/wash_area/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_app_library/wash_record/WashRecordLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_app_library/wash_record/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_app_library/wash_tag/WashTagLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_app_library/wash_tag/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/account/LoginLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/account/UserLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/account/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/admin_user/AdminUserLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/admin_user/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/car_info/CarInfoLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/car_info/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/car_model/CarModelLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/car_model/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/car_move_qrcode/CarMoveQrcodeLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/car_move_qrcode/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/car_position/CarPositionLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/car_position/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/car_series/CarSeriesLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/car_series/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/car_series_price/CarSeriesPriceLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/car_series_price/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/car_statistic/CarStatisticLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/car_statistic/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/car_washer/CarWasherLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/car_washer/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/car_washer_statistic/CarWasherStatisticLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/car_washer_statistic/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/card/CardLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/card/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/card_record/CardRecordLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/card_record/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/card_sale/CardSaleLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/card_sale/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/common/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/coupon/CouponLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/coupon/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/coupon_code/CouponCodeLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/coupon_code/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/coupon_distribute_setting/CouponDistributeSettingLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/coupon_distribute_setting/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/coupon_point/CouponPointLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/coupon_point/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/customer_service/CustomerServiceLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/customer_service/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/home_page_banner/HomePageBannerLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/home_page_banner/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/intelligent_service/IntelligentServiceLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/intelligent_service/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/invitation/InvitationLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/invitation/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/membership_statistic/MembershipStatisticLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/membership_statistic/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/notice_mail/NoticeMailLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/notice_mail/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/order/OrderLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/order/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/parking/ParkingLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/parking/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/parking_coupon/ParkingCouponLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/parking_coupon/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/parking_statistic/ParkingStatisticLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/parking_statistic/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/promoter/PromoterLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/promoter/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/promoter_statistic/PromoterStatisticLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/promoter_statistic/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/refund/RefundLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/refund/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/robot/RobotLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/robot/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/service/ServiceLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/service/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/service_group/ServiceGroupLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/service_group/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/summon/SummonLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/summon/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/turntable/TurntableLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/turntable/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/user_car/UserCarLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/user_car/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/user_contact/UserContactLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/user_contact/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/utils/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/utils/captcha.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/utils/captcha.traineddata" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/wash_able_group/WashAbleGroupLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/wash_able_group/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/wash_area/WashAreaLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/wash_area/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/wash_auto_group/WashAutoGroupLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/wash_auto_group/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/wash_comment/WashCommentLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/wash_comment/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/wash_group/WashGroupLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/wash_group/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/wash_normal/WashNormalLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/wash_normal/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/wash_record/WashRecordLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/wash_record/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/wash_record_statistic/WashRecordStatisticLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/wash_record_statistic/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/wash_user/WashUserLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/wash_user/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/wash_user_group/WashUserGroupLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/wash_user_group/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/wash_user_statistic/WashUserStatisticLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/wash_user_statistic/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/wash_user_trend_statistic/WashUserTrendStatisticLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/wash_user_trend_statistic/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/wechat_keyword/WechatKeywordLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/wechat_keyword/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/wechat_menu/WechatMenuLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/wechat_menu/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/wechat_reply/WechatReplyLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_server_library/wechat_reply/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_wxmp_library/car_brand/CarBrandLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_wxmp_library/car_brand/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_wxmp_library/car_move_qrcode/CarMoveQrcodeLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_wxmp_library/car_move_qrcode/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_wxmp_library/car_series/CarSeriesLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_wxmp_library/car_series/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_wxmp_library/card/CardLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_wxmp_library/card/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_wxmp_library/card_order/CardOrderLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_wxmp_library/card_order/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_wxmp_library/card_sale/CardSaleLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_wxmp_library/card_sale/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_wxmp_library/common/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_wxmp_library/coupon/CouponLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_wxmp_library/coupon/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_wxmp_library/coupon_code/CouponCodeLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_wxmp_library/coupon_code/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_wxmp_library/customer_service/CustomerServiceLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_wxmp_library/customer_service/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_wxmp_library/home_page_banner/HomePageBannerLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_wxmp_library/home_page_banner/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_wxmp_library/invitation/InvitationLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_wxmp_library/invitation/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_wxmp_library/membership/MembershipLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_wxmp_library/membership/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_wxmp_library/order/OrderLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_wxmp_library/order/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_wxmp_library/parking/ParkingLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_wxmp_library/parking/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_wxmp_library/refund/RefundLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_wxmp_library/refund/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_wxmp_library/service_group/ServiceGroupLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_wxmp_library/service_group/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_wxmp_library/summon/SummonLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_wxmp_library/summon/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_wxmp_library/turntable/TurntableLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_wxmp_library/turntable/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_wxmp_library/user_car/UserCarLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_wxmp_library/user_car/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_wxmp_library/user_contact/UserContactLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_wxmp_library/user_contact/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_wxmp_library/wash_area/WashAreaLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_wxmp_library/wash_area/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_wxmp_library/wash_comment/WashCommentLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_wxmp_library/wash_comment/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_wxmp_library/wash_group/WashGroupLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_wxmp_library/wash_group/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_wxmp_library/wash_normal/WashNormalLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_wxmp_library/wash_normal/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_wxmp_library/wash_record/WashRecordLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_wxmp_library/wash_record/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_wxmp_library/wash_user/WashUserLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_car_wash_wxmp_library/wash_user/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_account/login.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_account/user.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_admin_user/admin_users.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_admin_user/admin_users.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_admin_user/get_admin_admin_users_200.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_admin_user/get_admin_admin_users_by_username_200.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_admin_user/post_admin_admin_users_201.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_car_info/car_info.xlsx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_car_info/car_infos.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_car_info/car_infos.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_car_info/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_car_info/get_by_id_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_car_info/post_admin_car_infos_import_200.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_car_model/car_models.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_car_model/car_models.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_car_model/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_car_model/get_count_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_car_model/get_id_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_car_move_qrcode/car_move_qrcodes.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_car_move_qrcode/car_move_qrcodes.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_car_move_qrcode/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_car_position/car_positions.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_car_position/car_positions.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_car_position/car_positions.xlsx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_car_position/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_car_position/get_one_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_car_position/post_201.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_car_position/post_file_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_car_series/car_seriess.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_car_series/car_seriess.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_car_series/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_car_series_price/car_series_prices.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_car_series_price/car_series_prices.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_car_series_price/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_car_statistic/car_statistics.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_car_statistic/car_statistics.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_car_statistic/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_car_washer/car_washers.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_car_washer/car_washers.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_car_washer/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_car_washer/get_count_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_car_washer/get_log_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_car_washer/get_one_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_car_washer/post_201.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_car_washer_statistic/car_washer_statistics.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_car_washer_statistic/car_washer_statistics.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_car_washer_statistic/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_card/cards.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_card/cards.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_card/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_card/post_201.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_card_record/card_records.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_card_record/card_records.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_card_record/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_card_sale/card_sales.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_card_sale/card_sales.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_card_sale/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_card_sale/post_201.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_coupon/coupons.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_coupon/coupons.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_coupon/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_coupon/get_pools_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_coupon/getone_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_coupon/getpoint_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_coupon/post_201.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_coupon_code/coupon_codes.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_coupon_code/coupon_codes.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_coupon_code/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_coupon_code/get_all_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_coupon_code/post_201.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_coupon_distribute_setting/coupon_distribute_settings.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_coupon_distribute_setting/coupon_distribute_settings.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_coupon_distribute_setting/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_coupon_distribute_setting/get_setting_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_coupon_distribute_setting/post_201.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_coupon_point/coupon.xlsx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_coupon_point/coupon_points.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_coupon_point/coupon_points.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_coupon_point/get_auto_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_coupon_point/getpoint_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_coupon_point/getrecords_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_coupon_point/post_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_coupon_point/post_auto_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_customer_service/customer_services.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_customer_service/customer_services.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_customer_service/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_customer_service/getid_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_home_page_banner/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_home_page_banner/home_page_banners.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_home_page_banner/home_page_banners.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_home_page_banner/post_201.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_intelligent_service/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_intelligent_service/get_by_id_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_intelligent_service/intelligent_services.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_intelligent_service/intelligent_services.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_intelligent_service/post_201.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_invitation/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_invitation/invitations.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_invitation/invitations.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_membership_statistic/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_membership_statistic/membership_statistics.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_membership_statistic/membership_statistics.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_notice_mail/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_notice_mail/notice_mails.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_notice_mail/notice_mails.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_notice_mail/post_201.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_order/orders.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_order/orders.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_order/post_201.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_parking/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_parking/get_one_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_parking/parkings.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_parking/parkings.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_parking/post_201.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_parking_coupon/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_parking_coupon/parking_coupons.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_parking_coupon/parking_coupons.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_parking_statistic/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_parking_statistic/parking_statistics.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_parking_statistic/parking_statistics.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_promoter/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_promoter/get_count_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_promoter/get_promotions_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_promoter/post_201.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_promoter/promoters.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_promoter/promoters.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_promoter_statistic/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_promoter_statistic/promoter_statistics.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_promoter_statistic/promoter_statistics.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_refund/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_refund/refunds.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_refund/refunds.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_robot/add_201.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_robot/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_robot/robots.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_robot/robots.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_service/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_service/post_201.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_service/services.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_service/services.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_service_group/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_service_group/post_201.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_service_group/service_groups.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_service_group/service_groups.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_summon/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_summon/summons.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_summon/summons.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_turntable/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_turntable/get_awards_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_turntable/get_one_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_turntable/post_201.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_turntable/turntables.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_turntable/turntables.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_user_car/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_user_car/user_cars.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_user_car/user_cars.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_user_contact/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_user_contact/user_contacts.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_user_contact/user_contacts.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_wash_able_group/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_wash_able_group/get_by_id_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_wash_able_group/wash_able_groups.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_wash_able_group/wash_able_groups.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_wash_area/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_wash_area/get_by_id_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_wash_area/post_201.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_wash_area/wash_areas.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_wash_area/wash_areas.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_wash_auto_group/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_wash_auto_group/get_by_id_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_wash_auto_group/patch_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_wash_auto_group/put_201.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_wash_auto_group/wash_auto_groups.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_wash_auto_group/wash_auto_groups.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_wash_comment/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_wash_comment/wash_comments.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_wash_comment/wash_comments.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_wash_group/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_wash_group/get_by_id_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_wash_group/post_201.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_wash_group/post_by_id_201.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_wash_group/wash_groups.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_wash_group/wash_groups.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_wash_normal/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_wash_normal/get_by_id_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_wash_normal/wash_normals.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_wash_normal/wash_normals.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_wash_record/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_wash_record/getone_200.schema1.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_wash_record/wash_records.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_wash_record/wash_records.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_wash_record_statistic/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_wash_record_statistic/wash_record_statistics.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_wash_record_statistic/wash_record_statistics.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_wash_user/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_wash_user/get_wechat_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_wash_user/wash_users.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_wash_user/wash_users.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_wash_user_group/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_wash_user_group/get_one_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_wash_user_group/post_201.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_wash_user_group/wash_user_groups.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_wash_user_group/wash_user_groups.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_wash_user_statistic/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_wash_user_statistic/wash_user_statistics.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_wash_user_statistic/wash_user_statistics.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_wash_user_trend_statistic/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_wash_user_trend_statistic/wash_user_trend_statistics.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_wash_user_trend_statistic/wash_user_trend_statistics.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_wechat_keyword/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_wechat_keyword/get_one_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_wechat_keyword/post_201.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_wechat_keyword/wechat_keywords.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_wechat_keyword/wechat_keywords.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_wechat_menu/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_wechat_menu/post_201.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_wechat_menu/wechat_menus.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_wechat_menu/wechat_menus.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_wechat_reply/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_wechat_reply/wechat_replys.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/admin_wechat_reply/wechat_replys.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/app_call_user/call_users.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/app_call_user/call_users.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/app_call_user/get_201.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/app_call_user/post_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/app_car_info/car_infos.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/app_car_info/car_infos.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/app_car_info/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/app_car_position/car_positions.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/app_car_position/car_positions.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/app_car_position/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/app_car_position/get_new_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/app_car_position/post_201.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/app_car_washer/car_washers.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/app_car_washer/car_washers.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/app_car_washer/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/app_car_washer_order_statistic/car_washer_order_statistics.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/app_car_washer_order_statistic/car_washer_order_statistics.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/app_car_washer_order_statistic/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/app_parking/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/app_parking/parkings.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/app_parking/parkings.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/app_parking_coupon/parking_coupons.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/app_parking_coupon/parking_coupons.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/app_parking_coupon/post_201.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/app_user/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/app_user/users.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/app_user/users.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/app_wash_area/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/app_wash_area/wash_areas.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/app_wash_area/wash_areas.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/app_wash_record/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/app_wash_record/get_by_id_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/app_wash_record/get_parking_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/app_wash_record/get_patch_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/app_wash_record/post_201.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/app_wash_record/post_remark_and_mark_201.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/app_wash_record/post_update_201.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/app_wash_record/post_wash_201.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/app_wash_record/post_wash_finish_201.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/app_wash_record/wash_records.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/app_wash_record/wash_records.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/app_wash_tag/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/app_wash_tag/wash_tags.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/app_wash_tag/wash_tags.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/common/error_422.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/resources.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/resources/old_params.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/resources/params.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/resources/resources-d.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/server_account/accounts.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/server_account/accounts.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/server_account/get_roles_200.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/server_account/get_user_200.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/server_account/get_users_200.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/server_account/get_users_by_username_200.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/server_account/post_users_201.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/server_dot/dots.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/server_dot/dots.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/server_dot/get_projects_camera_infos_by_project_id_200.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/server_dot/get_projects_dot_datas_by_project_id_200.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/server_dot/get_projects_dot_datas_by_project_id_dot_data_id_200.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/server_dot/get_projects_dot_datas_camera_infos_by_project_id_dot_data_id_camera_info_id_200.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/server_dot/get_projects_statistics_by_project_id_200.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/server_dot/post_projects_dot_datas_by_project_id_201.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/server_login/login.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/server_project/get_camera_brands_200.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/server_project/get_projects_200.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/server_project/post_projects_201.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/server_project/projects.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/server_project/projects.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/server_spot/get_projects_spots_by_project_id_200.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/server_spot/spot_info.xlsx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/server_spot/spots.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/server_spot/spots.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_car_brand/car_brands.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_car_brand/car_brands.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_car_brand/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_car_move_qrcode/car_move_qrcodes.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_car_move_qrcode/car_move_qrcodes.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_car_move_qrcode/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_car_series/car_seriess.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_car_series/car_seriess.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_car_series/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_card/cards.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_card/cards.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_card/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_card_order/card_orders.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_card_order/card_orders.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_card_sale/card_sales.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_card_sale/card_sales.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_card_sale/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_coupon/coupons.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_coupon/coupons.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_coupon/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_coupon/get_cp_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_coupon/get_ex_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_coupon/get_id_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_coupon/get_my_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_coupon/get_public_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_coupon/post_many_coupon_pools_201.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_coupon_code/coupon_codes.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_coupon_code/coupon_codes.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_customer_service/customer_services.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_customer_service/customer_services.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_customer_service/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_customer_service/get_one_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_customer_service/post_201.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_home_page_banner/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_home_page_banner/home_page_banners.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_home_page_banner/home_page_banners.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_invitation/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_invitation/invitations.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_invitation/invitations.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_login/login.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_login/mobile_login.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_membership/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_membership/memberships.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_membership/memberships.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_order/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_order/get_range_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_order/orders.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_order/orders.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_order/post_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_order/post_order_201.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_parking/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_parking/get_nearby_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_parking/parkings.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_parking/parkings.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_refund/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_refund/refunds.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_refund/refunds.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_service_group/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_service_group/service_groups.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_service_group/service_groups.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_summon/post_201.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_summon/summons.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_summon/summons.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_turntable/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_turntable/post_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_turntable/turntables.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_turntable/turntables.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_user_car/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_user_car/get_update_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_user_car/post_201.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_user_car/user_cars.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_user_car/user_cars.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_user_contact/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_user_contact/get_update_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_user_contact/post_201.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_user_contact/user_contacts.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_user_contact/user_contacts.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_wash_area/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_wash_area/wash_areas.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_wash_area/wash_areas.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_wash_comment/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_wash_comment/post_201.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_wash_comment/wash_comments.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_wash_comment/wash_comments.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_wash_group/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_wash_group/get_able_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_wash_group/get_by_id_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_wash_group/post_201.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_wash_group/wash_groups.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_wash_group/wash_groups.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_wash_normal/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_wash_normal/wash_normals.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_wash_normal/wash_normals.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_wash_record/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_wash_record/get_by_id_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_wash_record/get_by_order_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_wash_record/get_sales_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_wash_record/get_user_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_wash_record/wash_records.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_wash_record/wash_records.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_wash_user/get_200.schema.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_wash_user/wash_users.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/wxmp_wash_user/wash_users.unauthorized.robot" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/intelli_sense/API_test.py" afterPath="$PROJECT_DIR$/intelli_sense/auto_write_API.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cache/document/old_auto_write_robot.csv" afterPath="$PROJECT_DIR$/cache/document/old_auto_write_robot.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/intelli_sense/API_test.py" afterPath="$PROJECT_DIR$/intelli_sense/API_test.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UtilsLibrary/BaseUtilsLibrary.py" afterPath="$PROJECT_DIR$/UtilsLibrary/BaseUtilsLibrary.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/intelli_sense/spider_from_document.py" afterPath="$PROJECT_DIR$/intelli_sense/spider_from_document.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,122 +620,59 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/auto_write_robot_case$auto_write_APIrobot.coverage" NAME="auto_write_APIrobot Coverage Results" MODIFIED="1555574698413" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spider" />
-    <SUITE FILE_PATH="coverage/auto_write_robot_case$API_test.coverage" NAME="API_test Coverage Results" MODIFIED="1558509673962" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/intelli_sense" />
-    <SUITE FILE_PATH="coverage/auto_write_robot_case$spider.coverage" NAME="spider Coverage Results" MODIFIED="1555313409976" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spider" />
     <SUITE FILE_PATH="coverage/auto_write_robot_case$auto_write_APIrobot0_1__1_.coverage" NAME="auto_write_APIrobot0.1 (1) Coverage Results" MODIFIED="1555666048691" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/robot_car_wash/intelli_sense" />
     <SUITE FILE_PATH="coverage/auto_write_robot_case$spider_for_robot.coverage" NAME="spider_for_robot Coverage Results" MODIFIED="1558415524285" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/intelli_sense" />
-    <SUITE FILE_PATH="coverage/auto_write_robot_case$auto_write_APIrobot0_1.coverage" NAME="auto_write_APIrobot0.1 Coverage Results" MODIFIED="1555579844081" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spider/intelli_sense" />
     <SUITE FILE_PATH="coverage/auto_write_robot_case$auto_write_APIrobot__2_.coverage" NAME="auto_write_APIrobot (2) Coverage Results" MODIFIED="1555918303029" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/robot_car_wash/intelli_sense" />
-    <SUITE FILE_PATH="coverage/auto_write_robot_case$spider_test.coverage" NAME="spider_test Coverage Results" MODIFIED="1558510863601" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/intelli_sense" />
-    <SUITE FILE_PATH="coverage/auto_write_robot_case$auto_write_APIrobot__1_.coverage" NAME="auto_write_APIrobot (1) Coverage Results" MODIFIED="1555557214495" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/auto_write_robot/intelli_sense" />
+    <SUITE FILE_PATH="coverage/auto_write_robot_case$spider_test.coverage" NAME="spider_test Coverage Results" MODIFIED="1559200398433" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/intelli_sense" />
+    <SUITE FILE_PATH="coverage/auto_write_robot_case$auto_write_API_test.coverage" NAME="auto_write_API_test Coverage Results" MODIFIED="1559030128903" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/intelli_sense" />
     <SUITE FILE_PATH="coverage/auto_write_robot_case$spider_for_robot__1_.coverage" NAME="spider_for_robot (1) Coverage Results" MODIFIED="1555910619747" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/robot_car_wash/intelli_sense" />
-    <SUITE FILE_PATH="coverage/auto_write_robot_case$auto_write_params.coverage" NAME="auto_write_params Coverage Results" MODIFIED="1555919550091" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/robot_car_wash/intelli_sense" />
+    <SUITE FILE_PATH="coverage/auto_write_robot_case$auto_write_API_test2.coverage" NAME="auto_write_API_test2 Coverage Results" MODIFIED="1559029815120" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/intelli_sense" />
+    <SUITE FILE_PATH="coverage/auto_write_robot_case$auto_write_APIrobot.coverage" NAME="auto_write_APIrobot Coverage Results" MODIFIED="1555574698413" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spider" />
+    <SUITE FILE_PATH="coverage/auto_write_robot_case$API_test.coverage" NAME="API_test Coverage Results" MODIFIED="1559200492393" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/intelli_sense" />
+    <SUITE FILE_PATH="coverage/auto_write_robot_case$spider.coverage" NAME="spider Coverage Results" MODIFIED="1555313409976" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spider" />
+    <SUITE FILE_PATH="coverage/auto_write_robot_case$auto_write_APIrobot0_1.coverage" NAME="auto_write_APIrobot0.1 Coverage Results" MODIFIED="1555579844081" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spider/intelli_sense" />
+    <SUITE FILE_PATH="coverage/auto_write_robot_case$auto_write_APIrobot__1_.coverage" NAME="auto_write_APIrobot (1) Coverage Results" MODIFIED="1555557214495" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/auto_write_robot/intelli_sense" />
+    <SUITE FILE_PATH="coverage/auto_write_robot_case$auto_write_params.coverage" NAME="auto_write_params Coverage Results" MODIFIED="1559199102709" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/intelli_sense" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="server_url.csv" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cache/document/server_url.csv">
-          <provider editor-type-id="csv-table-editor">
-            <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-          </provider>
-          <provider selected="true" editor-type-id="csv-text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="API_test.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/intelli_sense/API_test.py">
+      <file leaf-file-name="auto_write_API.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/intelli_sense/auto_write_API.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-247">
-              <caret line="23" column="30" lean-forward="true" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="camera.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cache/json/camera.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-46">
-              <caret line="28" column="8" lean-forward="false" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="old_文档状态码问题.csv" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cache/log/old_文档状态码问题.csv">
-          <provider editor-type-id="csv-table-editor">
-            <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-          </provider>
-          <provider selected="true" editor-type-id="csv-text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="文档状态码问题.csv" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cache/log/文档状态码问题.csv">
-          <provider editor-type-id="csv-table-editor">
-            <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-          </provider>
-          <provider selected="true" editor-type-id="csv-text-editor">
-            <state relative-caret-position="-1246">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="params_list.csv" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cache/params/params_list.csv">
-          <provider editor-type-id="csv-table-editor">
-            <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-          </provider>
-          <provider selected="true" editor-type-id="csv-text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="spider_from_document.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/intelli_sense/spider_from_document.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="179" column="24" lean-forward="false" selection-start-line="179" selection-start-column="24" selection-end-line="179" selection-end-column="24" />
+            <state relative-caret-position="-11967">
+              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding>
-                <element signature="e#20#29#0" expanded="true" />
+                <element signature="e#20#30#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="server_list.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cache/document/server_list.txt">
+      <file leaf-file-name="auto_write_params.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/intelli_sense/auto_write_params.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="594">
+              <caret line="27" column="6" lean-forward="false" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="server_auto_write_schema.csv" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cache/document/server_auto_write_schema.csv">
-          <provider editor-type-id="csv-table-editor">
-            <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      <file leaf-file-name="BaseUtilsLibrary.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/UtilsLibrary/BaseUtilsLibrary.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="15" column="27" lean-forward="false" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="50" />
+              <folding />
+            </state>
           </provider>
-          <provider selected="true" editor-type-id="csv-text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </entry>
+      </file>
+      <file leaf-file-name="spider_from_document.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/intelli_sense/spider_from_document.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="100">
+              <caret line="175" column="6" lean-forward="false" selection-start-line="175" selection-start-column="6" selection-end-line="175" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -150,19 +689,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>返回</find>
-      <find>base_part_file_parttern</find>
-      <find>api_params_data_pattern</find>
-      <find>promoter_statistics</find>
-      <find>base_file</find>
-      <find>write</find>
-      <find>&quot;</find>
-      <find>cache</find>
-      <find>get success</find>
-      <find>json_name</find>
-      <find>model_name_list</find>
-      <find>print</find>
-      <find>index2</find>
       <find>os.path.exists</find>
       <find>api_params_list</find>
       <find>params</find>
@@ -180,6 +706,19 @@
       <find>base_name_file_pattern</find>
       <find>entity_params_type_pattern</find>
       <find>save_file</find>
+      <find>ptxt</find>
+      <find>parse_model_file</find>
+      <find>lib_name</find>
+      <find>_write_robot_file_case</find>
+      <find>model_name</find>
+      <find>_write_robot_file_settings</find>
+      <find>full_name</find>
+      <find>new_</find>
+      <find>print</find>
+      <find>server_list.txt</find>
+      <find>sever_file</find>
+      <find>old</find>
+      <find>old_cache_path</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -220,7 +759,6 @@
         <option value="$PROJECT_DIR$/robot_car_wash/tests/resources.robot" />
         <option value="$PROJECT_DIR$/intelli_sense/spider_for_robot.py" />
         <option value="$PROJECT_DIR$/intelli_sense/spider_test.py" />
-        <option value="$PROJECT_DIR$/cache/document/old_auto_write_robot.csv" />
         <option value="$PROJECT_DIR$/cache/document/auto_write_robot.csv" />
         <option value="$PROJECT_DIR$/cache/json/camera.json" />
         <option value="$PROJECT_DIR$/requirements.txt" />
@@ -228,9 +766,15 @@
         <option value="$PROJECT_DIR$/intelli_sense/auto_write_APIrobot.py" />
         <option value="$PROJECT_DIR$/intelli_sense/auto_clean.py" />
         <option value="$PROJECT_DIR$/cache/document/server_auto_write_schema.csv" />
-        <option value="$PROJECT_DIR$/intelli_sense/API_test.py" />
         <option value="$PROJECT_DIR$/cache/document/server_list.txt" />
+        <option value="$PROJECT_DIR$/robot_camera_monitor_deployment_server/camera/__init__.py" />
+        <option value="$PROJECT_DIR$/intelli_sense/API_test.py" />
+        <option value="$PROJECT_DIR$/intelli_sense/auto_write_API_test.py" />
+        <option value="$PROJECT_DIR$/robot_camera_monitor_deployment_server/camera/CameraLibrary.py" />
+        <option value="$PROJECT_DIR$/tests/server_camera/cameras.robot" />
+        <option value="$PROJECT_DIR$/cache/document/old_auto_write_robot.csv" />
         <option value="$PROJECT_DIR$/intelli_sense/spider_from_document.py" />
+        <option value="$PROJECT_DIR$/intelli_sense/auto_write_API.py" />
       </list>
     </option>
   </component>
@@ -242,9 +786,9 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="65" />
-    <option name="y" value="24" />
-    <option name="width" value="1084" />
-    <option name="height" value="1056" />
+    <option name="y" value="34" />
+    <option name="width" value="1855" />
+    <option name="height" value="1028" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -263,6 +807,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -307,33 +852,48 @@
             <path>
               <item name="auto-write-robot-case" type="b2602c69:ProjectViewProjectNode" />
               <item name="auto-write-robot-case" type="462c0819:PsiDirectoryNode" />
-              <item name="robot_car_wash_app_library" type="462c0819:PsiDirectoryNode" />
+              <item name="robot_camera_monitor_deployment_server" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="auto-write-robot-case" type="b2602c69:ProjectViewProjectNode" />
               <item name="auto-write-robot-case" type="462c0819:PsiDirectoryNode" />
-              <item name="robot_car_wash_app_library" type="462c0819:PsiDirectoryNode" />
-              <item name="accredit" type="462c0819:PsiDirectoryNode" />
+              <item name="robot_camera_monitor_deployment_server" type="462c0819:PsiDirectoryNode" />
+              <item name="camera" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="auto-write-robot-case" type="b2602c69:ProjectViewProjectNode" />
+              <item name="auto-write-robot-case" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="auto-write-robot-case" type="b2602c69:ProjectViewProjectNode" />
+              <item name="auto-write-robot-case" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="server_camera" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="auto-write-robot-case" type="b2602c69:ProjectViewProjectNode" />
+              <item name="auto-write-robot-case" type="462c0819:PsiDirectoryNode" />
+              <item name="UtilsLibrary" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../robot_camera_monitor_deployment_server" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../robot-camera-monitor-server" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/UtilsLibrary" />
+      <recent name="$PROJECT_DIR$/intelli_sense" />
+      <recent name="$PROJECT_DIR$/robot_camera_monitor_deployment_server" />
       <recent name="$PROJECT_DIR$/robot_car_wash/tests" />
       <recent name="$PROJECT_DIR$/spider/robot_car_wash_server_library" />
-      <recent name="$PROJECT_DIR$/spider" />
-      <recent name="$PROJECT_DIR$/spider/tests" />
-      <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/robot_car_wash" />
@@ -352,7 +912,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.spider_test">
+  <component name="RunManager" selected="Python.API_test">
     <configuration name="API_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -366,48 +926,12 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="auto-write-robot-case" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/intelli_sense/API_test.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/intelli_sense/auto_write_API.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="auto_write_APIrobot (2)" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/robot_car_wash/intelli_sense" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="auto-write-robot-case" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/robot_car_wash/intelli_sense/auto_write_APIrobot.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-    </configuration>
-    <configuration name="auto_write_params" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/robot_car_wash/intelli_sense" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="auto-write-robot-case" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/robot_car_wash/intelli_sense/auto_write_params.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-    </configuration>
-    <configuration name="spider_for_robot" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="auto_write_API_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -420,7 +944,43 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="auto-write-robot-case" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/intelli_sense/spider_for_robot.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/intelli_sense/auto_write_API_test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration name="auto_write_API_test2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/intelli_sense" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="auto-write-robot-case" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/intelli_sense/auto_write_API_test2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration name="auto_write_params" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/intelli_sense" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="auto-write-robot-case" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/intelli_sense/auto_write_params.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -444,19 +1004,19 @@
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.auto_write_APIrobot (2)" />
-      <item index="1" class="java.lang.String" itemvalue="Python.auto_write_params" />
-      <item index="2" class="java.lang.String" itemvalue="Python.spider_for_robot" />
-      <item index="3" class="java.lang.String" itemvalue="Python.spider_test" />
-      <item index="4" class="java.lang.String" itemvalue="Python.API_test" />
+      <item index="0" class="java.lang.String" itemvalue="Python.spider_test" />
+      <item index="1" class="java.lang.String" itemvalue="Python.API_test" />
+      <item index="2" class="java.lang.String" itemvalue="Python.auto_write_API_test" />
+      <item index="3" class="java.lang.String" itemvalue="Python.auto_write_API_test2" />
+      <item index="4" class="java.lang.String" itemvalue="Python.auto_write_params" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.spider_test" />
-        <item index="1" class="java.lang.String" itemvalue="Python.API_test" />
-        <item index="2" class="java.lang.String" itemvalue="Python.spider_for_robot" />
-        <item index="3" class="java.lang.String" itemvalue="Python.auto_write_params" />
-        <item index="4" class="java.lang.String" itemvalue="Python.auto_write_APIrobot (2)" />
+        <item index="0" class="java.lang.String" itemvalue="Python.API_test" />
+        <item index="1" class="java.lang.String" itemvalue="Python.spider_test" />
+        <item index="2" class="java.lang.String" itemvalue="Python.auto_write_params" />
+        <item index="3" class="java.lang.String" itemvalue="Python.auto_write_API_test" />
+        <item index="4" class="java.lang.String" itemvalue="Python.auto_write_API_test2" />
       </list>
     </recent_temporary>
   </component>
@@ -478,17 +1038,16 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12465527" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17539988" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21278942" sideWeight="0.5032741" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22162741" sideWeight="0.49672592" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23982869" sideWeight="0.49672592" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30684328" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30620986" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39828694" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -530,157 +1089,29 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="28" />
+      <option name="time" value="30" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/spider/tests/admin_card.unauthorized/card.unauthorized.robot" />
-    <entry file="file://$PROJECT_DIR$/spider/tests/admin_card/card.unauthorized.robot" />
-    <entry file="file://$PROJECT_DIR$/spider/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/robot_car_wash/robot_car_wash_server_library/utils/captcha.py" />
-    <entry file="file://$PROJECT_DIR$/robot_car_wash/robot_car_wash_server_library/common/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/robot_car_wash/cache/document/app.txt" />
-    <entry file="file://$PROJECT_DIR$/robot_car_wash/cache/log/document_wrong.txt" />
-    <entry file="file://$PROJECT_DIR$/robot_car_wash/intelli_sense/auto_write_APIrobot0.1.py" />
-    <entry file="file://$PROJECT_DIR$/robot_car_wash/robot_car_wash_server_library/card/CardLibrary.py" />
-    <entry file="file://$PROJECT_DIR$/robot_car_wash/requirements.txt" />
-    <entry file="file://$PROJECT_DIR$/robot_car_wash/intelli_sense/spider_for_robot.py" />
-    <entry file="file://$PROJECT_DIR$/robot_car_wash/cache/document/auto_write_robot.txt" />
-    <entry file="file://$PROJECT_DIR$/robot_car_wash/cache/params/params_list.txt" />
-    <entry file="file://$PROJECT_DIR$/robot_car_wash/tests/resources/resources-d.robot" />
-    <entry file="file://$PROJECT_DIR$/robot_car_wash/intelli_sense/auto_write_APIrobot.py" />
-    <entry file="file://$PROJECT_DIR$/robot_car_wash/intelli_sense/auto_write_params.py" />
-    <entry file="file://$PROJECT_DIR$/robot_car_wash/tests/resources.robot" />
-    <entry file="file://$PROJECT_DIR$/robot_car_wash/tests/resources/params.robot" />
-    <entry file="file://$PROJECT_DIR$/robot_car_wash/tests/admin_card/card.robot" />
-    <entry file="file://$PROJECT_DIR$/cache/document/server.txt" />
-    <entry file="file://$PROJECT_DIR$/cache/test/params_list.csv" />
-    <entry file="file://$PROJECT_DIR$/cache/document/.txt" />
-    <entry file="file://$PROJECT_DIR$/cache/test/auto_write_robot.csv" />
-    <entry file="file://$PROJECT_DIR$/cache/document/old_auto_write_robot.csv">
+    <entry file="file://$PROJECT_DIR$/intelli_sense/spider_for_robot.py" />
+    <entry file="file://$PROJECT_DIR$/cache/params/server_list.txt" />
+    <entry file="file://$PROJECT_DIR$/cache/json/camerabrand.json" />
+    <entry file="file://$PROJECT_DIR$/cache/json/camera.json" />
+    <entry file="file://$PROJECT_DIR$/cache/document/server_list.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cache/document/server_url.csv">
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
       <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cache/document/auto_write_robot.csv">
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-      <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cache/json/实体名.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cache/json/camerabrand.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cache/json/cameramodel.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cache/json/project.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cache/json/spot.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cache/json/uploadimage.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cache/json/parkingrecord.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cache/json/user.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1558506221795" expanded="true" signature="0:26" ph="{...}" />
-            <marker date="1558506221795" expanded="true" signature="19:26" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/intelli_sense/auto_write_APIrobot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="130" column="0" lean-forward="false" selection-start-line="130" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cache/document/auto_write_robot.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1320">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/intelli_sense/auto_write_params.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="682">
-          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -688,12 +1119,173 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="473">
           <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/server_camera/new_cameras.robot" />
+    <entry file="file://$PROJECT_DIR$/tests/server_project/post_projects_201.json" />
+    <entry file="file://$PROJECT_DIR$/tests/server_record/new_records.robot" />
+    <entry file="file://$PROJECT_DIR$/tests/server_spot/new_spots.robot" />
+    <entry file="file://$PROJECT_DIR$/tests/server_user/new_users.robot" />
+    <entry file="file://$PROJECT_DIR$/tests/server_user/users.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cache/old/old_CameraLibrary.py" />
+    <entry file="file://$PROJECT_DIR$/robot_camera_monitor_deployment_server/camera/new_CameraLibrary.py" />
+    <entry file="file://$PROJECT_DIR$/robot_camera_monitor_deployment_server/camera/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/server_project/new_projects.robot" />
+    <entry file="file://$PROJECT_DIR$/tests/server_project/new_projects.unauthorized.robot" />
+    <entry file="file://$PROJECT_DIR$/tests/server_project/projects.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cache/json/server_camerabrand.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="9" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="29" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cache/json/server_cameramodel.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cache/json/server_camera.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1342">
+          <caret line="61" column="4" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="69" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cache/json/server_uploadimage.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="19" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="27" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cache/json/server_user.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="5" lean-forward="false" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cache/json/server_project.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="4" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cache/json/server_spot.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" column="19" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="31" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cache/json/server_spotrecord.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="20" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="31" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cache/json/server_parkingrecord.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="40" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="39" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/robot_camera_monitor_deployment_server/common/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cache/document/admin.txt">
+    <entry file="file://$PROJECT_DIR$/intelli_sense/auto_write_API_test2.py" />
+    <entry file="file://$PROJECT_DIR$/robot_camera_monitor_deployment_server/camera/NewCameraLibrary.py" />
+    <entry file="file://$PROJECT_DIR$/tests/resources.robot">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/server_camera/old_cameras.unauthorized.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/server_camera/old_cameras.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/server_camera/cameras.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-132">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/server_camera/cameras.unauthorized.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.rst">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/intelli_sense/auto_write_API_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4468">
+          <caret line="262" column="30" lean-forward="false" selection-start-line="262" selection-start-column="26" selection-end-line="262" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cache/log/文档状态码问题.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
@@ -711,68 +1303,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cache/log/文档状态码问题.csv">
+    <entry file="file://$PROJECT_DIR$/cache/document/auto_write_robot.csv">
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
       <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="-1246">
+        <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cache/params/params_list.txt">
+    <entry file="file://$PROJECT_DIR$/cache/document/old_auto_write_robot.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="462">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UtilsLibrary/BaseUtilsLibrary.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-264">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cache/params/params_list.csv">
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cache/document/auto_write_schema.csv">
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="-383">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/intelli_sense/spider_for_robot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1650">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cache/document/server_url.csv">
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="176">
+          <caret line="15" column="27" lean-forward="false" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="50" />
           <folding />
         </state>
       </provider>
@@ -782,42 +1338,66 @@
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
       <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/robot_camera_monitor_deployment_server/camera/CameraLibrary.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/robot_camera_monitor_deployment_server/camera/old_CameraLibrary.py">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/server_project/old_projects.unauthorized.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-198">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cache/json/camera.json">
+    <entry file="file://$PROJECT_DIR$/tests/server_project/projects.unauthorized.robot">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-46">
-          <caret line="28" column="8" lean-forward="false" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/intelli_sense/API_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-247">
-          <caret line="23" column="30" lean-forward="true" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cache/document/server_list.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="-132">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/intelli_sense/auto_write_params.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="27" column="6" lean-forward="false" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/intelli_sense/spider_from_document.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="179" column="24" lean-forward="false" selection-start-line="179" selection-start-column="24" selection-end-line="179" selection-end-column="24" />
+        <state relative-caret-position="100">
+          <caret line="175" column="6" lean-forward="false" selection-start-line="175" selection-start-column="6" selection-end-line="175" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/intelli_sense/auto_write_API.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-11967">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
-            <element signature="e#20#29#0" expanded="true" />
+            <element signature="e#20#30#0" expanded="true" />
           </folding>
         </state>
       </provider>

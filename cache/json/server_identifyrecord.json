@@ -1,0 +1,38 @@
+{
+  "definitions": {
+    "identifyrecord": {
+      "type":"object",
+      "properties":{
+        "identify_record_id": {"type":"string"},
+        "identify_result_id": {"type":"string"},
+        "vehicle_id": {"type":"string"},
+        "spot_num": {"type":"string"},
+        "status": {"type":"number"},
+        "image_url": {"type":"string"},
+        "identify_time": {"type":"number"},
+        "vehicle_type": {"type":"string"},
+        "created_time": {"type":"number"},
+        "updated_time": {"type":["number","null"]}
+      },
+      "required": [
+        "identify_record_id",
+        "identify_result_id",
+        "vehicle_id",
+        "spot_num",
+        "status",
+        "image_url",
+        "identify_time",
+        "vehicle_type",
+        "created_time",
+        "updated_time"
+      ]
+    }
+  },
+  "type": "object",
+  "$ref": "#/definitions/identifyrecord"
+//  "type": "array",
+//  "minItems":0,
+//  "items": {
+//    "$ref": "#/definitions/identifyrecord"
+//  }
+}

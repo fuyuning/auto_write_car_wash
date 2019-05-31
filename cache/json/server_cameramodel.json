@@ -6,7 +6,7 @@
         "camera_model_id": {"type":"string"},
         "camera_brand": {"type":"object"},
         "model_name": {"type":"string"},
-        "updated_time": {"type":"number"},
+        "updated_time": {"type":["number","null"]},
         "created_time": {"type":"number"}
       },
       "required": [

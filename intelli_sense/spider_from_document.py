@@ -167,19 +167,15 @@ class Spider(object):
         method_csv.close()
 
     def spider_entity(self, service_urls):
-        # folder = os.path.exists(self.old_entity_save_file)
-        # if folder:
-        #     os.remove(self.old_entity_save_file)
-        # folder = os.path.exists(self.entity_save_file)
-        # if folder:
-        #     os.rename(self.entity_save_file, self.old_entity_save_file)
         index = service_urls[0].rfind('_')
         service_name = service_urls[0][index + 1:-1]
         sever_list = []
-        sever_file = open('%s/server_list.txt' % self.spider_save_folder, "r")
-        for i in sever_file:
-            sever_list.append(i.replace('\n', ''))
-        sever_file.close()
+        folder = os.path.exists('%s/server_list.txt' % self.spider_save_folder)
+        if folder:
+            sever_file = open('%s/server_list.txt' % self.spider_save_folder, "r")
+            for i in sever_file:
+                sever_list.append(i.replace('\n', ''))
+            sever_file.close()
         sever_file = open('%s/server_list.txt' % self.spider_save_folder, "a+")
         if service_name not in sever_list:
             sever_file.write('%s\n' % service_name)
@@ -205,7 +201,8 @@ class Spider(object):
                         for i in range(0, len(entity_name)):
                             params_list = re.findall(self.entity_params_pattern, table_content[i])
                             params_type_list = re.findall(self.entity_params_type_pattern, table_content[i])
-                            writer.writerow({'服务端': service_name, '实体名': entity_name[i], '实体参数': params_list, '参数类型': params_type_list})
+                            writer.writerow({'服务端': service_name, '实体名': entity_name[i], '实体参数': params_list,
+                                             '参数类型': params_type_list})
         entity_csv.close()
 
     def run(self, service_urls):

@@ -3,7 +3,7 @@ server,user,用户登录,POST, /login,"['username', 'password']","['string', 'st
 server,user,用户退出,POST, /logout,,,,['204'],
 server,user,获取用户信息,GET, /user,,,,"['200', '403']",User
 server,project,项目导入,POST, /projects/import,['file'],['file'],['T'],"['204', '403', '422']",
-server,project,更新项目数据,PUT, /projects/:project_id,['file'],['file'],['T'],"['204', '404', '403', '422']",
+server,project,更新项目数据,POST, /projects/:project_id,['file'],['file'],['T'],"['204', '404', '403', '422']",
 server,project,上传配置,PATCH, /projects/:project_id/upload_platforms,['upload_platforms'],['string'],['T'],"['204', '403', '404', '422']",
 server,project,获取项目列表,GET, /projects,"['project_name', 'page_size', 'page_num', 'order_by']","['string', 'integer', 'integer', 'string']","['F', 'F', 'F', 'F']","['200', '403', '422']",Project
 server,project,删除项目,DELETE, /projects/:project_id,,,,"['204', '403', '404']",
@@ -18,5 +18,8 @@ server,camera,获取相机品牌,GET, /projects/:project_id/camera_brands,,,,"['
 server,camera,获取相机型号列表,GET, /projects/:project_id/camera_brands/:camera_brand_id/camera_models,,,,"['200', '403', '404']",CameraModel
 server,spot,获取泊位,GET, /projects/:project_id/cameras/:camera_id/spots,,,,"['200', '403', '404']",Spot
 server,spot,编辑泊位坐标,PUT, projects/:project_id/cameras/:camera_id/spots/:spot_id,['draw_coordinate'],['string'],['T'],"['204', '403', '404', '422']",
-server,record,获取停车记录列表,GET, projects/:project_id/cameras/:camera_id/spot_records/:spot_record_id/parking_records,"['car_id', 'vehicle_id', 'entry_section', 'exit_section', 'page_size', 'page_num']","['string', 'string', 'string', 'string', 'integer', 'integer']","['F', 'F', 'F', 'F', 'F', 'F']","['200', '403', '404', '422']",ParkingRecord
-server,record,获取泊位记录列表,GET, projects/:project_id/cameras/:camera_id/spot_records,"['spot_num', 'reg_code', 'section', 'page_size', 'page_num']","['string', 'string', 'string', 'integer', 'integer']","['F', 'F', 'F', 'F', 'F']","['200', '403', '404', '422']",SpotRecord
+server,record,获取识别记录列表,GET, projects/:project_id/cameras/:camera_id/identify_records,"['identify_record_id', 'identify_result_id', 'spot_num', 'vehicle_id', 'status', 'identify_section', 'page_size', 'page_num', 'order_by']","['string', 'string', 'string', 'string', 'integer', 'string', 'integer', 'integer', 'string']","['F', 'F', 'F', 'F', 'F', 'F', 'F', 'F', 'F']","['200', '403', '404', '422']",IdentifyRecord
+server,record,获取识别记录详情,GET, projects/:project_id/cameras/:camera_id/identify_records/:identify_record_id,,,,"['200', '403', '404']",IdentifyRecord
+server,record,获取停车记录列表,GET, projects/:project_id/cameras/:camera_id/spots/:spot_id/parking_records,"['time_point', 'car_id', 'vehicle_id', 'entry_section', 'exit_section', 'page_size', 'page_num', 'order_by']","['float', 'string', 'string', 'string', 'string', 'integer', 'integer', 'string']","['T', 'F', 'F', 'F', 'F', 'F', 'F', 'F']","['200', '403', '404', '422']",ParkingRecord
+server,record,获取泊位记录列表,GET, projects/:project_id/spot_records,"['spot_num', 'reg_code', 'section', 'page_size', 'page_num', 'order_by']","['string', 'string', 'string', 'integer', 'integer', 'string']","['F', 'F', 'F', 'F', 'F', 'F']","['200', '403', '404', '422']",SpotRecord
+server,record,获取泊位记录详情,GET, projects/:project_id/cameras/:camera_id/spot_records/:spot_record_id,,,,"['200', '403', '404']",SpotRecord

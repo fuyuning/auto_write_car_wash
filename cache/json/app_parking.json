@@ -28,7 +28,9 @@
         "province": {"type":"string"},
         "city": {"type":"string"},
         "district": {"type":"string"},
-        "position": {"type":"object"}
+        "position": {"type":"object"},
+        "parking_map": {"type":"string"},
+        "parking_map_time": {"type":"number"}
       },
       "required": [
         "parking_id",
@@ -56,7 +58,9 @@
         "province",
         "city",
         "district",
-        "position"
+        "position",
+        "parking_map",
+        "parking_map_time"
       ]
     }
   },

@@ -32,7 +32,7 @@
         "updated_time": {"type":["string","null"]},
         "remark": {"type":"string"},
         "close_description": {"type":"string"},
-        "close_time": {"type":"double"},
+        "close_time": {"type":"number"},
         "order_status": {"type":"string"},
         "service_group": {"type":"array"},
         "dirty_percent": {"type":"number"},

@@ -4,9 +4,9 @@
       "type":"object",
       "properties":{
         "call_record_id": {"type":"string"},
-        "call_id": {"type":"double"},
+        "call_id": {"type":"number"},
         "sub_id": {"type":"boolean"},
-        "pool_key": {"type":"double"},
+        "pool_key": {"type":"number"},
         "phone_no": {"type":"string"},
         "secret_no": {"type":"string"},
         "peer_no": {"type":"string"},

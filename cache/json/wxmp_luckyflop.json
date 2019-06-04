@@ -11,10 +11,10 @@
         "flop_week": {"type":"number"},
         "price_min": {"type":"number"},
         "price_status": {"type":"number"},
-        "price_set": {"type":"List"},
+        "price_set": {"type":"array"},
         "enabled": {"type":"boolean"},
-        "created_time": {"type":"double"},
-        "updated_time": {"type":["double","null"]},
+        "created_time": {"type":"number"},
+        "updated_time": {"type":["number","null"]},
         "remark": {"type":"string"}
       },
       "required": [

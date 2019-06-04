@@ -4,7 +4,7 @@
       "type":"object",
       "properties":{
         "wash_record_statistic_id": {"type":"string"},
-        "time_point": {"type":"double"},
+        "time_point": {"type":"number"},
         "wash_num": {"type":"number"},
         "amount": {"type":"number"},
         "increase_wash_num": {"type":"number"},

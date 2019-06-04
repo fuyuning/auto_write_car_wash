@@ -5,7 +5,7 @@
       "properties":{
         "car_statistic_id": {"type":"string"},
         "car_id": {"type":"string"},
-        "last_time": {"type":"double"},
+        "last_time": {"type":"number"},
         "wash_num": {"type":"number"},
         "wash_num_last_30_day": {"type":"number"},
         "total_amount": {"type":"number"},

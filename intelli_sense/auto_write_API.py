@@ -44,7 +44,7 @@ class AutoWriteRobot(object):
                                 params_list = row['实体参数'][1:-1].replace('\'', '').replace(' ', '').split(',')
                                 type_list = row['参数类型'][1:-1].replace('\'', '').replace(' ', '').split(',')
                                 for i in range(0, len(type_list)):
-                                    if type_list[i] in ('float', 'Float', 'integer', 'int', 'time'):
+                                    if type_list[i] in ('Double', 'double', 'float', 'Float', 'integer', 'int', 'time'):
                                         type_list[i] = 'number'
                                     if type_list[i] in ('bool', 'Boolean'):
                                         type_list[i] = 'boolean'
@@ -52,6 +52,8 @@ class AutoWriteRobot(object):
                                         type_list[i] = 'string'
                                     if type_list[i] == 'json':
                                         type_list[i] = 'object'
+                                    if type_list[i] == 'List':
+                                        type_list[i] = 'array'
                                     if '<' in type_list[i] and '>' in type_list[i]:
                                         type_list[i] = 'array'
                                 json_file.write('{\n  "definitions": {\n    "%s": {\n      "type":"object",'
@@ -78,7 +80,6 @@ class AutoWriteRobot(object):
                                                 '%s"\n//  "type": "array",\n//  "minItems":0,\n//  "items": {\n//    "'
                                                 '$ref": "#/definitions/%s"\n//  }\n}' % (row['实体名'], row['实体名']))
         with open('%s/auto_write_robot.csv' % self.document_path, 'r') as file:
-
             folder = os.path.exists('%s/old_auto_write_robot.csv' % self.document_path)
             if folder:
                 with open('%s/old_auto_write_robot.csv' % self.document_path, 'r') as old_file:

@@ -1,0 +1,44 @@
+{
+  "definitions": {
+    "couponcoderecord": {
+      "type":"object",
+      "properties":{
+        "coupon_code_record_id": {"type":"string"},
+        "coupon_code_name": {"type":"string"},
+        "coupon_money": {"type":"number"},
+        "created_number": {"type":"number"},
+        "granted_number": {"type":"number"},
+        "coupon_pool_id": {"type":"string"},
+        "coupon_code_remark": {"type":"string"},
+        "is_new_user": {"type":"boolean"},
+        "created_time": {"type":"number"},
+        "updated_time": {"type":["number","null"]},
+        "remark": {"type":"string"},
+        "is_deleted": {"type":"boolean"},
+        "deleted_time": {"type":"number"}
+      },
+      "required": [
+        "coupon_code_record_id",
+        "coupon_code_name",
+        "coupon_money",
+        "created_number",
+        "granted_number",
+        "coupon_pool_id",
+        "coupon_code_remark",
+        "is_new_user",
+        "created_time",
+        "updated_time",
+        "remark",
+        "is_deleted",
+        "deleted_time"
+      ]
+    }
+  },
+  "type": "object",
+  "$ref": "#/definitions/couponcoderecord"
+//  "type": "array",
+//  "minItems":0,
+//  "items": {
+//    "$ref": "#/definitions/couponcoderecord"
+//  }
+}

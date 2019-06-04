@@ -1,0 +1,42 @@
+{
+  "definitions": {
+    "usergroup": {
+      "type":"object",
+      "properties":{
+        "userid": {"type":"string"},
+        "mobile": {"type":"string"},
+        "name": {"type":"string"},
+        "sex": {"type":"number"},
+        "city": {"type":"string"},
+        "first_time": {"type":"number"},
+        "created_time": {"type":"number"},
+        "updated_time": {"type":["number","null"]},
+        "remark": {"type":"string"},
+        "is_deleted": {"type":"boolean"},
+        "deleted_time": {"type":"number"},
+        "wash_user_group_id": {"type":"string"}
+      },
+      "required": [
+        "userid",
+        "mobile",
+        "name",
+        "sex",
+        "city",
+        "first_time",
+        "created_time",
+        "updated_time",
+        "remark",
+        "is_deleted",
+        "deleted_time",
+        "wash_user_group_id"
+      ]
+    }
+  },
+  "type": "object",
+  "$ref": "#/definitions/usergroup"
+//  "type": "array",
+//  "minItems":0,
+//  "items": {
+//    "$ref": "#/definitions/usergroup"
+//  }
+}

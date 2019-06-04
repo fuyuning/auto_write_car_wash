@@ -1,0 +1,40 @@
+{
+  "definitions": {
+    "shortmessagetemplate": {
+      "type":"object",
+      "properties":{
+        "smt_id": {"type":"string"},
+        "name": {"type":"string"},
+        "content": {"type":"string"},
+        "type": {"type":"number"},
+        "enabled": {"type":"boolean"},
+        "examine": {"type":"boolean"},
+        "created_time": {"type":"number"},
+        "updated_time": {"type":["number","null"]},
+        "remark": {"type":"string"},
+        "is_deleted": {"type":"boolean"},
+        "deleted_time": {"type":"number"}
+      },
+      "required": [
+        "smt_id",
+        "name",
+        "content",
+        "type",
+        "enabled",
+        "examine",
+        "created_time",
+        "updated_time",
+        "remark",
+        "is_deleted",
+        "deleted_time"
+      ]
+    }
+  },
+  "type": "object",
+  "$ref": "#/definitions/shortmessagetemplate"
+//  "type": "array",
+//  "minItems":0,
+//  "items": {
+//    "$ref": "#/definitions/shortmessagetemplate"
+//  }
+}

@@ -1,0 +1,34 @@
+{
+  "definitions": {
+    "turntable": {
+      "type":"object",
+      "properties":{
+        "turntable_id": {"type":"string"},
+        "name": {"type":"string"},
+        "wash_user_groups": {"type":"array"},
+        "prizes": {"type":"array"},
+        "enabled": {"type":"boolean"},
+        "created_time": {"type":"double"},
+        "updated_time": {"type":["double","null"]},
+        "remark": {"type":"string"}
+      },
+      "required": [
+        "turntable_id",
+        "name",
+        "wash_user_groups",
+        "prizes",
+        "enabled",
+        "created_time",
+        "updated_time",
+        "remark"
+      ]
+    }
+  },
+  "type": "object",
+  "$ref": "#/definitions/turntable"
+//  "type": "array",
+//  "minItems":0,
+//  "items": {
+//    "$ref": "#/definitions/turntable"
+//  }
+}

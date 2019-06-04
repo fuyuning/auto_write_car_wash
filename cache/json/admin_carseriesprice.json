@@ -1,0 +1,50 @@
+{
+  "definitions": {
+    "carseriesprice": {
+      "type":"object",
+      "properties":{
+        "car_series_price_id": {"type":"string"},
+        "intelligent_service_id": {"type":"string"},
+        "car_brand": {"type":"string"},
+        "brand_id": {"type":"string"},
+        "car_series_name": {"type":"string"},
+        "car_scale": {"type":"string"},
+        "car_model_id": {"type":"string"},
+        "car_model": {"type":"string"},
+        "wash_seconds": {"type":"Int"},
+        "cost_price": {"type":"Int"},
+        "price": {"type":"Int"},
+        "wash_normal_price": {"type":"Int"},
+        "wash_group_price": {"type":"Int"},
+        "membership_price": {"type":"Int"},
+        "commission_price": {"type":"Int"},
+        "created_time": {"type":"number"}
+      },
+      "required": [
+        "car_series_price_id",
+        "intelligent_service_id",
+        "car_brand",
+        "brand_id",
+        "car_series_name",
+        "car_scale",
+        "car_model_id",
+        "car_model",
+        "wash_seconds",
+        "cost_price",
+        "price",
+        "wash_normal_price",
+        "wash_group_price",
+        "membership_price",
+        "commission_price",
+        "created_time"
+      ]
+    }
+  },
+  "type": "object",
+  "$ref": "#/definitions/carseriesprice"
+//  "type": "array",
+//  "minItems":0,
+//  "items": {
+//    "$ref": "#/definitions/carseriesprice"
+//  }
+}

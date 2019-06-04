@@ -1,0 +1,20 @@
+{
+  "definitions": {
+    "refund": {
+      "type":"object",
+      "properties":{
+        "": {"type":""}
+      },
+      "required": [
+        ""
+      ]
+    }
+  },
+  "type": "object",
+  "$ref": "#/definitions/refund"
+//  "type": "array",
+//  "minItems":0,
+//  "items": {
+//    "$ref": "#/definitions/refund"
+//  }
+}

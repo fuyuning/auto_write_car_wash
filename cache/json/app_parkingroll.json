@@ -1,0 +1,40 @@
+{
+  "definitions": {
+    "parkingroll": {
+      "type":"object",
+      "properties":{
+        "parking_coupon_id": {"type":"string"},
+        "parking_coupon_no": {"type":"string"},
+        "car_id": {"type":"string"},
+        "order_no": {"type":"string"},
+        "car_washer": {"type":"string"},
+        "parking_id": {"type":"string"},
+        "created_time": {"type":"number"},
+        "updated_time": {"type":["number","null"]},
+        "remark": {"type":"string"},
+        "is_deleted": {"type":"boolean"},
+        "deleted_time": {"type":"number"}
+      },
+      "required": [
+        "parking_coupon_id",
+        "parking_coupon_no",
+        "car_id",
+        "order_no",
+        "car_washer",
+        "parking_id",
+        "created_time",
+        "updated_time",
+        "remark",
+        "is_deleted",
+        "deleted_time"
+      ]
+    }
+  },
+  "type": "object",
+  "$ref": "#/definitions/parkingroll"
+//  "type": "array",
+//  "minItems":0,
+//  "items": {
+//    "$ref": "#/definitions/parkingroll"
+//  }
+}

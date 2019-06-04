@@ -1,7 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2b5dbe8c-edbb-41e1-bfc0-1c8862244c59" name="Default" comment="" />
+    <list default="true" id="2b5dbe8c-edbb-41e1-bfc0-1c8862244c59" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cache/document/auto_write_robot.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cache/document/server_auto_write_schema.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cache/document/server_list.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cache/document/server_url.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cache/json/server_camera.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cache/json/server_camerabrand.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cache/json/server_cameramodel.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cache/json/server_identifyrecord.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cache/json/server_parkingrecord.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cache/json/server_project.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cache/json/server_spot.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cache/json/server_spotrecordbyday.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cache/json/server_uploadimage.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cache/json/server_user.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cache/log/old_文档状态码问题.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cache/log/文档状态码问题.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cache/params/params_list.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cache/params/params_list.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/results/log.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/results/output.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/results/report.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_camera_monitor_deployment_server/camera/CameraLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_camera_monitor_deployment_server/camera/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_camera_monitor_deployment_server/camera/old_CameraLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_camera_monitor_deployment_server/project/ProjectLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_camera_monitor_deployment_server/project/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_camera_monitor_deployment_server/project/old_ProjectLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_camera_monitor_deployment_server/record/RecordLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_camera_monitor_deployment_server/record/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_camera_monitor_deployment_server/record/old_RecordLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_camera_monitor_deployment_server/spot/SpotLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_camera_monitor_deployment_server/spot/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_camera_monitor_deployment_server/spot/old_SpotLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_camera_monitor_deployment_server/user/UserLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_camera_monitor_deployment_server/user/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_camera_monitor_deployment_server/user/old_UserLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_camera_monitor_server_library/camera/CameraLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_camera_monitor_server_library/camera/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_camera_monitor_server_library/project/ProjectLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_camera_monitor_server_library/project/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_camera_monitor_server_library/record/RecordLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_camera_monitor_server_library/record/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_camera_monitor_server_library/spot/SpotLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_camera_monitor_server_library/spot/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_camera_monitor_server_library/user/UserLibrary.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robot_camera_monitor_server_library/user/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/server_camera/cameras.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/server_camera/cameras.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/server_camera/old_cameras.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/server_camera/old_cameras.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/server_project/old_projects.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/server_project/old_projects.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/server_project/projects.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/server_project/projects.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/server_record/old_records.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/server_record/old_records.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/server_record/records.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/server_record/records.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/server_spot/old_spots.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/server_spot/old_spots.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/server_spot/spots.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/server_spot/spots.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/server_user/old_users.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/server_user/old_users.unauthorized.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/server_user/users.robot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/server_user/users.unauthorized.robot" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/intelli_sense/spider_from_document.py" afterPath="$PROJECT_DIR$/intelli_sense/spider_camera.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/intelli_sense/auto_write_API.py" afterPath="$PROJECT_DIR$/intelli_sense/auto_write_API.py" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,24 +83,55 @@
     <SUITE FILE_PATH="coverage/auto_write_robot_case$auto_write_APIrobot0_1__1_.coverage" NAME="auto_write_APIrobot0.1 (1) Coverage Results" MODIFIED="1555666048691" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/robot_car_wash/intelli_sense" />
     <SUITE FILE_PATH="coverage/auto_write_robot_case$spider_for_robot.coverage" NAME="spider_for_robot Coverage Results" MODIFIED="1558415524285" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/intelli_sense" />
     <SUITE FILE_PATH="coverage/auto_write_robot_case$auto_write_APIrobot__2_.coverage" NAME="auto_write_APIrobot (2) Coverage Results" MODIFIED="1555918303029" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/robot_car_wash/intelli_sense" />
-    <SUITE FILE_PATH="coverage/auto_write_robot_case$spider_test.coverage" NAME="spider_test Coverage Results" MODIFIED="1559265200010" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/intelli_sense" />
+    <SUITE FILE_PATH="coverage/auto_write_robot_case$spider_test.coverage" NAME="spider_test Coverage Results" MODIFIED="1559626074347" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/intelli_sense" />
     <SUITE FILE_PATH="coverage/auto_write_robot_case$auto_write_API_test.coverage" NAME="auto_write_API_test Coverage Results" MODIFIED="1559030128903" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/intelli_sense" />
     <SUITE FILE_PATH="coverage/auto_write_robot_case$spider_for_robot__1_.coverage" NAME="spider_for_robot (1) Coverage Results" MODIFIED="1555910619747" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/robot_car_wash/intelli_sense" />
     <SUITE FILE_PATH="coverage/auto_write_robot_case$auto_write_API_test2.coverage" NAME="auto_write_API_test2 Coverage Results" MODIFIED="1559029815120" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/intelli_sense" />
     <SUITE FILE_PATH="coverage/auto_write_robot_case$auto_write_APIrobot.coverage" NAME="auto_write_APIrobot Coverage Results" MODIFIED="1555574698413" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spider" />
-    <SUITE FILE_PATH="coverage/auto_write_robot_case$API_test.coverage" NAME="API_test Coverage Results" MODIFIED="1559265215824" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/intelli_sense" />
+    <SUITE FILE_PATH="coverage/auto_write_robot_case$API_test.coverage" NAME="API_test Coverage Results" MODIFIED="1559629823746" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/intelli_sense" />
     <SUITE FILE_PATH="coverage/auto_write_robot_case$spider.coverage" NAME="spider Coverage Results" MODIFIED="1555313409976" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spider" />
     <SUITE FILE_PATH="coverage/auto_write_robot_case$auto_write_APIrobot0_1.coverage" NAME="auto_write_APIrobot0.1 Coverage Results" MODIFIED="1555579844081" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spider/intelli_sense" />
+    <SUITE FILE_PATH="coverage/auto_write_robot_case$spider_car_wash.coverage" NAME="spider_car_wash Coverage Results" MODIFIED="1559629387798" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/intelli_sense" />
     <SUITE FILE_PATH="coverage/auto_write_robot_case$auto_write_APIrobot__1_.coverage" NAME="auto_write_APIrobot (1) Coverage Results" MODIFIED="1555557214495" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/auto_write_robot/intelli_sense" />
     <SUITE FILE_PATH="coverage/auto_write_robot_case$auto_write_params.coverage" NAME="auto_write_params Coverage Results" MODIFIED="1559199102709" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/intelli_sense" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="auto_write_API.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="auto_clean.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/intelli_sense/auto_clean.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="spider_camera.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/intelli_sense/spider_camera.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="214" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="220" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="spider_car_wash.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/intelli_sense/spider_car_wash.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="201" column="0" lean-forward="false" selection-start-line="201" selection-start-column="0" selection-end-line="201" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="auto_write_API.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/intelli_sense/auto_write_API.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="337" column="0" lean-forward="false" selection-start-line="332" selection-start-column="0" selection-end-line="337" selection-end-column="0" />
+            <state relative-caret-position="255">
+              <caret line="348" column="33" lean-forward="false" selection-start-line="348" selection-start-column="33" selection-end-line="348" selection-end-column="33" />
               <folding>
                 <element signature="e#20#30#0" expanded="true" />
               </folding>
@@ -38,71 +139,40 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="auto_clean.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/intelli_sense/auto_clean.py">
+      <file leaf-file-name="car_positions.robot" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/admin_car_position/car_positions.robot">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="473">
-              <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#262#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="server_camerabrand.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cache/json/server_camerabrand.json">
+      <file leaf-file-name="AdminLogLibrary.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/robot_car_wash_server_library/admin_log/AdminLogLibrary.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="15" column="17" lean-forward="false" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="server_auto_write_schema.csv" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cache/document/server_auto_write_schema.csv">
-          <provider editor-type-id="csv-table-editor">
-            <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-          </provider>
-          <provider selected="true" editor-type-id="csv-text-editor">
-            <state relative-caret-position="242">
-              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="auto_write_params.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/intelli_sense/auto_write_params.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="27" column="6" lean-forward="false" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BaseUtilsLibrary.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/UtilsLibrary/BaseUtilsLibrary.py">
+      <file leaf-file-name="AdminUserLibrary.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/robot_car_wash_server_library/admin_user/AdminUserLibrary.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="176">
-              <caret line="15" column="27" lean-forward="false" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="50" />
+              <caret line="44" column="35" lean-forward="true" selection-start-line="44" selection-start-column="35" selection-end-line="44" selection-end-column="35" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="spider_from_document.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/intelli_sense/spider_from_document.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-245">
-              <caret line="189" column="4" lean-forward="false" selection-start-line="189" selection-start-column="4" selection-end-line="189" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="params_list.csv" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cache/params/params_list.csv">
+      <file leaf-file-name="admin_auto_write_schema.csv" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cache/document/admin_auto_write_schema.csv">
           <provider editor-type-id="csv-table-editor">
             <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
           </provider>
@@ -114,10 +184,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="params_list.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cache/params/params_list.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-726">
+      <file leaf-file-name="app_auto_write_schema.csv" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cache/document/app_auto_write_schema.csv">
+          <provider editor-type-id="csv-table-editor">
+            <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+          </provider>
+          <provider selected="true" editor-type-id="csv-text-editor">
+            <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -219,7 +292,9 @@
         <option value="$PROJECT_DIR$/robot_camera_monitor_deployment_server/camera/CameraLibrary.py" />
         <option value="$PROJECT_DIR$/tests/server_camera/cameras.robot" />
         <option value="$PROJECT_DIR$/cache/document/old_auto_write_robot.csv" />
+        <option value="$PROJECT_DIR$/intelli_sense/spider_camera.py" />
         <option value="$PROJECT_DIR$/intelli_sense/spider_from_document.py" />
+        <option value="$PROJECT_DIR$/intelli_sense/spider_car_wash.py" />
         <option value="$PROJECT_DIR$/intelli_sense/auto_write_API.py" />
       </list>
     </option>
@@ -231,10 +306,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="951" />
-    <option name="y" value="24" />
-    <option name="width" value="1857" />
-    <option name="height" value="1092" />
+    <option name="x" value="45" />
+    <option name="y" value="64" />
+    <option name="width" value="1017" />
+    <option name="height" value="1028" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -252,8 +327,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -281,30 +354,24 @@
             <path>
               <item name="auto-write-robot-case" type="b2602c69:ProjectViewProjectNode" />
               <item name="auto-write-robot-case" type="462c0819:PsiDirectoryNode" />
-              <item name="cache" type="462c0819:PsiDirectoryNode" />
-              <item name="log" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="auto-write-robot-case" type="b2602c69:ProjectViewProjectNode" />
-              <item name="auto-write-robot-case" type="462c0819:PsiDirectoryNode" />
-              <item name="cache" type="462c0819:PsiDirectoryNode" />
-              <item name="params" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="auto-write-robot-case" type="b2602c69:ProjectViewProjectNode" />
-              <item name="auto-write-robot-case" type="462c0819:PsiDirectoryNode" />
               <item name="intelli_sense" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="auto-write-robot-case" type="b2602c69:ProjectViewProjectNode" />
               <item name="auto-write-robot-case" type="462c0819:PsiDirectoryNode" />
-              <item name="robot_camera_monitor_deployment_server" type="462c0819:PsiDirectoryNode" />
+              <item name="robot_car_wash_server_library" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="auto-write-robot-case" type="b2602c69:ProjectViewProjectNode" />
               <item name="auto-write-robot-case" type="462c0819:PsiDirectoryNode" />
-              <item name="robot_camera_monitor_deployment_server" type="462c0819:PsiDirectoryNode" />
-              <item name="camera" type="462c0819:PsiDirectoryNode" />
+              <item name="robot_car_wash_server_library" type="462c0819:PsiDirectoryNode" />
+              <item name="admin_log" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="auto-write-robot-case" type="b2602c69:ProjectViewProjectNode" />
+              <item name="auto-write-robot-case" type="462c0819:PsiDirectoryNode" />
+              <item name="robot_car_wash_server_library" type="462c0819:PsiDirectoryNode" />
+              <item name="admin_user" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="auto-write-robot-case" type="b2602c69:ProjectViewProjectNode" />
@@ -315,7 +382,7 @@
               <item name="auto-write-robot-case" type="b2602c69:ProjectViewProjectNode" />
               <item name="auto-write-robot-case" type="462c0819:PsiDirectoryNode" />
               <item name="tests" type="462c0819:PsiDirectoryNode" />
-              <item name="server_camera" type="462c0819:PsiDirectoryNode" />
+              <item name="admin_car_position" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="auto-write-robot-case" type="b2602c69:ProjectViewProjectNode" />
@@ -326,24 +393,26 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../robot-car-wash-server" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/UtilsLibrary" />
-      <recent name="$PROJECT_DIR$/intelli_sense" />
-      <recent name="$PROJECT_DIR$/robot_camera_monitor_deployment_server" />
-      <recent name="$PROJECT_DIR$/robot_car_wash/tests" />
-      <recent name="$PROJECT_DIR$/spider/robot_car_wash_server_library" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/robot_car_wash" />
       <recent name="$PROJECT_DIR$/spider/intelli_sense" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/intelli_sense" />
+      <recent name="$PROJECT_DIR$/UtilsLibrary" />
+      <recent name="$PROJECT_DIR$/robot_camera_monitor_deployment_server" />
+      <recent name="$PROJECT_DIR$/robot_car_wash/tests" />
+      <recent name="$PROJECT_DIR$/spider/robot_car_wash_server_library" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -395,24 +464,6 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="auto_write_API_test2" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/intelli_sense" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="auto-write-robot-case" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/intelli_sense/auto_write_API_test2.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-    </configuration>
     <configuration name="auto_write_params" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -431,6 +482,24 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
+    <configuration name="spider_car_wash" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/intelli_sense" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="auto-write-robot-case" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/intelli_sense/spider_car_wash.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
     <configuration name="spider_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -444,7 +513,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="auto-write-robot-case" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/intelli_sense/spider_from_document.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/intelli_sense/spider_camera.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -453,16 +522,16 @@
       <item index="0" class="java.lang.String" itemvalue="Python.spider_test" />
       <item index="1" class="java.lang.String" itemvalue="Python.API_test" />
       <item index="2" class="java.lang.String" itemvalue="Python.auto_write_API_test" />
-      <item index="3" class="java.lang.String" itemvalue="Python.auto_write_API_test2" />
-      <item index="4" class="java.lang.String" itemvalue="Python.auto_write_params" />
+      <item index="3" class="java.lang.String" itemvalue="Python.auto_write_params" />
+      <item index="4" class="java.lang.String" itemvalue="Python.spider_car_wash" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.API_test" />
-        <item index="1" class="java.lang.String" itemvalue="Python.spider_test" />
-        <item index="2" class="java.lang.String" itemvalue="Python.auto_write_params" />
-        <item index="3" class="java.lang.String" itemvalue="Python.auto_write_API_test" />
-        <item index="4" class="java.lang.String" itemvalue="Python.auto_write_API_test2" />
+        <item index="1" class="java.lang.String" itemvalue="Python.spider_car_wash" />
+        <item index="2" class="java.lang.String" itemvalue="Python.spider_test" />
+        <item index="3" class="java.lang.String" itemvalue="Python.auto_write_params" />
+        <item index="4" class="java.lang.String" itemvalue="Python.auto_write_API_test" />
       </list>
     </recent_temporary>
   </component>
@@ -484,17 +553,16 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17539988" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.268064" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21278942" sideWeight="0.5032741" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23982869" sideWeight="0.49672592" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24518201" sideWeight="0.49672592" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30620986" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30513918" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39828694" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -513,18 +581,18 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21278942" sideWeight="0.5032741" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24625267" sideWeight="0.49672592" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23025584" sideWeight="0.49672592" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31973538" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2511715" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30513918" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1770546" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39828694" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39933258" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
@@ -541,199 +609,36 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/cache/json/camerabrand.json" />
-    <entry file="file://$PROJECT_DIR$/cache/json/camera.json" />
-    <entry file="file://$PROJECT_DIR$/cache/document/server_list.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cache/document/server_url.csv">
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/server_camera/new_cameras.robot" />
-    <entry file="file://$PROJECT_DIR$/tests/server_project/post_projects_201.json" />
-    <entry file="file://$PROJECT_DIR$/tests/server_record/new_records.robot" />
-    <entry file="file://$PROJECT_DIR$/tests/server_spot/new_spots.robot" />
     <entry file="file://$PROJECT_DIR$/tests/server_user/new_users.robot" />
-    <entry file="file://$PROJECT_DIR$/tests/server_user/users.robot">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/server_user/users.robot" />
     <entry file="file://$PROJECT_DIR$/cache/old/old_CameraLibrary.py" />
     <entry file="file://$PROJECT_DIR$/robot_camera_monitor_deployment_server/camera/new_CameraLibrary.py" />
-    <entry file="file://$PROJECT_DIR$/robot_camera_monitor_deployment_server/camera/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/robot_camera_monitor_deployment_server/camera/__init__.py" />
     <entry file="file://$PROJECT_DIR$/tests/server_project/new_projects.robot" />
     <entry file="file://$PROJECT_DIR$/tests/server_project/new_projects.unauthorized.robot" />
-    <entry file="file://$PROJECT_DIR$/tests/server_project/projects.robot">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cache/json/server_cameramodel.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cache/json/server_camera.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1342">
-          <caret line="61" column="4" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="69" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cache/json/server_uploadimage.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="19" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="27" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cache/json/server_user.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="5" lean-forward="false" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cache/json/server_project.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="4" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cache/json/server_spot.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="19" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="31" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cache/json/server_spotrecord.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" column="20" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="31" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cache/json/server_parkingrecord.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="40" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="39" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/robot_camera_monitor_deployment_server/common/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/server_project/projects.robot" />
+    <entry file="file://$PROJECT_DIR$/cache/json/server_cameramodel.json" />
+    <entry file="file://$PROJECT_DIR$/cache/json/server_uploadimage.json" />
+    <entry file="file://$PROJECT_DIR$/cache/json/server_user.json" />
+    <entry file="file://$PROJECT_DIR$/cache/json/server_spotrecord.json" />
+    <entry file="file://$PROJECT_DIR$/cache/json/server_parkingrecord.json" />
+    <entry file="file://$PROJECT_DIR$/robot_camera_monitor_deployment_server/common/__init__.py" />
     <entry file="file://$PROJECT_DIR$/intelli_sense/auto_write_API_test2.py" />
     <entry file="file://$PROJECT_DIR$/robot_camera_monitor_deployment_server/camera/NewCameraLibrary.py" />
-    <entry file="file://$PROJECT_DIR$/tests/resources.robot">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/server_camera/old_cameras.unauthorized.robot">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/server_camera/old_cameras.robot">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/server_camera/cameras.robot">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-132">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/server_camera/cameras.unauthorized.robot">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/resources.robot" />
+    <entry file="file://$PROJECT_DIR$/tests/server_camera/old_cameras.unauthorized.robot" />
+    <entry file="file://$PROJECT_DIR$/tests/server_camera/old_cameras.robot" />
+    <entry file="file://$PROJECT_DIR$/tests/server_camera/cameras.unauthorized.robot" />
     <entry file="file://$PROJECT_DIR$/README.rst">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/intelli_sense/auto_write_API_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4468">
-          <caret line="262" column="30" lean-forward="false" selection-start-line="262" selection-start-column="26" selection-end-line="262" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cache/log/文档状态码问题.csv">
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cache/log/old_文档状态码问题.csv">
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/intelli_sense/auto_write_API_test.py" />
+    <entry file="file://$PROJECT_DIR$/cache/log/文档状态码问题.csv" />
+    <entry file="file://$PROJECT_DIR$/cache/log/old_文档状态码问题.csv" />
     <entry file="file://$PROJECT_DIR$/cache/document/auto_write_robot.csv">
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
@@ -741,7 +646,6 @@
       <provider selected="true" editor-type-id="csv-text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -749,122 +653,117 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="15" column="27" lean-forward="false" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="50" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/robot_camera_monitor_deployment_server/camera/CameraLibrary.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/robot_camera_monitor_deployment_server/camera/old_CameraLibrary.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/server_project/old_projects.unauthorized.robot">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-198">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/server_project/projects.unauthorized.robot">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-132">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cache/params/params_list.csv">
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cache/params/params_list.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-726">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cache/document/old_auto_write_robot.csv">
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="462">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cache/document/server_auto_write_schema.csv">
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/server_project/old_projects.unauthorized.robot" />
+    <entry file="file://$PROJECT_DIR$/tests/server_project/projects.unauthorized.robot" />
+    <entry file="file://$PROJECT_DIR$/cache/params/params_list.csv" />
+    <entry file="file://$PROJECT_DIR$/cache/params/params_list.txt" />
+    <entry file="file://$PROJECT_DIR$/cache/document/old_auto_write_robot.csv" />
+    <entry file="file://$PROJECT_DIR$/cache/document/server_auto_write_schema.csv" />
     <entry file="file://$PROJECT_DIR$/intelli_sense/auto_write_params.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="594">
           <caret line="27" column="6" lean-forward="false" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cache/json/server_camerabrand.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="15" column="17" lean-forward="false" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/cache/json/server_spot.json" />
+    <entry file="file://$PROJECT_DIR$/cache/json/server_project.json" />
+    <entry file="file://$PROJECT_DIR$/robot_camera_monitor_deployment_server/camera/old_CameraLibrary.py" />
+    <entry file="file://$PROJECT_DIR$/robot_camera_monitor_deployment_server/camera/CameraLibrary.py" />
+    <entry file="file://$PROJECT_DIR$/robot_camera_monitor_server_library/camera/CameraLibrary.py" />
+    <entry file="file://$PROJECT_DIR$/tests/server_camera/cameras.robot" />
     <entry file="file://$PROJECT_DIR$/intelli_sense/auto_clean.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
+        <state relative-caret-position="0">
           <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/intelli_sense/spider_from_document.py">
+    <entry file="file://$PROJECT_DIR$/cache/json/server_camerabrand.json" />
+    <entry file="file://$PROJECT_DIR$/cache/json/server_camera.json" />
+    <entry file="file://$PROJECT_DIR$/intelli_sense/spider_camera.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-245">
-          <caret line="189" column="4" lean-forward="false" selection-start-line="189" selection-start-column="4" selection-end-line="189" selection-end-column="4" />
+        <state relative-caret-position="391">
+          <caret line="214" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="220" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/envs/auto-write-robot-test-case/lib/python3.5/re.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="212" column="0" lean-forward="false" selection-start-line="212" selection-start-column="0" selection-end-line="212" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/intelli_sense/spider_car_wash.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="201" column="0" lean-forward="false" selection-start-line="201" selection-start-column="0" selection-end-line="201" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cache/document/admin_auto_write_schema.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cache/document/app_auto_write_schema.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/intelli_sense/auto_write_API.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="337" column="0" lean-forward="false" selection-start-line="332" selection-start-column="0" selection-end-line="337" selection-end-column="0" />
+        <state relative-caret-position="255">
+          <caret line="348" column="33" lean-forward="false" selection-start-line="348" selection-start-column="33" selection-end-line="348" selection-end-column="33" />
           <folding>
             <element signature="e#20#30#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/admin_car_position/car_positions.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#262#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/robot_car_wash_server_library/admin_log/AdminLogLibrary.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/robot_car_wash_server_library/admin_user/AdminUserLibrary.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="44" column="35" lean-forward="true" selection-start-line="44" selection-start-column="35" selection-end-line="44" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>

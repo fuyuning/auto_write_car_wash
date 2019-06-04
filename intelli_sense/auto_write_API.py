@@ -295,7 +295,7 @@ class AutoWriteRobot(object):
             change_data = 'params=data'
         elif api_method in ('post', 'put', 'patch'):
             change_data = 'json=data'
-        if len(api_params_name_list) > 0:
+        if api_params_name_list != ['']:
             change_data = ', %s' % change_data
         else:
             change_data = ''
@@ -321,7 +321,6 @@ class AutoWriteRobot(object):
 
     # 根据爬取的数据生成robot文件头
     def _write_robot_file_settings(self, service_name, model_name):
-        pass
         full_name = '%s_%s' % (service_name, model_name)
         folder = os.path.exists('../tests/%s' % full_name)
         if not folder:
@@ -335,6 +334,21 @@ class AutoWriteRobot(object):
             setup = 'Suite Setup  Login  ${admin_username}   ${admin_password}'
             teardown = 'Suite Teardown  Logout'
             name_tag = ''
+        if service_name == 'admin':
+            lib_name = 'robot_car_wash_server_library.'
+            setup = 'Suite Setup  Login  ${username}   ${password}'
+            teardown = 'Suite Teardown  Logout'
+            name_tag = '虾洗后台'
+        if service_name == 'app':
+            lib_name = 'robot_washing_expert_library.'
+            setup = 'Suite Setup  Login  ${username}   ${password}'
+            teardown = ''
+            name_tag = '虾客APP'
+        if service_name == 'wxmp':
+            lib_name = 'robot_car_wash_wxmp_library.'
+            setup = 'Suite Setup  login by unionid   ${unionid}'
+            teardown = ''
+            name_tag = '车主微信端'
         lib_name = lib_name[:-1] + '.' + model_name
         class_name = self._upper_name(model_name)
         folder = os.path.exists('../tests/%s/%ss.robot' % (full_name, model_name))
@@ -554,7 +568,7 @@ class AutoWriteRobot(object):
             if id_in_url != [] and api_code in ('200', '201') and api_method in ('Get', 'Post'):
                 for k in range(0, len(id_in_url)):
                     robot.write('   ${' + id_in_url[k] + '}  set variable if  ${resp.json()}!=[]'
-                                                         '  ${resp.json()[0][' + id_in_url[k] + ']}\n')
+                                                         '  ${resp.json()[0][\'' + id_in_url[k] + '\']}\n')
                     robot.write('   set global variable   ${' + id_in_url[k] + '}\n')
             robot.write('\n')
 

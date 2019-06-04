@@ -1,0 +1,52 @@
+{
+  "definitions": {
+    "carposition": {
+      "type":"object",
+      "properties":{
+        "car_position_id": {"type":"string"},
+        "car_id": {"type":"string"},
+        "wash_area": {"type":"object"},
+        "-wash_area_id": {"type":"string"},
+        "-name": {"type":"string"},
+        "parking": {"type":"object"},
+        "-parking_id": {"type":"string"},
+        "-parking_name": {"type":"string"},
+        "entry_time": {"type":"number"},
+        "lon": {"type":"string"},
+        "lat": {"type":"string"},
+        "phase": {"type":"string"},
+        "floor": {"type":"string"},
+        "zone": {"type":"string"},
+        "space_no": {"type":"string"},
+        "ownership": {"type":"number"},
+        "created_time": {"type":"number"}
+      },
+      "required": [
+        "car_position_id",
+        "car_id",
+        "wash_area",
+        "-wash_area_id",
+        "-name",
+        "parking",
+        "-parking_id",
+        "-parking_name",
+        "entry_time",
+        "lon",
+        "lat",
+        "phase",
+        "floor",
+        "zone",
+        "space_no",
+        "ownership",
+        "created_time"
+      ]
+    }
+  },
+  "type": "object",
+  "$ref": "#/definitions/carposition"
+//  "type": "array",
+//  "minItems":0,
+//  "items": {
+//    "$ref": "#/definitions/carposition"
+//  }
+}

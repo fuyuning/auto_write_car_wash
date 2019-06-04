@@ -1,0 +1,30 @@
+{
+  "definitions": {
+    "luckyflopuser": {
+      "type":"object",
+      "properties":{
+        "lucky_flop_user_id": {"type":"string"},
+        "user_id": {"type":"string"},
+        "lucky_flop_id": {"type":"string"},
+        "created_time": {"type":"double"},
+        "updated_time": {"type":["double","null"]},
+        "remark": {"type":"string"}
+      },
+      "required": [
+        "lucky_flop_user_id",
+        "user_id",
+        "lucky_flop_id",
+        "created_time",
+        "updated_time",
+        "remark"
+      ]
+    }
+  },
+  "type": "object",
+  "$ref": "#/definitions/luckyflopuser"
+//  "type": "array",
+//  "minItems":0,
+//  "items": {
+//    "$ref": "#/definitions/luckyflopuser"
+//  }
+}

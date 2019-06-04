@@ -1,0 +1,36 @@
+{
+  "definitions": {
+    "carbrandstatistic": {
+      "type":"object",
+      "properties":{
+        "car_brand_statistic_id": {"type":"string"},
+        "car_brand_name": {"type":"string"},
+        "num": {"type":"number"},
+        "percentage": {"type":"number"},
+        "created_time": {"type":"number"},
+        "updated_time": {"type":["number","null"]},
+        "remark": {"type":"string"},
+        "is_deleted": {"type":"boolean"},
+        "deleted_time": {"type":"number"}
+      },
+      "required": [
+        "car_brand_statistic_id",
+        "car_brand_name",
+        "num",
+        "percentage",
+        "created_time",
+        "updated_time",
+        "remark",
+        "is_deleted",
+        "deleted_time"
+      ]
+    }
+  },
+  "type": "object",
+  "$ref": "#/definitions/carbrandstatistic"
+//  "type": "array",
+//  "minItems":0,
+//  "items": {
+//    "$ref": "#/definitions/carbrandstatistic"
+//  }
+}

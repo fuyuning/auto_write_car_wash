@@ -1,0 +1,64 @@
+{
+  "definitions": {
+    "servicegroup": {
+      "type":"object",
+      "properties":{
+        "service_group_id": {"type":"string"},
+        "service_group_name": {"type":"string"},
+        "cost_price": {"type":"number"},
+        "service_original_price": {"type":"number"},
+        "wash_normal_price": {"type":"number"},
+        "wash_group_price": {"type":"number"},
+        "membership_price": {"type":"number"},
+        "commission_price": {"type":"number"},
+        "wash_normal_percent": {"type":"number"},
+        "wash_group_percent": {"type":"number"},
+        "membership_percent": {"type":"number"},
+        "service_group_price": {"type":"number"},
+        "pricing_strategy": {"type":"number"},
+        "services": {"type":"array"},
+        "intelligent_services": {"type":"array"},
+        "description": {"type":"string"},
+        "order_by": {"type":"number"},
+        "status": {"type":"number"},
+        "created_time": {"type":"number"},
+        "updated_time": {"type":["number","null"]},
+        "remark": {"type":"string"},
+        "is_deleted": {"type":"boolean"},
+        "deleted_time": {"type":"number"}
+      },
+      "required": [
+        "service_group_id",
+        "service_group_name",
+        "cost_price",
+        "service_original_price",
+        "wash_normal_price",
+        "wash_group_price",
+        "membership_price",
+        "commission_price",
+        "wash_normal_percent",
+        "wash_group_percent",
+        "membership_percent",
+        "service_group_price",
+        "pricing_strategy",
+        "services",
+        "intelligent_services",
+        "description",
+        "order_by",
+        "status",
+        "created_time",
+        "updated_time",
+        "remark",
+        "is_deleted",
+        "deleted_time"
+      ]
+    }
+  },
+  "type": "object",
+  "$ref": "#/definitions/servicegroup"
+//  "type": "array",
+//  "minItems":0,
+//  "items": {
+//    "$ref": "#/definitions/servicegroup"
+//  }
+}

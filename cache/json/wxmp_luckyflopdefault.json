@@ -1,0 +1,30 @@
+{
+  "definitions": {
+    "luckyflopdefault": {
+      "type":"object",
+      "properties":{
+        "lucky_flop_default_id": {"type":"string"},
+        "lucky_flop_id": {"type":"string"},
+        "enabled": {"type":"boolean"},
+        "created_time": {"type":"double"},
+        "updated_time": {"type":["double","null"]},
+        "remark": {"type":"string"}
+      },
+      "required": [
+        "lucky_flop_default_id",
+        "lucky_flop_id",
+        "enabled",
+        "created_time",
+        "updated_time",
+        "remark"
+      ]
+    }
+  },
+  "type": "object",
+  "$ref": "#/definitions/luckyflopdefault"
+//  "type": "array",
+//  "minItems":0,
+//  "items": {
+//    "$ref": "#/definitions/luckyflopdefault"
+//  }
+}

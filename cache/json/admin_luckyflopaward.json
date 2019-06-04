@@ -1,0 +1,56 @@
+{
+  "definitions": {
+    "luckyflopaward": {
+      "type":"object",
+      "properties":{
+        "lucky_flop_award_id": {"type":"string"},
+        "user_id": {"type":"string"},
+        "parking_id": {"type":"string"},
+        "parking_name": {"type":"string"},
+        "lucky_flop_id": {"type":"string"},
+        "rule_no": {"type":"string"},
+        "flop_num": {"type":"number"},
+        "award_time": {"type":"double"},
+        "flop_price": {"type":"number"},
+        "lucky_award_type": {"type":"number"},
+        "custom_price": {"type":"number"},
+        "fail_price": {"type":"number"},
+        "status": {"type":"number"},
+        "order_id": {"type":"string"},
+        "order_no": {"type":"string"},
+        "order_by": {"type":"string"},
+        "created_time": {"type":"double"},
+        "updated_time": {"type":["double","null"]},
+        "remark": {"type":"string"}
+      },
+      "required": [
+        "lucky_flop_award_id",
+        "user_id",
+        "parking_id",
+        "parking_name",
+        "lucky_flop_id",
+        "rule_no",
+        "flop_num",
+        "award_time",
+        "flop_price",
+        "lucky_award_type",
+        "custom_price",
+        "fail_price",
+        "status",
+        "order_id",
+        "order_no",
+        "order_by",
+        "created_time",
+        "updated_time",
+        "remark"
+      ]
+    }
+  },
+  "type": "object",
+  "$ref": "#/definitions/luckyflopaward"
+//  "type": "array",
+//  "minItems":0,
+//  "items": {
+//    "$ref": "#/definitions/luckyflopaward"
+//  }
+}

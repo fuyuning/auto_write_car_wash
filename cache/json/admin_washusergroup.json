@@ -1,0 +1,34 @@
+{
+  "definitions": {
+    "washusergroup": {
+      "type":"object",
+      "properties":{
+        "wash_user_group_id": {"type":"string"},
+        "name": {"type":"string"},
+        "order_by": {"type":"number"},
+        "created_time": {"type":"number"},
+        "updated_time": {"type":["number","null"]},
+        "remark": {"type":"string"},
+        "is_deleted": {"type":"boolean"},
+        "deleted_time": {"type":"number"}
+      },
+      "required": [
+        "wash_user_group_id",
+        "name",
+        "order_by",
+        "created_time",
+        "updated_time",
+        "remark",
+        "is_deleted",
+        "deleted_time"
+      ]
+    }
+  },
+  "type": "object",
+  "$ref": "#/definitions/washusergroup"
+//  "type": "array",
+//  "minItems":0,
+//  "items": {
+//    "$ref": "#/definitions/washusergroup"
+//  }
+}

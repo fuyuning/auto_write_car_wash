@@ -1,0 +1,56 @@
+{
+  "definitions": {
+    "washrecordstatistic": {
+      "type":"object",
+      "properties":{
+        "wash_record_statistic_id": {"type":"string"},
+        "time_point": {"type":"double"},
+        "wash_num": {"type":"number"},
+        "amount": {"type":"number"},
+        "increase_wash_num": {"type":"number"},
+        "increase_amount": {"type":"number"},
+        "total_record_num": {"type":"number"},
+        "total_amount": {"type":"number"},
+        "record_num_last_7_day": {"type":"number"},
+        "amount_last_7_day": {"type":"number"},
+        "record_num_last_30_day": {"type":"number"},
+        "amount_last_30_day": {"type":"number"},
+        "parking_id": {"type":"string"},
+        "wash_area_id": {"type":"string"},
+        "created_time": {"type":"number"},
+        "updated_time": {"type":["number","null"]},
+        "remark": {"type":"string"},
+        "is_deleted": {"type":"boolean"},
+        "deleted_time": {"type":"number"}
+      },
+      "required": [
+        "wash_record_statistic_id",
+        "time_point",
+        "wash_num",
+        "amount",
+        "increase_wash_num",
+        "increase_amount",
+        "total_record_num",
+        "total_amount",
+        "record_num_last_7_day",
+        "amount_last_7_day",
+        "record_num_last_30_day",
+        "amount_last_30_day",
+        "parking_id",
+        "wash_area_id",
+        "created_time",
+        "updated_time",
+        "remark",
+        "is_deleted",
+        "deleted_time"
+      ]
+    }
+  },
+  "type": "object",
+  "$ref": "#/definitions/washrecordstatistic"
+//  "type": "array",
+//  "minItems":0,
+//  "items": {
+//    "$ref": "#/definitions/washrecordstatistic"
+//  }
+}

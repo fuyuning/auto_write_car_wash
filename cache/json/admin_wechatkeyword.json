@@ -1,0 +1,38 @@
+{
+  "definitions": {
+    "wechatkeyword": {
+      "type":"object",
+      "properties":{
+        "wechat_keyword_id": {"type":"string"},
+        "name": {"type":"string"},
+        "keyword": {"type":"array"},
+        "reply_type": {"type":"string"},
+        "content": {"type":"object"},
+        "created_time": {"type":"number"},
+        "updated_time": {"type":["number","null"]},
+        "remark": {"type":"string"},
+        "is_deleted": {"type":"boolean"},
+        "deleted_time": {"type":"number"}
+      },
+      "required": [
+        "wechat_keyword_id",
+        "name",
+        "keyword",
+        "reply_type",
+        "content",
+        "created_time",
+        "updated_time",
+        "remark",
+        "is_deleted",
+        "deleted_time"
+      ]
+    }
+  },
+  "type": "object",
+  "$ref": "#/definitions/wechatkeyword"
+//  "type": "array",
+//  "minItems":0,
+//  "items": {
+//    "$ref": "#/definitions/wechatkeyword"
+//  }
+}

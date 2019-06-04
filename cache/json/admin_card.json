@@ -1,0 +1,52 @@
+{
+  "definitions": {
+    "card": {
+      "type":"object",
+      "properties":{
+        "card_id": {"type":"string"},
+        "card_no": {"type":"string"},
+        "card_name": {"type":"string"},
+        "days": {"type":"number"},
+        "grant_way": {"type":"number"},
+        "price": {"type":"number"},
+        "first_price": {"type":"number"},
+        "recharge_price": {"type":"number"},
+        "first_recharge_price": {"type":"number"},
+        "auto_recharge": {"type":"boolean"},
+        "coupons": {"type":"object"},
+        "card_remark": {"type":"string"},
+        "created_time": {"type":"number"},
+        "updated_time": {"type":["number","null"]},
+        "remark": {"type":"string"},
+        "is_deleted": {"type":"boolean"},
+        "deleted_time": {"type":"number"}
+      },
+      "required": [
+        "card_id",
+        "card_no",
+        "card_name",
+        "days",
+        "grant_way",
+        "price",
+        "first_price",
+        "recharge_price",
+        "first_recharge_price",
+        "auto_recharge",
+        "coupons",
+        "card_remark",
+        "created_time",
+        "updated_time",
+        "remark",
+        "is_deleted",
+        "deleted_time"
+      ]
+    }
+  },
+  "type": "object",
+  "$ref": "#/definitions/card"
+//  "type": "array",
+//  "minItems":0,
+//  "items": {
+//    "$ref": "#/definitions/card"
+//  }
+}

@@ -630,3 +630,5 @@ class AutoWriteRobot(object):
 if __name__ == '__main__':
     auto_write_robot = AutoWriteRobot()
     auto_write_robot.run()
+
+

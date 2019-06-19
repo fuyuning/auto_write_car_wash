@@ -290,9 +290,11 @@ class Spider(object):
         :param service_urls: 文档入口url列表
         :type service_urls: list
         """
-        # 遍历各
+        # 遍历各服务端的url
         for service_url in service_urls:
+            # 获取服务端名称
             service_name = service_url[28:-1]
+            # 生成各服务端的列表
             sever_list = []
             folder = os.path.exists('%s/server_list.txt' % self.spider_save_folder)
             if folder:
@@ -303,27 +305,42 @@ class Spider(object):
             sever_file = open('%s/server_list.txt' % self.spider_save_folder, "a+")
             if service_name not in sever_list:
                 sever_file.write('%s\n' % service_name)
-            with open('%s/%s_%s' % (self.spider_save_folder, service_name, self.entity_save_file), "w+", newline='') as \
-                    entity_csv:
+            # 打开自动生成schema的csv表
+            with open('%s/%s_%s' % (self.spider_save_folder, service_name, self.entity_save_file),
+                      "w+", newline='') as entity_csv:
+                # 表头
                 fieldnames = ['服务端', '实体名', '实体参数', '参数类型']
+                # 生成一个表实体
                 writer = csv.DictWriter(entity_csv, fieldnames=fieldnames)
+                # 写入表头
                 writer.writeheader()
-                real_entity_urls = []
+                # 获取服务端全文
                 service_content = self._get_content(service_url)
+                # 获取返回实体的url列表
                 entity_urls = self._get_entity_url_list(service_content)
+                # 遍历返回实体的url
                 for entity_url in entity_urls:
+                    # 拼接真实的url
                     real_entity_url = '%s%s' % (service_url, entity_url)
-                    real_entity_urls.append(real_entity_url)
+                    # 获取返回实体的全文
                     entity_content = self._get_content(real_entity_url)
+                    # 解析返回实体
                     if entity_content is None:
                         print('网页不存在：%s' % real_entity_url)
                     else:
+                        # 获取关键信息部分
                         base_file = re.findall(self.base_file_pattern, entity_content)
+                        # 获取实体名称列表
                         entity_name = re.findall(self.entity_name_pattern, base_file[0])
+                        # 获取实体table列表
                         table_content = re.findall(self.entity_table_pattern, base_file[0])
+                        # 解析每个实体的信息
                         for i in range(0, len(entity_name)):
+                            # 获取参数列表
                             params_list = re.findall(self.entity_params_pattern, table_content[i])
+                            # 获取参数类型列表
                             params_type_list = re.findall(self.entity_params_type_pattern, table_content[i])
+                            # 写入csv
                             writer.writerow({'服务端': service_name, '实体名': entity_name[i], '实体参数': params_list,
                                              '参数类型': params_type_list})
 

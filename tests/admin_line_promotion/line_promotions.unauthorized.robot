@@ -11,7 +11,7 @@ get admin line promotions Fail Without Login
    ...              请求方式:Get${\n}
    ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
    [Tags]           Respcode:403
-   get admin line promotions fail 403     car_id=${car_id}  sex=${sex}  car_status=${car_status}  wash_area_id=${wash_area_id}  wash_status=${wash_status}  user_tag=${user_tag}  created_section=${created_section}  page_num=${page_num}  page_size=${page_size}  
+   get admin line promotions fail 403     car_id=${car_id}  sex=${sex}  car_status=${car_status}  parking_id=${parking_id}  wash_status=${wash_status}  user_tag=${user_tag}  created_section=${created_section}  page_num=${page_num}  page_size=${page_size}  
 
 get admin line promotions by lpr id Fail Without Login
    [Documentation]  接口名:查询地推记录${\n}

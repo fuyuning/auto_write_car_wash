@@ -18,7 +18,7 @@ get car wash car series money Fail Without Login
    ...              请求方式:Get${\n}
    ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
    [Tags]           Respcode:403
-   get car wash car series money fail 403     series_id=${series_id}  parking_id=${parking_id}  
+   get car wash car series money fail 403   parking_id=${parking_id}    series_id=${series_id}  
 
 
 *** Keywords ***

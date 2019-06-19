@@ -1,0 +1,38 @@
+{
+  "definitions": {
+    "membershipstatistic": {
+      "type":"object",
+      "properties":{
+        "user_membership_statistic_id": {"type":"string"},
+        "time_point": {"type":"number"},
+        "first_num": {"type":"number"},
+        "recharge_num": {"type":"number"},
+        "all_num": {"type":"number"},
+        "created_time": {"type":"number"},
+        "updated_time": {"type":["number","null"]},
+        "remark": {"type":"string"},
+        "is_deleted": {"type":"boolean"},
+        "deleted_time": {"type":"number"}
+      },
+      "required": [
+        "user_membership_statistic_id",
+        "time_point",
+        "first_num",
+        "recharge_num",
+        "all_num",
+        "created_time",
+        "updated_time",
+        "remark",
+        "is_deleted",
+        "deleted_time"
+      ]
+    }
+  },
+  "type": "object",
+  "$ref": "#/definitions/membershipstatistic"
+//  "type": "array",
+//  "minItems":0,
+//  "items": {
+//    "$ref": "#/definitions/membershipstatistic"
+//  }
+}

@@ -1,0 +1,7 @@
+*** Settings ***
+Documentation  wxmp_membership
+Resource  ../resources.robot
+Library  robot_car_wash_wxmp_library.membership.MembershipLibrary
+Force Tags  model:wxmp_membership  车主微信端
+
+

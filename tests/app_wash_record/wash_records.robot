@@ -272,6 +272,24 @@ get car wash car in parking Fail With Wrong Params
    ${unessential_params}  create dictionary  parking_id=${parking_id_422}  
    run every case by params   get car wash car in parking fail 422   ${essential_params}  ${unessential_params}  success=False
 
+get car wash alone wash records Success 
+   [Documentation]  接口名:查询车牌号是否有洗车记录${\n}
+   ...              请求方式:Get${\n}
+   ...              预期结果:输入正确参数,http响应码返回 200,返回的Json数据为 WashRecord 列表。
+   [Tags]           Respcode:200
+   ${essential_params}  create dictionary  car_id=${car_id}  
+   ${unessential_params}  create dictionary  
+   run every case by params   get car wash alone wash records success 200   ${essential_params}  ${unessential_params}
+
+get car wash alone wash records Fail With Wrong Params
+   [Documentation]  接口名:查询车牌号是否有洗车记录${\n}
+   ...              请求方式:Get${\n}
+   ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
+   [Tags]           Respcode:422
+   ${essential_params}  create dictionary  car_id=${car_id_422}  
+   ${unessential_params}  create dictionary  
+   run every case by params   get car wash alone wash records fail 422   ${essential_params}  ${unessential_params}  success=False
+
 patch car wash wash records washer remark by wash record id Success 
    [Documentation]  接口名:备注${\n}
    ...              请求方式:Patch${\n}
@@ -524,6 +542,18 @@ get car wash car in parking Success 200
 get car wash car in parking Fail 422
    [Arguments]  &{kwargs}
    ${resp}=  get car wash car in parking  &{kwargs}
+   expect status is 422  ${resp}  
+
+get car wash alone wash records Success 200
+   [Arguments]  &{kwargs}
+   ${resp}=  get car wash alone wash records  &{kwargs}
+   expect status is 200  ${resp}  app_wash_record/get_car_wash_alone_wash_records_200.json
+   ${wash_record_id}  set variable if  ${resp.json()}!=[]  ${resp.json()[0]['wash_record_id']}
+   set global variable   ${wash_record_id}
+
+get car wash alone wash records Fail 422
+   [Arguments]  &{kwargs}
+   ${resp}=  get car wash alone wash records  &{kwargs}
    expect status is 422  ${resp}  
 
 patch car wash wash records washer remark by wash record id Success 204

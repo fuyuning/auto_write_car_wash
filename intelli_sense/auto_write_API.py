@@ -12,75 +12,87 @@ class AutoWriteRobot(object):
 
     @staticmethod
     def fail_print(help_str):
+        """
+        控制台打印红色消息
+        :param help_str: 消息
+        """
         print('\033[0;31m'+help_str+'\033[0m')
 
     @staticmethod
     def help_print(help_str):
+        """
+        控制台打印绿色消息
+        :param help_str: 消息
+        """
         print('\033[0;32m'+help_str+'\033[0m')
 
     @staticmethod
     def warning_print(help_str):
+        """
+        控制台打印黄色消息
+        :param help_str: 消息
+        """
         print('\033[0;33m'+help_str+'\033[0m')
 
-    # 解析爬取的数据
+    @classmethod
+    def create_folder(cls, folder_path):
+        """
+        校验是否存在目标路径，不存在则创建路径
+        :param folder_path: 目标路径
+        :type folder_path: str
+        :return: 提示
+        :rtype: str
+        """
+        status = '已存在'
+        folder = os.path.exists(folder_path)
+        if not folder:
+            os.makedirs(folder_path)
+            status = '创建成功'
+        return '路径：%s 状态：%s' % (folder_path, status)
+
+    @classmethod
+    def rename_folder(cls, folder_path, new_folder_path):
+        """
+        校验是否存在目标路径，不存在则创建路径
+        :param folder_path: 目标路径
+        :type folder_path: str
+        :param new_folder_path: 新路径
+        :type new_folder_path: str
+        :return: 提示
+        :rtype: str
+        """
+        folder = os.path.exists(folder_path)
+        status = '不存在'
+        if folder:
+            os.rename(folder_path, new_folder_path)
+            status = '删除成功'
+        return '路径：%s 状态：%s' % (folder_path, status)
+
+    @classmethod
+    def reset_csv(cls, csv_path):
+        """
+        重置csv
+        :param csv_path: csv路径
+        """
+        with open(csv_path, 'w+') as csv_file:
+            csv_file.write('')
+
     def _parse_file(self):
-        folder = os.path.exists(self.params_path)
-        if not folder:
-            os.makedirs(self.params_path)
-        folder = os.path.exists('../cache/json')
-        if not folder:
-            os.makedirs('../cache/json')
-        with open('%s/params_list.csv' % self.params_path, 'w+') as params_csv:
-            params_csv.write('')
-            params_csv.close()
-        with open('%s/server_list.txt' % self.document_path, 'r') as server_file:
-            for server_name in server_file:
-                server_name = server_name.replace('\n', '')
-                if server_name:
-                    with open('%s/%s_auto_write_schema.csv' % (self.document_path, server_name), 'r') as schema_csv:
-                        reader = csv.DictReader(schema_csv)
-                        for row in reader:
-                            with open('../cache/json/%s_%s.json' % (row['服务端'], row['实体名']), 'w+') as json_file:
-                                params_list = row['实体参数'][1:-1].replace('\'', '').replace(' ', '').split(',')
-                                type_list = row['参数类型'][1:-1].replace('\'', '').replace(' ', '').split(',')
-                                for i in range(0, len(type_list)):
-                                    if type_list[i] in ('Double', 'double', 'float', 'Float', 'integer', 'int', 'time'):
-                                        type_list[i] = 'number'
-                                    if type_list[i] in ('bool', 'Boolean'):
-                                        type_list[i] = 'boolean'
-                                    if type_list[i] == 'text':
-                                        type_list[i] = 'string'
-                                    if type_list[i] == 'json':
-                                        type_list[i] = 'object'
-                                    if type_list[i] == 'List':
-                                        type_list[i] = 'array'
-                                    if '<' in type_list[i] and '>' in type_list[i]:
-                                        type_list[i] = 'array'
-                                json_file.write('{\n  "definitions": {\n    "%s": {\n      "type":"object",'
-                                                '\n      "properties":{\n' % row['实体名'])
-                                for i in range(0, len(params_list)):
-                                    if i != len(params_list)-1:
-                                        end_point = ','
-                                    else:
-                                        end_point = ''
-                                    if params_list[i] == 'updated_time':
-                                        json_file.write('        "%s": {"type":["%s","null"]}%s\n' % (
-                                            params_list[i], type_list[i], end_point))
-                                    else:
-                                        json_file.write('        "%s": {"type":"%s"}%s\n' % (
-                                            params_list[i], type_list[i], end_point))
-                                json_file.write('      },\n      "required": [\n')
-                                for i in range(0, len(params_list)):
-                                    if i != len(params_list)-1:
-                                        end_point = ','
-                                    else:
-                                        end_point = ''
-                                    json_file.write('        "%s"%s\n' % (params_list[i], end_point))
-                                json_file.write('      ]\n    }\n  },\n  "type": "object",\n  "$ref": "#/definitions/'
-                                                '%s"\n//  "type": "array",\n//  "minItems":0,\n//  "items": {\n//    "'
-                                                '$ref": "#/definitions/%s"\n//  }\n}' % (row['实体名'], row['实体名']))
+        """
+        解析数据
+        """
+        # 校验文件是否存在
+        self.create_folder(self.params_path)
+        self.create_folder('../cache/json')
+        # 重置csv
+        self.reset_csv('%s/params_list.csv' % self.params_path)
+        # 生成所有schema文件
+        self.parse_schema()
+        # 读取生成需要的文件
         with open('%s/auto_write_robot.csv' % self.document_path, 'r') as file:
+            # 检查是否生成过
             folder = os.path.exists('%s/old_auto_write_robot.csv' % self.document_path)
+            # 如果有则筛选出修改或者新增的接口,没有则全视为新增
             if folder:
                 with open('%s/old_auto_write_robot.csv' % self.document_path, 'r') as old_file:
                     old_file_line = []
@@ -95,24 +107,28 @@ class AutoWriteRobot(object):
                             new_line.append(line)
             else:
                 new_line = file
+            # 初始化统计和写入参数
             index2 = 0
             flag = ''
             lib_name = ''
             model_list = []
             all_model_list = []
-            folder = os.path.exists('../cache/log')
-            if not folder:
-                os.makedirs('../cache/log')
-            folder = os.path.exists('../cache/log/文档状态码问题.csv')
-            if folder:
-                os.rename('../cache/log/文档状态码问题.csv', '../cache/log/old_文档状态码问题.csv')
+            # 校验文件，没有则创建
+            self.create_folder('../cache/log')
+            self.rename_folder('../cache/log/文档状态码问题.csv', '../cache/log/old_文档状态码问题.csv')
+            # 打开文档状态码问题csv
             with open('../cache/log/文档状态码问题.csv', 'w+', newline='') as csv_file:
                 # 表头
                 fieldnames = ['问题类型', '服务端', '模块名', '接口名', '请求方式', '问题', '预期']
+                # 创建写入
                 writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
+                # 写入表头
                 writer.writeheader()
+                # 创建读取
                 reader = csv.DictReader(new_line)
+                # 逐行遍历读取的信息
                 for data in reader:
+                    # 获取当前写入的接口信息
                     service_name = data['服务端'].replace(' ', '')
                     model_name = data['模块名'].replace(' ', '')
                     api_name = data['接口名'].replace(' ', '')
@@ -123,6 +139,7 @@ class AutoWriteRobot(object):
                     api_params_nn_list = data['是否必传'][1:-1].replace('\'', '').replace(' ', '').split(',')
                     api_codes_list = data['响应码情况'][1:-1].replace('\'', '').replace(' ', '').split(',')
                     return_entities = data['返回实体'].replace(' ', '')
+                    # 校验文档，并处理和记录问题
                     if len(re.findall('404', str(api_codes_list))) > 1:
                         index = []
                         for i in api_codes_list:
@@ -163,15 +180,20 @@ class AutoWriteRobot(object):
                         writer.writerow({'问题类型': '建议修改', '服务端': service_name, '模块名': model_name, '接口名': api_name,
                                          '请求方式': api_method, '问题': '应该返回 204, 但%s,请判断是否为文档及代码错误' % return_code,
                                          '预期': str(api_codes_list)})
+                    # 初始化接口信息列表
                     api_list = []
+                    # 获取 服务端_模块名
                     local = '%s_%s' % (service_name, model_name)
-                    class_name = self._upper_name(model_name)
+                    # 判断是否写入同一个文件
                     if flag != local:
                         flag = local
                         all_model_list.append(model_list)
                         model_list = []
+                        # 写入当前模块robot文件的settings头
                         lib_name, model_name = self._write_robot_file_settings(service_name, model_name)
+                        # 写入当前模块library文件的头
                         class_name = self._write_library_head(lib_name, model_name)
+                    # 生成接口信息列表
                     api_list.append(service_name)
                     api_list.append(model_name)
                     api_list.append(api_name)
@@ -184,21 +206,108 @@ class AutoWriteRobot(object):
                     api_list.append(api_params_nn_list)
                     api_list.append(api_params_type_list)
                     api_list.append(class_name)
+                    # 将接口信息列表存入模块列表
                     model_list.append(api_list)
+                    # 限制最多接口数
                     if index2 == 65535:
                         break
                     index2 += 1
+            # 将模块列表存入总计模块列表
             all_model_list.append(model_list)
+            # 控制台打印提示
             self.help_print('总计写入模块：%s个' % str(len(all_model_list) - 1))
+            # 遍历得到模块列表
             for i in range(0, len(all_model_list)):
+                # 解析模块
                 self.parse_model_file(all_model_list[i])
+
+    def parse_schema(self):
+        """
+        解析生成schema
+        """
+        # 打开服务端名称缓存文件
+        with open('%s/server_list.txt' % self.document_path, 'r') as server_file:
+            # 遍历获取服务端名称
+            for server_name in server_file:
+                server_name = server_name.replace('\n', '')
+                if server_name:
+                    # 打开用于生成schema的缓存文件
+                    with open('%s/%s_auto_write_schema.csv' % (self.document_path, server_name), 'r') as schema_csv:
+                        # 创建读取
+                        reader = csv.DictReader(schema_csv)
+                        index = 0
+                        # 遍历每行数据
+                        for row in reader:
+                            # 生成json文件
+                            with open('../cache/json/%s_%s.json' % (row['服务端'], row['实体名']), 'w+') as json_file:
+                                # 读取参数列表,参数类型列表
+                                params_list = row['实体参数'][1:-1].replace('\'', '').replace(' ', '').split(',')
+                                type_list = row['参数类型'][1:-1].replace('\'', '').replace(' ', '').split(',')
+                                # 处理文档中的参数类型转为schema中的参数类型
+                                for i in range(0, len(type_list)):
+                                    if type_list[i] in ('Double', 'double', 'float', 'Float', 'integer', 'int', 'time'):
+                                        type_list[i] = 'number'
+                                    if type_list[i] in ('bool', 'Boolean'):
+                                        type_list[i] = 'boolean'
+                                    if type_list[i] == 'text':
+                                        type_list[i] = 'string'
+                                    if type_list[i] == 'json':
+                                        type_list[i] = 'object'
+                                    if type_list[i] == 'List':
+                                        type_list[i] = 'array'
+                                    if '<' in type_list[i] and '>' in type_list[i]:
+                                        type_list[i] = 'array'
+                                # 写入.json文件中
+                                json_file.write('{\n  "definitions": {\n    "%s": {\n      "type":"object",'
+                                                '\n      "properties":{\n' % row['实体名'])
+                                # 遍历参数
+                                for i in range(0, len(params_list)):
+                                    # 判断是否为最后一个,是则不加逗号
+                                    if i != len(params_list) - 1:
+                                        end_point = ','
+                                    else:
+                                        end_point = ''
+                                    # 为列表内的字段加上null的类型,其他的正常写入
+                                    if params_list[i] in ('updated_time',):
+                                        json_file.write('        "%s": {"type":["%s","null"]}%s\n' % (
+                                            params_list[i], type_list[i], end_point))
+                                    else:
+                                        json_file.write('        "%s": {"type":"%s"}%s\n' % (
+                                            params_list[i], type_list[i], end_point))
+                                # 写入required
+                                json_file.write('      },\n      "required": [\n')
+                                # 遍历参数
+                                for i in range(0, len(params_list)):
+                                    # 判断是否为最后一个,是则不加逗号
+                                    if i != len(params_list) - 1:
+                                        end_point = ','
+                                    else:
+                                        end_point = ''
+                                    # 写入
+                                    json_file.write('        "%s"%s\n' % (params_list[i], end_point))
+                                # 写入object和array两种情况,方便后期自行选择
+                                json_file.write('      ]\n    }\n  },\n  "type": "object",\n  "$ref": "#/definitions/'
+                                                '%s"\n//  "type": "array",\n//  "minItems":0,\n//  "items": {\n//    "'
+                                                '$ref": "#/definitions/%s"\n//  }\n}' % (row['实体名'], row['实体名']))
+                                # 控制台生成信息打印
+                                print('正在生成 %s 的schema校验文件,路径：../cache/json/%s_%s.json' % (
+                                    row['实体名'], row['服务端'], row['实体名']))
+                                index += 1
+                        # 控制台统计打印
+                        self.help_print('总计生成schema文件: %s个' % index)
 
     # 解析模块文件
     def parse_model_file(self, model):
+        """
+        解析模块
+        :param model: 模块
+        """
+        # 开关和参数初始化
         case_switch = True
         keyword_switch = True
         id_in_url = []
         model_list_sort = []
+        # 请求方法排序
         for i in range(0, 5):
             for j in model:
                 if j[3] == 'POST' and i == 0:
@@ -211,6 +320,7 @@ class AutoWriteRobot(object):
                     model_list_sort.append(j)
                 if j[3] == 'DELETE' and i == 4:
                     model_list_sort.append(j)
+        # 获取url中包含的动态id列表
         for i in model_list_sort:
             url_parts = i[4].split('/')
             for j in url_parts:
@@ -218,7 +328,9 @@ class AutoWriteRobot(object):
                     j = j.replace(':', '')
                     if j not in id_in_url:
                         id_in_url.append(j)
+        # 按顺序写入文件
         for i in range(0, 3):
+            # 遍历得到接口
             for api in model_list_sort:
                 params_txt = open('../cache/params/params_list.txt', "a+")
                 service_name = api[0]
@@ -234,6 +346,7 @@ class AutoWriteRobot(object):
                 api_params_type_list = api[10]
                 class_name = api[11]
                 api_codes_list_sort = api_codes_list
+                # 将403排序到第一位
                 if '403' in api_codes_list:
                     code_index = 0
                     for api_code in api_codes_list:
@@ -241,13 +354,16 @@ class AutoWriteRobot(object):
                             api_codes_list_sort[0], api_codes_list_sort[code_index] = api_codes_list[code_index], \
                                                                                       api_codes_list[0]
                         code_index += 1
+                # 第一次循环写入library的函数
                 if i == 0:
                     self._write_lib_file(class_name, lib_name, api_method, api_url, api_params_name_list)
+                # 第二次循环写入robot的testcase
                 if i == 1:
                     self._write_robot_file_case(params_txt, service_name, model_name, api_name, api_method, api_url,
                                                 api_params_name_list, api_codes_list_sort, return_entities,
                                                 api_params_nn_list, api_params_type_list, case_switch)
                     case_switch = False
+                # 第三次循环写入robot的keyword
                 if i == 2:
                     self._write_robot_file_keywords(service_name, model_name, api_method, api_url, api_codes_list_sort,
                                                     id_in_url, keyword_switch)
@@ -260,7 +376,7 @@ class AutoWriteRobot(object):
         lib = os.path.exists(lib_name)
         if not lib:
             os.makedirs(lib_name)
-        class_name = self._upper_name(model_name)
+        class_name = self._upper_first_char(model_name)
         lib_import = lib_name.split('/')[1]
         open('%s/__init__.py' % lib_name, 'w+')
         folder = os.path.exists('%s/%sLibrary.py' % (lib_name, class_name))
@@ -275,7 +391,7 @@ class AutoWriteRobot(object):
 
     # 根据爬取的数据生成library
     def _write_lib_file(self, class_name, lib_name, api_method, api_url, api_params_name_list):
-        api_method = self._upper_name(api_method)
+        api_method = self._upper_first_char(api_method)
         lib_name = lib_name.replace('.', '/')
         lib_file = open('../%s/%sLibrary.py' % (lib_name, class_name), 'a+')
         api_params = ''
@@ -351,7 +467,7 @@ class AutoWriteRobot(object):
             teardown = ''
             name_tag = '车主微信端'
         lib_name = lib_name[:-1] + '.' + model_name
-        class_name = self._upper_name(model_name)
+        class_name = self._upper_first_char(model_name)
         folder = os.path.exists('../tests/%s/%ss.robot' % (full_name, model_name))
         if folder:
             os.rename('../tests/%s/%ss.robot' % (full_name, model_name), '../tests/%s/old_%ss.robot' %
@@ -390,7 +506,7 @@ class AutoWriteRobot(object):
                 if j not in id_in_url:
                     id_in_url.append(j)
         full_name = service_name + '_' + model_name
-        api_method = self._upper_name(api_method)
+        api_method = self._upper_first_char(api_method)
         method_name = (api_method + self._parse_url_part(api_url)[0]).lower().replace('_', ' ')
         for api_code in api_codes_list:
             wrong_id_value = ''
@@ -518,7 +634,7 @@ class AutoWriteRobot(object):
     def _write_robot_file_keywords(self, service_name, model_name, api_method, api_url, api_codes_list,
                                    id_in_url, keyword_switch):
         full_name = '%s_%s' % (service_name, model_name)
-        api_method = self._upper_name(api_method)
+        api_method = self._upper_first_char(api_method)
         for api_code in api_codes_list:
             method_name = (api_method + self._parse_url_part(api_url)[0]).lower().replace('_', ' ')
             if api_code == '200':
@@ -574,7 +690,7 @@ class AutoWriteRobot(object):
             robot.write('\n')
 
     @classmethod
-    def _upper_name(cls, name, place=False):
+    def _upper_first_char(cls, name, place=False):
         if '_' in name:
             str_list = name.split('_')
         else:
@@ -624,11 +740,14 @@ class AutoWriteRobot(object):
 
     # run方法
     def run(self):
+        # 解析数据
         self._parse_file()
 
 
 if __name__ == '__main__':
+    # 实例化
     auto_write_robot = AutoWriteRobot()
+    # run方法
     auto_write_robot.run()
 
 

@@ -1,0 +1,38 @@
+{
+  "definitions": {
+    "carwasher": {
+      "type":"object",
+      "properties":{
+        "username": {"type":"string"},
+        "name": {"type":"string"},
+        "mobile": {"type":"string"},
+        "sex": {"type":"number"},
+        "birthday": {"type":"string"},
+        "ID_card": {"type":"string"},
+        "address": {"type":"string"},
+        "promoter_no": {"type":"string"},
+        "password": {"type":"string"},
+        "is_active": {"type":"boolean"}
+      },
+      "required": [
+        "username",
+        "name",
+        "mobile",
+        "sex",
+        "birthday",
+        "ID_card",
+        "address",
+        "promoter_no",
+        "password",
+        "is_active"
+      ]
+    }
+  },
+  "type": "object",
+  "$ref": "#/definitions/carwasher"
+//  "type": "array",
+//  "minItems":0,
+//  "items": {
+//    "$ref": "#/definitions/carwasher"
+//  }
+}

@@ -26,12 +26,23 @@ post admin lucky flops Fail With Wrong Params
    ${unessential_params}  create dictionary  price_min=${price_min_422}  price_status=${price_status_422}  enabled=ThisIsRobot!  
    run every case by params   post admin lucky flops fail 422   ${essential_params}  ${unessential_params}  success=False
 
-post admin lucky flops import Success 
+post admin lucky flop users import Success 
    [Documentation]  接口名:用户翻牌规则${\n}
    ...              请求方式:Post${\n}
    ...              预期结果:输入正确参数,http响应码返回 200,返回的Json数据为  列表。
    [Tags]           Respcode:200
-    post admin lucky flops import success 200
+   ${essential_params}  create dictionary  file=${Please_input}  
+   ${unessential_params}  create dictionary  
+   run every case by params   post admin lucky flop users import success 200   ${essential_params}  ${unessential_params}
+
+post admin lucky flop users import Fail With Wrong Params
+   [Documentation]  接口名:用户翻牌规则${\n}
+   ...              请求方式:Post${\n}
+   ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
+   [Tags]           Respcode:422
+   ${essential_params}  create dictionary  file=${Please_input}  
+   ${unessential_params}  create dictionary  
+   run every case by params   post admin lucky flop users import fail 422   ${essential_params}  ${unessential_params}  success=False
 
 get admin lucky flops Success 
    [Documentation]  接口名:获取翻牌列表${\n}
@@ -115,6 +126,31 @@ put admin lucky flops by lucky flop id Fail With Wrong Params
    ${unessential_params}  create dictionary  price_min=${price_min_422}  price_status=${price_status_422}  enabled=ThisIsRobot!  
    run every case by params   put admin lucky flops by lucky flop id fail 422   ${essential_params}  ${unessential_params}    lucky_flop_id=${lucky_flop_id}  success=False
 
+put admin lucky flop default by lucky flop default id Fail With Wrong Url
+   [Documentation]  接口名:修改新用户规则${\n}
+   ...              请求方式:Put${\n}
+   ...              预期结果:输入正确参数及错误的url,http响应码返回 404,无Json数据返回。
+   [Tags]           Respcode:404
+   put admin lucky flop default by lucky flop default id fail 404     lucky_flop_default_id=${wrong_url_id}    lucky_flop_id=${lucky_flop_id}  
+
+put admin lucky flop default by lucky flop default id Success 
+   [Documentation]  接口名:修改新用户规则${\n}
+   ...              请求方式:Put${\n}
+   ...              预期结果:输入正确参数,http响应码返回 204,无Json数据返回。
+   [Tags]           Respcode:204
+   ${essential_params}  create dictionary  
+   ${unessential_params}  create dictionary  lucky_flop_id=${lucky_flop_id}  
+   run every case by params   put admin lucky flop default by lucky flop default id success 204   ${essential_params}  ${unessential_params}    lucky_flop_default_id=${lucky_flop_default_id}
+
+put admin lucky flop default by lucky flop default id Fail With Wrong Params
+   [Documentation]  接口名:修改新用户规则${\n}
+   ...              请求方式:Put${\n}
+   ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
+   [Tags]           Respcode:422
+   ${essential_params}  create dictionary  
+   ${unessential_params}  create dictionary  lucky_flop_id=${lucky_flop_id_422}  
+   run every case by params   put admin lucky flop default by lucky flop default id fail 422   ${essential_params}  ${unessential_params}    lucky_flop_default_id=${lucky_flop_default_id}  success=False
+
 patch admin lucky flops enabled by lucky flop id Fail With Wrong Url
    [Documentation]  接口名:翻牌启用/关闭${\n}
    ...              请求方式:Patch${\n}
@@ -175,6 +211,7 @@ delete admin lucky flops by lucky flop id Success
 
 *** Variables ***
 ${lucky_flop_id}  
+${lucky_flop_default_id}  
 
 
 *** Keywords ***
@@ -184,18 +221,27 @@ post admin lucky flops Success 201
    expect status is 201  ${resp}  admin_lucky_flop/post_admin_lucky_flops_201.json
    ${lucky_flop_id}  set variable if  ${resp.json()}!=[]  ${resp.json()[0]['lucky_flop_id']}
    set global variable   ${lucky_flop_id}
+   ${lucky_flop_default_id}  set variable if  ${resp.json()}!=[]  ${resp.json()[0]['lucky_flop_default_id']}
+   set global variable   ${lucky_flop_default_id}
 
 post admin lucky flops Fail 422
    [Arguments]  &{kwargs}
    ${resp}=  post admin lucky flops  &{kwargs}
    expect status is 422  ${resp}  
 
-post admin lucky flops import Success 200
+post admin lucky flop users import Success 200
    [Arguments]  &{kwargs}
-   ${resp}=  post admin lucky flops import  &{kwargs}
-   expect status is 200  ${resp}  admin_lucky_flop/post_admin_lucky_flops_import_200.json
+   ${resp}=  post admin lucky flop users import  &{kwargs}
+   expect status is 200  ${resp}  admin_lucky_flop/post_admin_lucky_flop_users_import_200.json
    ${lucky_flop_id}  set variable if  ${resp.json()}!=[]  ${resp.json()[0]['lucky_flop_id']}
    set global variable   ${lucky_flop_id}
+   ${lucky_flop_default_id}  set variable if  ${resp.json()}!=[]  ${resp.json()[0]['lucky_flop_default_id']}
+   set global variable   ${lucky_flop_default_id}
+
+post admin lucky flop users import Fail 422
+   [Arguments]  &{kwargs}
+   ${resp}=  post admin lucky flop users import  &{kwargs}
+   expect status is 422  ${resp}  
 
 get admin lucky flops Success 200
    [Arguments]  &{kwargs}
@@ -203,6 +249,8 @@ get admin lucky flops Success 200
    expect status is 200  ${resp}  admin_lucky_flop/get_admin_lucky_flops_200.json
    ${lucky_flop_id}  set variable if  ${resp.json()}!=[]  ${resp.json()[0]['lucky_flop_id']}
    set global variable   ${lucky_flop_id}
+   ${lucky_flop_default_id}  set variable if  ${resp.json()}!=[]  ${resp.json()[0]['lucky_flop_default_id']}
+   set global variable   ${lucky_flop_default_id}
 
 get admin lucky flops Fail 422
    [Arguments]  &{kwargs}
@@ -220,6 +268,8 @@ get admin lucky flop awards Success 200
    expect status is 200  ${resp}  admin_lucky_flop/get_admin_lucky_flop_awards_200.json
    ${lucky_flop_id}  set variable if  ${resp.json()}!=[]  ${resp.json()[0]['lucky_flop_id']}
    set global variable   ${lucky_flop_id}
+   ${lucky_flop_default_id}  set variable if  ${resp.json()}!=[]  ${resp.json()[0]['lucky_flop_default_id']}
+   set global variable   ${lucky_flop_default_id}
 
 get admin lucky flops by lucky flop id Fail 404
    [Arguments]  &{kwargs}
@@ -232,6 +282,8 @@ get admin lucky flops by lucky flop id Success 200
    expect status is 200  ${resp}  admin_lucky_flop/get_admin_lucky_flops_by_lucky_flop_id_200.json
    ${lucky_flop_id}  set variable if  ${resp.json()}!=[]  ${resp.json()[0]['lucky_flop_id']}
    set global variable   ${lucky_flop_id}
+   ${lucky_flop_default_id}  set variable if  ${resp.json()}!=[]  ${resp.json()[0]['lucky_flop_default_id']}
+   set global variable   ${lucky_flop_default_id}
 
 get admin lucky flop default Success 200
    [Arguments]  &{kwargs}
@@ -239,6 +291,8 @@ get admin lucky flop default Success 200
    expect status is 200  ${resp}  admin_lucky_flop/get_admin_lucky_flop_default_200.json
    ${lucky_flop_id}  set variable if  ${resp.json()}!=[]  ${resp.json()[0]['lucky_flop_id']}
    set global variable   ${lucky_flop_id}
+   ${lucky_flop_default_id}  set variable if  ${resp.json()}!=[]  ${resp.json()[0]['lucky_flop_default_id']}
+   set global variable   ${lucky_flop_default_id}
 
 put admin lucky flops by lucky flop id Fail 404
    [Arguments]  &{kwargs}
@@ -253,6 +307,21 @@ put admin lucky flops by lucky flop id Success 204
 put admin lucky flops by lucky flop id Fail 422
    [Arguments]  &{kwargs}
    ${resp}=  put admin lucky flops by lucky flop id  &{kwargs}
+   expect status is 422  ${resp}  
+
+put admin lucky flop default by lucky flop default id Fail 404
+   [Arguments]  &{kwargs}
+   ${resp}=  put admin lucky flop default by lucky flop default id  &{kwargs}
+   expect status is 404  ${resp}  
+
+put admin lucky flop default by lucky flop default id Success 204
+   [Arguments]  &{kwargs}
+   ${resp}=  put admin lucky flop default by lucky flop default id  &{kwargs}
+   expect status is 204  ${resp}  
+
+put admin lucky flop default by lucky flop default id Fail 422
+   [Arguments]  &{kwargs}
+   ${resp}=  put admin lucky flop default by lucky flop default id  &{kwargs}
    expect status is 422  ${resp}  
 
 patch admin lucky flops enabled by lucky flop id Fail 404

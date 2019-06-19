@@ -1,0 +1,52 @@
+{
+  "definitions": {
+    "couponpoint": {
+      "type":"object",
+      "properties":{
+        "coupon_point_id": {"type":"string"},
+        "coupon_point_record_id": {"type":"string"},
+        "coupon_pool_id": {"type":"string"},
+        "user_id": {"type":"string"},
+        "mobile": {"type":"string"},
+        "coupon_name": {"type":"string"},
+        "coupon_type": {"type":"string"},
+        "created_time": {"type":"string"},
+        "status": {"type":"number"},
+        "is_used": {"type":"number"},
+        "updated_time": {"type":["number","null"]},
+        "remark": {"type":"string"},
+        "is_deleted": {"type":"boolean"},
+        "deleted_time": {"type":"number"},
+        "coupon": {"type":"string"},
+        "auto_coupon_point": {"type":"boolean"},
+        "coupon_point_auto_id": {"type":"string"}
+      },
+      "required": [
+        "coupon_point_id",
+        "coupon_point_record_id",
+        "coupon_pool_id",
+        "user_id",
+        "mobile",
+        "coupon_name",
+        "coupon_type",
+        "created_time",
+        "status",
+        "is_used",
+        "updated_time",
+        "remark",
+        "is_deleted",
+        "deleted_time",
+        "coupon",
+        "auto_coupon_point",
+        "coupon_point_auto_id"
+      ]
+    }
+  },
+  "type": "object",
+  "$ref": "#/definitions/couponpoint"
+//  "type": "array",
+//  "minItems":0,
+//  "items": {
+//    "$ref": "#/definitions/couponpoint"
+//  }
+}

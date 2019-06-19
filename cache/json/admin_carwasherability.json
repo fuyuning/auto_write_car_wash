@@ -1,0 +1,32 @@
+{
+  "definitions": {
+    "carwasherability": {
+      "type":"object",
+      "properties":{
+        "car_washer_ability_id": {"type":"string"},
+        "ability_value": {"type":"number"},
+        "created_time": {"type":"number"},
+        "updated_time": {"type":["number","null"]},
+        "remark": {"type":"string"},
+        "is_deleted": {"type":"boolean"},
+        "deleted_time": {"type":"number"}
+      },
+      "required": [
+        "car_washer_ability_id",
+        "ability_value",
+        "created_time",
+        "updated_time",
+        "remark",
+        "is_deleted",
+        "deleted_time"
+      ]
+    }
+  },
+  "type": "object",
+  "$ref": "#/definitions/carwasherability"
+//  "type": "array",
+//  "minItems":0,
+//  "items": {
+//    "$ref": "#/definitions/carwasherability"
+//  }
+}

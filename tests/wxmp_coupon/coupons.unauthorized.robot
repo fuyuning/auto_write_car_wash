@@ -20,6 +20,13 @@ post coupon pools achieve by coupon pool id Fail Without Login
    [Tags]           Respcode:403
    post coupon pools achieve by coupon pool id fail 403     coupon_pool_id=${coupon_pool_id}
 
+get user coupons count Fail Without Login
+   [Documentation]  接口名:券总数接口${\n}
+   ...              请求方式:Get${\n}
+   ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
+   [Tags]           Respcode:403
+    get user coupons count fail 403
+
 get user coupons usable Fail Without Login
    [Documentation]  接口名:我本单能用的一张优惠券${\n}
    ...              请求方式:Get${\n}
@@ -62,6 +69,11 @@ post user coupon pools achieve Fail 403
 post coupon pools achieve by coupon pool id Fail 403
    [Arguments]  &{kwargs}
    ${resp}=  post coupon pools achieve by coupon pool id  &{kwargs}
+   expect status is 403  ${resp}  
+
+get user coupons count Fail 403
+   [Arguments]  &{kwargs}
+   ${resp}=  get user coupons count  &{kwargs}
    expect status is 403  ${resp}  
 
 get user coupons usable Fail 403

@@ -1,0 +1,40 @@
+{
+  "definitions": {
+    "voucherorder": {
+      "type":"object",
+      "properties":{
+        "voucher_order_id": {"type":"string"},
+        "voucher_order_no": {"type":"string"},
+        "price": {"type":"number"},
+        "user_id": {"type":"string"},
+        "mobile": {"type":"string"},
+        "bought_time": {"type":"number"},
+        "created_time": {"type":"number"},
+        "updated_time": {"type":["number","null"]},
+        "remark": {"type":"string"},
+        "is_deleted": {"type":"boolean"},
+        "deleted_time": {"type":"number"}
+      },
+      "required": [
+        "voucher_order_id",
+        "voucher_order_no",
+        "price",
+        "user_id",
+        "mobile",
+        "bought_time",
+        "created_time",
+        "updated_time",
+        "remark",
+        "is_deleted",
+        "deleted_time"
+      ]
+    }
+  },
+  "type": "object",
+  "$ref": "#/definitions/voucherorder"
+//  "type": "array",
+//  "minItems":0,
+//  "items": {
+//    "$ref": "#/definitions/voucherorder"
+//  }
+}

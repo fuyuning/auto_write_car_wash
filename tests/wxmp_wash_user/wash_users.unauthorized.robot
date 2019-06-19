@@ -25,7 +25,7 @@ put user user info Fail Without Login
    ...              请求方式:Put${\n}
    ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
    [Tags]           Respcode:403
-   put user user info fail 403   wx_nickname=${wx_nickname}  wx_avatarurl=${wx_avatarurl}  unionid=${unionid}  mobile=${mobile}    
+   put user user info fail 403   wx_nickname=${wx_nickname}  wx_avatarurl=${wx_avatarurl}  unionid=${unionid}  mobile=${mobile}  city=${city}  gender=${gender}  mobile_brand=${mobile_brand}  mobile_model=${mobile_model}  position=${position}  lon=${lon}  lat=${lat}    
 
 
 *** Keywords ***

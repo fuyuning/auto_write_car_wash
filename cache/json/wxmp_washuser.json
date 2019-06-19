@@ -1,0 +1,36 @@
+{
+  "definitions": {
+    "washuser": {
+      "type":"object",
+      "properties":{
+        "user_id": {"type":"string"},
+        "wx_nickname": {"type":"string"},
+        "wx_avatarurl": {"type":"string"},
+        "mobile": {"type":"string"},
+        "city": {"type":"string"},
+        "gender": {"type":"number"},
+        "brand": {"type":"string"},
+        "model": {"type":"string"},
+        "position": {"type":"string"}
+      },
+      "required": [
+        "user_id",
+        "wx_nickname",
+        "wx_avatarurl",
+        "mobile",
+        "city",
+        "gender",
+        "brand",
+        "model",
+        "position"
+      ]
+    }
+  },
+  "type": "object",
+  "$ref": "#/definitions/washuser"
+//  "type": "array",
+//  "minItems":0,
+//  "items": {
+//    "$ref": "#/definitions/washuser"
+//  }
+}

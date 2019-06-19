@@ -31,7 +31,7 @@ post orders Success
    ...              预期结果:输入正确参数,http响应码返回 201,返回的Json数据符合验证。
    [Tags]           Respcode:201
    ${essential_params}  create dictionary  service_group_id=${service_group_id}  mobile=${mobile}  name=${name}  order_type=${order_type}  user_car_id=${user_car_id}  user_contact_id=${user_contact_id}  
-   ${unessential_params}  create dictionary  wash_group_id=${wash_group_id}  wash_normal_id=${wash_normal_id}  parking_id=${parking_id}  wxmp_remark=${wxmp_remark}  coupon_id=${coupon_id}  car_id=${car_id}  car_type=${car_type}  car_place=${car_place}  card_id=${card_id}  position=${position}  lucky_flop_award_id=${lucky_flop_award_id}  
+   ${unessential_params}  create dictionary  wash_group_id=${wash_group_id}  wash_normal_id=${wash_normal_id}  parking_id=${parking_id}  wxmp_remark=${wxmp_remark}  coupon_id=${coupon_id}  car_id=${car_id}  car_type=${car_type}  car_place=${car_place}  card_id=${card_id}  position=${position}  lucky_flop_award_id=${lucky_flop_award_id}  voucher_id=${voucher_id}  
    run every case by params   post orders success 201   ${essential_params}  ${unessential_params}
 
 post orders Fail With Wrong Params
@@ -40,7 +40,7 @@ post orders Fail With Wrong Params
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create dictionary  service_group_id=${service_group_id_422}  mobile=${mobile_422}  name=${name_422}  order_type=${order_type_422}  user_car_id=${user_car_id_422}  user_contact_id=${user_contact_id_422}  
-   ${unessential_params}  create dictionary  wash_group_id=${wash_group_id_422}  wash_normal_id=${wash_normal_id_422}  parking_id=${parking_id_422}  wxmp_remark=${wxmp_remark_422}  coupon_id=${coupon_id_422}  car_id=${car_id_422}  car_type=${car_type_422}  car_place=${car_place_422}  card_id=${card_id_422}  position=${position_422}  lucky_flop_award_id=${lucky_flop_award_id_422}  
+   ${unessential_params}  create dictionary  wash_group_id=${wash_group_id_422}  wash_normal_id=${wash_normal_id_422}  parking_id=${parking_id_422}  wxmp_remark=${wxmp_remark_422}  coupon_id=${coupon_id_422}  car_id=${car_id_422}  car_type=${car_type_422}  car_place=${car_place_422}  card_id=${card_id_422}  position=${position_422}  lucky_flop_award_id=${lucky_flop_award_id_422}  voucher_id=${voucher_id_422}  
    run every case by params   post orders fail 422   ${essential_params}  ${unessential_params}  success=False
 
 post orders pay by order id Fail With Wrong Url

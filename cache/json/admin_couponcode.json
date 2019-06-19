@@ -1,0 +1,50 @@
+{
+  "definitions": {
+    "couponcode": {
+      "type":"object",
+      "properties":{
+        "coupon_code_id": {"type":"string"},
+        "coupon_code_record_id": {"type":"string"},
+        "coupon_code_no": {"type":"string"},
+        "coupon_money": {"type":"number"},
+        "user_id": {"type":"string"},
+        "mobile": {"type":"string"},
+        "status": {"type":"number"},
+        "car_id": {"type":"string"},
+        "receive_time": {"type":"number"},
+        "used_time": {"type":"number"},
+        "is_new_user": {"type":"boolean"},
+        "created_time": {"type":"number"},
+        "updated_time": {"type":["number","null"]},
+        "remark": {"type":"string"},
+        "is_deleted": {"type":"boolean"},
+        "deleted_time": {"type":"number"}
+      },
+      "required": [
+        "coupon_code_id",
+        "coupon_code_record_id",
+        "coupon_code_no",
+        "coupon_money",
+        "user_id",
+        "mobile",
+        "status",
+        "car_id",
+        "receive_time",
+        "used_time",
+        "is_new_user",
+        "created_time",
+        "updated_time",
+        "remark",
+        "is_deleted",
+        "deleted_time"
+      ]
+    }
+  },
+  "type": "object",
+  "$ref": "#/definitions/couponcode"
+//  "type": "array",
+//  "minItems":0,
+//  "items": {
+//    "$ref": "#/definitions/couponcode"
+//  }
+}

@@ -32,7 +32,7 @@ post admin coupon point records Fail With Wrong Params
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
    ${essential_params}  create dictionary  user_ids=${user_ids_422}  coupon_pool_id=${coupon_pool_id_422}  
-   ${unessential_params}  create dictionary  is_short_message_template=ThisIsRobot!  
+   ${unessential_params}  create dictionary  is_short_message_template=ThisIsRobot!  short_message_template_id=${short_message_template_id_422}  sent_number=${sent_number_422}  
    run every case by params   post admin coupon point records fail 422   ${essential_params}  ${unessential_params}  success=False
 
 post admin coupon point records Success 
@@ -41,7 +41,7 @@ post admin coupon point records Success
    ...              预期结果:输入正确参数,http响应码返回 200,返回的Json数据为  列表。
    [Tags]           Respcode:200
    ${essential_params}  create dictionary  user_ids=${user_ids}  coupon_pool_id=${coupon_pool_id}  
-   ${unessential_params}  create dictionary  is_short_message_template=False  
+   ${unessential_params}  create dictionary  is_short_message_template=False  short_message_template_id=${short_message_template_id}  sent_number=${sent_number}  
    run every case by params   post admin coupon point records success 200   ${essential_params}  ${unessential_params}
 
 post admin coupon point records upload Success 

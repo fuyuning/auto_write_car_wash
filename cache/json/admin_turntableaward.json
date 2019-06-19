@@ -1,0 +1,22 @@
+{
+  "definitions": {
+    "turntableaward": {
+      "type":"object",
+      "properties":{
+        "wash_user_group_id": {"type":"string"},
+        "name": {"type":"string"}
+      },
+      "required": [
+        "wash_user_group_id",
+        "name"
+      ]
+    }
+  },
+  "type": "object",
+  "$ref": "#/definitions/turntableaward"
+//  "type": "array",
+//  "minItems":0,
+//  "items": {
+//    "$ref": "#/definitions/turntableaward"
+//  }
+}

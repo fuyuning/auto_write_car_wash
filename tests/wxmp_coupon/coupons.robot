@@ -64,6 +64,13 @@ post coupon pools achieve by coupon pool id Fail With Wrong Url
    [Tags]           Respcode:404
    post coupon pools achieve by coupon pool id fail 404     coupon_pool_id=${wrong_url_id}
 
+get user coupons count Success 
+   [Documentation]  接口名:券总数接口${\n}
+   ...              请求方式:Get${\n}
+   ...              预期结果:输入正确参数,http响应码返回 200,返回的Json数据为  列表。
+   [Tags]           Respcode:200
+    get user coupons count success 200
+
 get user coupons usable Success 
    [Documentation]  接口名:我本单能用的一张优惠券${\n}
    ...              请求方式:Get${\n}
@@ -205,6 +212,13 @@ post coupon pools achieve by coupon pool id Fail 404
    [Arguments]  &{kwargs}
    ${resp}=  post coupon pools achieve by coupon pool id  &{kwargs}
    expect status is 404  ${resp}  
+
+get user coupons count Success 200
+   [Arguments]  &{kwargs}
+   ${resp}=  get user coupons count  &{kwargs}
+   expect status is 200  ${resp}  wxmp_coupon/get_user_coupons_count_200.json
+   ${coupon_pool_id}  set variable if  ${resp.json()}!=[]  ${resp.json()[0]['coupon_pool_id']}
+   set global variable   ${coupon_pool_id}
 
 get user coupons usable Success 200
    [Arguments]  &{kwargs}

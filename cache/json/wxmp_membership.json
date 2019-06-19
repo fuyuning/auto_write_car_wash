@@ -1,0 +1,40 @@
+{
+  "definitions": {
+    "membership": {
+      "type":"object",
+      "properties":{
+        "membership_id": {"type":"string"},
+        "card_no": {"type":"string"},
+        "card_name": {"type":"string"},
+        "user_id": {"type":"string"},
+        "start_time": {"type":"number"},
+        "end_time": {"type":"number"},
+        "created_time": {"type":"number"},
+        "updated_time": {"type":["number","null"]},
+        "remark": {"type":"string"},
+        "is_deleted": {"type":"boolean"},
+        "deleted_time": {"type":"number"}
+      },
+      "required": [
+        "membership_id",
+        "card_no",
+        "card_name",
+        "user_id",
+        "start_time",
+        "end_time",
+        "created_time",
+        "updated_time",
+        "remark",
+        "is_deleted",
+        "deleted_time"
+      ]
+    }
+  },
+  "type": "object",
+  "$ref": "#/definitions/membership"
+//  "type": "array",
+//  "minItems":0,
+//  "items": {
+//    "$ref": "#/definitions/membership"
+//  }
+}

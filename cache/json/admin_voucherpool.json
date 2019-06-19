@@ -1,0 +1,54 @@
+{
+  "definitions": {
+    "voucherpool": {
+      "type":"object",
+      "properties":{
+        "voucher_pool_id": {"type":"string"},
+        "name": {"type":"string"},
+        "price": {"type":"number"},
+        "denomination": {"type":"number"},
+        "num": {"type":"number"},
+        "num_status": {"type":"boolean"},
+        "sell": {"type":"number"},
+        "days": {"type":"number"},
+        "description": {"type":"string"},
+        "buy_num": {"type":"number"},
+        "give_num": {"type":"number"},
+        "service_groups": {"type":"array"},
+        "service_types": {"type":"string"},
+        "created_time": {"type":"number"},
+        "updated_time": {"type":["number","null"]},
+        "remark": {"type":"string"},
+        "is_deleted": {"type":"boolean"},
+        "deleted_time": {"type":"number"}
+      },
+      "required": [
+        "voucher_pool_id",
+        "name",
+        "price",
+        "denomination",
+        "num",
+        "num_status",
+        "sell",
+        "days",
+        "description",
+        "buy_num",
+        "give_num",
+        "service_groups",
+        "service_types",
+        "created_time",
+        "updated_time",
+        "remark",
+        "is_deleted",
+        "deleted_time"
+      ]
+    }
+  },
+  "type": "object",
+  "$ref": "#/definitions/voucherpool"
+//  "type": "array",
+//  "minItems":0,
+//  "items": {
+//    "$ref": "#/definitions/voucherpool"
+//  }
+}

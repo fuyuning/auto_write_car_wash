@@ -1,0 +1,40 @@
+{
+  "definitions": {
+    "adminlog": {
+      "type":"object",
+      "properties":{
+        "admin_log_id": {"type":"string"},
+        "user": {"type":"string"},
+        "user_id": {"type":"string"},
+        "business_type": {"type":"string"},
+        "operate": {"type":"number"},
+        "content": {"type":"string"},
+        "created_time": {"type":"number"},
+        "updated_time": {"type":["number","null"]},
+        "remark": {"type":"string"},
+        "is_deleted": {"type":"boolean"},
+        "deleted_time": {"type":"number"}
+      },
+      "required": [
+        "admin_log_id",
+        "user",
+        "user_id",
+        "business_type",
+        "operate",
+        "content",
+        "created_time",
+        "updated_time",
+        "remark",
+        "is_deleted",
+        "deleted_time"
+      ]
+    }
+  },
+  "type": "object",
+  "$ref": "#/definitions/adminlog"
+//  "type": "array",
+//  "minItems":0,
+//  "items": {
+//    "$ref": "#/definitions/adminlog"
+//  }
+}

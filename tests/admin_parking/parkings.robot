@@ -26,6 +26,24 @@ post admin parkings Fail With Wrong Params
    ${unessential_params}  create dictionary  alias_name=${alias_name_422}  wash_area_id=${wash_area_id_422}  out_parking_id=${out_parking_id_422}  enabled=ThisIsRobot!  lon=${lon_422}  lat=${lat_422}  parking_banners=${parking_banners_422}  use_home_banner=ThisIsRobot!  service_introduce=${service_introduce_422}  address=${address_422}  use_home_illustrate=ThisIsRobot!  province=${province_422}  city=${city_422}  district=${district_422}  landing_content=${Please_input}  parking_map=${parking_map_422}  
    run every case by params   post admin parkings fail 422   ${essential_params}  ${unessential_params}  success=False
 
+get admin out parkings Success 
+   [Documentation]  接口名:获取美行停车场${\n}
+   ...              请求方式:Get${\n}
+   ...              预期结果:输入正确参数,http响应码返回 200,返回的Json数据为  列表。
+   [Tags]           Respcode:200
+   ${essential_params}  create dictionary  
+   ${unessential_params}  create dictionary  parking_name=${parking_name}  
+   run every case by params   get admin out parkings success 200   ${essential_params}  ${unessential_params}
+
+get admin out parkings Fail With Wrong Params
+   [Documentation]  接口名:获取美行停车场${\n}
+   ...              请求方式:Get${\n}
+   ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
+   [Tags]           Respcode:422
+   ${essential_params}  create dictionary  
+   ${unessential_params}  create dictionary  parking_name=${parking_name_422}  
+   run every case by params   get admin out parkings fail 422   ${essential_params}  ${unessential_params}  success=False
+
 get admin parkings Success 
    [Documentation]  接口名:停车场信息列表${\n}
    ...              请求方式:Get${\n}
@@ -138,6 +156,18 @@ post admin parkings Success 201
 post admin parkings Fail 422
    [Arguments]  &{kwargs}
    ${resp}=  post admin parkings  &{kwargs}
+   expect status is 422  ${resp}  
+
+get admin out parkings Success 200
+   [Arguments]  &{kwargs}
+   ${resp}=  get admin out parkings  &{kwargs}
+   expect status is 200  ${resp}  admin_parking/get_admin_out_parkings_200.json
+   ${parking_id}  set variable if  ${resp.json()}!=[]  ${resp.json()[0]['parking_id']}
+   set global variable   ${parking_id}
+
+get admin out parkings Fail 422
+   [Arguments]  &{kwargs}
+   ${resp}=  get admin out parkings  &{kwargs}
    expect status is 422  ${resp}  
 
 get admin parkings Success 200

@@ -1,0 +1,52 @@
+{
+  "definitions": {
+    "voucher": {
+      "type":"object",
+      "properties":{
+        "voucher_id": {"type":"string"},
+        "voucher_pool_id": {"type":"string"},
+        "voucher_sub_order_id": {"type":"string"},
+        "order_no": {"type":"string"},
+        "name": {"type":"string"},
+        "denomination": {"type":"number"},
+        "user_id": {"type":"string"},
+        "mobile": {"type":"string"},
+        "car_id": {"type":"string"},
+        "status": {"type":"number"},
+        "deadline": {"type":"number"},
+        "used_time": {"type":"number"},
+        "created_time": {"type":"number"},
+        "updated_time": {"type":["number","null"]},
+        "remark": {"type":"string"},
+        "is_deleted": {"type":"boolean"},
+        "deleted_time": {"type":"number"}
+      },
+      "required": [
+        "voucher_id",
+        "voucher_pool_id",
+        "voucher_sub_order_id",
+        "order_no",
+        "name",
+        "denomination",
+        "user_id",
+        "mobile",
+        "car_id",
+        "status",
+        "deadline",
+        "used_time",
+        "created_time",
+        "updated_time",
+        "remark",
+        "is_deleted",
+        "deleted_time"
+      ]
+    }
+  },
+  "type": "object",
+  "$ref": "#/definitions/voucher"
+//  "type": "array",
+//  "minItems":0,
+//  "items": {
+//    "$ref": "#/definitions/voucher"
+//  }
+}

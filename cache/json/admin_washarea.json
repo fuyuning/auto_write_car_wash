@@ -1,0 +1,62 @@
+{
+  "definitions": {
+    "washarea": {
+      "type":"object",
+      "properties":{
+        "wash_area_id": {"type":"string"},
+        "name": {"type":"string"},
+        "province": {"type":"string"},
+        "city": {"type":"string"},
+        "city_code": {"type":"string"},
+        "district": {"type":"string"},
+        "address": {"type":"string"},
+        "created_time": {"type":"number"},
+        "updated_time": {"type":["number","null"]},
+        "remark": {"type":"string"},
+        "is_deleted": {"type":"boolean"},
+        "deleted_time": {"type":"number"},
+        "wash_normal": {"type":"boolean"},
+        "wash_group": {"type":"boolean"},
+        "user_group": {"type":"boolean"},
+        "enabled": {"type":"boolean"},
+        "status": {"type":"number"},
+        "service_type": {"type":"number"},
+        "car_washers": {"type":"string"},
+        "copywriting": {"type":"string"},
+        "wash_normal_id": {"type":"string"},
+        "user_group_id": {"type":"string"}
+      },
+      "required": [
+        "wash_area_id",
+        "name",
+        "province",
+        "city",
+        "city_code",
+        "district",
+        "address",
+        "created_time",
+        "updated_time",
+        "remark",
+        "is_deleted",
+        "deleted_time",
+        "wash_normal",
+        "wash_group",
+        "user_group",
+        "enabled",
+        "status",
+        "service_type",
+        "car_washers",
+        "copywriting",
+        "wash_normal_id",
+        "user_group_id"
+      ]
+    }
+  },
+  "type": "object",
+  "$ref": "#/definitions/washarea"
+//  "type": "array",
+//  "minItems":0,
+//  "items": {
+//    "$ref": "#/definitions/washarea"
+//  }
+}

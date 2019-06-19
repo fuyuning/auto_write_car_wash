@@ -48,7 +48,7 @@ put user user info Success
    ...              请求方式:Put${\n}
    ...              预期结果:输入正确参数,http响应码返回 204,无Json数据返回。
    [Tags]           Respcode:204
-   ${essential_params}  create dictionary  wx_nickname=${wx_nickname}  wx_avatarurl=${wx_avatarurl}  unionid=${unionid}  mobile=${mobile}  
+   ${essential_params}  create dictionary  wx_nickname=${wx_nickname}  wx_avatarurl=${wx_avatarurl}  unionid=${unionid}  mobile=${mobile}  city=${city}  gender=${gender}  mobile_brand=${mobile_brand}  mobile_model=${mobile_model}  position=${position}  lon=${lon}  lat=${lat}  
    ${unessential_params}  create dictionary  
    run every case by params   put user user info success 204   ${essential_params}  ${unessential_params}
 
@@ -57,7 +57,7 @@ put user user info Fail With Wrong Params
    ...              请求方式:Put${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create dictionary  wx_nickname=${wx_nickname_422}  wx_avatarurl=${wx_avatarurl_422}  unionid=${unionid_422}  mobile=${mobile_422}  
+   ${essential_params}  create dictionary  wx_nickname=${wx_nickname_422}  wx_avatarurl=${wx_avatarurl_422}  unionid=${unionid_422}  mobile=${mobile_422}  city=${city_422}  gender=${gender_422}  mobile_brand=${mobile_brand_422}  mobile_model=${mobile_model_422}  position=${position_422}  lon=${lon_422}  lat=${lat_422}  
    ${unessential_params}  create dictionary  
    run every case by params   put user user info fail 422   ${essential_params}  ${unessential_params}  success=False
 

@@ -41,6 +41,13 @@ patch admin wash records serve time by wash record id Fail Without Login
    [Tags]           Respcode:403
    patch admin wash records serve time by wash record id fail 403     wash_record_id=${wash_record_id}  serve_time=${serve_time}  expect_time=${expect_time}    
 
+patch admin wash records position by wash record id Fail Without Login
+   [Documentation]  接口名:修改车辆位置${\n}
+   ...              请求方式:Patch${\n}
+   ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
+   [Tags]           Respcode:403
+   patch admin wash records position by wash record id fail 403     wash_record_id=${wash_record_id}  position=${position}    
+
 delete admin wash records by wash record id Fail Without Login
    [Documentation]  接口名:删除洗车订单${\n}
    ...              请求方式:Delete${\n}
@@ -77,6 +84,11 @@ patch admin wash records (car id|mobile|name) by wash record id Fail 403
 patch admin wash records serve time by wash record id Fail 403
    [Arguments]  &{kwargs}
    ${resp}=  patch admin wash records serve time by wash record id  &{kwargs}
+   expect status is 403  ${resp}  
+
+patch admin wash records position by wash record id Fail 403
+   [Arguments]  &{kwargs}
+   ${resp}=  patch admin wash records position by wash record id  &{kwargs}
    expect status is 403  ${resp}  
 
 delete admin wash records by wash record id Fail 403

@@ -1,0 +1,34 @@
+{
+  "definitions": {
+    "invitationbanner": {
+      "type":"object",
+      "properties":{
+        "invitation_banner_id": {"type":"string"},
+        "entrance_banner": {"type":"string"},
+        "interface_poster": {"type":"string"},
+        "created_time": {"type":"number"},
+        "updated_time": {"type":["number","null"]},
+        "remark": {"type":"string"},
+        "is_deleted": {"type":"boolean"},
+        "deleted_time": {"type":"number"}
+      },
+      "required": [
+        "invitation_banner_id",
+        "entrance_banner",
+        "interface_poster",
+        "created_time",
+        "updated_time",
+        "remark",
+        "is_deleted",
+        "deleted_time"
+      ]
+    }
+  },
+  "type": "object",
+  "$ref": "#/definitions/invitationbanner"
+//  "type": "array",
+//  "minItems":0,
+//  "items": {
+//    "$ref": "#/definitions/invitationbanner"
+//  }
+}

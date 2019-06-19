@@ -1,0 +1,66 @@
+{
+  "definitions": {
+    "coupon": {
+      "type":"object",
+      "properties":{
+        "coupon_id": {"type":"string"},
+        "coupon_pool_id": {"type":"string"},
+        "user_id": {"type":"string"},
+        "coupon_name": {"type":"string"},
+        "coupon_type": {"type":"string"},
+        "coupon_channel": {"type":"number"},
+        "created_time": {"type":"string"},
+        "allow_use_start_time": {"type":"number"},
+        "allow_use_end_time": {"type":"number"},
+        "used_time": {"type":"string"},
+        "condition_money": {"type":"number"},
+        "discount": {"type":"number"},
+        "discount_money": {"type":"number"},
+        "status": {"type":"number"},
+        "service_types": {"type":"string"},
+        "order_types": {"type":"string"},
+        "service_group_ids": {"type":"string"},
+        "wash_area_ids": {"type":"string"},
+        "parking_ids": {"type":"string"},
+        "remark": {"type":"string"},
+        "car_id": {"type":"string"},
+        "mobile": {"type":"string"},
+        "is_point": {"type":"string"},
+        "order_no": {"type":"string"}
+      },
+      "required": [
+        "coupon_id",
+        "coupon_pool_id",
+        "user_id",
+        "coupon_name",
+        "coupon_type",
+        "coupon_channel",
+        "created_time",
+        "allow_use_start_time",
+        "allow_use_end_time",
+        "used_time",
+        "condition_money",
+        "discount",
+        "discount_money",
+        "status",
+        "service_types",
+        "order_types",
+        "service_group_ids",
+        "wash_area_ids",
+        "parking_ids",
+        "remark",
+        "car_id",
+        "mobile",
+        "is_point",
+        "order_no"
+      ]
+    }
+  },
+  "type": "object",
+  "$ref": "#/definitions/coupon"
+//  "type": "array",
+//  "minItems":0,
+//  "items": {
+//    "$ref": "#/definitions/coupon"
+//  }
+}

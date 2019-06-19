@@ -30,8 +30,8 @@ get car wash car series money Fail With Wrong Params
    ...              请求方式:Get${\n}
    ...              预期结果:输入错误参数,http响应码返回 422,返回的Json数据为错误信息。
    [Tags]           Respcode:422
-   ${essential_params}  create dictionary  
-   ${unessential_params}  create dictionary  series_id=${series_id_422}  parking_id=${parking_id_422}  
+   ${essential_params}  create dictionary  parking_id=${parking_id_422}  
+   ${unessential_params}  create dictionary  series_id=${series_id_422}  
    run every case by params   get car wash car series money fail 422   ${essential_params}  ${unessential_params}  success=False
 
 get car wash car series money Success 
@@ -39,8 +39,8 @@ get car wash car series money Success
    ...              请求方式:Get${\n}
    ...              预期结果:输入正确参数,http响应码返回 200,返回的Json数据为  列表。
    [Tags]           Respcode:200
-   ${essential_params}  create dictionary  
-   ${unessential_params}  create dictionary  series_id=${series_id}  parking_id=${parking_id}  
+   ${essential_params}  create dictionary  parking_id=${parking_id}  
+   ${unessential_params}  create dictionary  series_id=${series_id}  
    run every case by params   get car wash car series money success 200   ${essential_params}  ${unessential_params}
 
 

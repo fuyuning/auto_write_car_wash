@@ -18,7 +18,7 @@ post admin coupon point records Fail Without Login
    ...              请求方式:Post${\n}
    ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
    [Tags]           Respcode:403
-   post admin coupon point records fail 403   user_ids=${user_ids}  coupon_pool_id=${coupon_pool_id}    is_short_message_template=False  
+   post admin coupon point records fail 403   user_ids=${user_ids}  coupon_pool_id=${coupon_pool_id}    is_short_message_template=False  short_message_template_id=${short_message_template_id}  sent_number=${sent_number}  
 
 post admin coupon point records upload Fail Without Login
    [Documentation]  接口名:文件上传(已停用)${\n}

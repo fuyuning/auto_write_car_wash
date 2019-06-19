@@ -13,6 +13,13 @@ post admin parkings Fail Without Login
    [Tags]           Respcode:403
    post admin parkings fail 403   parking_name=${parking_name}  position=${position}    alias_name=${alias_name}  wash_area_id=${wash_area_id}  out_parking_id=${out_parking_id}  enabled=False  lon=${lon}  lat=${lat}  parking_banners=${parking_banners}  use_home_banner=False  service_introduce=${service_introduce}  address=${address}  use_home_illustrate=False  province=${province}  city=${city}  district=${district}  landing_content=${Please_input}  parking_map=${parking_map}  
 
+get admin out parkings Fail Without Login
+   [Documentation]  接口名:获取美行停车场${\n}
+   ...              请求方式:Get${\n}
+   ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
+   [Tags]           Respcode:403
+   get admin out parkings fail 403     parking_name=${parking_name}  
+
 get admin parkings Fail Without Login
    [Documentation]  接口名:停车场信息列表${\n}
    ...              请求方式:Get${\n}
@@ -57,6 +64,11 @@ ${parking_id}  1a2b3c4d5e6f7zz
 post admin parkings Fail 403
    [Arguments]  &{kwargs}
    ${resp}=  post admin parkings  &{kwargs}
+   expect status is 403  ${resp}  
+
+get admin out parkings Fail 403
+   [Arguments]  &{kwargs}
+   ${resp}=  get admin out parkings  &{kwargs}
    expect status is 403  ${resp}  
 
 get admin parkings Fail 403

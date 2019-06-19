@@ -1,0 +1,44 @@
+{
+  "definitions": {
+    "carmoveqrcode": {
+      "type":"object",
+      "properties":{
+        "car_move_qrcode_no": {"type":"string"},
+        "car_move_qrcode_id": {"type":"string"},
+        "user_id": {"type":"string"},
+        "mobile": {"type":"string"},
+        "wash_area_name": {"type":"string"},
+        "car_id": {"type":"string"},
+        "status": {"type":"number"},
+        "remark": {"type":"string"},
+        "qrcode_remark": {"type":"string"},
+        "created_time": {"type":"number"},
+        "updated_time": {"type":["number","null"]},
+        "is_deleted": {"type":"boolean"},
+        "deleted_time": {"type":"number"}
+      },
+      "required": [
+        "car_move_qrcode_no",
+        "car_move_qrcode_id",
+        "user_id",
+        "mobile",
+        "wash_area_name",
+        "car_id",
+        "status",
+        "remark",
+        "qrcode_remark",
+        "created_time",
+        "updated_time",
+        "is_deleted",
+        "deleted_time"
+      ]
+    }
+  },
+  "type": "object",
+  "$ref": "#/definitions/carmoveqrcode"
+//  "type": "array",
+//  "minItems":0,
+//  "items": {
+//    "$ref": "#/definitions/carmoveqrcode"
+//  }
+}

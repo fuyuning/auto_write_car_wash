@@ -288,7 +288,6 @@ app,wash_record,修改单个洗车记录状态,PATCH, /car_wash/wash_records/:wa
 app,wash_record,洗车,POST, /car_wash/wash_records/:wash_record_id/wash,"['before_wash_images', 'tags', 'description', 'dirty_percent']","['json', '<string>', 'string', 'int']","['T', 'F', 'F', '车脏程度0-100']","['403', '404', '204', '422']",
 app,wash_record,完成洗车,POST, /car_wash/wash_records/:wash_record_id/finish,['after_wash_images'],['json'],['T'],"['403', '404', '204', '422']",
 app,wash_record,查询车辆是否在场内,GET, /car_wash/car/in_parking,"['parking_id', 'car_id']","['string', 'string']","['F', 'T']","['403', '200', '422']",
-app,wash_record,查询车牌号是否有洗车记录,GET, /car_wash/alone_wash_records,['car_id'],['string'],['T'],"['403', '200', '422']",WashRecord
 app,wash_area,获取全部洗车区域列表,GET, /car_wash/wash_areas,"['section', 'condition']","['string', 'string']","['F', 'F']","['403', '200', '422']",WashArea
 app,wash_tag,获取wash_tags列表,GET, /car_wash/wash_tags,,,,['200'],WashTag
 app,oauth2,账号密码授权,POST, /oauth/2.0/token,"['grant_type', 'client_id', 'secret', 'userid', 'mobile', 'password']","['string', 'string(32)', 'string(32)', 'string', 'string', 'string(6,16)']","['T', 'T', 'T', 'F', 'F', 'T']","['403', '200', '422']",
@@ -303,7 +302,8 @@ app,car_position,车位增量更新,GET, /car_wash/new_car_positions,"['parking_
 app,car_info,车辆信息详情,GET, /car_wash/car_infos,['car_ids'],['string'],['T'],"['403', '200', '422']",CarInfo
 app,car_info,上传车辆图片,PUT, /car_wash/car_infos/:car_info_id,['car_images'],['array'],['F'],"['404', '204', '422', '403']",
 app,parking,停车场信息列表,GET, /car_wash/parkings,"['section', 'condition']","['string', 'string']","['F', 'F']","['403', '200', '422']",Parking
-wxmp,voucher,我的洗车券,GET,  /user/vouchers,"['status', 'section', 'page_limit']","['string', 'string', 'int']","['T', 'F', 'F']","['200', '403', '422']",Voucher
+wxmp,voucher,我的洗车券,GET,  /user/vouchers,"['status', 'section', 'page_limit']","['int', 'string', 'int']","['T', 'F', 'F']","['200', '403', '422']",Voucher
+wxmp,voucher,我本单能用的一张洗车券,GET, user/vouchers/usable,"['service_type', 'service_group_id']","['string', 'string']","['F', 'F']","['403', '200', '422']",Voucher
 wxmp,voucher_order,创建洗车券订单,POST, /voucher_orders,['voucher_info'],['array'],['T'],"['403', '201', '422']",
 wxmp,voucher_order,支付订单,POST, /voucher_orders/:voucher_order_id/pay,"['pay_type', 'openid']","['string', 'string']","['T', 'T']","['404', '403', '200', '422']",
 wxmp,voucher_pool,查询可买洗车劵,GET, /voucher_pools,,,,"['200', '403']",VoucherPool

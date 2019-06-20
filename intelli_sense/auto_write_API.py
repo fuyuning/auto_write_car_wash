@@ -77,6 +77,70 @@ class AutoWriteRobot(object):
         with open(csv_path, 'w+') as csv_file:
             csv_file.write('')
 
+    @classmethod
+    def _upper_first_char(cls, name, place=False):
+        """
+        首字母大写其余小写
+        :param name: 参数名字
+        :type name: str
+        :param place: 是否加空格
+        :type place: bool
+        :return: 转化后的名字
+        :rtype: str
+        """
+        if '_' in name:
+            str_list = name.split('_')
+        else:
+            str_list = name.split(' ')
+        for index in range(0, len(str_list)):
+            if place is False:
+                end = ''
+            else:
+                end = ' '
+            if str_list[index] != '':
+                str_list[index] = str_list[index][0].upper() + str_list[index][1:].lower() + end
+            else:
+                continue
+        return ''.join(str_list)
+
+    # 把url处理为名字
+    @classmethod
+    def _parse_url_part(cls, api_url):
+        """
+        根据url生成不重复的名字
+        :param api_url: url地址
+        :type api_url: str
+        :return: 四个写入数据部分
+        """
+        url_parts = api_url.split("/")
+        final_url_parts = []
+        id_url_parts = []
+        for i in url_parts:
+            if i != '' and i.find(':') != -1:
+                id_url_parts.append(i)
+
+            if i != '' and i.find(':') == -1:
+                final_url_parts.append(i)
+        method_name = ''
+        url_params = ''
+        format_data = ''
+        id_name_list = []
+        for i in final_url_parts:
+            method_name = method_name + '_' + i
+        if id_url_parts:
+            method_name = method_name + '_by'
+            for i in id_url_parts:
+                method_name = method_name + '_' + i.replace(':', '')
+        if id_url_parts:
+            for i in id_url_parts:
+                id_name = i.replace(':', '')
+                id_name_list.append(id_name)
+                url_params = url_params + ', ' + id_name
+                format_data = format_data + ', ' + id_name + '=' + id_name
+        else:
+            url_params = ''
+        return method_name, id_name_list, url_params, format_data
+
     def _parse_file(self):
         """
         解析数据
@@ -362,26 +426,34 @@ class AutoWriteRobot(object):
                     self._write_robot_file_case(params_txt, service_name, model_name, api_name, api_method, api_url,
                                                 api_params_name_list, api_codes_list_sort, return_entities,
                                                 api_params_nn_list, api_params_type_list, case_switch)
+                    # 修改开关状态
                     case_switch = False
                 # 第三次循环写入robot的keyword
                 if i == 2:
                     self._write_robot_file_keywords(service_name, model_name, api_method, api_url, api_codes_list_sort,
                                                     id_in_url, keyword_switch)
+                    # 修改开关状态
                     keyword_switch = False
 
     # 写入library头文件
     def _write_library_head(self, lib_name, model_name):
+        """
+        写入lib头
+        :param lib_name: lib名
+        :param model_name: 模块名
+        :return: 类名
+        """
         self.help_print('正在写入文件：%s/__init__.py' % lib_name)
         lib_name = '../%s' % lib_name.replace('.', '/')
-        lib = os.path.exists(lib_name)
-        if not lib:
-            os.makedirs(lib_name)
+        # 创建文件
+        self.create_folder(lib_name)
         class_name = self._upper_first_char(model_name)
         lib_import = lib_name.split('/')[1]
+        # 创建init
         open('%s/__init__.py' % lib_name, 'w+')
-        folder = os.path.exists('%s/%sLibrary.py' % (lib_name, class_name))
-        if folder:
-            os.rename('%s/%sLibrary.py' % (lib_name, class_name), '%s/old_%sLibrary.py' % (lib_name, class_name))
+        # 替换历史数据
+        self.rename_folder('%s/%sLibrary.py' % (lib_name, class_name), '%s/old_%sLibrary.py' % (lib_name, class_name))
+        # 写入lib头
         self.help_print('正在写入文件：%s/%sLibrary.py' % (lib_name, class_name))
         lib_file = open('%s/%sLibrary.py' % (lib_name, class_name), 'w+')
         lib_file.write('from %s.common import CommonLibrary\n\n\n' % lib_import)
@@ -391,9 +463,19 @@ class AutoWriteRobot(object):
 
     # 根据爬取的数据生成library
     def _write_lib_file(self, class_name, lib_name, api_method, api_url, api_params_name_list):
+        """
+        写入
+        :param class_name:
+        :param lib_name:
+        :param api_method:
+        :param api_url:
+        :param api_params_name_list:
+        :return:
+        """
         api_method = self._upper_first_char(api_method)
         lib_name = lib_name.replace('.', '/')
         lib_file = open('../%s/%sLibrary.py' % (lib_name, class_name), 'a+')
+        # 判断参数部分写入
         api_params = ''
         index = 0
         for i in api_params_name_list:
@@ -406,6 +488,7 @@ class AutoWriteRobot(object):
             kwargs_name = ''
         else:
             kwargs_name = ', **kwargs'
+        # 根据请求情况判断如何传值
         change_data = ''
         api_method = api_method.lower()
         if api_method == 'get':
@@ -417,6 +500,7 @@ class AutoWriteRobot(object):
         else:
             change_data = ''
         api_url_part = api_url.split('/')
+        # 根据url判断是否有动态id
         url_format = ''
         for i in api_url_part:
             if i.find(':') != -1:
@@ -424,6 +508,7 @@ class AutoWriteRobot(object):
             if i != '':
                 url_format = url_format + '/' + i
         method_name, id_name_list, url_params, format_data = self._parse_url_part(api_url)
+        # 写入lib中的函数
         lib_file.write(
             '    def ' + api_method.lower() + method_name.lower() + '(self' + url_params + kwargs_name + '):\n')
         lib_file.write('        url = "{SERVER_DOMAIN}' + url_format + '".format(\n            SERVER_DOMAIN='
@@ -439,9 +524,8 @@ class AutoWriteRobot(object):
     # 根据爬取的数据生成robot文件头
     def _write_robot_file_settings(self, service_name, model_name):
         full_name = '%s_%s' % (service_name, model_name)
-        folder = os.path.exists('../tests/%s' % full_name)
-        if not folder:
-            os.makedirs('../tests/%s' % full_name)
+        self.create_folder('../tests/%s' % full_name)
+        # 根据服务端的名称来选择模板
         lib_name = ''
         setup = ''
         teardown = ''
@@ -468,14 +552,13 @@ class AutoWriteRobot(object):
             name_tag = '车主微信端'
         lib_name = lib_name[:-1] + '.' + model_name
         class_name = self._upper_first_char(model_name)
-        folder = os.path.exists('../tests/%s/%ss.robot' % (full_name, model_name))
-        if folder:
-            os.rename('../tests/%s/%ss.robot' % (full_name, model_name), '../tests/%s/old_%ss.robot' %
-                      (full_name, model_name))
-            os.rename('../tests/%s/%ss.unauthorized.robot' % (full_name, model_name),
-                      '../tests/%s/old_%ss.unauthorized.robot' % (full_name, model_name))
-
+        # 替换历史数据
+        self.rename_folder('../tests/%s/%ss.robot' % (full_name, model_name), '../tests/%s/old_%ss.robot' %
+                           (full_name, model_name))
+        self.rename_folder('../tests/%s/%ss.unauthorized.robot' % (full_name, model_name),
+                           '../tests/%s/old_%ss.unauthorized.robot' % (full_name, model_name))
         self.help_print('正在写入文件：../tests/%s/%ss.robot' % (full_name, model_name))
+        # 根据选择的模板动态写入robot的settings
         robot = open('../tests/%s/%ss.robot' % (full_name, model_name), 'w+')
         robot.write('*** Settings ***\n')
         robot.write('Documentation  ' + full_name + '\n')
@@ -508,6 +591,7 @@ class AutoWriteRobot(object):
         full_name = service_name + '_' + model_name
         api_method = self._upper_first_char(api_method)
         method_name = (api_method + self._parse_url_part(api_url)[0]).lower().replace('_', ' ')
+        # 动态选择testcase模板
         for api_code in api_codes_list:
             wrong_id_value = ''
             if id_in_url:
@@ -563,6 +647,7 @@ class AutoWriteRobot(object):
                 success_value = '  success=False'
             else:
                 success_value = ''
+            # 参数动态赋默认值
             for i in range(0, len(api_params_name_list)):
                 params_name = str(api_params_name_list[i])
                 not_none = api_params_nn_list[i]
@@ -597,14 +682,17 @@ class AutoWriteRobot(object):
                     id_name_value = id_name[i]
                 format_kwp = format_kwp + '  ' + id_name[i] + '=${' + id_name_value + '}'
             robot = open('../tests/' + full_name + '/' + model_name + 's.' + name_part + 'robot', 'a+')
+            # 根据开关判断是否写入TestCases标识
             if case_switch is True:
                 robot.write('*** Test Cases ***\n')
                 if api_code != '403':
                     case_switch = False
+            # 写入TestCase
             robot.write(tc_name + '\n')
             robot.write('   [Documentation]  接口名:' + api_name + '${\\n}\n   ...              请求方式:' + api_method +
                         '${\\n}\n   ...              预期结果:' + ex_result + '\n')
             robot.write('   [Tags]           Respcode:' + api_code + '\n')
+            # 根据状态码判断写入方式
             if flag is False and api_params_name_list != ['']:
                 if api_code in ('403', '404'):
                     robot.write('   ' + kw_name + '   ' + essential_params_part + '  ' + unessential_params_part + '\n')
@@ -635,6 +723,7 @@ class AutoWriteRobot(object):
                                    id_in_url, keyword_switch):
         full_name = '%s_%s' % (service_name, model_name)
         api_method = self._upper_first_char(api_method)
+        # 根据状态码选择模板
         for api_code in api_codes_list:
             method_name = (api_method + self._parse_url_part(api_url)[0]).lower().replace('_', ' ')
             if api_code == '200':
@@ -664,6 +753,7 @@ class AutoWriteRobot(object):
             else:
                 name_part = 'unauthorized.'
             robot = open('../tests/' + full_name + '/' + model_name + 's.' + name_part + 'robot', 'a+')
+            # 根据开关选择是否写入Keyword标识
             if keyword_switch is True:
                 robot.write('\n')
                 if id_in_url:
@@ -678,6 +768,7 @@ class AutoWriteRobot(object):
                 robot.write('*** Keywords ***\n')
                 if api_code != '403':
                     keyword_switch = False
+            # 动态写入keyword
             robot.write(kw_name + '\n')
             robot.write('   [Arguments]  &{kwargs}\n')
             robot.write('   ${resp}=  ' + method_name + '  &{kwargs}\n')
@@ -688,55 +779,6 @@ class AutoWriteRobot(object):
                                                          '  ${resp.json()[0][\'' + id_in_url[k] + '\']}\n')
                     robot.write('   set global variable   ${' + id_in_url[k] + '}\n')
             robot.write('\n')
-
-    @classmethod
-    def _upper_first_char(cls, name, place=False):
-        if '_' in name:
-            str_list = name.split('_')
-        else:
-            str_list = name.split(' ')
-        for index in range(0, len(str_list)):
-            if place is False:
-                end = ''
-            else:
-                end = ' '
-            if str_list[index] != '':
-                str_list[index] = str_list[index][0].upper() + str_list[index][1:].lower() + end
-            else:
-                continue
-        return ''.join(str_list)
-
-    # 把url处理为名字
-    @classmethod
-    def _parse_url_part(cls, api_url):
-        url_parts = api_url.split("/")
-        final_url_parts = []
-        id_url_parts = []
-        for i in url_parts:
-            if i != '' and i.find(':') != -1:
-                id_url_parts.append(i)
-
-            if i != '' and i.find(':') == -1:
-                final_url_parts.append(i)
-        method_name = ''
-        url_params = ''
-        format_data = ''
-        id_name_list = []
-        for i in final_url_parts:
-            method_name = method_name + '_' + i
-        if id_url_parts:
-            method_name = method_name + '_by'
-            for i in id_url_parts:
-                method_name = method_name + '_' + i.replace(':', '')
-        if id_url_parts:
-            for i in id_url_parts:
-                id_name = i.replace(':', '')
-                id_name_list.append(id_name)
-                url_params = url_params + ', ' + id_name
-                format_data = format_data + ', ' + id_name + '=' + id_name
-        else:
-            url_params = ''
-        return method_name, id_name_list, url_params, format_data
 
     # run方法
     def run(self):

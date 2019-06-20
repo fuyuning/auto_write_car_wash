@@ -5,6 +5,7 @@
       "properties":{
         "voucher_id": {"type":"string"},
         "voucher_pool_id": {"type":"string"},
+        "voucher_pool": {"type":"object"},
         "voucher_sub_order_id": {"type":"string"},
         "order_no": {"type":"string"},
         "name": {"type":"string"},
@@ -24,6 +25,7 @@
       "required": [
         "voucher_id",
         "voucher_pool_id",
+        "voucher_pool",
         "voucher_sub_order_id",
         "order_no",
         "name",

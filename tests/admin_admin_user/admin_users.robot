@@ -14,7 +14,7 @@ post admin admin users Success
    ...              预期结果:输入正确参数,http响应码返回 201,返回的Json数据符合验证。
    [Tags]           Respcode:201
    ${essential_params}  create dictionary  username=${username}  name=${name}  mobile=${mobile}  password=${password}  
-   ${unessential_params}  create dictionary  email=${email}  
+   ${unessential_params}  create dictionary  email=${email}  a=111111
    run every case by params   post admin admin users success 201   ${essential_params}  ${unessential_params}
 
 post admin admin users Fail With Wrong Params

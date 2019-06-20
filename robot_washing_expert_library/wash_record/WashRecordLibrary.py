@@ -115,15 +115,6 @@ class WashRecordLibrary(CommonLibrary):
                 data[k] = v
         return self.client.get(url, params=data)
 
-    def get_car_wash_alone_wash_records(self, **kwargs):
-        url = "{SERVER_DOMAIN}/car_wash/alone_wash_records".format(
-            SERVER_DOMAIN=self.SERVER_DOMAIN)
-        data = {}
-        for k, v in kwargs.items():
-            if k in ("car_id", ):
-                data[k] = v
-        return self.client.get(url, params=data)
-
     def patch_car_wash_wash_records_washer_remark_by_wash_record_id(self, wash_record_id, **kwargs):
         url = "{SERVER_DOMAIN}/car_wash/wash_records/{wash_record_id}/washer_remark".format(
             SERVER_DOMAIN=self.SERVER_DOMAIN, wash_record_id=wash_record_id)

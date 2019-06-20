@@ -97,13 +97,6 @@ get car wash car in parking Fail Without Login
    [Tags]           Respcode:403
    get car wash car in parking fail 403   car_id=${car_id}    parking_id=${parking_id}  
 
-get car wash alone wash records Fail Without Login
-   [Documentation]  接口名:查询车牌号是否有洗车记录${\n}
-   ...              请求方式:Get${\n}
-   ...              预期结果:未登录,http响应码返回 403,无Json数据返回。
-   [Tags]           Respcode:403
-   get car wash alone wash records fail 403   car_id=${car_id}    
-
 patch car wash wash records washer remark by wash record id Fail Without Login
    [Documentation]  接口名:备注${\n}
    ...              请求方式:Patch${\n}
@@ -194,11 +187,6 @@ get car wash wash record by wash record id Fail 403
 get car wash car in parking Fail 403
    [Arguments]  &{kwargs}
    ${resp}=  get car wash car in parking  &{kwargs}
-   expect status is 403  ${resp}  
-
-get car wash alone wash records Fail 403
-   [Arguments]  &{kwargs}
-   ${resp}=  get car wash alone wash records  &{kwargs}
    expect status is 403  ${resp}  
 
 patch car wash wash records washer remark by wash record id Fail 403

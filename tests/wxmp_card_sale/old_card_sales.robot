@@ -1,8 +1,0 @@
-*** Settings ***
-Documentation  wxmp_card_sale
-Resource  ../resources.robot
-Library  robot_car_wash_wxmp_library.card_sale.CardSaleLibrary
-Suite Setup  login by unionid   ${unionid}
-Force Tags  model:wxmp_card_sale  车主微信端
-
-

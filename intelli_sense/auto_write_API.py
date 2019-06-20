@@ -463,15 +463,6 @@ class AutoWriteRobot(object):
 
     # 根据爬取的数据生成library
     def _write_lib_file(self, class_name, lib_name, api_method, api_url, api_params_name_list):
-        """
-        写入
-        :param class_name:
-        :param lib_name:
-        :param api_method:
-        :param api_url:
-        :param api_params_name_list:
-        :return:
-        """
         api_method = self._upper_first_char(api_method)
         lib_name = lib_name.replace('.', '/')
         lib_file = open('../%s/%sLibrary.py' % (lib_name, class_name), 'a+')
